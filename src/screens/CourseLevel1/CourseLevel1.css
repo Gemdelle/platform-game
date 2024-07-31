@@ -6,13 +6,25 @@
 
 /* DEFAULT CLASSES */
 
-.flex {
+.flex-s {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flex-c {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.flex-c {
+.flex-e {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.flex-col {
   display: flex;
   flex-direction: column;
   justify-content: center;

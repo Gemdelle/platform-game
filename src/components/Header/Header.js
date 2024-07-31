@@ -14,7 +14,7 @@ const Header = () => {
                     <div id='support'>Support</div>
                 </div>
 
-                <div className='hud flex'>
+                <div className='flex-e hud'>
                     <div className='level-bar'></div>
                     <div className='data flex'>
                         <div className='pp flex'>profile picture</div>

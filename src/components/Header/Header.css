@@ -42,7 +42,6 @@ header {
     width: 30%;
     height: 100%;
     /* background-color: aquamarine; */
-    justify-content: flex-end;
 }
 
 .level-bar {

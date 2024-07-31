@@ -26,9 +26,7 @@ const CourseLevel1 = () => {
 
     return (
         <div className="App">
-
             <Header/>
-
             <div className='container flex'>
             <div className='code-container flex-c'>
                 <CodeEditor onSubmit={handleCompileAndRun} />
