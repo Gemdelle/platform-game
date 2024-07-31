@@ -2,7 +2,6 @@
 .App {
   font-family: Arial, sans-serif;
   text-align: center;
-  padding: 20px;
 }
 
 textarea {
@@ -22,3 +21,222 @@ pre {
   white-space: pre-wrap;
   text-align: left;
 }
+
+/* DEFAULT CLASSES */
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* --------------------------- INDEX ------------------------------------- */
+
+.header-space {
+  width: 100%;
+  height: 10vw;
+}
+
+header {
+  height: 10vw;
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  position: fixed;
+  z-index: 100;
+  margin-top: 1vw;
+}
+
+.header-container {
+  width: 95%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: blue;
+  margin: 0 auto;
+}
+
+/* MENU */
+
+.menu {
+  width: 30%;
+  height: 100%;
+  background-color: yellowgreen;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.menu-options {
+  width: 50%;
+  height: 90%;
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-options div {
+  cursor: pointer;
+}
+
+/* END-MENU */
+
+/* HUD */
+
+.hud {
+  width: 30%;
+  height: 100%;
+  background-color: aquamarine;
+  justify-content: flex-end;
+}
+
+.level-bar {
+  right: 5%;
+  top: 25%;
+  position: absolute;
+  width: 25%;
+  height: 30%;
+  background-color: burlywood;
+}
+
+.data {
+  position: relative;
+  width: 30%;
+  height: 100%;
+  /* background-color: brown; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pp {
+  height: 80%;
+  width: 100%;
+  background-color: rgb(65, 31, 31);
+  border-radius: 50%;
+  color: white;
+}
+
+.heart {
+  position: absolute;
+  top: 60%;
+  width: 60%;
+  height: 60%;
+  background-image: url('/public/assets/UI/heart.gif');
+  color: white;
+}
+
+.heart span {
+  margin-top: 20%;
+}
+
+#level {
+
+}
+
+/* END HUD */
+
+/* COURSES */
+.course {
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 3vw;
+  background-color: violet;
+  display: flex;
+  flex-direction: column;
+  padding: 2vw;
+}
+
+h1 {
+  width: 30%;
+  background-color: lightblue;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+}
+
+/* COURSE DESCRIPTION */
+
+.course-description {
+  width: 100%;
+  background-color: lightcyan;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 1vw;
+  margin: 0 auto;
+}
+
+.course-description span {
+  margin-bottom: 1vw;
+  font-size: 1.2vw;
+}
+
+ul {
+  list-style: none; /* Remove default list bullets */
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin: 0vw 0vw 0.8vw 3.5vw;
+}
+
+.heart-bullet {
+  position: relative;
+  padding-left: 1.5vw; /* Adjust based on the size of the bullet */
+}
+
+.heart-bullet::before {
+  content: '';
+  position: absolute;
+  left: 20%;
+  top: 50%;
+  transform: translateY(-30%);
+  width: 2.5vw;
+  height: 2vw;
+  background-image: url('/public/assets/UI/heart.gif');
+  background-size: contain;
+}
+
+/* END COURSE DESCRIPTION */
+
+.levels {
+  width: 100%;
+  margin-top: 1vw;
+  background-color: pink;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.level {
+  width: 3vw;
+  height: 5vw;
+  margin: 0.4vw 0.95vw;
+  /* background-color: lightcoral; */
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+  background-image: url(/public/assets/UI/heart-dead.png);
+  color: white;
+}
+
+.level span {
+  margin-top: 2.2vw;
+  margin-left: 0.4vw;
+}
+
+.level:hover {
+  scale: 110%;
+}
+
