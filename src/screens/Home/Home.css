@@ -61,7 +61,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: blue;
+  /* background: blue; */
   margin: 0 auto;
 }
 
@@ -70,7 +70,7 @@ header {
 .menu {
   width: 30%;
   height: 100%;
-  background-color: yellowgreen;
+  /* background-color: yellowgreen; */
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -96,7 +96,7 @@ header {
 .hud {
   width: 30%;
   height: 100%;
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
   justify-content: flex-end;
 }
 

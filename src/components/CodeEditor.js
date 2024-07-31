@@ -11,7 +11,8 @@ const CodeEditor = ({ onSubmit }) => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} >
+            <div className='code-area flex-c bg'>
             <h2>Father.java</h2>
             <textarea
                 value={fatherCode}
@@ -19,16 +20,21 @@ const CodeEditor = ({ onSubmit }) => {
                 placeholder="Write your Father.java code here..."
                 rows="10"
                 cols="50"
+                className='bg'
             ></textarea>
-            <h2>Main.java</h2>
+            <button type="submit" className='compile-button'>Compile & Run</button>
+            </div>
+            
+            {/* <h2>Main.java</h2>
             <textarea
                 value={mainCode}
                 onChange={(e) => setMainCode(e.target.value)}
                 placeholder="Write your Main.java code here..."
                 rows="10"
                 cols="50"
-            ></textarea>
-            <button type="submit">Compile and Run</button>
+                className='bg'
+            ></textarea> */}
+            
         </form>
     );
 };

@@ -3,7 +3,7 @@ import React from 'react';
 
 const OutputDisplay = ({ output }) => {
     return (
-        <div>
+        <div className='output'>
             <h2>Output:</h2>
             <pre>{output}</pre>
         </div>

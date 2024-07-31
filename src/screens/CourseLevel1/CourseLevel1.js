@@ -25,9 +25,41 @@ const CourseLevel1 = () => {
 
     return (
         <div className="App">
-            <h1>Online Java Compiler</h1>
-            <CodeEditor onSubmit={handleCompileAndRun} />
-            <OutputDisplay output={output} />
+
+{/* HEADER */}
+            <header>
+                <div className='header-container'>
+                    
+                        <div className='menu-options'>
+                            <div id='courses'>Courses</div>
+                            <div id='library'>Library</div>
+                            <div id='friends'>Friends (coming soon)</div>
+                            <div id='calendar'>Calendar</div>
+                            <div id='faq'>FAQ</div>
+                            <div id='support'>Support</div>
+                        </div>
+                    
+                    <div className='hud flex'>
+                        <div className='level-bar'></div>
+                        <div className='data flex'>
+                            <div className='pp flex'>profile picture</div>
+                            <div className='heart bg flex'><span id='level'>1</span></div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+
+
+            <div className='container flex'>
+            <div className='code-container flex-c'>
+                <CodeEditor onSubmit={handleCompileAndRun} />
+                <OutputDisplay output={output} />
+            </div>
+            <div className='img-output'></div>
+            <div className='user-stories'></div>
+            </div>
+            
         </div>
     );
 };

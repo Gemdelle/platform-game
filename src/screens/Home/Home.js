@@ -18,6 +18,7 @@ const Home = () => {
                             <div id='courses'>Courses</div>
                             <div id='library'>Library</div>
                             <div id='friends'>Friends (coming soon)</div>
+                            <div id='calendar'>Calendar</div>
                             <div id='faq'>FAQ</div>
                             <div id='support'>Support</div>
                         </div>
