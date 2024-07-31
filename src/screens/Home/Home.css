@@ -1,4 +1,4 @@
-/* src/App.css */
+/* src/Home.css */
 .App {
   font-family: Arial, sans-serif;
   text-align: center;
@@ -61,7 +61,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background: blue; */
+  background: blue;
   margin: 0 auto;
 }
 
