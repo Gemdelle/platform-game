@@ -61,7 +61,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: blue;
+  /* background: blue; */
   margin: 0 auto;
 }
 
