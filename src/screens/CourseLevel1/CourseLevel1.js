@@ -1,8 +1,9 @@
 // src/App.js
 import React, { useState } from 'react';
-import CodeEditor from '../../components/CodeEditor';
-import OutputDisplay from '../../components/OutputDisplay';
+import CodeEditor from '../../components/CodeEditor/CodeEditor';
+import OutputDisplay from '../../components/OutputDisplay/OutputDisplay';
 import './CourseLevel1.css';
+import Header from "../../components/Header/Header";
 
 const CourseLevel1 = () => {
     const [output, setOutput] = useState('');
@@ -26,30 +27,7 @@ const CourseLevel1 = () => {
     return (
         <div className="App">
 
-{/* HEADER */}
-            <header>
-                <div className='header-container'>
-                    
-                        <div className='menu-options'>
-                            <div id='courses'>Courses</div>
-                            <div id='library'>Library</div>
-                            <div id='friends'>Friends (coming soon)</div>
-                            <div id='calendar'>Calendar</div>
-                            <div id='faq'>FAQ</div>
-                            <div id='support'>Support</div>
-                        </div>
-                    
-                    <div className='hud flex'>
-                        <div className='level-bar'></div>
-                        <div className='data flex'>
-                            <div className='pp flex'>profile picture</div>
-                            <div className='heart bg flex'><span id='level'>1</span></div>
-                        </div>
-                    </div>
-                </div>
-            </header>
-
-
+            <Header/>
 
             <div className='container flex'>
             <div className='code-container flex-c'>

@@ -1,6 +1,6 @@
 // src/components/CodeEditor.js
 import React, { useState } from 'react';
-
+import './CodeEditor.css';
 const CodeEditor = ({ onSubmit }) => {
     const [fatherCode, setFatherCode] = useState('');
     const [mainCode, setMainCode] = useState('');

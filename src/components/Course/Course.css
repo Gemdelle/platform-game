@@ -1,0 +1,93 @@
+/* COURSES */
+.course {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 3vw;
+    background-color: violet;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw;
+}
+
+h1 {
+    width: 30%;
+    background-color: lightblue;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+}
+
+/* COURSE DESCRIPTION */
+
+.course-description {
+    width: 100%;
+    background-color: lightcyan;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 1vw;
+    margin: 0 auto;
+}
+
+.course-description span {
+    margin-bottom: 1vw;
+    font-size: 1.2vw;
+}
+
+ul {
+    list-style: none; /* Remove default list bullets */
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin: 0vw 0vw 0.8vw 3.5vw;
+}
+
+.heart-bullet {
+    position: relative;
+    padding-left: 1.5vw; /* Adjust based on the size of the bullet */
+}
+
+.heart-bullet::before {
+    content: '';
+    position: absolute;
+    left: 20%;
+    top: 50%;
+    transform: translateY(-30%);
+    width: 2.5vw;
+    height: 2vw;
+    background-image: url('/public/assets/UI/heart.gif');
+    background-size: contain;
+}
+
+/* END COURSE DESCRIPTION */
+
+.levels {
+    width: 100%;
+    margin-top: 1vw;
+    background-color: pink;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.level {
+    width: 3vw;
+    height: 5vw;
+    margin: 0.4vw 0.95vw;
+    /* background-color: lightcoral; */
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+    background-image: url(/public/assets/UI/heart-dead.png);
+    color: white;
+}
+
+.level span {
+    margin-top: 2.2vw;
+    margin-left: 0.4vw;
+}
+
+.level:hover {
+    scale: 110%;
+}
