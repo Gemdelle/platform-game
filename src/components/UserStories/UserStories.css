@@ -1,0 +1,67 @@
+.user-stories {
+  width: 18%;
+  height: 100%;
+  background-color: pink;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.stories-container {
+    padding-top: 2vw;
+    background-color: gray;
+}
+
+ul {
+margin-top: 23vh;
+  list-style: none; /* Remove default list bullets */
+  padding: 0;
+  max-height: 70%;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width:none;
+}
+
+li {
+  margin: 0vw 0vw 0.8vw 4.5vw;
+  text-align: left; /* Justify the text */
+}
+
+.heart-bullet {
+  position: relative;
+  padding-left: 2vw; /* Adjust based on the size of the bullet */
+}
+
+.heart-bullet::before {
+  content: "";
+  position: absolute;
+  left: 0.5vw;
+  transform: translateY(-40%);
+  width: 4vw;
+  height: 4vw;
+  background-image: url("/public/assets/UI/heart.gif");
+  background-size: contain;
+}
+
+/* DEAD HEART */
+/* .heart-bullet::before {
+    content: "";
+    position: absolute;
+    left: 1.6vw;
+    transform: translateY(-40%);
+    width: 3vw;
+    height: 3vw;
+    background-image: url("/public/assets/UI/heart-dead.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  } */
+
+/* USER STORIES PROGRESS BAR */
+.bar {
+    position: absolute;
+    right: 19%;
+    bottom: 6vh;
+    width: 2vw;
+    height: 75%;
+    background-color: cyan;
+}

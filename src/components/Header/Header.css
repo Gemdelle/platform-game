@@ -20,19 +20,70 @@ header {
 
 /* MENU */
 
-.menu-options {
-    width: 20%;
+.menu {
+    width: 10%;
     height: 70%;
     background-color: lightgray;
+    margin-left: 6vw;
+}
+
+.logo {
+    position: absolute;
+    left: 2vw;
+    background-color: gold;
+    border-radius: 50%;
+    height: 60%;
+    width: 6%;
+    cursor: pointer;
+}
+
+.options {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     top: 0;
 }
 
-.menu-options div {
+.options div {
     cursor: pointer;
 }
+
+/* Menu Animation */
+
+.options {
+    animation: fadeInLeft 1s forwards;
+}
+
+.options.hidden {
+    animation: fadeOutLeft 1s forwards;
+}
+
+/* Keyframes for the animations */
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOutLeft {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-10%);
+    }
+}
+
+/* END Menu Animation */
 
 /* END-MENU */
 
@@ -46,7 +97,7 @@ header {
 
 .level-bar {
     right: 5%;
-    top: 25%;
+    top: 10%;
     position: absolute;
     width: 25%;
     height: 30%;
@@ -73,7 +124,7 @@ header {
 
 .heart {
     position: absolute;
-    top: 60%;
+    top: 50%;
     width: 60%;
     height: 60%;
     background-image: url('/public/assets/UI/heart.gif');

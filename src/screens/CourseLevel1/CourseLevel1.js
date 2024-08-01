@@ -4,6 +4,8 @@ import CodeEditor from '../../components/CodeEditor/CodeEditor';
 import OutputDisplay from '../../components/OutputDisplay/OutputDisplay';
 import './CourseLevel1.css';
 import Header from "../../components/Header/Header";
+import UserStories from '../../components/UserStories/UserStories';
+import Preview from '../../components/Preview/Preview';
 
 const CourseLevel1 = () => {
     const [output, setOutput] = useState('');
@@ -32,8 +34,8 @@ const CourseLevel1 = () => {
                 <CodeEditor onSubmit={handleCompileAndRun} />
                 <OutputDisplay output={output} />
             </div>
-            <div className='img-output'></div>
-            <div className='user-stories'></div>
+            <Preview></Preview>
+            <UserStories></UserStories>
             </div>
             
         </div>
