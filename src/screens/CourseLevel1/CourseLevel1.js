@@ -12,7 +12,7 @@ const CourseLevel1 = () => {
 
     const handleCompileAndRun = async (fatherCode, mainCode) => {
         try {
-            const response = await fetch('https://quiet-badlands-42095-c0012ddb8417.herokuapp.com:3000/compile', {
+            const response = await fetch('https://quiet-badlands-42095-c0012ddb8417.herokuapp.com/compile', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

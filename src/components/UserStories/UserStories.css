@@ -13,13 +13,13 @@
 }
 
 ul {
-margin-top: 23vh;
   list-style: none; /* Remove default list bullets */
   padding: 0;
   max-height: 70%;
   overflow: scroll;
   scroll-behavior: smooth;
   scrollbar-width:none;
+    z-index: 2;
 }
 
 li {
@@ -64,4 +64,14 @@ li {
     width: 2vw;
     height: 75%;
     background-color: cyan;
+    z-index: 1;
+}
+
+.score {
+    margin-top: 16vh;
+    background-color: yellowgreen;
+    color: black;
+    z-index: 2;
+    height: 4vw;
+    width: 8vw;
 }
