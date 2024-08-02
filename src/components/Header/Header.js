@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import FAQ from "../../components/FAQ/FAQ";
 import './Header.css';
 
 const Header = () => {
     const [showOptions, setShowOptions] = useState(true);
     const [animating, setAnimating] = useState(false);
+    const [showFAQ, setShowFAQ] = useState(false);
 
     useEffect(() => {
         const savedState = localStorage.getItem('showOptions');
@@ -28,6 +30,24 @@ const Header = () => {
         }
     };
 
+
+    const handleFAQClick = () => {
+        setShowFAQ(true);
+    };
+
+    const handleCloseFAQ = () => {
+        setShowFAQ(false);
+    };
+
+
+    // const handleFAQClick = () => {
+    //     setShowFAQ(true);
+    // };
+
+    // const handleCloseFAQ = () => {
+    //     setShowFAQ(false);
+    // };
+
     return (
         <header>
             <div className='header-container'>
@@ -39,7 +59,7 @@ const Header = () => {
                             <div id='library'>Library</div>
                             <div id='friends'>Friends (coming soon)</div>
                             <div id='calendar'>Calendar</div>
-                            <div id='faq'>FAQ</div>
+                            <div id='faq' onClick={handleFAQClick}>FAQ</div>
                             <div id='support'>Support</div>
                         </div>
                     )}
@@ -53,6 +73,8 @@ const Header = () => {
                     </div>
                 </div>
             </div>
+
+            {showFAQ && <FAQ onClose={handleCloseFAQ} />}
         </header>
     );
 };
