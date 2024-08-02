@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import FAQ from "../../components/FAQ/FAQ";
 import './Header.css';
+import FAQ from "../../components/FAQ/FAQ";
+import Support from '../Support/Support';
+import Calendar from '../Calendar/Calendar';
 
 const Header = () => {
     const [showOptions, setShowOptions] = useState(true);
     const [animating, setAnimating] = useState(false);
     const [showFAQ, setShowFAQ] = useState(false);
+    const [showSupport, setShowSupport] = useState(false);
+    const [showCalendar, setShowCalendar] = useState(false);
 
     useEffect(() => {
         const savedState = localStorage.getItem('showOptions');
@@ -30,6 +34,7 @@ const Header = () => {
         }
     };
 
+    // MENU BUTTONS
 
     const handleFAQClick = () => {
         setShowFAQ(true);
@@ -40,13 +45,21 @@ const Header = () => {
     };
 
 
-    // const handleFAQClick = () => {
-    //     setShowFAQ(true);
-    // };
+    const handleSupportClick = () => {
+        setShowSupport(true);
+    };
 
-    // const handleCloseFAQ = () => {
-    //     setShowFAQ(false);
-    // };
+    const handleCloseSupport = () => {
+        setShowSupport(false);
+    };
+
+    const handleCalendarClick = () => {
+        setShowCalendar(true);
+    };
+
+    const handleCloseCalendar = () => {
+        setShowCalendar(false);
+    };
 
     return (
         <header>
@@ -58,9 +71,9 @@ const Header = () => {
                             <div id='courses'>Courses</div>
                             <div id='library'>Library</div>
                             <div id='friends'>Friends (coming soon)</div>
-                            <div id='calendar'>Calendar</div>
+                            <div id='calendar' onClick={handleCalendarClick}>Calendar</div>
                             <div id='faq' onClick={handleFAQClick}>FAQ</div>
-                            <div id='support'>Support</div>
+                            <div id='support' onClick={handleSupportClick}>Support</div>
                         </div>
                     )}
                 </div>
@@ -75,6 +88,8 @@ const Header = () => {
             </div>
 
             {showFAQ && <FAQ onClose={handleCloseFAQ} />}
+            {showSupport && <Support onClose={handleCloseSupport} />}
+            {showCalendar && <Calendar onClose={handleCloseCalendar} />}
         </header>
     );
 };
