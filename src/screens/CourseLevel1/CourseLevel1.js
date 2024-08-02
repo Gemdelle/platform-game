@@ -6,6 +6,7 @@ import './CourseLevel1.css';
 import Header from "../../components/Header/Header";
 import UserStories from '../../components/UserStories/UserStories';
 import Preview from '../../components/Preview/Preview';
+import Instructions from "../../components/Instructions/Instructions";
 
 const CourseLevel1 = () => {
     const [output, setOutput] = useState('');
@@ -28,6 +29,7 @@ const CourseLevel1 = () => {
 
     return (
         <div className="App">
+            <Instructions />
             <Header/>
             <div className='container flex'>
             <div className='code-container flex-c'>

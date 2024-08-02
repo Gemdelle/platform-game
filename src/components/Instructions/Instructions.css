@@ -1,0 +1,10 @@
+.instructions{
+    position: absolute;
+    top: 1vw;
+    left: 4vw;
+    width: 63vw;
+    height: 4.5vw;
+    background-color: blueviolet;
+    display: flex;
+    align-items: center;
+}
