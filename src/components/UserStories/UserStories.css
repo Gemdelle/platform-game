@@ -64,14 +64,14 @@ li {
     width: 2vw;
     height: 75%;
     background-color: cyan;
-    z-index: 1;
+    z-index: 50;
 }
 
 .score {
     margin-top: 16vh;
     background-color: yellowgreen;
     color: black;
-    z-index: 2;
+    z-index: 900;
     height: 4vw;
     width: 8vw;
 }

@@ -3,8 +3,7 @@ import React from 'react';
 import './OutputDisplay.css';
 const OutputDisplay = ({ output }) => {
     return (
-        <div className='output'>
-            <h2>Output:</h2>
+        <div className='output flex'>
             <pre>{output}</pre>
         </div>
     );

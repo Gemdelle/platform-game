@@ -2,8 +2,15 @@
 
 .output {
     height: 15%;
-    width: 100%;
+    width: 70%;
     background-color: blue;
+}
+
+pre {
+    height: 70%;
+    width: 90%;
+    padding: 0;
+    margin: 0;
 }
 
 /* END OUTPUT */

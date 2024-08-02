@@ -12,8 +12,13 @@ const CodeEditor = ({ onSubmit }) => {
 
     return (
         <form onSubmit={handleSubmit} >
-            <div className='code-area flex-c bg'>
-            <h2>Father.java</h2>
+            <div className='code-area bg'>
+
+            <div className='arrows'>
+                <div className='arrow arr-2'></div>
+                <div className='arrow arr-1'></div>
+            </div>
+            <div className='title'>Father.java</div>
             <textarea
                 value={fatherCode}
                 onChange={(e) => setFatherCode(e.target.value)}
