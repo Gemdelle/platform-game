@@ -3,5 +3,5 @@ h2 {
 }
 
 .popup {
-    background-color: lightpink;
+    background-image: url(/public/assets/popup.png);
 }

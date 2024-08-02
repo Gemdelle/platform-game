@@ -1,7 +1,10 @@
 /* src/Home.css */
+@font-face {
+  font-family: 'BlackwoodCastle';
+  src: url('/public/assets/fonts/BlackwoodCastle.TTF') format('truetype');
+}
 .App {
-  font-family: Arial, sans-serif;
-  text-align: center;
+  font-family: 'BlackwoodCastle', sans-serif;
 }
 
 textarea {
