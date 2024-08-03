@@ -4,14 +4,58 @@
     height: auto;
     margin: 0 auto;
     margin-top: 3vw;
-    background-color: violet;
+    background-image: url('/public/assets/course-background.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    padding: 2vw;
+    justify-content: center;
+    align-items: center;
+    padding: 2vmax;
 }
 
+.course-container {
+    position: relative;
+    width: 90%;
+    height: 80%;
+    background-color: rgba(0.5, 0.5, 0.5, 0.5);
+    padding: 4vmax;
+}
+
+/* CORNERS */
+
+.corners {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(100, 234, 60, 0.5);
+    z-index: 9;
+}
+
+.corner-1,
+.corner-2,
+.corner-3,
+.corner-4 {
+    position: absolute;
+    width: 10vmax;
+    height: 10vmax;
+    background-image: url('/public/assets/corner.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 10% 10%;
+}
+
+.corner-2 {
+    right: 0;
+    transform: rotate(270deg);
+}
+
+/* END CORNERS */
+
 h1 {
-    width: 30%;
+    width: 100%;
     background-color: lightblue;
     display: flex;
     justify-content: flex-start;
@@ -23,24 +67,27 @@ h1 {
 
 .course-description {
     width: 100%;
+    padding: 1vmax 0;
     background-color: lightcyan;
     display: flex;
     flex-direction: column;
     align-items: start;
-    padding: 1vw;
-    
+}
+
+.levels {
+    width: 100%;
+    background-color: pink;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .course-description span {
-
     font-size: 1.8vw;
-   
 }
 
 ul {
     list-style: none; /* Remove default list bullets */
     padding: 0;
-
 }
 
 li {
@@ -50,7 +97,6 @@ li {
 .heart-bullet {
     position: relative;
     padding-left: 1.5vw; /* Adjust based on the size of the bullet */
-    
 }
 
 .heart-bullet::before {
@@ -66,14 +112,6 @@ li {
 }
 
 /* END COURSE DESCRIPTION */
-
-.levels {
-    width: 100%;
-    margin-top: 1vw;
-    background-color: pink;
-    display: flex;
-    flex-wrap: wrap;
-}
 
 .level {
     width: 3vw;
