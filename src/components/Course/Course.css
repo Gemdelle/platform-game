@@ -44,9 +44,9 @@
     background-image: url('/public/assets/corner.png');
     background-size: contain;
     background-repeat: no-repeat;
-    background-color: red;
-    /* background-origin: ; */
-    /* background-position: ; */
+    /* background-color: red; */
+    background-position: 0.7vmax 0.7vmax; /* Ajusta estos valores para mover la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
 
 .corner-1 {
