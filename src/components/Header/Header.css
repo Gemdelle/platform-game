@@ -115,12 +115,17 @@ header {
     align-items: center;
 }
 
-.pp {
+.pp-container {
     height: 80%;
     width: 100%;
     background-color: rgb(65, 31, 31);
+    background-image: url('/public/assets/character-frame.png');
     border-radius: 50%;
     color: white;
+}
+
+.pp {
+    background-image: url('/public/assets/character-frame.png');
 }
 
 .heart {

@@ -92,7 +92,9 @@ const Header = () => {
                 <div className='flex-e hud'>
                     <div className='level-bar'></div>
                     <div className='data flex-s'>
-                        <div className='pp flex'>profile picture</div>
+                        <div className='pp-container flex bg'>
+                            <div className='pp bg'></div>
+                        </div>
                         <div className='heart bg flex'><span id='level'>1</span></div>
                     </div>
                 </div>
