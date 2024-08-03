@@ -65,7 +65,7 @@ li {
 /* USER STORIES PROGRESS BAR */
 .bar {
     position: absolute;
-    right: 19%;
+    right: 30%;
     bottom: 6vh;
     width: 2vw;
     height: 75%;

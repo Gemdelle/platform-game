@@ -1,6 +1,6 @@
 .preview {
     width: 35%;
     height: 70%;
-    background-color: black;
+    background-image: url('/public/assets/pets/pet-1.gif');
     margin-right: 2vw;
   }
