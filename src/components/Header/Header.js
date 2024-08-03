@@ -1,12 +1,12 @@
-import React, {useState, useEffect} from 'react';
-import {signOut} from "firebase/auth";
+import React, { useState, useEffect } from 'react';
+import { signOut } from "firebase/auth";
 import './Header.css';
 import FAQ from "../../components/FAQ/FAQ";
 import Support from '../Support/Support';
 import Calendar from '../Calendar/Calendar';
-import {auth} from "../../firebase";
-import {useUser} from "../utils/UserProvider";
-import {useNavigate} from "react-router-dom";
+import { auth } from "../../firebase";
+import { useUser } from "../utils/UserProvider";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
     const [showOptions, setShowOptions] = useState(true);
@@ -47,8 +47,7 @@ const Header = () => {
         }
     };
 
-    // MENU BUTTONS
-
+    // Handling clicks for menu items
     const handleFAQClick = () => {
         setShowFAQ(true);
     };
@@ -56,7 +55,6 @@ const Header = () => {
     const handleCloseFAQ = () => {
         setShowFAQ(false);
     };
-
 
     const handleSupportClick = () => {
         setShowSupport(true);
@@ -74,6 +72,12 @@ const Header = () => {
         setShowCalendar(false);
     };
 
+    const handleCoursesClick = () => {
+        navigate('/'); // Ruta a la que quieres redirigir
+    };
+
+   
+
     return (
         <header>
             <div className='header-container'>
@@ -82,7 +86,7 @@ const Header = () => {
                     <div className='logo' onClick={handleLogoClick}></div>
                     {showOptions && (
                         <div className={`options ${animating ? 'hidden' : ''}`}>
-                            <div id='courses'>Courses</div>
+                            <div id='courses' onClick={handleCoursesClick}>Courses</div>
                             <div id='library'>Library</div>
                             <div id='friends'>Friends (coming soon)</div>
                             <div id='calendar' onClick={handleCalendarClick}>Calendar</div>

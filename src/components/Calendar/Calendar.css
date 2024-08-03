@@ -4,4 +4,38 @@ h2 {
 
 .popup {
     /* background-color: lightpink; */
+    background-image: url(/public/assets/coding-area.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.centered-background {
+    background-color: rgb(255, 0, 0);
+    width: 600px; /* Ajusta el tamaño del contenedor principal */
+    height: 600px; /* Ajusta el tamaño del contenedor principal */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.grid {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Espacio entre filas */
+}
+
+.row {
+    display: flex;
+    gap: 5px; /* Espacio entre columnas */
+}
+
+.square {
+    background-color: black;
+    width: 30px; /* Tamaño de cada cuadrado */
+    height: 30px; /* Tamaño de cada cuadrado */
 }
