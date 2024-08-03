@@ -16,6 +16,7 @@ h1 {
     display: flex;
     justify-content: flex-start;
     margin: 0;
+    font-size: 3vw;
 }
 
 /* COURSE DESCRIPTION */
@@ -27,27 +28,29 @@ h1 {
     flex-direction: column;
     align-items: start;
     padding: 1vw;
-    margin: 0 auto;
+    
 }
 
 .course-description span {
-    margin-bottom: 1vw;
-    font-size: 1.2vw;
+
+    font-size: 1.8vw;
+   
 }
 
 ul {
     list-style: none; /* Remove default list bullets */
     padding: 0;
-    margin: 0;
+
 }
 
 li {
-    margin: 0vw 0vw 0.8vw 3.5vw;
+    margin: 1vw 0vw 0.8vw 3.5vw;
 }
 
 .heart-bullet {
     position: relative;
     padding-left: 1.5vw; /* Adjust based on the size of the bullet */
+    
 }
 
 .heart-bullet::before {

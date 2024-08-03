@@ -15,21 +15,27 @@
 ul {
   list-style: none; /* Remove default list bullets */
   padding: 0;
+  margin-bottom: -2vh;
   max-height: 70%;
   overflow: scroll;
   scroll-behavior: smooth;
   scrollbar-width:none;
     z-index: 2;
+
 }
 
 li {
-  margin: 0vw 0vw 0.8vw 4.5vw;
+  margin: 0.4vw 0vw 0.8vw 3.5vw;
   text-align: left; /* Justify the text */
+  margin-bottom: 1vw;
+  padding: 1px 1px;
+  font-size: 1.5vw;
 }
 
 .heart-bullet {
-  position: relative;
+  position: absolute;
   padding-left: 2vw; /* Adjust based on the size of the bullet */
+  margin-top: 7px
 }
 
 .heart-bullet::before {
@@ -37,8 +43,8 @@ li {
   position: absolute;
   left: 0.5vw;
   transform: translateY(-40%);
-  width: 4vw;
-  height: 4vw;
+  width: 3vw;
+  height: 3vw;
   background-image: url("/public/assets/UI/heart.gif");
   background-size: contain;
 }

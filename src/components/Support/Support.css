@@ -10,19 +10,26 @@
     display: flex;
     flex-direction: column;
     align-items: end;
+    
+    
+    
 }
 
 .support-text {
     width: 100%;
     height: 25%;
     /* background-color: blue; */
+    
+    
+    
 }
 
 .support-text h2 {
-    width: 50%;
+    width: 45%;
     height: 10%;
     /* background-color: white; */
     font-size: 2vmax;
+    margin-top: 1vw;
 }
 
 .support-text p {
@@ -30,7 +37,11 @@
     margin-left: 7vw;
     /* background-color: pink; */
     text-align: left;
-    font-size: 0.8vw;
+    font-size: 1vw;
+    margin-top: 1vw;
+    
+    
+    
 }
 
 .support-text-area {
@@ -41,6 +52,8 @@
     margin: 0 auto;
     resize: none;
     /* background-color: white; */
+    
+    
 }
 
 textarea:focus {
@@ -63,6 +76,7 @@ textarea::placeholder {
     height: 35%;
     width: 75%;
     /* background-color: pink; */
+    
 }
 
 .submit-btn {
@@ -77,4 +91,5 @@ textarea::placeholder {
 .submit-btn:hover {
     scale: 105%;
     cursor: pointer;
+    
 }
