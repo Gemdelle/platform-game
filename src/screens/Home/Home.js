@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 import './Home.css';
 import Header from "../../components/Header/Header";
@@ -8,24 +8,40 @@ import {auth} from "../../firebase";
 import { signInWithPopup, GoogleAuthProvider, signInWithEmailAndPassword  } from 'firebase/auth';
 import {useUser} from "../../components/utils/UserProvider";
 import axios from "axios";
+import {useNavigate} from "react-router-dom";
 
 const Home = () => {
     const [user, loading, error] = useAuthState(auth);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const { setUserProfile } = useUser();
+    const { userProfile, setUserProfile } = useUser();
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        const storedUserProfile = localStorage.getItem('userProfile');
+        if (storedUserProfile) {
+            setUserProfile(JSON.parse(storedUserProfile));
+        }
+    }, [setUserProfile]);
+
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
             const result = await  signInWithEmailAndPassword(auth, email, password);
-            debugger
+            const idToken = await result.user.getIdToken()
             const response = await axios.get('https://quiet-badlands-42095-c0012ddb8417.herokuapp.com/profile', {
                 headers: {
-                    'Authorization': `Bearer ${result.user.uid}`
+                    'Authorization': `Bearer ${idToken}`
                 }
             });
 
             setUserProfile(response.data);
+            localStorage.setItem('userProfile', JSON.stringify(response.data));
+
+            if (response.data.profile.avatar === 'default_avatar') {
+                navigate('/avatar-selection')
+            }
+
             console.log("Login successful");
         } catch (error) {
             console.error("Error logging in:", error.message);
@@ -34,7 +50,6 @@ const Home = () => {
     const signInWithGoogle = async () => {
         const provider = new GoogleAuthProvider();
         const result = await signInWithPopup(auth, provider);
-        debugger
         const idToken = await result.user.getIdToken()
 
         const response = await axios.get('https://quiet-badlands-42095-c0012ddb8417.herokuapp.com/profile', {
@@ -44,12 +59,16 @@ const Home = () => {
         });
 
         setUserProfile(response.data);
+        localStorage.setItem('userProfile', JSON.stringify(response.data));
+        if (response.data.profile.avatar === 'default_avatar') {
+            navigate('/avatar-selection')
+        }
     };
 
     if (loading) {
         return <div>Loading...</div>;
     }
-    if (user) {
+    if (userProfile) {
         return (
             <div className="App">
                 <Header/>

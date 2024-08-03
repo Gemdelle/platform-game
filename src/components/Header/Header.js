@@ -5,6 +5,8 @@ import FAQ from "../../components/FAQ/FAQ";
 import Support from '../Support/Support';
 import Calendar from '../Calendar/Calendar';
 import {auth} from "../../firebase";
+import {useUser} from "../utils/UserProvider";
+import {useNavigate} from "react-router-dom";
 
 const Header = () => {
     const [showOptions, setShowOptions] = useState(true);
@@ -12,13 +14,14 @@ const Header = () => {
     const [showFAQ, setShowFAQ] = useState(false);
     const [showSupport, setShowSupport] = useState(false);
     const [showCalendar, setShowCalendar] = useState(false);
+    const { userProfile, setUserProfile } = useUser();
+    const navigate = useNavigate();
 
-    const handleSignOut = () => {
-        signOut(auth).then(() => {
-            console.log("User signed out successfully");
-        }).catch((error) => {
-            console.error("Error signing out: ", error);
-        });
+    const handleSignOut = async () => {
+        await signOut(auth);
+        localStorage.removeItem('userProfile');
+        setUserProfile(null);
+        navigate('/');
     };
 
     useEffect(() => {
@@ -88,14 +91,13 @@ const Header = () => {
                         </div>
                     )}
                 </div>
-
                 <div className='flex-e hud'>
                     <div className='level-bar bg'></div>
                     <div className='data flex-s'>
                         <div className='pp-container flex'>
-                            <div className='pp bg'></div>
+                            <div className='pp bg' style={{backgroundImage:`url("/assets/pets/${userProfile.profile.avatar}-${userProfile.profile.level}-profile.gif")`}}></div>
                         </div>
-                        <div className='heart bg flex'><span id='level'>1</span></div>
+                        <div className='heart bg flex'><span id='level'>{userProfile.profile.level}</span></div>
                     </div>
                 </div>
             </div>

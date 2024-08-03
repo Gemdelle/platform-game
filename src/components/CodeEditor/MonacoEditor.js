@@ -9,11 +9,11 @@ const CodeEditor = ({ onSubmit }) => {
     useEffect(() => {
         loader.init().then(monaco => {
             monaco.editor.defineTheme('gemy-theme', {
-                base: 'vs-dark', // You can change this to 'vs' for a light base theme
+                base: 'vs-dark',
                 inherit: true,
                 rules: [],
                 colors: {
-                    'editor.background': '#00000000', // Transparent background
+                    'editor.background': '#00000000',
                 }
             });
         });
@@ -65,17 +65,6 @@ const CodeEditor = ({ onSubmit }) => {
                 />
             <button type="submit" className='compile-button'>Compile & Run</button>
             </div>
-            
-            {/* <h2>Main.java</h2>
-            <textarea
-                value={mainCode}
-                onChange={(e) => setMainCode(e.target.value)}
-                placeholder="Write your Main.java code here..."
-                rows="10"
-                cols="50"
-                className='bg'
-            ></textarea> */}
-            
         </form>
     );
 };

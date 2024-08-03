@@ -132,7 +132,7 @@ header {
 .pp {
     height: 80%;
     width: 100%;
-    background-image: url('/public/assets/pets/pet-1-profile.gif');
+    /*background-image: url('/public/assets/pets/caterpillar-1-profile.gif');*/
     /* background-color: rgb(65, 31, 31); */
     border-radius: 50%;
     color: white;
