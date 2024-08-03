@@ -37,7 +37,7 @@ const Home = () => {
         debugger
         const idToken = await result.user.getIdToken()
 
-        const response = await axios.get('http://localhost:3001/profile', {
+        const response = await axios.get('https://quiet-badlands-42095-c0012ddb8417.herokuapp.com/profile', {
             headers: {
                 'Authorization': `Bearer ${idToken}`
             }
