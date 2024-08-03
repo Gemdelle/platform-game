@@ -1,5 +1,5 @@
 header {
-    height: 10vw;
+    height: 11vw;
     width: 100vw;
     /* background-color: red; */
     display: flex;
@@ -97,17 +97,17 @@ header {
 }
 
 .level-bar {
-    right: 5%;
+    right: 11%;
     top: 10%;
     position: absolute;
-    width: 25%;
-    height: 30%;
-    background-color: burlywood;
+    width: 22%;
+    height: 50%;
+    background-image: url('/public/assets/level-bar.png');
 }
 
 .data {
     position: relative;
-    width: 30%;
+    width: 50%;
     height: 100%;
     /* background-color: brown; */
     display: flex;
@@ -116,23 +116,26 @@ header {
 }
 
 .pp-container {
-    height: 80%;
+    height: 100%;
     width: 100%;
-    background-color: rgb(65, 31, 31);
+    /* background-color: rgb(65, 31, 31); */
     background-image: url('/public/assets/character-frame.png');
-    border-radius: 50%;
+    background-size: 100%;
+    background-position-y: -30;
+    background-repeat: no-repeat;
     color: white;
 }
 
 .pp {
-    background-image: url('/public/assets/character-frame.png');
+    background-image: url('/public/assets/pets/pet-1-profile.gif');
+    background-color: transparent;
 }
 
 .heart {
     position: absolute;
-    top: 50%;
-    width: 60%;
-    height: 60%;
+    top: 65%;
+    width: 45%;
+    height: 45%;
     background-image: url('/public/assets/UI/heart.gif');
     color: white;
 }
