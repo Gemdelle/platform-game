@@ -24,17 +24,17 @@ ul {
 
 }
 
-li {
+/* li {
   margin: 0.4vw 0vw 0.8vw 3.5vw;
-  text-align: left; /* Justify the text */
+  text-align: left;
   margin-bottom: 1vw;
   padding: 1px 1px;
   font-size: 1.5vw;
-}
+} */
 
-.heart-bullet {
+/* .heart-bullet {
   position: absolute;
-  padding-left: 2vw; /* Adjust based on the size of the bullet */
+  padding-left: 2vw;
   margin-top: 7px
 }
 
@@ -47,7 +47,7 @@ li {
   height: 3vw;
   background-image: url("/public/assets/UI/heart.gif");
   background-size: contain;
-}
+} */
 
 /* DEAD HEART */
 /* .heart-bullet::before {

@@ -80,12 +80,13 @@
     align-items: center;
     justify-content: center;
     padding: 2vmax;
-    background-color: rgba(100,100,10,0.5);
+    padding-bottom: 3vmax;
+    /* background-color: rgba(100,100,10,0.5); */
 }
 
 h1 {
     width: 80%;
-    background-color: lightblue;
+    /* background-color: lightblue; */
     display: flex;
     justify-content: center;
     margin: 0;
@@ -96,7 +97,7 @@ h1 {
 
 .course-description {
     width: 90%;
-    background-color: lightcyan;
+    /* background-color: lightcyan; */
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -116,27 +117,32 @@ h1 {
 ul {
     list-style: none; /* Remove default list bullets */
     padding: 0;
+    margin: 0;
 }
 
 li {
-    margin: 1vw 0vw 0.8vw 3.5vw;
-}
+    margin-left: 3.5vw;
+    text-align: left;
+    font-size: 1.4vw;
+  }
 
+/* li:last-child {
+    margin-bottom: 1vw;
+} */
+  
 .heart-bullet {
     position: relative;
-    padding-left: 1.5vw; /* Adjust based on the size of the bullet */
 }
 
 .heart-bullet::before {
     content: '';
     position: absolute;
-    left: 20%;
-    top: 50%;
-    transform: translateY(-30%);
+    left: 25%;
     width: 2.5vw;
-    height: 2vw;
+    height: 1.7vw;
     background-image: url('/public/assets/UI/heart.gif');
     background-size: contain;
+    background-repeat: no-repeat;
 }
 
 /* END COURSE DESCRIPTION */
