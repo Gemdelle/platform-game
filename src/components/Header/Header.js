@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
+import {getAuth, signOut} from "firebase/auth";
 import './Header.css';
 import FAQ from "../../components/FAQ/FAQ";
 import Support from '../Support/Support';
 import Calendar from '../Calendar/Calendar';
+import {auth} from "../../firebase";
 
 const Header = () => {
     const [showOptions, setShowOptions] = useState(true);
@@ -10,6 +12,14 @@ const Header = () => {
     const [showFAQ, setShowFAQ] = useState(false);
     const [showSupport, setShowSupport] = useState(false);
     const [showCalendar, setShowCalendar] = useState(false);
+
+    const handleSignOut = () => {
+        signOut(auth).then(() => {
+            console.log("User signed out successfully");
+        }).catch((error) => {
+            console.error("Error signing out: ", error);
+        });
+    };
 
     useEffect(() => {
         const savedState = localStorage.getItem('showOptions');
@@ -65,6 +75,7 @@ const Header = () => {
         <header>
             <div className='header-container'>
                 <div className='menu'>
+                    <button onClick={handleSignOut}>Logout</button>
                     <div className='logo' onClick={handleLogoClick}></div>
                     {showOptions && (
                         <div className={`options ${animating ? 'hidden' : ''}`}>
@@ -87,9 +98,9 @@ const Header = () => {
                 </div>
             </div>
 
-            {showFAQ && <FAQ onClose={handleCloseFAQ} />}
-            {showSupport && <Support onClose={handleCloseSupport} />}
-            {showCalendar && <Calendar onClose={handleCloseCalendar} />}
+            {showFAQ && <FAQ onClose={handleCloseFAQ}/>}
+            {showSupport && <Support onClose={handleCloseSupport}/>}
+            {showCalendar && <Calendar onClose={handleCloseCalendar}/>}
         </header>
     );
 };
