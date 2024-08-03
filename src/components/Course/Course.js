@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Course.css';
 import {useNavigate} from "react-router-dom";
 const Course = ({name, description:{ message, itemCount }, levels = 1, navigationUrl}) => {

@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {getAuth, signOut} from "firebase/auth";
+import {signOut} from "firebase/auth";
 import './Header.css';
 import FAQ from "../../components/FAQ/FAQ";
 import Support from '../Support/Support';

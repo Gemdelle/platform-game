@@ -11,7 +11,7 @@ import axios from "axios";
 import {useNavigate} from "react-router-dom";
 
 const Home = () => {
-    const [user, loading, error] = useAuthState(auth);
+    const [, loading] = useAuthState(auth);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const { userProfile, setUserProfile } = useUser();
