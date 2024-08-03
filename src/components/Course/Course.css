@@ -70,11 +70,24 @@
 
 /* END CORNERS */
 
+.course-description-container {
+    width: 80%;
+    background-image: url('/public/assets/level-description-background.png');
+    background-size: 100% 100%;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2vmax;
+    background-color: rgba(100,100,10,0.5);
+}
+
 h1 {
-    width: 100%;
+    width: 80%;
     background-color: lightblue;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     margin: 0;
     font-size: 3vw;
 }
@@ -82,8 +95,7 @@ h1 {
 /* COURSE DESCRIPTION */
 
 .course-description {
-    width: 100%;
-    padding: 1vmax 0;
+    width: 90%;
     background-color: lightcyan;
     display: flex;
     flex-direction: column;
@@ -91,8 +103,8 @@ h1 {
 }
 
 .levels {
-    width: 100%;
-    background-color: pink;
+    width: 80%;
+    /* background-color: pink; */
     display: flex;
     flex-wrap: wrap;
 }

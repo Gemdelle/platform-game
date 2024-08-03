@@ -19,6 +19,7 @@ const Course = ({ name, description: { message, itemCount }, levels = 1, navigat
                     <div className='corner-3'></div>
                     <div className='corner-4'></div>
                 </div>
+                <div className='course-description-container'>
                 <h1>{name}</h1>
                 <div className='course-description'>
                     <span>{message}</span>
@@ -27,6 +28,7 @@ const Course = ({ name, description: { message, itemCount }, levels = 1, navigat
                             return (<div key={`${name}-${index}`}><div className='heart-bullet bg'></div><li>Item {number}</li></div>);
                         })}
                     </ul>
+                </div>
                 </div>
                 <div className='levels'>
                     {levelsRange.map((number) => {
