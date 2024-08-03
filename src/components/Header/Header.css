@@ -21,10 +21,13 @@ header {
 /* MENU */
 
 .menu {
-    width: 10%;
+    width: 15%;
     height: 70%;
     background-color: lightgray;
     margin-left: 3vw;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .logo {
@@ -127,9 +130,13 @@ header {
 }
 
 .pp {
+    height: 80%;
+    width: 100%;
     background-image: url('/public/assets/pets/pet-1-profile.gif');
-    background-color: transparent;
-}
+    /* background-color: rgb(65, 31, 31); */
+    border-radius: 50%;
+    color: white;
+  }
 
 .heart {
     position: absolute;

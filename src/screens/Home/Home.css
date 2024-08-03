@@ -71,84 +71,15 @@ header {
 
 /* MENU */
 
-.menu {
-  width: 30%;
-  height: 100%;
-  /* background-color: yellowgreen; */
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
 
-.menu-options {
-  width: 50%;
-  height: 90%;
-  background-color: lightgray;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
 
-.menu-options div {
-  cursor: pointer;
-}
 
-/* END-MENU */
 
-/* HUD */
 
-.hud {
-  width: 30%;
-  height: 100%;
-  /* background-color: aquamarine; */
-  justify-content: flex-end;
-}
 
-.level-bar {
-  right: 5%;
-  top: 25%;
-  position: absolute;
-  width: 25%;
-  height: 30%;
-  background-color: burlywood;
-}
 
-.data {
-  position: relative;
-  width: 30%;
-  height: 100%;
-  /* background-color: brown; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
-.pp {
-  height: 80%;
-  width: 100%;
-  background-color: rgb(65, 31, 31);
-  border-radius: 50%;
-  color: white;
-}
 
-.heart {
-  position: absolute;
-  top: 60%;
-  width: 60%;
-  height: 60%;
-  background-image: url('/public/assets/UI/heart.gif');
-  color: white;
-}
-
-.heart span {
-  margin-top: 20%;
-}
-
-#level {
-
-}
-
-/* END HUD */
 
 
 
