@@ -52,7 +52,7 @@ const Home = () => {
         const result = await signInWithPopup(auth, provider);
         const idToken = await result.user.getIdToken()
 
-        const response = await axios.get('https://quiet-badlands-42095-c0012ddb8417.herokuapp.com/profile', {
+        const response = await axios.get('http://localhost:3001/profile', {
             headers: {
                 'Authorization': `Bearer ${idToken}`
             }
@@ -73,25 +73,20 @@ const Home = () => {
             <div className="App">
                 <Header/>
                 <div className='header-space'></div>
-                <Course
-                    name={"COURSE 1"}
-                    description={{
-                        message: "The course -name- us about -description. Once finished, you will know how to:",
-                        itemCount: 4
-                    }}
-                    levels={25}
-                    navigationUrl={'/course/1/'}
-                />
-
-                <Course
-                    name={"COURSE 2"}
-                    description={{
-                        message: "The course -name- us about -description. Once finished, you will know how to:",
-                        itemCount: 4
-                    }}
-                    levels={13}
-                    navigationUrl={'/course/2/'}
-                />
+                {userProfile.progress.courses.map((course, index) => {
+                    return (
+                        <Course
+                            key={`course-${index}`}
+                            name={course.name}
+                            description={{
+                                message: course.description,
+                                itemCount: course.item_count
+                            }}
+                            levels={course.total}
+                            navigationUrl={`/course/${index+1}/`}
+                        />
+                    )
+                })}
             </div>
         );
     }

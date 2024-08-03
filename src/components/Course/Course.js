@@ -16,8 +16,8 @@ const Course = ({name, description:{ message, itemCount }, levels = 1, navigatio
             <div className='course-description'>
                 <span>{message}</span>
                 <ul>
-                    {itemsRange.map((number) => {
-                        return (<div><div className='heart-bullet bg'></div><li>Item {number}</li></div>);
+                    {itemsRange.map((number, index) => {
+                        return (<div key={`${name}-${index}`}><div className='heart-bullet bg'></div><li>Item {number}</li></div>);
                     })}
                 </ul>
             </div>
