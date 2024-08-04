@@ -68,25 +68,6 @@ header {
   /* background: blue; */
   margin: 0 auto;
 }
- 
-.hidden {
-  display: none;
-}
-
-#imageContainer {
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -20%);
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 10px;
-  border-radius: 8px;
-}
-
-#popupImage {
-  width: 300px; /* Ajusta el tamaño de la imagen según sea necesario */
-  height: auto;
-}
 
 /* MENU */
 

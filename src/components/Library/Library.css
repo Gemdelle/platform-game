@@ -6,6 +6,9 @@
     width: 100vw;
     background-size: 65% !important;
     background-color: rgba(32, 39, 31, 0.95);
+    background-image: url(/public/assets/library-test.png);
+    background-size: contain;
+    background-position: center;
 }
 
 

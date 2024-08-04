@@ -4,6 +4,7 @@ import './Header.css';
 import FAQ from "../../components/FAQ/FAQ";
 import Support from '../Support/Support';
 import Calendar from '../Calendar/Calendar';
+import Library from '../Library/Library';
 import { auth } from "../../firebase";
 import { useUser } from "../utils/UserProvider";
 import { useNavigate } from "react-router-dom";
@@ -14,6 +15,7 @@ const Header = () => {
     const [showFAQ, setShowFAQ] = useState(false);
     const [showSupport, setShowSupport] = useState(false);
     const [showCalendar, setShowCalendar] = useState(false);
+    const [showLibrary, setShowLibrary] = useState(false);
     const { userProfile, setUserProfile } = useUser();
     const navigate = useNavigate();
 
@@ -72,6 +74,14 @@ const Header = () => {
         setShowCalendar(false);
     };
 
+    const handleLibraryClick = () => {
+        setShowLibrary(true);
+    };
+
+    const handleCloseLibrary = () => {
+        setShowLibrary(false);
+    };
+
     const handleCoursesClick = () => {
         navigate('/'); // Ruta a la que quieres redirigir
     };
@@ -87,7 +97,7 @@ const Header = () => {
                     {showOptions && (
                         <div className={`options ${animating ? 'hidden' : ''}`}>
                             <div id='courses' onClick={handleCoursesClick}>Courses</div>
-                            <div id='library'>Library</div>
+                            <div id='library' onClick={handleLibraryClick}>Library</div>
                             <div id='friends'>Friends (coming soon)</div>
                             <div id='calendar' onClick={handleCalendarClick}>Calendar</div>
                             <div id='faq' onClick={handleFAQClick}>FAQ</div>
@@ -109,6 +119,7 @@ const Header = () => {
             {showFAQ && <FAQ onClose={handleCloseFAQ}/>}
             {showSupport && <Support onClose={handleCloseSupport}/>}
             {showCalendar && <Calendar onClose={handleCloseCalendar}/>}
+            {showLibrary && <Library onClose={handleCloseLibrary}/>}
         </header>
     );
 };

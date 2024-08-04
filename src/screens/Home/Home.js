@@ -117,14 +117,4 @@ const Home = () => {
 
 };
 
-document.getElementById('showImageButton').addEventListener('click', function() {
-    const imageContainer = document.getElementById('imageContainer');
-    if (imageContainer.classList.contains('hidden')) {
-        imageContainer.classList.remove('hidden');
-    } else {
-        imageContainer.classList.add('hidden');
-    }
-});
-
-
 export default Home;
