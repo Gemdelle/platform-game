@@ -1,6 +1,5 @@
 import React from 'react';
 import './Preview.css';
-import {useUser} from "../utils/UserProvider";
 const Preview = ({ previewImageUrl }) => {
 
     return (
