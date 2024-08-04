@@ -77,6 +77,7 @@ const Home = () => {
                     return (
                         <Course
                             key={`course-${index}`}
+                            course={course}
                             name={course.name}
                             description={{
                                 message: course.description,
