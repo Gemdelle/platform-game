@@ -1,9 +1,10 @@
 import React from 'react';
 import './Course.css';
-import { useNavigate } from "react-router-dom";
-const Course = ({ name, description: { message, itemCount }, levels = 1, navigationUrl }) => {
-    let itemsRange = Array.from({ length: itemCount }, (_, index) => index + 1);
-    let levelsRange = Array.from({ length: levels }, (_, index) => index + 1);
+import {useNavigate} from "react-router-dom";
+
+const Course = ({name, description: {message, itemCount}, levels = 1, navigationUrl, course}) => {
+    let itemsRange = Array.from({length: itemCount}, (_, index) => index + 1);
+    let levelsRange = Array.from({length: levels}, (_, index) => index + 1);
 
     const navigate = useNavigate();
 
@@ -25,14 +26,22 @@ const Course = ({ name, description: { message, itemCount }, levels = 1, navigat
                     <span>{message}</span>
                     <ul>
                         {itemsRange.map((number, index) => {
-                            return (<div key={`${name}-${index}`}><div className='heart-bullet bg'></div><li>Item {number}</li></div>);
+                            return (<div key={`${name}-${index}`}>
+                                <div className='heart-bullet bg'></div>
+                                <li>Item {number}</li>
+                            </div>);
                         })}
                     </ul>
                 </div>
                 </div>
                 <div className='levels'>
                     {levelsRange.map((number) => {
-                        return (<div className='level flex bg' onClick={() => { navigateToCourse(number) }}><span>{number}</span></div>);
+                        return (<div
+                            className={`level flex bg ${course.completed_sublevels && course.completed_sublevels.find((sublevelNumber) => {
+                                return number === sublevelNumber
+                            }) !== undefined ? 'completed' : ''}`} onClick={() => {
+                            navigateToCourse(number)
+                        }}><span>{number}</span></div>);
                     })}
                 </div>
             </div>

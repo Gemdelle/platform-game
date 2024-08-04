@@ -7,7 +7,7 @@ import axios from "axios";
 const avatars = [
     { id: 1, src: '/assets/pets/caterpillar-1.gif', alt: 'Caterpillar', name: 'caterpillar' },
     { id: 2, src: '/assets/pets/axolotl-1.gif', alt: 'Axolotl', name: 'axolotl' },
-    { id: 3, src: '/assets/pets/pterodactyl-3.gif', alt: 'Pterodactyl', name: 'pterodactyl' },
+    { id: 3, src: '/assets/pets/pterodactyl-1.gif', alt: 'Pterodactyl', name: 'pterodactyl' },
 ];
 
 const AvatarSelection = () => {
