@@ -7,6 +7,26 @@
     font-family: 'Vivaldi', serif;
 }
 
+.calendar-text {
+    display: flex;
+    position: relative;
+    width: 2%;
+    height: 2%;
+    bottom: 37.3%;
+    left: 16.5%;
+    font-size: 2vmax;
+}
+
+.month-text {
+    display: flex;
+    position: relative;
+    width: 2%;
+    height: 2%;
+    top: 34.5%;
+    left: 16.25%;
+    font-size: 2vmax;
+}
+
 .calendar-popup {
     position: absolute;
     display: flex;
@@ -22,6 +42,7 @@
 }
 
 .calendar {
+    /* background-color: aqua; */
     background-image: url(/public/assets/level-description-background.png);
     background-size: 100% 75%;
     background-repeat: no-repeat;
@@ -32,6 +53,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    margin-right: 4.4%;
 }
 
 .week-days {
@@ -77,11 +99,14 @@
     height: 18%; /* Ajusta el tamaño de cada casilla */
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    font-size: large;
 }
 
 .date {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 2%;
+    margin-right: 7%;
     color: wheat;
 }
 
