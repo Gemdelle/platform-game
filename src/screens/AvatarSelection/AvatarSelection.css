@@ -2,6 +2,23 @@
   overflow: hidden;
 } */
 
+.avatar-selection-screen h1 {
+  width: 40%;
+  height: 9%;
+  /* background-color: lightblue; */
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  font-size: 3vw;
+  background-image: url(/public/assets/ornament.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  color:rgb(165, 168, 152);
+  font-weight: lighter;
+
+}
+
 .avatar-selection-screen {
   display: flex;
   flex-direction: column;
@@ -9,7 +26,11 @@
   justify-content: center;
   height: 100vh;
   width: 100vw;
-  background-color: rgba(100, 100, 100, 0.5);
+  /* background-color: rgba(100, 100, 100, 0.5); */
+  background-image: url(/public/assets/backgrounds/pet-select-background.gif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .avatar-list {
@@ -17,7 +38,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background-color: lightcoral; */
+  / background-color: lightcoral; /
   width: 85%;
   height: 70%;
 }
@@ -30,11 +51,11 @@
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s ease;
-  background-image: url(/public/assets/pet-selection.png);
+  /* background-image: url(/public/assets/pet-selection.png); */
   background-position: center;
+  background-color: red;
   background-size: contain;
   background-repeat: no-repeat;
-  /* background-color: red; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,13 +86,4 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.avatar-selection-screen h1 {
-  width: 30%;
-  /* background-color: lightblue; */
-  display: flex;
-  justify-content: center;
-  margin: 0;
-  font-size: 3vw;
 }
