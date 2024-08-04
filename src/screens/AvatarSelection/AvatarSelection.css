@@ -14,10 +14,12 @@
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  color:rgb(165, 168, 152);
+  color:rgb(234, 233, 208);
   font-weight: lighter;
 
 }
+
+
 
 .avatar-selection-screen {
   display: flex;
@@ -26,19 +28,34 @@
   justify-content: center;
   height: 100vh;
   width: 100vw;
-  /* background-color: rgba(100, 100, 100, 0.5); */
-  background-image: url(/public/assets/backgrounds/pet-select-background.gif);
-  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.8);
+  /* background-image: url(/public/assets/backgrounds/pet-select-background.gif); */
+  background-image: url(/public/assets/avatar-selection-background.png);
+  background-size: 210%;
   background-position: center;
   background-repeat: no-repeat;
+  background-repeat: repeat-x;
+  animation: travel 120s linear infinite;
 }
 
+@keyframes travel {
+            0% {
+                background-position: 0 0;
+            }
+            50% {
+                background-position: 100% 0;
+            }
+            100% {
+              background-position: 0 0;
+            }
+        }
+
 .avatar-list {
-  margin-top: 2vmax;
+  margin-top: 0.5vmax;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  / background-color: lightcoral; /
+  /* background-color: lightcoral; */
   width: 85%;
   height: 70%;
 }
@@ -51,9 +68,9 @@
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s ease;
-  /* background-image: url(/public/assets/pet-selection.png); */
+  background-image: url(/public/assets/pet-selection.png);
   background-position: center;
-  background-color: red;
+  /* background-color: red; */
   background-size: contain;
   background-repeat: no-repeat;
   display: flex;
