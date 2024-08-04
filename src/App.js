@@ -2,15 +2,19 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Home from './screens/Home/Home';
-import CourseLevel1 from "./screens/CourseLevel1/CourseLevel1";
+import Course1Sublevel1 from "./screens/Course1Sublevel1/Course1Sublevel1";
 import AvatarSelection from "./screens/AvatarSelection/AvatarSelection";
+import Course1Sublevel2 from "./screens/Course1Sublevel2/Course1Sublevel2";
+import Course1Sublevel3 from "./screens/Course1Sublevel3/Course1Sublevel3";
 
 const App = () => {
     return (
         <Router>
             <div>
                 <Routes>
-                    <Route path="/course/1/1" element={<CourseLevel1/>}/>
+                    <Route path="/course/1/1" element={<Course1Sublevel1/>}/>
+                    <Route path="/course/1/2" element={<Course1Sublevel2/>}/>
+                    <Route path="/course/1/3" element={<Course1Sublevel3/>}/>
                     <Route path="/avatar-selection" element={<AvatarSelection/>}/>
                     <Route path="/" element={<Home/>}/>
                 </Routes>

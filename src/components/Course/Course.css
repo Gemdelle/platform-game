@@ -39,8 +39,8 @@
 .corner-3,
 .corner-4 {
     position: absolute;
-    width: 10vmax;
-    height: 10vmax;
+    width: 12vmax;
+    height: 12vmax;
     background-image: url('/public/assets/corner.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -155,6 +155,18 @@ li {
     cursor: pointer;
     transition: all 200ms ease-in-out;
     background-image: url(/public/assets/UI/heart-dead.png);
+    color: white;
+    z-index: 99;
+}
+
+.level.completed {
+    width: 3vw;
+    height: 5vw;
+    margin: 0.4vw 0.95vw;
+    /* background-color: lightcoral; */
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+    background-image: url(/public/assets/UI/heart.gif);
     color: white;
     z-index: 99;
 }
