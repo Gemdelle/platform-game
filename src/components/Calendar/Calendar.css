@@ -21,33 +21,27 @@ h2 {
     width: 35vw; /* Ajusta el tamaño del contenedor principal */
     height: 50vh; /* Ajusta el tamaño del contenedor principal */
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 47%;
-    left: 50%;
 }
 
 .week-days {
     background-color: rgb(217, 250, 33);
-    width: 35vw; /* Ajusta el tamaño del contenedor principal */
-    height: 50vh; /* Ajusta el tamaño del contenedor principal */
+    width: 100%;
+    height: 15%;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    top: 20%;
-    left: 50%;
 }
 
 .grid {
     display: flex;
     background-color: rgb(133, 24, 24);
     flex-direction: column;
-    gap: 0%; /* Espacio entre filas */
-    width: 100%;
-    height: 90%;
-    margin-top: 30%;
+    gap: 3%; /* Espacio entre filas */
+    width: 95%;
+    height: 80%;
 }
 
 .row {
@@ -60,7 +54,7 @@ h2 {
 .day {
     background-color: black;
     width: 20%; 
-    height: 70%; 
+    height: 100%; 
 }
 
 .close-btn {

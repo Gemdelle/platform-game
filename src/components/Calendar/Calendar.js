@@ -4,13 +4,9 @@ import './Calendar.css';
 const Calendar = ({ onClose }) => {
   return (
     <div className='calendar-popup bg'>
-      <div className='calendar-description'>
-        <button onClick={onClose} className='close-btn'></button>
-        <h2>Calendar</h2>
-        <p>Your Calendar content goes here.</p>
-      </div>
-      <div className='week-days'></div>
+      <button onClick={onClose} className='close-btn'></button>
       <div className="calendar">
+      <div className='week-days'></div>
         <div className="grid">
           {[...Array(5)].map((_, rowIndex) => (
             <div className="row" key={rowIndex}>
