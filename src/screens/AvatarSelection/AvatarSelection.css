@@ -1,3 +1,7 @@
+html {
+  overflow: hidden;
+}
+
 .avatar-selection-screen {
   display: flex;
   flex-direction: column;
@@ -9,7 +13,7 @@
 }
 
 .avatar-list {
-  margin-top: 1vmax;
+  margin-top: 2vmax;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -65,7 +69,7 @@
 
 .avatar-selection-screen h1 {
   width: 30%;
-  background-color: lightblue;
+  /* background-color: lightblue; */
   display: flex;
   justify-content: center;
   margin: 0;
