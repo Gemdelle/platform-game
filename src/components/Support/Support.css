@@ -97,12 +97,12 @@ textarea::placeholder {
 
 
 
-.close-btn {
+.close-btn-support {
     width: 7vw;
     height: 10vw;
    position: absolute;
    right: 22vw;
-   top: 16.5vh;
+   top: 15vh;
    background-image: url(/public/assets/UI/close-button.png);
    background-size: contain;
    background-position: center;
@@ -112,7 +112,7 @@ textarea::placeholder {
    transition: all 300ms ease-in-out;
 }
 
-.close-btn:hover {
+.close-btn-support:hover {
     background-image: url(/public/assets/UI/close-button-active.png);
     scale: 103%;
     cursor: pointer;

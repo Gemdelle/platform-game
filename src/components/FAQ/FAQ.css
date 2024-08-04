@@ -1,5 +1,7 @@
 h2 {
-    font-size: small;
+    font-size: 1.8vmax;
+    margin-top: 15%; /* Ajusta este valor para bajar o subir el texto */
+    margin-right: 22%;
 }
 
 .faq-popup {
@@ -11,4 +13,25 @@ h2 {
     background-size: 65% !important;
     background-color: rgba(32, 39, 31, 0.95);
     background-image: url(/public/assets/popup.png);
+}
+
+.close-btn-faq {
+    width: 7vw;
+    height: 10vw;
+    position: absolute;
+    right: 22vw;
+    top: 15vh;
+    background-image: url(/public/assets/UI/close-button.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    transition: all 300ms ease-in-out;
+}
+
+.close-btn-faq:hover {
+    background-image: url(/public/assets/UI/close-button-active.png);
+    scale: 103%;
+    cursor: pointer;
 }

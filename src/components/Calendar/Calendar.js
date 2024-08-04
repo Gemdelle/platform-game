@@ -19,7 +19,7 @@ const Calendar = ({ onClose }) => {
     <div className='calendar-popup bg'>
       <p className='calendar-text'>Calendar</p>
       <p className='month-text'>Mes</p>
-      <button onClick={onClose} className='close-btn'></button>
+      <button onClick={onClose} className='close-btn-calendar'></button>
       <div className="calendar">
         <div className='week-days'>
           {days.map((day, index) => (

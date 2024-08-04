@@ -114,7 +114,7 @@
     color: wheat;
 }
 
-.close-btn {
+.close-btn-calendar {
     width: 7vw;
     height: 10vw;
     position: absolute;
@@ -129,7 +129,7 @@
     transition: all 300ms ease-in-out;
 }
 
-.close-btn:hover {
+.close-btn-calendar:hover {
     background-image: url(/public/assets/UI/close-button-active.png);
     scale: 103%;
     cursor: pointer;
