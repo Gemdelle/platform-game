@@ -1,8 +1,13 @@
-.popup {
+.support-popup {
+    position: absolute;
+    top: -2vh;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-size: 65% !important;
+    background-color: rgba(32, 39, 31, 0.95);
     background-image: url(/public/assets/support-background.png);
 }
-
-
 
 .support-content {
     width: 45vw;
@@ -12,18 +17,12 @@
     display: flex;
     flex-direction: column;
     align-items: end;
-    
-    
-    
 }
 
 .support-text {
     width: 100%;
     height: 25%;
     /* background-color: blue; */
-    
-    
-    
 }
 
 .support-text h2 {
@@ -94,4 +93,27 @@ textarea::placeholder {
     scale: 105%;
     cursor: pointer;
     
+}
+
+
+
+.close-btn {
+    width: 7vw;
+    height: 10vw;
+   position: absolute;
+   right: 22vw;
+   top: 16.5vh;
+   background-image: url(/public/assets/UI/close-button.png);
+   background-size: contain;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-color: transparent;
+   border: none;
+   transition: all 300ms ease-in-out;
+}
+
+.close-btn:hover {
+    background-image: url(/public/assets/UI/close-button-active.png);
+    scale: 103%;
+    cursor: pointer;
 }

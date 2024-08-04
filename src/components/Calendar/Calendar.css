@@ -2,40 +2,108 @@ h2 {
     font-size: small;
 }
 
-.popup {
-    /* background-color: lightpink; */
+.calendar-popup {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -2vh;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-size: 55% !important;
+    background-color: rgba(32, 39, 31, 0.95);
     background-image: url(/public/assets/coding-area.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
 }
 
-.centered-background {
-    background-color: rgb(255, 0, 0);
-    width: 600px; /* Ajusta el tamaño del contenedor principal */
-    height: 600px; /* Ajusta el tamaño del contenedor principal */
+.calendar {
+    background-color: rgb(27, 172, 177);
+    width: 35vw; /* Ajusta el tamaño del contenedor principal */
+    height: 50vh; /* Ajusta el tamaño del contenedor principal */
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 50%;
+    top: 47%;
     left: 50%;
-    transform: translate(-50%, -50%);
+}
+
+.week-days {
+    background-color: rgb(217, 250, 33);
+    width: 35vw; /* Ajusta el tamaño del contenedor principal */
+    height: 50vh; /* Ajusta el tamaño del contenedor principal */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 20%;
+    left: 50%;
 }
 
 .grid {
     display: flex;
+    background-color: rgb(133, 24, 24);
     flex-direction: column;
-    gap: 5px; /* Espacio entre filas */
+    gap: 0%; /* Espacio entre filas */
+    width: 100%;
+    height: 90%;
+    margin-top: 30%;
 }
 
 .row {
     display: flex;
-    gap: 5px; /* Espacio entre columnas */
+    gap: 3%; /* Espacio entre columnas */
+    width: 100%;
+    height: 80%;
 }
 
-.square {
+.day {
     background-color: black;
-    width: 30px; /* Tamaño de cada cuadrado */
-    height: 30px; /* Tamaño de cada cuadrado */
+    width: 20%; 
+    height: 70%; 
+}
+
+.close-btn {
+    width: 7vw;
+    height: 10vw;
+    position: absolute;
+    right: 23vw;
+    top: 8vh;
+    background-image: url(/public/assets/UI/close-button.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    transition: all 300ms ease-in-out;
+}
+
+.close-btn:hover {
+    background-image: url(/public/assets/UI/close-button-active.png);
+    scale: 103%;
+    cursor: pointer;
+}
+
+.arrows-calendar {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 44%;
+    width: 100%;
+}
+
+.arrow-calendar {
+    width: 4vw; /* Ajusta el tamaño de las flechas según sea necesario */
+    height: 12vh;
+    background-color: black; /* Cambia esto para que coincida con tus flechas */
+    margin: 0 19%;
+}
+
+/* Estilos específicos para las flechas */
+.arr-1-calendar {
+    /* Estilos específicos para la flecha arr-1 */
+}
+
+.arr-2-calendar {
+    /* Estilos específicos para la flecha arr-2 */
 }

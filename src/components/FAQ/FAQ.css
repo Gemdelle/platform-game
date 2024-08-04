@@ -2,6 +2,13 @@ h2 {
     font-size: small;
 }
 
-.popup {
+.faq-popup {
+    position: absolute;
+    top: -2vh;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-size: 65% !important;
+    background-color: rgba(32, 39, 31, 0.95);
     background-image: url(/public/assets/popup.png);
 }

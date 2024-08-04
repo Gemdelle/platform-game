@@ -1,10 +1,9 @@
 import React from 'react';
 import './Support.css';
-import '../popup.css';
 
 const Support = ({ onClose }) => {
   return (
-    <div className='support popup bg'>
+    <div className='support-popup bg'>
       <div className='support-content'>
         <button onClick={onClose} className='close-btn'></button>
         <div className='support-text'>
