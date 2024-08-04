@@ -39,8 +39,8 @@
 .corner-3,
 .corner-4 {
     position: absolute;
-    width: 10vmax;
-    height: 10vmax;
+    width: 12vmax;
+    height: 12vmax;
     background-image: url('/public/assets/corner.png');
     background-size: contain;
     background-repeat: no-repeat;
