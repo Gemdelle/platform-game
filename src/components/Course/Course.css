@@ -147,26 +147,28 @@ li {
 
 /* END COURSE DESCRIPTION */
 
-.level {
-    width: 3vw;
-    height: 5vw;
-    margin: 0.4vw 0.95vw;
-    /* background-color: lightcoral; */
+.level.completed {
+    width: 4.5vw;
+    height: 7vw;
+    margin: 0.4vw 0.1vw;
     cursor: pointer;
     transition: all 200ms ease-in-out;
     background-image: url(/public/assets/UI/heart-dead.png);
+    background-image: url(/public/assets/UI/heart.gif);
+    background-size: cover !important;
+    background-size: contain;
     color: white;
     z-index: 99;
 }
 
-.level.completed {
-    width: 3vw;
-    height: 5vw;
-    margin: 0.4vw 0.95vw;
-    /* background-color: lightcoral; */
+.level {
+    width: 4.5vw;
+    height: 7vw;
+    margin: 0.4vw 0.1vw;
     cursor: pointer;
     transition: all 200ms ease-in-out;
-    background-image: url(/public/assets/UI/heart.gif);
+    background-image: url(/public/assets/UI/heart-dead.png);
+    background-size: 62% !important;
     color: white;
     z-index: 99;
 }
