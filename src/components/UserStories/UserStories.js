@@ -3,19 +3,49 @@ import './UserStories.css';
 
 const user_stories = [
     [
-        "The class name should be Caterpillar",
-        "All attributes should be private",
-        "Caterpillar should have a String attribute <name>",
-        "Caterpillar should have a double attribute <weight>",
-        "Caterpillar should have a double attribute <height>",
-        "Caterpillar should have an int attribute <birthDay>",
-        "Caterpillar should have an int attribute <birthMonth>",
-        "Caterpillar should have an int attribute <birthYear>",
-        "Caterpillar should have an int attribute <legs>",
-        "Caterpillar should have an int attribute <eyes>",
-        "Caterpillar should have an int attribute <antennae>"
+      "The class name should be Terrestrial",
+      "All of the attributes should be private",
+      "Terrestrial should have a String attribute <name>",
+      "Terrestrial should have a double attribute <weight>",
+      "Terrestrial should have a double attribute <height>",
+      "Terrestrial should have an int attribute <birthDay>",
+      "Terrestrial should have an int attribute <birthMonth>",
+      "Terrestrial should have an int attribute <birthYear>",
+      "Terrestrial should have an int attribute <legs>",
+      "Terrestrial should have an int attribute <eyes>",
+      "Terrestrial should have an int attribute <antennae>"
+    ],
+    [
+      "The class name should be Aquatic",
+      "All of the attributes should be private",
+      "Aquatic should have a String attribute <name>",
+      "Aquatic should have a double attribute <weight>",
+      "Aquatic should have a double attribute <height>",
+      "Aquatic should have an int attribute <birthDay>",
+      "Aquatic should have an int attribute <birthMonth>",
+      "Aquatic should have an int attribute <birthYear>",
+      "Aquatic should have an int attribute <legs>",
+      "Aquatic should have an int attribute <eyes>",
+      "Aquatic should have an int attribute <fins>",
+      "Aquatic should have an int attribute <tails>"
+    ],
+    [
+      "The class name should be Aerial",
+      "All of the attributes should be private",
+      "Aerial should have a String attribute <name>",
+      "Aerial should have a double attribute <weight>",
+      "Aerial should have a double attribute <height>",
+      "Aerial should have an int attribute <birthDay>",
+      "Aerial should have an int attribute <birthMonth>",
+      "Aerial should have an int attribute <birthYear>",
+      "Aerial should have an int attribute <legs>",
+      "Aerial should have an int attribute <arms>",
+      "Aerial should have an int attribute <eyes>",
+      "Aerial should have an int attribute <wings>",
+      "Aerial should have an int attribute <tails>"
     ]
-];
+  ];
+  
 
 
 const UserStories = () => {
