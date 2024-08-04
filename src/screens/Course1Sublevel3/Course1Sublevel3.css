@@ -57,6 +57,14 @@
   justify-content: flex-end;
 }
 
+textarea{
+  border: none;
+}
+
+textarea:focus {
+  border: none;
+}
+
 /* END CourseLevel */
 
 
