@@ -18,12 +18,17 @@ h2 {
 
 .calendar {
     background-color: rgb(27, 172, 177);
-    width: 35vw; /* Ajusta el tamaño del contenedor principal */
+    background-image: url(/public/assets/level-description-background.png);
+    background-size: 100% 75%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    width: 34vw; /* Ajusta el tamaño del contenedor principal */
     height: 50vh; /* Ajusta el tamaño del contenedor principal */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    padding: 3vmax 1vmax;
 }
 
 .week-days {
@@ -35,9 +40,21 @@ h2 {
     justify-content: center;
 }
 
+.day-container {
+    background-image: url(/public/assets/day-container.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: blue;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .grid {
     display: flex;
-    background-color: rgb(133, 24, 24);
     flex-direction: column;
     gap: 3%; /* Espacio entre filas */
     width: 95%;
