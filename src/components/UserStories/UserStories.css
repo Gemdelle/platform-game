@@ -1,5 +1,5 @@
 .user-stories {
-  width: 18%;
+  width: 25%;
   height: 100%;
   background-color: pink;
   display: flex;
@@ -24,49 +24,46 @@ ul {
 
 }
 
-/* li {
-  margin: 0.4vw 0vw 0.8vw 3.5vw;
+.stories-container li {
+  margin: 0.4vw 0vw 0.8vw 4vw;
   text-align: left;
-  margin-bottom: 1vw;
+  margin-bottom: 1.8vw;
   padding: 1px 1px;
   font-size: 1.5vw;
-} */
+}
 
-/* .heart-bullet {
-  position: absolute;
+.stories-container .heart-bullet {
   padding-left: 2vw;
   margin-top: 7px
 }
 
-.heart-bullet::before {
+.stories-container .heart-bullet::before {
   content: "";
-  position: absolute;
   left: 0.5vw;
   transform: translateY(-40%);
   width: 3vw;
   height: 3vw;
   background-image: url("/public/assets/UI/heart.gif");
   background-size: contain;
-} */
+}
 
 /* DEAD HEART */
-/* .heart-bullet::before {
+.stories-container .heart-bullet::before {
     content: "";
-    position: absolute;
     left: 1.6vw;
-    transform: translateY(-40%);
+    transform: translateY(-35%);
     width: 3vw;
     height: 3vw;
     background-image: url("/public/assets/UI/heart-dead.png");
     background-size: contain;
     background-repeat: no-repeat;
-  } */
+  }
 
 /* USER STORIES PROGRESS BAR */
 .bar {
     position: absolute;
-    right: 30%;
-    bottom: 6vh;
+    right: 25%;
+    bottom: 3vh;
     width: 2vw;
     height: 75%;
     background-color: cyan;
