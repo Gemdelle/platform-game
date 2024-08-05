@@ -66,7 +66,6 @@ const UserStories = () => {
                     <div className='heart-bullet bg'></div><li>{user_stories[0][8]}</li>
                     <div className='heart-bullet bg'></div><li>{user_stories[0][9]}</li>
                     <div className='heart-bullet bg'></div><li>{user_stories[0][10]}</li>
-
                 </div>
             </ul>
         </div>
