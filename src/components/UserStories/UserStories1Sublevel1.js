@@ -2,17 +2,7 @@ import React from 'react';
 import './UserStories.css';
 
 const user_stories = [
-      "The class name should be Terrestrial",
-      "All of the attributes should be private",
-      "Terrestrial should have a String attribute <name>",
-      "Terrestrial should have a double attribute <weight>",
-      "Terrestrial should have a double attribute <height>",
-      "Terrestrial should have an int attribute <birthDay>",
-      "Terrestrial should have an int attribute <birthMonth>",
-      "Terrestrial should have an int attribute <birthYear>",
-      "Terrestrial should have an int attribute <legs>",
-      "Terrestrial should have an int attribute <eyes>",
-      "Terrestrial should have an int attribute <antennae>"
+      "The class name should be Terrestrial"
   ];
 
 const UserStories = () => {
