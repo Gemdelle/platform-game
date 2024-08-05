@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
-import CodeEditor from '../../components/CodeEditor/CodeEditor';
-import OutputDisplay from '../../components/OutputDisplay/OutputDisplay';
+import CodeEditor from '../../../components/CodeEditor/CodeEditor';
+import OutputDisplay from '../../../components/OutputDisplay/OutputDisplay';
 import './Course1Sublevel1.css';
-import Header from "../../components/Header/Header";
-import UserStories from '../../components/UserStories/UserStories';
-import Preview from '../../components/Preview/Preview';
-import Instructions from "../../components/Instructions/Instructions";
-import {useUser} from "../../components/utils/UserProvider";
+import Header from "../../../components/Header/Header";
+import UserStories from '../../../components/UserStories/UserStories';
+import Preview from '../../../components/Preview/Preview';
+import Instructions from "../../../components/Instructions/Instructions";
+import {useUser} from "../../../components/utils/UserProvider";
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
 

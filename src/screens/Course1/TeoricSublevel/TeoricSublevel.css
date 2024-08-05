@@ -1,0 +1,114 @@
+
+.score-section {
+  display: flex;
+  font-size: 24px;
+  align-items: center;
+}
+
+/* QUESTION/TIMER/LEFT SECTION */
+.question-section {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.question-count {
+  margin-bottom: 20px;
+}
+
+.question-count span {
+  font-size: 28px;
+}
+
+.question-text {
+  margin-bottom: 12px;
+  line-height: 1.5em;
+  font-size: 2vw;
+}
+
+/* ANSWERS/RIGHT SECTION */
+.answer-section {
+  width: 26vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+button.button-teoric {
+  width: 100%;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #1b6552;
+  border-radius: 15px;
+  display: flex;
+  padding: 5px;
+  justify-content: flex-start;
+  align-items: center;
+  border: 5px solid #72dac0;
+  cursor: pointer;
+}
+
+button.button-teoric:hover {
+  background-color: #72dac0;
+}
+
+button.button-teoric:focus {
+  outline: none;
+}
+
+button.button-teoric svg {
+  margin-right: 5px;
+}
+
+.question-container {
+  background-image: url(/public/assets/question-background.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 50vw;
+  height: 32vw;
+  margin-bottom: 9vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.question-progress {
+  background-image: url(/public/assets/question-progress.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 14vw;
+  height: 11vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 13vw;
+}
+
+.teoric-sublevel-container {
+  width: 100vw;
+  height: 47vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.pet-companion {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 21vw;
+  height: 20vw;
+  position: absolute;
+  left: 26vw;
+  bottom: 0;
+}

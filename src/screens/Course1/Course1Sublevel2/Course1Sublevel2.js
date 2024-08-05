@@ -1,16 +1,16 @@
 import React, {useState} from 'react';
-import CodeEditor from '../../components/CodeEditor/CodeEditor';
-import OutputDisplay from '../../components/OutputDisplay/OutputDisplay';
-import './Course1Sublevel3.css';
-import Header from "../../components/Header/Header";
-import UserStories from '../../components/UserStories/UserStories';
-import Preview from '../../components/Preview/Preview';
-import Instructions from "../../components/Instructions/Instructions";
-import {useUser} from "../../components/utils/UserProvider";
+import CodeEditor from '../../../components/CodeEditor/CodeEditor';
+import OutputDisplay from '../../../components/OutputDisplay/OutputDisplay';
+import './Course1Sublevel2.css';
+import Header from "../../../components/Header/Header";
+import UserStories from '../../../components/UserStories/UserStories';
+import Preview from '../../../components/Preview/Preview';
+import Instructions from "../../../components/Instructions/Instructions";
+import {useUser} from "../../../components/utils/UserProvider";
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
 
-const Course1Sublevel3 = () => {
+const Course1Sublevel2 = () => {
     const [output, setOutput] = useState('');
     const navigate = useNavigate();
     const {userProfile, setUserProfile} = useUser();
@@ -18,7 +18,7 @@ const Course1Sublevel3 = () => {
     const handleCompileAndRun = async (className, classCode) => {
         const idToken = userProfile.id
         try {
-            const response = await axios.post('https://quiet-badlands-42095-c0012ddb8417.herokuapp.com/validate/course/1/3', {
+            const response = await axios.post('https://quiet-badlands-42095-c0012ddb8417.herokuapp.com/validate/course/1/2', {
                 class_code: classCode
             },{
                 headers: {
@@ -44,14 +44,14 @@ const Course1Sublevel3 = () => {
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>
-                    <CodeEditor onSubmit={handleCompileAndRun} className="Pterodactyl"/>
+                    <CodeEditor onSubmit={handleCompileAndRun} className="Axolotl"/>
                     <OutputDisplay output={output}/>
                 </div>
-                <Preview previewImageUrl={`url("/assets/pets/pterodactyl-1.gif")`}/>
+                <Preview previewImageUrl={`url("/assets/pets/axolotl-1.gif")`}/>
                 <UserStories/>
             </div>
         </div>
     );
 };
 
-export default Course1Sublevel3;
+export default Course1Sublevel2;
