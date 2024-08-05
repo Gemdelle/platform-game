@@ -78,11 +78,21 @@
   align-items: center;
 }
 
+@keyframes shake {
+  0% { transform: rotate(0); }
+  25% { transform: rotate(-1deg); }
+  50% { transform: rotate(2deg); }
+  75% { transform: rotate(-1deg); }
+  100% { transform: rotate(0); }
+}
+
 .avatar-item img {
-  width: 60%;
-  height: 45%;
+  width: 45%;
+  height: 55%;
   filter: brightness(0);
   transition: all 500ms ease-in-out;
+  animation: shake 2s ease-in-out infinite;
+  transform-origin: bottom center;
 }
 
 .avatar-item:hover {
