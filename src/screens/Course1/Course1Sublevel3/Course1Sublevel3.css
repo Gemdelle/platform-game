@@ -1,0 +1,73 @@
+/* src/Home.css */
+.App {
+  font-family: 'BlackwoodCastle', sans-serif;
+  text-align: center;
+  position: relative;
+}
+
+/* DEFAULT CLASSES */
+
+.flex-s {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flex-c {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-e {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* CourseLevel */
+
+.container {
+  margin: 0 auto;
+  margin-top: 4vh;
+  width: 95vw;
+  height: 92vh;
+  background-color: lightgoldenrodyellow;
+  justify-content: space-between;
+}
+
+.code-container {
+  width: 40%;
+  height: 100%;
+  background-color: black;
+  justify-content: flex-end;
+}
+
+textarea{
+  border: none;
+}
+
+textarea:focus {
+  border: none;
+}
+
+/* END CourseLevel */
+
+
+
+
+

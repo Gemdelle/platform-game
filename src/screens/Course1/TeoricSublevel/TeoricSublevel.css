@@ -1,0 +1,165 @@
+
+.score-section {
+  display: flex;
+  font-size: 24px;
+  align-items: center;
+}
+
+/* QUESTION/TIMER/LEFT SECTION */
+.question-section {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.question-count {
+  margin-bottom: 20px;
+}
+
+.question-count span {
+  font-size: 28px;
+}
+
+.question-text {
+  margin-bottom: 12px;
+  line-height: 1.5em;
+  font-size: 2vw;
+}
+
+/* ANSWERS/RIGHT SECTION */
+
+.question-design {
+  height: 15vh;
+  background-color: pink;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.answer-section {
+  position: relative;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: red;
+}
+
+.question-opener {
+  background-image: url(/public/assets/item-container.png);
+  background-size: contain;
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  width: 6vmax;
+  height: 6vmax;
+  position: absolute;
+  transform: rotate(90deg);
+  /* background-color: #1b6552; */
+}
+
+.start {
+  left: 0;
+}
+
+.end {
+  transform: rotate(-90deg);
+  right: 0;
+}
+
+button.button-teoric {
+  width: 95%;
+  height: 40%;
+  font-size: 1.2vmax;
+  color: black;
+  /* background-color: radial-gradient(circle, rgba(245, 245, 220, 1) 0%, rgba(245, 245, 220, 0) 100%); */
+  background-color: rebeccapurple;
+  display: flex;
+  /* padding: 5px; */
+  justify-content: flex-start;
+  align-items: center;
+  border: none;
+  border-top: 2px solid #72dac0;
+  border-bottom: 2px solid #72dac0;
+  cursor: pointer;
+  transition: all 500ms ease-in-out;
+}
+
+button.button-teoric:hover {
+  /* background-color: radial-gradient(circle, rgb(144, 144, 127) 0%, rgba(245, 245, 220, 0) 100%); */
+  background-color: white;
+}
+
+button.button-teoric:focus {
+  outline: none;
+}
+
+button.button-teoric svg {
+  margin-right: 1vmax;
+}
+
+.question-container {
+  background-image: url(/public/assets/question-background.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 50vw;
+  height: 32vw;
+  margin-bottom: 9vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.question-progress {
+  background-image: url(/public/assets/question-progress.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 14vw;
+  height: 11vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 13vw;
+}
+
+@keyframes travel {
+  0% {
+    background-position: bottom center, 0 0;
+  }
+  100% {
+    background-position: bottom center, -100% 0;
+  }
+}
+
+.teoric-sublevel-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover, auto 50%; /* Mantener la proporción de la segunda imagen */
+  background-image: url('/public/assets/questionnaire-background.png'), url('/public/assets/questionnaire-moving-sky.png');
+  background-position: bottom center, 0 0;
+  background-repeat: no-repeat, repeat; /* Solo la segunda imagen se repite */
+  background-color: black;
+  animation: travel 4s infinite linear;
+}
+
+.pet-companion {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 21vw;
+  height: 20vw;
+  position: absolute;
+  left: 26vw;
+  bottom: 0;
+}
