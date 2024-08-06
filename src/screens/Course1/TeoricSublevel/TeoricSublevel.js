@@ -172,7 +172,6 @@ const TeoricSublevel = ({ backgroundImage }) => {
 
     return (
         <div className='teoric-sublevel-container'>
-            <div className='sky'><div className='sky-img'></div></div>
             {showScore ? (
                 <div className='score-section'>You scored {score} out of {questions.length}</div>
             ) : (

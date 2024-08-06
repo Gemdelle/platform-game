@@ -132,10 +132,10 @@ button.button-teoric svg {
 
 @keyframes travel {
   0% {
-      background-position: 0 0, center;
+    background-position: bottom center, 0 0;
   }
   100% {
-      background-position: 100% 0, center;
+    background-position: bottom center, -100% 0;
   }
 }
 
@@ -145,30 +145,12 @@ button.button-teoric svg {
   left: 0;
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-image: url(/public/assets/questionnaire-background.png);
-  background-position: 0 center;
+  background-size: cover, auto 50%; /* Mantener la proporción de la segunda imagen */
+  background-image: url('/public/assets/questionnaire-background.png'), url('/public/assets/questionnaire-moving-sky.png');
+  background-position: bottom center, 0 0;
+  background-repeat: no-repeat, repeat; /* Solo la segunda imagen se repite */
   background-color: black;
-}
-
-.sky {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.sky-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-repeat: repeat-x;
-  animation: travel 5s linear infinite;
-  background-image: url(/public/assets/questionnaire-moving-sky.png);
+  animation: travel 4s infinite linear;
 }
 
 .pet-companion {
