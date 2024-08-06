@@ -145,7 +145,7 @@ button.button-teoric svg {
   left: 0;
   width: 100%;
   height: 100%;
-  background-size: cover, auto 50%; /* Mantener la proporción de la segunda imagen */
+  background-size: cover, 50% 50%; /* Mantener la proporción de la segunda imagen */
   background-image: url('/public/assets/questionnaire-background.png'), url('/public/assets/questionnaire-moving-sky.png');
   background-position: bottom center, 0 0;
   background-repeat: no-repeat, repeat; /* Solo la segunda imagen se repite */
