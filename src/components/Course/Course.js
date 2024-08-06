@@ -49,4 +49,5 @@ const Course = ({name, description: {message, itemCount}, levels = 1, navigation
     );
 };
 
+
 export default Course;
