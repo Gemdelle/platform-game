@@ -29,29 +29,66 @@
 }
 
 /* ANSWERS/RIGHT SECTION */
+
+.question-design {
+  height: 15vh;
+  background-color: pink;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .answer-section {
-  width: 26vw;
+  position: relative;
+  width: 30vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: red;
+}
+
+.question-opener {
+  background-image: url(/public/assets/item-container.png);
+  background-size: contain;
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  width: 6vmax;
+  height: 6vmax;
+  position: absolute;
+  transform: rotate(90deg);
+  /* background-color: #1b6552; */
+}
+
+.start {
+  left: 0;
+}
+
+.end {
+  transform: rotate(-90deg);
+  right: 0;
 }
 
 button.button-teoric {
-  width: 100%;
-  font-size: 16px;
-  color: #ffffff;
-  background-color: #1b6552;
-  border-radius: 15px;
+  width: 95%;
+  height: 40%;
+  font-size: 1.2vmax;
+  color: black;
+  /* background-color: radial-gradient(circle, rgba(245, 245, 220, 1) 0%, rgba(245, 245, 220, 0) 100%); */
+  background-color: rebeccapurple;
   display: flex;
-  padding: 5px;
+  /* padding: 5px; */
   justify-content: flex-start;
   align-items: center;
-  border: 5px solid #72dac0;
+  border: none;
+  border-top: 2px solid #72dac0;
+  border-bottom: 2px solid #72dac0;
   cursor: pointer;
+  transition: all 500ms ease-in-out;
 }
 
 button.button-teoric:hover {
-  background-color: #72dac0;
+  /* background-color: radial-gradient(circle, rgb(144, 144, 127) 0%, rgba(245, 245, 220, 0) 100%); */
+  background-color: white;
 }
 
 button.button-teoric:focus {
@@ -59,7 +96,7 @@ button.button-teoric:focus {
 }
 
 button.button-teoric svg {
-  margin-right: 5px;
+  margin-right: 1vmax;
 }
 
 .question-container {
@@ -94,12 +131,14 @@ button.button-teoric svg {
 }
 
 .teoric-sublevel-container {
-  width: 100vw;
-  height: 47vw;
+  width: 90vw;
+  height: 100vh;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-end;
+  background-color: red;
+  margin: 0 auto;
 }
 
 .pet-companion {

@@ -1,8 +1,8 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './TeoricSublevel.css';
-import {useUser} from "../../../components/utils/UserProvider";
+import { useUser } from "../../../components/utils/UserProvider";
 
-const TeoricSublevel = ({backgroundImage}) => {
+const TeoricSublevel = ({ backgroundImage }) => {
     const { userProfile } = useUser();
     const initialQuestions = [
         {
@@ -158,12 +158,12 @@ const TeoricSublevel = ({backgroundImage}) => {
 
     const [score, setScore] = React.useState(0);
     const handleAnswerButtonClick = (isCorrect) => {
-        if (isCorrect===true) {
+        if (isCorrect === true) {
             setScore(score + 1);
         }
 
         const nextQuestion = currentQuestion + 1;
-        if(nextQuestion < questions.length) {
+        if (nextQuestion < questions.length) {
             setCurrentQuestion(nextQuestion);
         } else {
             setShowScore(true);
@@ -183,12 +183,15 @@ const TeoricSublevel = ({backgroundImage}) => {
                         <div className='question-text'>{questions[currentQuestion].questionText}</div>
                     </div>
                     <div className='answer-section'>
+
+
                         {questions[currentQuestion].answerOptions.map((answerOption) => (
-                            <button className="button-teoric" onClick={() => handleAnswerButtonClick(answerOption.isCorrect)}>{answerOption.answerText}</button>))}
+                            <div className='question-design'><div className='question-opener start'></div><button className="button-teoric" onClick={() => handleAnswerButtonClick(answerOption.isCorrect)}>{answerOption.answerText}</button><div className='question-opener end'></div></div>))}
+
                     </div>
                 </div>
             )}
-            <div className="pet-companion" style={{backgroundImage: `url("/assets/pets/${userProfile.profile.avatar}-${userProfile.profile.level}.gif")`}}></div>
+            <div className="pet-companion" style={{ backgroundImage: `url("/assets/pets/${userProfile.profile.avatar}-${userProfile.profile.level}.gif")` }}></div>
         </div>
     );
 }
