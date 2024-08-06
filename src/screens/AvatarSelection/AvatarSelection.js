@@ -5,9 +5,9 @@ import {useUser} from "../../components/utils/UserProvider";
 import axios from "axios";
 
 const avatars = [
-    { id: 1, src: '/assets/pets/caterpillar-1.gif', alt: 'Caterpillar', name: 'caterpillar' },
-    { id: 2, src: '/assets/pets/axolotl-1.gif', alt: 'Axolotl', name: 'axolotl' },
-    { id: 3, src: '/assets/pets/pterodactyl-1.gif', alt: 'Pterodactyl', name: 'pterodactyl' },
+    { id: 1, src: '/assets/eggs/egg-terrestrial.png', alt: 'Caterpillar', name: 'caterpillar' },
+    { id: 2, src: '/assets/eggs/egg-aquatic.png', alt: 'Axolotl', name: 'axolotl' },
+    { id: 3, src: '/assets/eggs/egg-aerial.png', alt: 'Pterodactyl', name: 'pterodactyl' },
 ];
 
 const AvatarSelection = () => {
@@ -38,7 +38,7 @@ const AvatarSelection = () => {
 
     return (
         <div className="avatar-selection-screen">
-            <h1>Select Your Pet</h1>
+            <h1>Hatch you egg</h1>
             <div className="avatar-list">
                 {avatars.map((avatar) => (
                     <div
