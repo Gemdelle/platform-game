@@ -5,6 +5,7 @@ import FAQ from "../../components/FAQ/FAQ";
 import Support from '../Support/Support';
 import Calendar from '../Calendar/Calendar';
 import Library from '../Library/Library';
+import Friends from '../Friends/Friends';
 import { auth } from "../../firebase";
 import { useUser } from "../utils/UserProvider";
 import { useNavigate } from "react-router-dom";
@@ -16,6 +17,7 @@ const Header = () => {
     const [showSupport, setShowSupport] = useState(false);
     const [showCalendar, setShowCalendar] = useState(false);
     const [showLibrary, setShowLibrary] = useState(false);
+    const [showFriends, setShowFriends] = useState(false);
     const { userProfile, setUserProfile } = useUser();
     const navigate = useNavigate();
 
@@ -82,6 +84,14 @@ const Header = () => {
         setShowLibrary(false);
     };
 
+    const handleFriendsClick = () => {
+        setShowFriends(true);
+    };
+
+    const handleCloseFriends = () => {
+        setShowFriends(false);
+    };
+
     const handleCoursesClick = () => {
         navigate('/'); // Ruta a la que quieres redirigir
     };
@@ -98,10 +108,11 @@ const Header = () => {
                         <div className={`options ${animating ? 'hidden' : ''}`}>
                             <div id='courses' onClick={handleCoursesClick}>Courses</div>
                             <div id='library' onClick={handleLibraryClick}>Library</div>
-                            <div id='friends'>Friends (coming soon)</div>
+                            <div id='friends' onClick={handleFriendsClick}>Friends (coming soon)</div>
                             <div id='calendar' onClick={handleCalendarClick}>Calendar</div>
                             <div id='faq' onClick={handleFAQClick}>FAQ</div>
                             <div id='support' onClick={handleSupportClick}>Support</div>
+                            
                         </div>
                     )}
                 </div>
@@ -120,6 +131,7 @@ const Header = () => {
             {showSupport && <Support onClose={handleCloseSupport}/>}
             {showCalendar && <Calendar onClose={handleCloseCalendar}/>}
             {showLibrary && <Library onClose={handleCloseLibrary}/>}
+            {showFriends && <Friends onClose={handleCloseFriends}/>}
         </header>
     );
 };
