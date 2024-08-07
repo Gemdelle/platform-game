@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './TeoricSublevel.css';
 import { useUser } from "../../../components/utils/UserProvider";
 
@@ -172,11 +172,12 @@ const TeoricSublevel = ({ backgroundImage }) => {
 
     return (
         <div className='teoric-sublevel-container'>
+            <div className="moving-sky"></div>
             {showScore ? (
                 <div className='score-section'>You scored {score} out of {questions.length}</div>
             ) : (
                 <div className="question-container">
-                    
+
                     <div className='question-section'>
                         <div className='question-count question-progress'>
                             <span>Question {currentQuestion + 1}</span>/{questions.length}
