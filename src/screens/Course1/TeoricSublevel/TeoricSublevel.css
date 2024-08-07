@@ -13,10 +13,6 @@
   align-items: center;
 }
 
-.question-count {
-  /* margin-bottom: 20px; */
-}
-
 .question-text {
   line-height: 1.5em;
   font-size: 2vw;
@@ -57,7 +53,7 @@
   background-size: contain;
   background-position: 0% 100%;
   background-repeat: no-repeat;
-  width: 18%;
+  width: 13%;
   height: 100%;
   position: absolute;
   transform: rotate(90deg);
@@ -74,21 +70,22 @@
 }
 
 button.button-teoric {
-  width: 90%;
+  width: 80%;
   height: 70%;
-  font-size: 1.2vmax;
+  font-size: 1.6vmax;
   color: black;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   border: none;
   background-color: transparent;
+  /* background-color: red; */
   cursor: pointer;
   transition: all 500ms ease-in-out;
 }
 
 button.button-teoric:hover {
-  /* background-color: radial-gradient(circle, rgb(144, 144, 127) 0%, rgba(245, 245, 220, 0) 100%); */
+  background-color: radial-gradient(circle, rgb(144, 144, 127) 0%, rgba(245, 245, 220, 0) 100%);
 }
 
 .question-container {
@@ -96,11 +93,11 @@ button.button-teoric:hover {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  width: 55vw;
-  height: 55vh;
+  width: 60vw;
+  height: 65vh;
   position: relative;
-  margin-left: -5vw;
-  margin-top: 5vh;
+  margin-left: -8vw;
+  margin-top: -3vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -110,7 +107,7 @@ button.button-teoric:hover {
 
 .question-progress {
   background-image: url(/public/assets/UI/button.png);
-  background-size: contain;
+  background-size: 80% 60%;
   background-position: center;
   background-repeat: no-repeat;
   width: 12vw;
@@ -119,8 +116,8 @@ button.button-teoric:hover {
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 0;
-  left: 250px;
+  top: 20px;
+  left: 540px;
 }
 
 .teoric-sublevel-container {
@@ -228,12 +225,12 @@ button.button-teoric:hover {
 
 /* NUEVO */
 .content-container {
-  width: 95vw;
+  width: 93.5vw;
   height: 90vh;
   /* background-color: blue; */
   position: absolute;
   top: 5%;
-  left: 2.5%;
+  left: 4%;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -241,7 +238,7 @@ button.button-teoric:hover {
 }
 
 .answers-container {
-  width: 40%;
+  width: 50%;
   height: 100%;
   /* background-color: orange; */
   position: relative;
@@ -255,21 +252,24 @@ button.button-teoric:hover {
   justify-content: space-between;
   align-items: center;
   width: 50%;
-  height: 25%;
+  height: 35%;
   /* background-color: bisque; */
 }
 
 .food {
-  height: 100%;
-  width: 20%;
-  background-color: brown;
-  /* background-image: url(/public/assets/UI); */
+  height: 50%;
+  width: 25%;
+  /* background-color: brown; */
+  background-image: url(/public/assets/food/beetlesweets.png);
+  background-position: center bottom;
+  background-repeat: no-repeat;
   background-size: contain;
 }
 
 .steam {
-  width: 50%;
-  height: 100%;
+  position: absolute;
+  width: 29%;
+  height: 40%;
   /* background-color: gray; */
   background-image: url(/public/assets/steam.png);
   background-size: contain;
@@ -277,6 +277,8 @@ button.button-teoric:hover {
   background-repeat: no-repeat;
   filter: brightness(1.5);
   animation: steam 3s ease-in-out infinite;
+  left: 10%;
+  bottom: 1%;
 }
 
 @keyframes steam {
@@ -302,11 +304,11 @@ button.button-teoric:hover {
 }
 
 .score-bar {
-  width: 15%;
+  width: 10%;
   height: 70%;
   /* background-color: lightgoldenrodyellow; */
   position: absolute;
-  left: -3vmax;
+  left: -0.5vmax;
   background-image: url(/public/assets/question-bar.png);
   background-size: contain;
   background-size: 100% 100%;
@@ -357,7 +359,7 @@ button.button-teoric:hover {
 }
 
 .next-btn {
-  width: 200px;
+  width: 250px;
   height: 150px;
   background-image: url(/public/assets/UI/button.png);
   /* background-color: blue; */
@@ -367,5 +369,15 @@ button.button-teoric:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 25%;
+  margin-right: 32%;
+  cursor: pointer;
+  font-size: 1.2vmax;
+  color: rgb(95, 92, 57);
+  filter: opacity(0.5);
+  transition: all 500ms ease-in-out;
+}
+
+.next-btn:hover {
+  filter: opacity(1);
+  scale: 105%;
 }
