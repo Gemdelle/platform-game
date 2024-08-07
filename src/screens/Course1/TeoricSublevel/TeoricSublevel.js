@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './TeoricSublevel.css';
 import { useUser } from "../../../components/utils/UserProvider";
 
@@ -180,20 +180,29 @@ const TeoricSublevel = ({ backgroundImage }) => {
 
                     <div className='question-section'>
                         <div className='question-count question-progress'>
-                            <span>Question {currentQuestion + 1}</span>/{questions.length}
+                            <span className='current-question-number'><span className='number'>{currentQuestion + 1}</span>/{questions.length}</span>
                         </div>
                         <div className='question-text'>{questions[currentQuestion].questionText}</div>
                     </div>
-                    <div className='answer-section'>
-
-
-                        {questions[currentQuestion].answerOptions.map((answerOption) => (
-                            <div className='question-design'><div className='question-opener start'></div><button className="button-teoric" onClick={() => handleAnswerButtonClick(answerOption.isCorrect)}>{answerOption.answerText}</button><div className='question-opener end'></div></div>))}
-
-                    </div>
                 </div>
             )}
-            <div className="pet-companion" style={{ backgroundImage: `url("/assets/pets/${userProfile.profile.avatar}-${userProfile.profile.level}.gif")` }}></div>
+            <div className='content-container'>
+                <div className='timer-container'>
+                    <div className='food'></div>
+                    <div className='steam'></div>
+                    <div className="pet-companion" style={{ backgroundImage: `url("/assets/pets/${userProfile.profile.avatar}-${userProfile.profile.level}.gif")` }}></div>
+                </div>
+                <div className='answers-container'>
+                    <div className='score-bar'>
+                        <div className='bar-interior'></div>
+                    </div>
+                    <div className='answer-section'>
+                        {questions[currentQuestion].answerOptions.map((answerOption) => (
+                            <div className='answer-and-bullet'><div className='bullet-heart'></div><div className='question-design'><div className='question-opener start'></div><button className="button-teoric" onClick={() => handleAnswerButtonClick(answerOption.isCorrect)}>{answerOption.answerText}</button><div className='question-opener end'></div></div></div>))}
+                    </div>
+                    <div className='next-btn'>NEXT</div>
+                </div>
+            </div>
         </div>
     );
 }
