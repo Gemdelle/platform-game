@@ -308,7 +308,7 @@ button.button-teoric:hover {
   height: 70%;
   /* background-color: lightgoldenrodyellow; */
   position: absolute;
-  left: -0.5vmax;
+  left: -1.2vmax;
   background-image: url(/public/assets/question-bar.png);
   background-size: contain;
   background-size: 100% 100%;
@@ -326,6 +326,50 @@ button.button-teoric:hover {
   margin-left: 5px;
   margin-bottom: 50px;
   /* Difumina los bordes */
+}
+
+.gold-heart {
+  width: 8.5vmax;
+  height: 10vmax;
+  /* background-color: white; */
+  background-image: url(/public/assets/UI/heart-gold.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -40px;
+  transition: all 500ms ease-in-out;
+}
+
+.won-gold {
+  width: 8vmax;
+  height: 10vmax;
+  background-image: url(/public/assets/UI/heart-gold.gif);
+  rotate: -25deg;
+}
+
+.silver-heart {
+  width: 7vmax;
+  height: 10vmax;
+  /* background-color: white; */
+  background-image: url(/public/assets/UI/heart-silver.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 120px;
+  transition: all 500ms ease-in-out;
+}
+
+.won-silver {
+  width: 7vmax;
+  height: 6.5vmax;
+  background-image: url(/public/assets/UI/heart-silver.gif);
+  background-position: bottom;
+  rotate: -25deg;
+}
+
+.silver-heart:hover,
+.gold-heart:hover {
+  opacity: 0;
 }
 
 .bullet-heart {

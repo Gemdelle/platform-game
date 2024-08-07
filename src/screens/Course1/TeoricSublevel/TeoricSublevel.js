@@ -194,6 +194,8 @@ const TeoricSublevel = ({ backgroundImage }) => {
                 </div>
                 <div className='answers-container'>
                     <div className='score-bar'>
+                        <div className='gold-heart'></div>
+                        <div className='silver-heart'></div>
                         <div className='bar-interior'></div>
                     </div>
                     <div className='answer-section'>
