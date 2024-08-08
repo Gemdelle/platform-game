@@ -194,11 +194,13 @@ const TeoricSublevel = ({ backgroundImage }) => {
                 </div>
                 <div className='answers-container'>
                     <div className='score-bar'>
+                        <div className='gold-heart'></div>
+                        <div className='silver-heart'></div>
                         <div className='bar-interior'></div>
                     </div>
                     <div className='answer-section'>
                         {questions[currentQuestion].answerOptions.map((answerOption) => (
-                            <div className='answer-and-bullet'><div className='bullet-heart'></div><div className='question-design'><div className='question-opener start'></div><button className="button-teoric" onClick={() => handleAnswerButtonClick(answerOption.isCorrect)}>{answerOption.answerText}</button><div className='question-opener end'></div></div></div>))}
+                            <div className='answer-and-bullet'><div className='bullet-heart'></div><div className='question-design'><div className=''></div><button className="button-teoric" onClick={() => handleAnswerButtonClick(answerOption.isCorrect)}><span className='text-answer'>{answerOption.answerText}</span></button><div className='question-opener end'></div></div></div>))}
                     </div>
                     <div className='next-btn'>NEXT</div>
                 </div>
