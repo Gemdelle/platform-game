@@ -371,10 +371,12 @@ button.button-teoric:hover {
 }
 
 .bar-interior {
-  width: 38%;
+  width: 53%;
   height: 83%;
   /* height: 20%; */
-  background: linear-gradient(to right, #35051c, transparent, #35051c);
+  background-color: rgb(41, 13, 21);
+  opacity: 70%;
+  background-repeat: no-repeat;
   border-radius: 50px;
   margin-left: 5px;
   margin-bottom: 50px;
