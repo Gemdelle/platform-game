@@ -81,9 +81,14 @@ button.button-teoric {
   background-color: transparent;
   /* background-color: red; */
   background-image: url(/public/assets/UI/question-background.png);
+
   background-size: 100% 100%;
   cursor: pointer;
   transition: all 500ms ease-in-out;
+}
+
+.wrong-answer {
+  background-image: url(/public/assets/UI/question-background-wrong.png);
 }
 
 .text-answer {
@@ -109,7 +114,7 @@ button.button-teoric:hover {
   background-position: center;
   background-repeat: no-repeat;
   width: 60vw;
-  height: 65vh;
+  height: 68vh;
   position: relative;
   margin-left: -8vw;
   margin-top: -3vh;
@@ -158,7 +163,7 @@ button.button-teoric:hover {
   background-position: 0 0;
   background-repeat: repeat;
   animation: travel 28s infinite linear;
-  filter: blur(11px);
+  filter: blur(6px);
   z-index: -1;
 }
 
@@ -415,7 +420,7 @@ button.button-teoric:hover {
 }
 
 .next-btn {
-  width: 250px;
+  width: 200px;
   height: 150px;
   background-image: url(/public/assets/UI/button.png);
   /* background-color: blue; */
@@ -425,9 +430,9 @@ button.button-teoric:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 32%;
+  margin-right: 8%;
   cursor: pointer;
-  font-size: 1.2vmax;
+  font-size: 1vmax;
   color: rgb(95, 92, 57);
   filter: opacity(0.5);
   transition: all 500ms ease-in-out;
