@@ -193,10 +193,12 @@ const TeoricSublevel = ({ backgroundImage }) => {
                     <div className="pet-companion" style={{ backgroundImage: `url("/assets/pets/${userProfile.profile.avatar}-${userProfile.profile.level}.gif")` }}></div>
                 </div>
                 <div className='answers-container'>
+                    <div className='level-title'>LEVEL TITLE</div>
                     <div className='score-bar'>
                         <div className='gold-heart'></div>
                         <div className='silver-heart'></div>
                         <div className='bar-interior'></div>
+                        <div className='correct-answers'>N</div>
                     </div>
                     <div className='answer-section'>
                         {questions[currentQuestion].answerOptions.map((answerOption) => (
