@@ -13,25 +13,12 @@
     align-items: center;
 }
 
-.evolutionMap-content {
-    width: 85%;
-    height: 90%;
-    /* background-color: black; */
-    background-image: url(/public/assets/evolution-map.png);
-    background-position: center;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-}
-
 .close-btn-evolutionmap {
     width: 7vw;
     height: 10vw;
    position: absolute;
-   right: 8vw;
-   top: 9vh;
+   right: 3vw;
+   top: 6vh;
    background-image: url(/public/assets/UI/close-button.png);
    background-size: contain;
    background-position: center;
@@ -46,5 +33,214 @@
     scale: 103%;
     cursor: pointer;
 }
+
+.evolutionMap-content {
+    width: 95%;
+    height: 95%;
+    /* background-color: black; */
+    background-image: url(/public/assets/evolution-map.png);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-and-progress {
+    height: 10%;
+    width: 50%;
+    background-color: aqua;
+}
+
+.evolution-content {
+    margin: 1% 0%;
+    width: 85%;
+    height: 70%;
+    /* background-color: black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.evo-row-1,
+.evo-row-2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.evo-row-1 {
+    height: 38%;
+    /* background-color: palevioletred; */
+}
+
+.evo-row-2 {
+    height: 60%;
+    /* background-color: purple; */
+}
+
+.evo-row-1 .evo-pets,
+.evo-row-2 .evo-pets {
+    height: 80%;
+    width: 100%;
+    /* background-color: rgb(62, 101, 135); */
+    display: flex;
+    justify-content: space-between;
+}
+
+.evo-xp-info {
+    height: 2vmax;
+    width: 90%;
+    /* background-color: green; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.evo-row-2 .evo-xp-info {
+    margin-bottom: 1vmax;
+}
+
+@keyframes breathe {
+    0%, 100% {
+      transform: scaleY(1);
+    }
+    50% {
+      transform: scaleY(1.03);
+    }
+  }
+
+  @keyframes shake {
+    0% { transform: rotate(0); }
+    25% { transform: rotate(-1deg); }
+    50% { transform: rotate(2deg); }
+    75% { transform: rotate(-1deg); }
+    100% { transform: rotate(0); }
+  }
+
+.pet {
+    height: 100%;
+    /* background-color: brown; */
+    background-position: bottom;
+    background-repeat: no-repeat;
+    animation: breathe 3s ease-in-out infinite;
+    transform-origin: center bottom;
+    filter: brightness(0);
+    transition: all 500ms ease-in-out;
+    cursor: pointer;
+}
+
+.pet:hover {
+    scale: 103%;
+}
+
+.evo-row-1 .evo-pets .pet {
+    width: 14%;
+}
+
+.evo-row-2 .evo-pets .pet {
+    width: 16%;
+}
+
+/* IMAGES */
+#evo-pet-0 {
+    background-image: url(/public/assets/eggs/egg-aquatic.png);
+    background-size: 30%;
+    animation-delay: 0s;
+    animation: shake 2s ease-in-out infinite;
+    filter: brightness(1);
+}
+
+#evo-pet-1 {
+    background-image: url(/public/assets/pets/axolotl-1.gif);
+    background-size: 70%;
+    animation-delay: 4s;
+    background-position: 0 3.3vmax;
+    filter: brightness(1);
+}
+
+#evo-pet-2 {
+    background-image: url(/public/assets/pets/evolutions/aquatic/2.png);
+    background-size: 70%;
+    animation-delay: 0.2s;
+}
+
+#evo-pet-3 {
+    background-image: url(/public/assets/pets/evolutions/aquatic/3.png);
+    background-size: 65%;
+    animation-delay: 0.5s;
+}
+
+#evo-pet-4 {
+    background-image: url(/public/assets/pets/evolutions/aquatic/4.png);
+    background-size: 75%;
+    animation-delay: 0.3s;
+}
+
+#evo-pet-5 {
+    background-image: url(/public/assets/pets/evolutions/aquatic/5.png);
+    background-size: 76%;
+    animation-delay: 0.8s;
+}
+
+#evo-pet-6 {
+    background-image: url(/public/assets/pets/evolutions/aquatic/6.png);
+    background-size: 80%;
+    animation-delay: 0.4s;
+}
+
+#evo-pet-7 {
+    background-image: url(/public/assets/pets/evolutions/aquatic/7.png);
+    background-size: 70%;
+    animation-delay: 0s;
+}
+
+#evo-pet-8 {
+    background-image: url(/public/assets/pets/evolutions/aquatic/8.png);
+    background-size: 73%;
+    animation-delay: 0.2s;
+}
+
+#evo-pet-9 {
+    background-image: url(/public/assets/pets/evolutions/aquatic/9.png);
+    background-size: 90%;
+    animation-delay: 0.5s;
+}
+
+#evo-pet-10 {
+    background-image: url(/public/assets/pets/evolutions/aquatic/10.png);
+    background-size: 100% 87%;
+    animation-delay: 0.9s;
+}
+
+#evo-pet-11 {
+    background-image: url(/public/assets/pets/evolutions/aquatic/11.png);
+    background-size: 88%;
+    animation-delay: 0.1s;
+}
+
+#evo-pet-12 {
+    background-image: url(/public/assets/pets/evolutions/aquatic/12.png);
+    background-size: 100%;
+    animation-delay: 0.8s;
+}
+
+
+
+/* END IMAGES */
+
+.orb {
+    width: 10%;
+    height: 7%;
+    background-color: red;
+}
+
+
+
 
 
