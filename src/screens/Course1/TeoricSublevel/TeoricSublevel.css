@@ -375,6 +375,7 @@ button.button-teoric:hover {
   height: 83%;
   /* height: 20%; */
   background-color: rgb(41, 13, 21);
+  background-image: url(/public/assets/UI/question-bar-background.png);
   opacity: 70%;
   background-repeat: no-repeat;
   border-radius: 50px;
