@@ -41,7 +41,7 @@ const Course = ({
                 }}><span>{number}</span></div>);
         });
     }
-
+    
     return (
         <div className='course' id='course-1'>
             <div className='course-container flex-c'>

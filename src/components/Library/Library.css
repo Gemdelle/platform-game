@@ -1,6 +1,6 @@
 .library-h2 {
     font-size: 2.2vmax;
-    margin-top: 6.65%; /* Ajusta este valor para bajar o subir el texto */
+    margin-top: 8%; /* Ajusta este valor para bajar o subir el texto */
     margin-right: 21.1%;
 }
 
@@ -63,4 +63,25 @@
     display: flex;
     margin-left: 57%;
     margin-top: -8.5%;
+}
+
+.close-btn-library {
+    width: 7vw;
+    height: 10vw;
+   position: absolute;
+   right: 17.5vw;
+   top: 7vh;
+   background-image: url(/public/assets/UI/close-button.png);
+   background-size: contain;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-color: transparent;
+   border: none;
+   transition: all 300ms ease-in-out;
+}
+
+.close-btn-library:hover {
+    background-image: url(/public/assets/UI/close-button-active.png);
+    scale: 103%;
+    cursor: pointer;
 }

@@ -40,9 +40,6 @@
     text-align: left;
     font-size: 1vw;
     margin-top: 1vw;
-    
-    
-    
 }
 
 .support-text-area {
@@ -53,8 +50,6 @@
     margin: 0 auto;
     resize: none;
     /* background-color: white; */
-    
-    
 }
 
 textarea:focus {
@@ -94,8 +89,6 @@ textarea::placeholder {
     cursor: pointer;
     
 }
-
-
 
 .close-btn-support {
     width: 7vw;

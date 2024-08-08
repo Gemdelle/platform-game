@@ -247,3 +247,41 @@ li {
     left: 1.65vmax;
 
 }
+
+html {
+    scroll-behavior: smooth; /* Habilita el desplazamiento suave */
+}
+
+.index-container {
+    position: fixed; /* Opcional: hace que el índice sea fijo en la pantalla */
+    top: 2%;
+    left: 43%;
+    background: #f0f0f0;
+    padding: 1rem;
+    width: 200px;
+    z-index: 1000;
+}
+
+.index-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.index-list li {
+    margin-bottom: 0.5rem;
+}
+
+.index-list a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.index-list a:hover {
+    text-decoration: underline;
+}
+
+.content-section {
+    padding: 2rem;
+    margin: 2rem 0;
+}
