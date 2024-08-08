@@ -374,11 +374,12 @@ button.button-teoric:hover {
   width: 38%;
   height: 83%;
   /* height: 20%; */
-  background-color: red;
+  background: linear-gradient(to right, #35051c, transparent, #35051c);
   border-radius: 50px;
   margin-left: 5px;
   margin-bottom: 50px;
-  /* Difumina los bordes */
+  filter: blur(50%);
+  
 }
 
 .gold-heart {
