@@ -5,7 +5,8 @@ import {useNavigate} from "react-router-dom";
 const Course = ({
                     navigationUrl,
                     course: {
-                        description: {message, itemCount},
+                        description,
+                        item_count:itemCount,
                         completed_sublevels,
                         name,
                         total: levels,
@@ -53,7 +54,7 @@ const Course = ({
                 <div className='course-description-container'>
                     <h1>{name}</h1>
                     <div className='course-description'>
-                        <span>{message}</span>
+                        <span>{description}</span>
                         <ul>
                             {itemsRange.map((number, index) => {
                                 return (<div key={`${name}-${index}`}>
