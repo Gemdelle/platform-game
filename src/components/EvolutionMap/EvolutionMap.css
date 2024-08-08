@@ -8,13 +8,19 @@
     background-color: rgba(32, 39, 31, 0.95);
     background-size: contain;
     background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .evolutionMap-content {
-    width: 45vw;
-    height: 53vh;
-    background-color: black;
-    margin: 26vh 28vw;
+    width: 85%;
+    height: 90%;
+    /* background-color: black; */
+    background-image: url(/public/assets/evolution-map.png);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     align-items: end;
