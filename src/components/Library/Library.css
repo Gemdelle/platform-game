@@ -1,3 +1,15 @@
+.library-h2 {
+    font-size: 2.2vmax;
+    margin-top: 6.65%; /* Ajusta este valor para bajar o subir el texto */
+    margin-right: 21.1%;
+}
+
+.library-description-p {
+    font-size: 2.2vmax;
+    margin-top: 4%; /* Ajusta este valor para bajar o subir el texto */
+    margin-right: 38%;
+}
+
 .library-popup {
     position: absolute;
     top: -2vh;
@@ -6,9 +18,49 @@
     width: 100vw;
     background-size: 65% !important;
     background-color: rgba(32, 39, 31, 0.95);
-    background-image: url(/public/assets/library-test.png);
+    background-image: url(/public/assets/popup-library.png);
     background-size: contain;
     background-position: center;
 }
 
+.library-description-p {
+    font-size: 2.2vmax;
+    margin-top: 4%; /* Ajusta este valor para bajar o subir el texto */
+    margin-right: 38%;
+}
 
+.arrows-library {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 46.5%;
+    width: 100%;
+    left: 16.2%;
+}
+
+.arrow-left-library {
+    width: 4vw;
+    height: 12vh;
+    background-image: url(/public/assets/UI/arrow.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 10.4%;
+    cursor: pointer;
+}
+
+.arrow-right-library {
+    transform: rotate(180deg);
+}
+
+.giph {
+    width: 19vw;
+    height: 54.5vh;
+    background-color: black;
+    /* La imagen se establecerá dinámicamente desde React */
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    margin-left: 57%;
+    margin-top: -8.5%;
+}

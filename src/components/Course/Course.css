@@ -199,5 +199,16 @@ li {
     background-repeat: no-repeat;
     left: 10%;
     top: 7%;
-    /* background-color: rgba(100,100,10,0.5); */
+}
+
+.course-bar-interior {
+    position: absolute;
+    width: 2vmax; /* Ajusta el ancho para que se adapte dentro del contenedor */
+    height: 17vmax; /* Ajusta la altura para que se adapte dentro del contenedor */
+    background-color: red;
+    border-radius: 50px;
+    margin-top: 0.9vmax; /* Alinea la barra al fondo del contenedor */
+    margin-bottom: auto; /* Alinea la barra al fondo del contenedor */
+    left: 1.65vmax;
+
 }
