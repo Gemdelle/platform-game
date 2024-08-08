@@ -14,10 +14,10 @@ const App = () => {
         <Router>
             <div>
                 <Routes>
-                    <Route path="/course/1/1" element={<TeoricSublevel/>}/>
-                    <Route path="/course/1/2" element={<Course1Sublevel1/>}/>
-                    <Route path="/course/1/3" element={<Course1Sublevel2/>}/>
-                    <Route path="/course/1/4" element={<Course1Sublevel3/>}/>
+                    <Route path="/course/1/theoretical" element={<TeoricSublevel/>}/>
+                    <Route path="/course/1/1" element={<Course1Sublevel1/>}/>
+                    <Route path="/course/1/2" element={<Course1Sublevel2/>}/>
+                    <Route path="/course/1/3" element={<Course1Sublevel3/>}/>
                     <Route path="/avatar-selection" element={<AvatarSelection/>}/>
                     <Route path="/" element={<Home/>}/>
                 </Routes>

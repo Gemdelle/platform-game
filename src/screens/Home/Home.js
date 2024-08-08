@@ -5,7 +5,7 @@ import Header from "../../components/Header/Header";
 import Course from "../../components/Course/Course";
 import {useAuthState} from "react-firebase-hooks/auth";
 import {auth} from "../../firebase";
-import { signInWithPopup, GoogleAuthProvider, signInWithEmailAndPassword  } from 'firebase/auth';
+import {signInWithPopup, GoogleAuthProvider, signInWithEmailAndPassword} from 'firebase/auth';
 import {useUser} from "../../components/utils/UserProvider";
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
@@ -14,7 +14,7 @@ const Home = () => {
     const [, loading] = useAuthState(auth);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const { userProfile, setUserProfile } = useUser();
+    const {userProfile, setUserProfile} = useUser();
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -27,7 +27,7 @@ const Home = () => {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const result = await  signInWithEmailAndPassword(auth, email, password);
+            const result = await signInWithEmailAndPassword(auth, email, password);
             const idToken = await result.user.getIdToken()
             const response = await axios.get('https://quiet-badlands-42095-c0012ddb8417.herokuapp.com/profile', {
                 headers: {
@@ -52,7 +52,7 @@ const Home = () => {
         const result = await signInWithPopup(auth, provider);
         const idToken = await result.user.getIdToken()
 
-        const response = await axios.get('https://quiet-badlands-42095-c0012ddb8417.herokuapp.com/profile', {
+        const response = await axios.get('http://localhost:3001/profile', {
             headers: {
                 'Authorization': `Bearer ${idToken}`
             }
@@ -78,12 +78,6 @@ const Home = () => {
                         <Course
                             key={`course-${index}`}
                             course={course}
-                            name={course.name}
-                            description={{
-                                message: course.description,
-                                itemCount: course.item_count
-                            }}
-                            levels={course.total}
                             navigationUrl={`/course/${index+1}/`}
                         />
                     )

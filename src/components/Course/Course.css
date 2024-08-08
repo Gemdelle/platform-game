@@ -154,7 +154,6 @@ li {
     margin: 0.4vw 0.1vw;
     cursor: pointer;
     transition: all 200ms ease-in-out;
-    background-image: url(/public/assets/UI/heart-dead.png);
     background-image: url(/public/assets/UI/heart.gif);
     background-size: cover !important;
     background-size: contain;
@@ -162,7 +161,43 @@ li {
     z-index: 99;
 }
 
-.level {
+.level.silver {
+    width: 4.5vw;
+    height: 7vw;
+    margin: 0.4vw 0.1vw;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+    background-image: url(/public/assets/UI/heart-silver.gif);
+    background-size: cover !important;
+    background-size: contain;
+    color: white;
+    z-index: 99;
+}
+
+.level.gold {
+    width: 4.5vw;
+    height: 7vw;
+    margin: 0.4vw 0.1vw;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+    background-image: url(/public/assets/UI/heart-gold.gif);
+    background-size: cover !important;
+    background-size: contain;
+    color: white;
+    z-index: 99;
+}
+
+.level.disabled {
+    width: 4.5vw;
+    height: 7vw;
+    margin: 0.4vw 0.1vw;
+    background-image: url(/public/assets/UI/heart-dead.png);
+    background-size: 62% !important;
+    color: white;
+    z-index: 99;
+}
+
+.level.default {
     width: 4.5vw;
     height: 7vw;
     margin: 0.4vw 0.1vw;
@@ -179,7 +214,7 @@ li {
     margin-left: 0.4vw;
 }
 
-.level:hover {
+.level.default:hover {
     scale: 110%;
 }
 
