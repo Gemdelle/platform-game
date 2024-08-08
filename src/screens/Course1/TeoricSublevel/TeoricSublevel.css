@@ -424,7 +424,20 @@ button.button-teoric:hover {
   opacity: 0;
 }
 
-.bullet-heart {
+.bullet-heart-dead {
+  width: 11.5%;
+  height: 22%;
+  /* background-color: burlywood; */
+  background-image: url(/public/assets/UI/heart-dead.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* margin-left: 0.5vmax; */
+  position: absolute;
+  z-index: 99;
+}
+
+.bullet-heart-alive {
   width: 11.5%;
   height: 80%;
   /* background-color: burlywood; */

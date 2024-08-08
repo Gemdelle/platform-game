@@ -4,7 +4,16 @@ import {useUser} from "../../../components/utils/UserProvider";
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
 
-const TeoricSublevel = ({backgroundImage}) => {
+const TeoricSublevel = () => {
+    /*
+    TODO: Agregar timer de cuenta regresiva (1min y medio) y que no se resetee cuando le haces hover al bicho.
+    Los corazones arrancan muertos y cuando se seleccionan se ponen vivos.
+    Hacer efecto de caricia con el cursor al pet
+    Ver el cambio automatico de la pregunta con las respuestas
+    Ver porque se repiten cada tanto
+    Ver porque cuando llegas a las 15 preguntas aparecen algunas mas
+    Seleccionar una respuesta y despues con el boton de "next" se contesta.
+     */
     const {userProfile, setUserProfile} = useUser();
     const navigate = useNavigate();
     const initialQuestions = [
@@ -196,6 +205,8 @@ const TeoricSublevel = ({backgroundImage}) => {
     const [showScore, setShowScore] = React.useState(false);
 
     const [score, setScore] = React.useState(0);
+
+
     const handleAnswerButtonClick = (isCorrect) => {
         if (isCorrect === true) {
             setScore(score + 1);
@@ -235,17 +246,17 @@ const TeoricSublevel = ({backgroundImage}) => {
                          style={{backgroundImage: `url("/assets/pets/${userProfile.profile.avatar}-${userProfile.profile.level}.gif")`}}></div>
                 </div>
                 <div className='answers-container'>
-                    <div className='level-title'>LEVEL TITLE</div>
+                    <div className='level-title'>{userProfile.progress.courses[0].name}</div>
                     <div className='score-bar'>
                         <div className='gold-heart'></div>
                         <div className='silver-heart'></div>
                         <div className='bar-interior'></div>
-                        <div className='correct-answers'>N</div>
+                        <div className='correct-answers'>{score}</div>
                     </div>
                     <div className='answer-section'>
                         {questions[currentQuestion].answerOptions.map((answerOption) => (
                             <div className='answer-and-bullet'>
-                                <div className='bullet-heart'></div>
+                                <div className='bullet-heart-dead'></div>
                                 <div className='question-design'>
                                     <div className=''></div>
                                     <button className="button-teoric"
