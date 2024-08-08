@@ -150,8 +150,7 @@ li {
 
 .level.completed {
     width: 4.5vw;
-    height: 7vw;
-    margin: 0.4vw 0.1vw;
+    height: 6vw;
     cursor: pointer;
     transition: all 200ms ease-in-out;
     background-image: url(/public/assets/UI/heart.gif);
@@ -163,14 +162,12 @@ li {
 
 .level.silver {
     width: 4.5vw;
-    height: 7vw;
-    margin: 0.4vw 0.1vw;
+    height: 6vw;
     cursor: pointer;
     transition: all 200ms ease-in-out;
     background-image: url(/public/assets/UI/heart-silver.gif);
-    background-size: cover !important;
-    background-size: contain;
-    color: white;
+    background-size: 160% ;
+    color: black;
     z-index: 99;
 }
 
@@ -181,16 +178,15 @@ li {
     cursor: pointer;
     transition: all 200ms ease-in-out;
     background-image: url(/public/assets/UI/heart-gold.gif);
-    background-size: cover !important;
-    background-size: contain;
+    background-size: 160% ;
     color: white;
     z-index: 99;
 }
 
 .level.disabled {
     width: 4.5vw;
-    height: 7vw;
-    margin: 0.4vw 0.1vw;
+    height: 6vw;
+    /* margin: 0.4vw 0.1vw; */
     background-image: url(/public/assets/UI/heart-dead.png);
     background-size: 62% !important;
     color: white;
@@ -199,14 +195,20 @@ li {
 
 .level.default {
     width: 4.5vw;
-    height: 7vw;
-    margin: 0.4vw 0.1vw;
+    height: 6vw;
+    /* margin: 0.4vw 0.1vw; */
     cursor: pointer;
     transition: all 200ms ease-in-out;
     background-image: url(/public/assets/UI/heart-dead.png);
     background-size: 62% !important;
+    /* background-size: 100% 100%; */
     color: white;
     z-index: 99;
+}
+
+.level.default,
+.level.disabled {
+
 }
 
 .level span {
@@ -233,7 +235,7 @@ li {
     padding-bottom: 3vmax;
     background-repeat: no-repeat;
     left: 9.5%;
-    top: 17%;
+    top: 15%;
 }
 
 .course-bar-interior {
