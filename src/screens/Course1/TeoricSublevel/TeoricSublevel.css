@@ -20,6 +20,7 @@
   width: 25vw;
   text-align: center;
   color: rgb(94, 97, 82);
+  text-shadow: 5px 5px 6px rgba(0, 0, 0, 0.3);
 }
 
 /* ANSWERS/RIGHT SECTION */
@@ -39,7 +40,7 @@
 
 /* CAMBIO */
 .question-design {
-  width: 90%;
+  width: 100%;
   height: 100%;
   /* background-color: green; */
   position: relative;
@@ -53,7 +54,7 @@
   background-size: contain;
   background-position: 0% 100%;
   background-repeat: no-repeat;
-  width: 13%;
+  width: 15%;
   height: 100%;
   position: absolute;
   transform: rotate(90deg);
@@ -61,7 +62,7 @@
 }
 
 .start {
-  left: 0;
+  left: 2vmax;
 }
 
 .end {
@@ -70,22 +71,36 @@
 }
 
 button.button-teoric {
-  width: 80%;
-  height: 70%;
-  font-size: 1.6vmax;
-  color: black;
+  width: 100%;
+  height: 100%;
+  padding: 1vmax;
   display: flex;
   justify-content: center;
   align-items: center;
   border: none;
   background-color: transparent;
   /* background-color: red; */
+  background-image: url(/public/assets/UI/question-background.png);
+  background-size: 100% 100%;
   cursor: pointer;
   transition: all 500ms ease-in-out;
 }
 
+.text-answer {
+  width: 80%;
+  line-height: 0.9;
+  font-size: 1.5vmax;
+  color: black;
+  margin-left: 1.5vmax;
+  transition: all 300ms ease-in-out;
+}
+
 button.button-teoric:hover {
-  background-color: radial-gradient(circle, rgb(144, 144, 127) 0%, rgba(245, 245, 220, 0) 100%);
+  .text-answer {
+    scale: 103%;
+    
+  }
+  filter:sepia(100%)
 }
 
 .question-container {
@@ -296,7 +311,6 @@ button.button-teoric:hover {
 .bullet-hearts {
   width: 15%;
   height: 82%;
-  /* background-color: lightcoral; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -308,7 +322,7 @@ button.button-teoric:hover {
   height: 70%;
   /* background-color: lightgoldenrodyellow; */
   position: absolute;
-  left: -1.2vmax;
+  left: -2vmax;
   background-image: url(/public/assets/question-bar.png);
   background-size: contain;
   background-size: 100% 100%;
@@ -338,13 +352,11 @@ button.button-teoric:hover {
   position: absolute;
   top: -40px;
   transition: all 500ms ease-in-out;
+  filter: brightness(40%);
 }
 
 .won-gold {
-  width: 8vmax;
-  height: 10vmax;
-  background-image: url(/public/assets/UI/heart-gold.gif);
-  rotate: -25deg;
+  filter: brightness(100%);
 }
 
 .silver-heart {
@@ -357,14 +369,11 @@ button.button-teoric:hover {
   position: absolute;
   top: 120px;
   transition: all 500ms ease-in-out;
+  filter: brightness(40%);
 }
 
 .won-silver {
-  width: 7vmax;
-  height: 6.5vmax;
-  background-image: url(/public/assets/UI/heart-silver.gif);
-  background-position: bottom;
-  rotate: -25deg;
+  filter: brightness(100%);
 }
 
 .silver-heart:hover,
@@ -373,18 +382,21 @@ button.button-teoric:hover {
 }
 
 .bullet-heart {
-  width: 15%;
-  height: 100%;
+  width: 11.5%;
+  height: 80%;
   /* background-color: burlywood; */
   background-image: url(/public/assets/UI/heart.gif);
   background-position: calc(100% - -1vw) center;
   background-size: contain;
   background-repeat: no-repeat;
+  /* margin-left: 0.5vmax; */
+  position: absolute;
+  z-index: 99;
 }
 
 .answer-and-bullet {
-  width: 100%;
-  height: 15%;
+  width: 97%;
+  height: 22%;
   /* background-color: blue; */
   display: flex;
   align-items: center;
@@ -393,13 +405,13 @@ button.button-teoric:hover {
 .current-question-number {
   /* background-color: red; */
   color: rgb(158, 157, 146);
-  font-size: 1.2vmax;
+  font-size: 1vmax;
 }
 
 .number {
   /* background-color: #72dac0; */
   color: rgb(95, 92, 57);
-  font-size: 1.6vmax;
+  font-size: 1.8vmax;
 }
 
 .next-btn {
