@@ -186,7 +186,7 @@ li {
 .course-progress-bar {
     position: absolute;
     width: 1vmax;
-    height: 15.5vmax;
+    height: 11vmax;
     background-image: url('/public/assets/question-bar.png');
     background-size: 100% 100%;
     background-position: center;
@@ -197,14 +197,14 @@ li {
     padding: 2vmax;
     padding-bottom: 3vmax;
     background-repeat: no-repeat;
-    left: 10%;
-    top: 7%;
+    left: 9.5%;
+    top: 17%;
 }
 
 .course-bar-interior {
     position: absolute;
     width: 2vmax; /* Ajusta el ancho para que se adapte dentro del contenedor */
-    height: 17vmax; /* Ajusta la altura para que se adapte dentro del contenedor */
+    height: 13vmax; /* Ajusta la altura para que se adapte dentro del contenedor */
     background-color: red;
     border-radius: 50px;
     margin-top: 0.9vmax; /* Alinea la barra al fondo del contenedor */

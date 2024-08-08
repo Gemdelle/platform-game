@@ -6,6 +6,7 @@ import Support from '../Support/Support';
 import Calendar from '../Calendar/Calendar';
 import Library from '../Library/Library';
 import Friends from '../Friends/Friends';
+import EvolutionMap from '../EvolutionMap/EvolutionMap';
 import { auth } from "../../firebase";
 import { useUser } from "../utils/UserProvider";
 import { useNavigate } from "react-router-dom";
@@ -18,6 +19,7 @@ const Header = () => {
     const [showCalendar, setShowCalendar] = useState(false);
     const [showLibrary, setShowLibrary] = useState(false);
     const [showFriends, setShowFriends] = useState(false);
+    const [showEvolutionMap, setShowEvolutionMap] = useState(false);
     const { userProfile, setUserProfile } = useUser();
     const navigate = useNavigate();
 
@@ -92,6 +94,14 @@ const Header = () => {
         setShowFriends(false);
     };
 
+    const handleEvolutionMapClick = () => {
+        setShowEvolutionMap(true);
+    };
+
+    const handleCloseEvolutionMap = () => {
+        setShowEvolutionMap(false);
+    };
+
     const handleCoursesClick = () => {
         navigate('/'); // Ruta a la que quieres redirigir
     };
@@ -108,6 +118,7 @@ const Header = () => {
                         <div className={`options ${animating ? 'hidden' : ''}`}>
                             <div id='courses' onClick={handleCoursesClick}>Courses</div>
                             <div id='library' onClick={handleLibraryClick}>Library</div>
+                            <div id='evolutionMap' onClick={handleEvolutionMapClick}>Evolution Map</div>
                             <div id='friends' onClick={handleFriendsClick}>Friends (coming soon)</div>
                             <div id='calendar' onClick={handleCalendarClick}>Calendar</div>
                             <div id='faq' onClick={handleFAQClick}>FAQ</div>
@@ -115,6 +126,14 @@ const Header = () => {
                             
                         </div>
                     )}
+                </div>
+                <div className='index'>
+                    <div>Curso 1</div>
+                    <div>Curso 2</div>
+                    <div>Curso 3</div>
+                    <div>Curso 4</div>
+                    <div>Curso 5</div>
+                    <div>Curso 6</div>
                 </div>
                 <div className='flex-e hud'>
                     <div className='level-bar bg'></div>
@@ -132,6 +151,7 @@ const Header = () => {
             {showCalendar && <Calendar onClose={handleCloseCalendar}/>}
             {showLibrary && <Library onClose={handleCloseLibrary}/>}
             {showFriends && <Friends onClose={handleCloseFriends}/>}
+            {showEvolutionMap && <EvolutionMap onClose={handleCloseEvolutionMap}/>}
         </header>
     );
 };

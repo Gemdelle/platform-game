@@ -32,10 +32,7 @@ const Course = ({name, description: {message, itemCount}, levels = 1, navigation
                             </div>);
                         })}
                     </ul>
-                    <div className='course-progress-bar'>
-                        <div className='course-bar-interior'></div>
-                    </div>
-                    
+                    <div className='course-progress-bar'></div>
                 </div>
                 </div>
                 <div className='levels'>
