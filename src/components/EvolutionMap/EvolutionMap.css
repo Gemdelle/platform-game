@@ -69,9 +69,8 @@
 .evo-row-2 {
     width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    /* border: 2px solid white; */
 }
 
 .evo-row-1 {
@@ -82,28 +81,6 @@
 .evo-row-2 {
     height: 60%;
     /* background-color: purple; */
-}
-
-.evo-row-1 .evo-pets,
-.evo-row-2 .evo-pets {
-    height: 80%;
-    width: 100%;
-    /* background-color: rgb(62, 101, 135); */
-    display: flex;
-    justify-content: space-between;
-}
-
-.evo-xp-info {
-    height: 2vmax;
-    width: 90%;
-    /* background-color: green; */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.evo-row-2 .evo-xp-info {
-    margin-bottom: 1vmax;
 }
 
 @keyframes breathe {
@@ -123,28 +100,35 @@
     100% { transform: rotate(0); }
   }
 
-.pet {
-    height: 100%;
+.evo-row-1 .pet {
+    height: 95%;
     /* background-color: brown; */
-    background-position: bottom;
-    background-repeat: no-repeat;
-    animation: breathe 3s ease-in-out infinite;
-    transform-origin: center bottom;
-    filter: brightness(0);
-    transition: all 500ms ease-in-out;
-    cursor: pointer;
+}
+
+.evo-row-1 .pet {
+    width: 14%;
+}
+
+.evo-row-2 .pet {
+    width: 16%;
 }
 
 .pet:hover {
     scale: 103%;
 }
 
-.evo-row-1 .evo-pets .pet {
-    width: 14%;
+.pet {
+    transition: all 500ms ease-in-out;
 }
 
-.evo-row-2 .evo-pets .pet {
-    width: 16%;
+.pet-img {
+    height: 88%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    animation: breathe 3s ease-in-out infinite;
+    transform-origin: center bottom;
+    filter: brightness(0);
+    cursor: pointer;
 }
 
 /* IMAGES */
@@ -160,7 +144,7 @@
     background-image: url(/public/assets/pets/axolotl-1.gif);
     background-size: 70%;
     animation-delay: 4s;
-    background-position: 0 3.3vmax;
+    background-position: center 3.8vmax;
     filter: brightness(1);
 }
 
@@ -214,13 +198,13 @@
 
 #evo-pet-10 {
     background-image: url(/public/assets/pets/evolutions/aquatic/10.png);
-    background-size: 100% 87%;
+    background-size: 100% 81%;
     animation-delay: 0.9s;
 }
 
 #evo-pet-11 {
     background-image: url(/public/assets/pets/evolutions/aquatic/11.png);
-    background-size: 88%;
+    background-size: 86%;
     animation-delay: 0.1s;
 }
 
@@ -230,12 +214,35 @@
     animation-delay: 0.8s;
 }
 
+.pet-xp {
+    margin-top: 0.7vmax;
+    height: 2vmax;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.evo-bar {
+    width: 80%;
+    height: 60%;
+    /* background-color: aqua; */
+    background-image: url(/public/assets/level-bar.png);
+    background-position: center;
+    background-size: 80% 100%;
+    background-repeat: no-repeat;
+}
+
+.number {
+    font-size: large;
+    height: 40%;
+}
 
 /* END IMAGES */
 
 .orb {
-    width: 10%;
+    width: 5%;
     height: 7%;
     background-color: red;
 }
