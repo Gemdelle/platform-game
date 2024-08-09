@@ -233,8 +233,13 @@ const TeoricSublevel = () => {
         setSelectedAnswer(answerOption);
     };
 
-    const debug = () => {
+    const increment = () => {
         setScore(score + 1);
+    }
+    const decrement = () => {
+        if (score - 1 < 0)
+            return
+        setScore(score - 1);
     }
 
     const handleAnswer = () => {
@@ -334,7 +339,8 @@ const TeoricSublevel = () => {
                                 ))}
                             </div>
                             <div className='next-btn' onClick={handleAnswer}>NEXT</div>
-                            <div className='next-btn' onClick={debug}>DEBUG</div>
+                            <div className='next-btn' onClick={increment}>INCREMENT</div>
+                            <div className='next-btn' onClick={decrement}>DECREMENT</div>
                         </div>
                     </div>
                 </>
