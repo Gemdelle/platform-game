@@ -328,6 +328,7 @@ const TeoricSublevel = () => {
                                 {questionsToAnswer[currentQuestion].answerOptions.map((answerOption) => (
                                     <div className='answer-and-bullet'>
                                         <div className={`${selectedAnswer && selectedAnswer === answerOption && answerState === "RIGHT" ? 'bullet-heart-alive' : 'bullet-heart-dead'}`}></div>
+                                        <div className="veins"></div>
                                         <div className='question-design'>
                                             <button className={`button-teoric ${selectedAnswer && selectedAnswer === answerOption && answerState !== "WRONG" ? "selected" : selectedAnswer && selectedAnswer === answerOption && answerState === "WRONG" ? "wrong-answer" : ""}`}
                                                     onClick={() => handleAnswerButtonClick(answerOption)}>
