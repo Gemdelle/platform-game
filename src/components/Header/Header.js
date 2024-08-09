@@ -106,8 +106,6 @@ const Header = () => {
         navigate('/'); // Ruta a la que quieres redirigir
     };
 
-   
-
     return (
         <header>
             <div className='header-container'>
