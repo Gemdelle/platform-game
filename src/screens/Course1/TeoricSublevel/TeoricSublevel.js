@@ -339,8 +339,8 @@ const TeoricSublevel = () => {
                                 ))}
                             </div>
                             <div className='next-btn' onClick={handleAnswer}>NEXT</div>
-                            <div className='next-btn' onClick={increment}>INCREMENT</div>
-                            <div className='next-btn' onClick={decrement}>DECREMENT</div>
+                            <div className='debug-btn' onClick={increment}>INCREMENT</div>
+                            <div className='debug-btn decrement' onClick={decrement}>DECREMENT</div>
                         </div>
                     </div>
                 </>

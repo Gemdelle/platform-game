@@ -502,6 +502,36 @@ button.button-teoric.selected {
   scale: 105%;
 }
 
+.debug-btn {
+  width: 200px;
+  height: 150px;
+  background-image: url(/public/assets/UI/button.png);
+  /* background-color: blue; */
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8%;
+  cursor: pointer;
+  font-size: 1vmax;
+  color: rgb(95, 92, 57);
+  filter: opacity(0.5);
+  transition: all 500ms ease-in-out;
+  position: absolute;
+  bottom: 0;
+}
+
+.debug-btn.decrement {
+  right: 8vw
+}
+
+.debug-btn:hover {
+  filter: opacity(1);
+  scale: 105%;
+}
+
 .timer {
   position: absolute;
   bottom: 2.5vh;
