@@ -41,7 +41,7 @@ const Course = ({
                 }}><span>{number}</span></div>);
         });
     }
-    
+
     return (
         <div className='course' id='course-1'>
             <div className='course-container flex-c'>
@@ -54,7 +54,7 @@ const Course = ({
                 <div className='course-description-container'>
                     <h1>{name}</h1>
                     <div className='course-progress-bar'>
-                            <div className='course-bar-interior'></div>
+                            <div className='course-bar-interior' style={{ height: `${(completed_sublevels ? completed_sublevels.length : 0 / levelsRange.length) * 100}%` }}></div>
                         </div>
                     <div className='course-description'>
                         <span>{description}</span>
