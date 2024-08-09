@@ -125,14 +125,14 @@ const Header = () => {
                         </div>
                     )}
                 </div>
-                {/* <div className='index'>
+                <div className='index'>
                     <div>Curso 1</div>
                     <div>Curso 2</div>
                     <div>Curso 3</div>
                     <div>Curso 4</div>
                     <div>Curso 5</div>
                     <div>Curso 6</div>
-                </div> */}
+                </div>
                 <div className='currency'></div>
                 <div className='flex-e hud'>
                     <div className='level-bar bg'>

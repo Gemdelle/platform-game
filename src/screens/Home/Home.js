@@ -82,8 +82,8 @@ const Home = () => {
                         />
                     )
                 })}
-                <div className="pet-static" id="petStatic" style={{backgroundImage: `url("/assets/pets/${userProfile.profile.avatar}-${userProfile.profile.level}.gif")`}}></div>
-                <div className="pet-looker" id="petLooker" style={{display: 'none'}}></div>
+                {/* <div className="pet-static" id="petStatic" style={{backgroundImage: `url("/assets/pets/${userProfile.profile.avatar}-${userProfile.profile.level}.gif")`}}></div> */}
+                <div className="pet-looker" id="petLooker" ></div>
             </div>
         );
     }
