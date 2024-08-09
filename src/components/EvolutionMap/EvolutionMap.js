@@ -1,7 +1,21 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './EvolutionMap.css';
+import {useUser} from "../utils/UserProvider";
 
 const EvolutionMap = ({ onClose }) => {
+  const {userProfile} = useUser();
+  //TODO: FOR UI
+  //userProfile.profile.avatar = 'axolotl'
+  useEffect(() => {
+    if (userProfile.profile.avatar === 'caterpillar') {
+      import('./EvolutionMapTerrestrial.css');
+    } else if(userProfile.profile.avatar === 'axolotl') {
+      import('./EvolutionMapAquatic.css');
+    }else {
+      import('./EvolutionMapAerial.css');
+    }
+  }, []);
+
   return (
     <div className='evolutionMap-popup bg'>
       <div className='evolutionMap-content'>
