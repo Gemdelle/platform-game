@@ -367,6 +367,7 @@ button.button-teoric.selected {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  z-index: 1;
 }
 
 .correct-answers {
@@ -435,11 +436,11 @@ button.button-teoric.selected {
   width: 11.5%;
   height: 18%;
   /* background-color: burlywood; */
-  background-image: url(/public/assets/UI/heart-dead.png);
-  background-position: center;
-  background-size: contain;
+  background-image: url(/public/assets/UI/heart-dead.png), url(/public/assets/UI/dead-veins.png);
+  background-position: center, -1.3vmax center ;
+  background-size: contain, 120% 90%;
   background-repeat: no-repeat;
-  /* margin-left: 0.5vmax; */
+  margin-left: 1vmax;
   position: absolute;
   z-index: 99;
 }
@@ -448,11 +449,11 @@ button.button-teoric.selected {
   width: 11.5%;
   height: 80%;
   /* background-color: burlywood; */
-  background-image: url(/public/assets/UI/heart.gif);
-  background-position: left;
-  background-size: contain;
+  background-image: url(/public/assets/UI/heart.gif), url(/public/assets/UI/veins.png);
+  background-position: center, -1.3vmax center ;
+  background-size: contain, 120% 90%;
   background-repeat: no-repeat;
-  /* margin-left: 0.5vmax; */
+  margin-left: 1vmax;
   position: absolute;
   z-index: 99;
 }
