@@ -393,7 +393,7 @@ button.button-teoric.selected {
   background-image: url(/public/assets/UI/question-bar-background.png);
   opacity: 100%;
   background-repeat: no-repeat;
-  border-radius: 50px;
+  border-radius: 10px 10px 50px 50px;
   margin-left: 5px;
   margin-bottom: 4.4vw;
   filter: blur(50%);
