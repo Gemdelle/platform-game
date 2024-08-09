@@ -14,13 +14,14 @@
 }
 
 .question-text {
-  line-height: 1.5em;
   font-size: 2vw;
   /* background-color: palevioletred; */
   width: 25vw;
+  line-height: 1.1;
   text-align: center;
   color: rgb(94, 97, 82);
   text-shadow: 5px 5px 6px rgba(0, 0, 0, 0.3);
+  margin-bottom: 5vh;
 }
 
 /* ANSWERS/RIGHT SECTION */
@@ -433,14 +434,9 @@ button.button-teoric.selected {
   filter: brightness(100%);
 }
 
-/*.silver-heart:hover,*/
-/*.gold-heart:hover {*/
-/*  opacity: 0;*/
-/*}*/
-
 .bullet-heart-dead {
   width: 11.5%;
-  height: 22%;
+  height: 18%;
   /* background-color: burlywood; */
   background-image: url(/public/assets/UI/heart-dead.png);
   background-position: center;
@@ -456,7 +452,7 @@ button.button-teoric.selected {
   height: 80%;
   /* background-color: burlywood; */
   background-image: url(/public/assets/UI/heart.gif);
-  background-position: calc(100% - -1vw) center;
+  background-position: left;
   background-size: contain;
   background-repeat: no-repeat;
   /* margin-left: 0.5vmax; */
@@ -510,6 +506,9 @@ button.button-teoric.selected {
 
 .timer {
   position: absolute;
-  bottom: 1.2vw;
-  left: 13.8vw;
+  bottom: 2.5vh;
+  left: 12.8vw;
+  font-size: 1.1vmax;
+  color: rgb(95, 92, 57);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
