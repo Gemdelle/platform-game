@@ -131,89 +131,6 @@
     cursor: pointer;
 }
 
-/* IMAGES */
-#evo-pet-0 {
-    background-image: url(/public/assets/eggs/egg-aquatic.png);
-    background-size: 30%;
-    animation-delay: 0s;
-    animation: shake 2s ease-in-out infinite;
-    filter: brightness(1);
-}
-
-#evo-pet-1 {
-    background-image: url(/public/assets/pets/axolotl-1.gif);
-    background-size: 70%;
-    animation-delay: 4s;
-    background-position: center 3.8vmax;
-    filter: brightness(1);
-}
-
-#evo-pet-2 {
-    background-image: url(/public/assets/pets/evolutions/aquatic/2.png);
-    background-size: 70%;
-    animation-delay: 0.2s;
-}
-
-#evo-pet-3 {
-    background-image: url(/public/assets/pets/evolutions/aquatic/3.png);
-    background-size: 65%;
-    animation-delay: 0.5s;
-}
-
-#evo-pet-4 {
-    background-image: url(/public/assets/pets/evolutions/aquatic/4.png);
-    background-size: 75%;
-    animation-delay: 0.3s;
-}
-
-#evo-pet-5 {
-    background-image: url(/public/assets/pets/evolutions/aquatic/5.png);
-    background-size: 76%;
-    animation-delay: 0.8s;
-}
-
-#evo-pet-6 {
-    background-image: url(/public/assets/pets/evolutions/aquatic/6.png);
-    background-size: 80%;
-    animation-delay: 0.4s;
-}
-
-#evo-pet-7 {
-    background-image: url(/public/assets/pets/evolutions/aquatic/7.png);
-    background-size: 70%;
-    animation-delay: 0s;
-}
-
-#evo-pet-8 {
-    background-image: url(/public/assets/pets/evolutions/aquatic/8.png);
-    background-size: 73%;
-    animation-delay: 0.2s;
-}
-
-#evo-pet-9 {
-    background-image: url(/public/assets/pets/evolutions/aquatic/9.png);
-    background-size: 90%;
-    animation-delay: 0.5s;
-}
-
-#evo-pet-10 {
-    background-image: url(/public/assets/pets/evolutions/aquatic/10.png);
-    background-size: 100% 81%;
-    animation-delay: 0.9s;
-}
-
-#evo-pet-11 {
-    background-image: url(/public/assets/pets/evolutions/aquatic/11.png);
-    background-size: 86%;
-    animation-delay: 0.1s;
-}
-
-#evo-pet-12 {
-    background-image: url(/public/assets/pets/evolutions/aquatic/12.png);
-    background-size: 100%;
-    animation-delay: 0.8s;
-}
-
 .pet-xp {
     margin-top: 0.7vmax;
     height: 2vmax;
@@ -234,8 +151,8 @@
     background-repeat: no-repeat;
 }
 
-.number {
-    font-size: large;
+.xp-progress-numbers {
+    font-size: medium;
     height: 40%;
 }
 

@@ -82,6 +82,7 @@ const Home = () => {
                         />
                     )
                 })}
+                <div className='pet-looker'></div>
             </div>
         );
     }

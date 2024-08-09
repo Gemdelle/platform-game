@@ -5,6 +5,12 @@
 }
 .App {
   font-family: 'BlackwoodCastle', sans-serif;
+  background-image: url(/public/assets/ground.png);
+  background-attachment: fixed; 
+  background-size: 100% 50%; 
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-color: black;
 }
 
 textarea {
@@ -44,7 +50,7 @@ pre {
 
 .header-space {
   width: 100%;
-  height: 10vw;
+  height: 6vw;
 }
 
 header {
@@ -71,6 +77,44 @@ header {
 
 /* MENU */
 
+/* PET */
+.pet-looker {
+  position: fixed;
+  background-image: url(/public/assets/pets/axolotl-1.gif);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 12vmax;
+  width: 15%;
+  /* background-color: red; */
+  z-index: 999;
+  left: 8vw;
+  top: 35vmax;
+  transform: scaleX(-1); /* Refleja el elemento horizontalmente */
+}
+
+@keyframes pulseMove {
+  0% {
+    transform: scaleX(1) scaleY(1) translateX(0); /* Tamaño original y posición inicial */
+  }
+  25% {
+    transform: scaleX(1) scaleY(0.95) translateX(1vw); /* Se achica un 5% en Y y se mueve hacia la izquierda */
+  }
+  50% {
+    transform: scaleX(1) scaleY(1) translateX(0vw); /* Tamaño original y se mueve hacia la derecha */
+  }
+  75% {
+    transform: scaleX(1) scaleY(0.95) translateX(1vw); /* Se achica un 5% en Y y se mueve hacia la izquierda */
+  }
+  100% {
+    transform: scaleX(1) scaleY(1) translateX(0); /* Tamaño original y posición inicial */
+  }
+}
+
+.pet-looker:hover {
+  transform: scaleX(1); /* Refleja el elemento horizontalmente */
+  animation: pulseMove 0.8s infinite; /* Aplica la animación */
+}
 
 
 
