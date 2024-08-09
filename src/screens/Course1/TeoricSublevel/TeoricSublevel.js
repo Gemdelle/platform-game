@@ -243,7 +243,7 @@ const TeoricSublevel = () => {
     }
 
     const handleAnswer = () => {
-        if (!selectedAnswer)
+        if (!selectedAnswer || answerState === "WRONG" || answerState === "RIGHT" )
             return
 
         if (selectedAnswer.isCorrect) {
