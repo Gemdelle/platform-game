@@ -95,19 +95,19 @@ header {
 
 @keyframes pulseMove {
   0% {
-    transform: scaleX(1) scaleY(1) translateX(0); /* Tamaño original y posición inicial */
+    transform: scaleX(1) translateX(0); /* Tamaño original y posición inicial */
   }
   25% {
-    transform: scaleX(1) scaleY(0.95) translateX(1vw); /* Se achica un 5% en Y y se mueve hacia la izquierda */
+    transform: scaleX(1) translateX(1vw); /* Se achica un 5% en Y y se mueve hacia la izquierda */
   }
   50% {
-    transform: scaleX(1) scaleY(1) translateX(0vw); /* Tamaño original y se mueve hacia la derecha */
+    transform: scaleX(1) translateX(0vw); /* Tamaño original y se mueve hacia la derecha */
   }
   75% {
-    transform: scaleX(1) scaleY(0.95) translateX(1vw); /* Se achica un 5% en Y y se mueve hacia la izquierda */
+    transform: scaleX(1) translateX(1vw); /* Se achica un 5% en Y y se mueve hacia la izquierda */
   }
   100% {
-    transform: scaleX(1) scaleY(1) translateX(0); /* Tamaño original y posición inicial */
+    transform: scaleX(1) translateX(0); /* Tamaño original y posición inicial */
   }
 }
 
