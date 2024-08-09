@@ -4,8 +4,6 @@ import {useUser} from "../utils/UserProvider";
 
 const EvolutionMap = ({ onClose }) => {
   const {userProfile} = useUser();
-  //TODO: FOR UI
-  userProfile.profile.avatar = 'caterpillar'
   useEffect(() => {
     if (userProfile.profile.avatar === 'caterpillar') {
       import('./EvolutionMapTerrestrial.css');
