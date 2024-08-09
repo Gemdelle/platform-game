@@ -126,12 +126,12 @@ const Header = () => {
                     )}
                 </div>
                 <div className='index'>
-                    <div>Curso 1</div>
-                    <div>Curso 2</div>
-                    <div>Curso 3</div>
-                    <div>Curso 4</div>
-                    <div>Curso 5</div>
-                    <div>Curso 6</div>
+                    <div className='index-option'>1</div>
+                    <div className='index-option'>2</div>
+                    <div className='index-option'>3</div>
+                    <div className='index-option'>4</div>
+                    <div className='index-option'>5</div>
+                    <div className='index-option'>6</div>
                 </div>
                 <div className='currency'></div>
                 <div className='flex-e hud'>

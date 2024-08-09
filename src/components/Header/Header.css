@@ -4,6 +4,7 @@ header {
     /* background-color: red; */
     display: flex;
     justify-content: space-between;
+    align-items: center;
     top: 0;
     position: fixed;
     z-index: 100;
@@ -14,7 +15,6 @@ header {
     height: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: start;
     margin: 0 auto;
 }
 
@@ -25,19 +25,45 @@ header {
     height: 70%;
     background-color: lightgray;
     margin-left: 3vw;
+    margin-bottom: 5vh;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 
 .index {
-    width: 15%;
-    height: 70%;
-    background-color: lightgray;
+    width: 20%;
+    height: 45%;
+    /* background-color: lightgray; */
     margin-left: 10vw;
+    margin-bottom: 3vh;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
+}
+
+.index-option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 100%;
+    /* background-color: peru; */
+    background-image: url(/public/assets/right-questions-background.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    filter: brightness(0.6);
+    transition: all 500ms ease-in-out;
+    font-size: 1.3vmax;
+    color: rgb(122, 123, 105);
+}
+
+.index-option:hover {
+    filter: brightness(1);
+    scale: 103%;
+    color: rgb(43, 44, 29);
 }
 
 .logo {
