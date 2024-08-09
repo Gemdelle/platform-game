@@ -78,6 +78,21 @@ header {
 /* MENU */
 
 /* PET */
+.pet-static {
+  position: fixed;
+  background-image: url(/public/assets/pets/axolotl-1.gif);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 12vmax;
+  width: 15%;
+  /* background-color: red; */
+  z-index: 999;
+  left: 8vw;
+  top: 35vmax;
+  transform: scaleX(-1); /* Refleja el elemento horizontalmente */
+}
+
 .pet-looker {
   position: fixed;
   background-image: url(/public/assets/pets/axolotl-1.gif);
@@ -95,25 +110,35 @@ header {
 
 @keyframes pulseMove {
   0% {
-    transform: scaleX(1) translateX(0); /* Tamaño original y posición inicial */
+    transform-origin: bottom;
+    transform: translateX(0) scaleY(0.9); /* Posición inicial */
   }
-  25% {
-    transform: scaleX(1) translateX(1vw); /* Se achica un 5% en Y y se mueve hacia la izquierda */
+  20% {
+    transform-origin: bottom;
+    transform: translateX(0.5vw) scaleY(0.9); /* Se mueve un poco a la derecha */
   }
-  50% {
-    transform: scaleX(1) translateX(0vw); /* Tamaño original y se mueve hacia la derecha */
+  40% {
+    transform-origin: bottom;
+    transform: translateX(0vw) scaleY(0.9); /* Vuelve a la posición inicial */
   }
-  75% {
-    transform: scaleX(1) translateX(1vw); /* Se achica un 5% en Y y se mueve hacia la izquierda */
+  60% {
+    transform-origin: bottom;
+    transform: translateX(0.5vw) scaleY(0.9); /* Se mueve otra vez a la derecha */
+  }
+  80% {
+    transform-origin: bottom;
+    transform: translateX(0vw) scaleY(0.9); /* Vuelve a la posición inicial */
   }
   100% {
-    transform: scaleX(1) translateX(0); /* Tamaño original y posición inicial */
+    transform-origin: bottom;
+    transform: translateX(-400px) scaleY(0.9); /* Se desplaza 600px hacia la izquierda */
   }
 }
 
+
 .pet-looker:hover {
   transform: scaleX(1); /* Refleja el elemento horizontalmente */
-  animation: pulseMove 0.8s infinite; /* Aplica la animación */
+  animation: pulseMove 0.8s linear 1; /* Aplica la animación una sola vez */
 }
 
 
