@@ -53,6 +53,9 @@ const Course = ({
                 </div>
                 <div className='course-description-container'>
                     <h1>{name}</h1>
+                    <div className='course-progress-bar'>
+                            <div className='course-bar-interior'></div>
+                        </div>
                     <div className='course-description'>
                         <span>{description}</span>
                         <ul>
@@ -63,9 +66,6 @@ const Course = ({
                                 </div>);
                             })}
                         </ul>
-                        <div className='course-progress-bar'>
-                            <div className='course-bar-interior'></div>
-                        </div>
 
                     </div>
                 </div>

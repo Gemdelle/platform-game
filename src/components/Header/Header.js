@@ -106,8 +106,6 @@ const Header = () => {
         navigate('/'); // Ruta a la que quieres redirigir
     };
 
-   
-
     return (
         <header>
             <div className='header-container'>
@@ -123,35 +121,38 @@ const Header = () => {
                             <div id='calendar' onClick={handleCalendarClick}>Calendar</div>
                             <div id='faq' onClick={handleFAQClick}>FAQ</div>
                             <div id='support' onClick={handleSupportClick}>Support</div>
-                            
+
                         </div>
                     )}
                 </div>
-                <div className='index'>
+                {/* <div className='index'>
                     <div>Curso 1</div>
                     <div>Curso 2</div>
                     <div>Curso 3</div>
                     <div>Curso 4</div>
                     <div>Curso 5</div>
                     <div>Curso 6</div>
-                </div>
+                </div> */}
+                <div className='currency'></div>
                 <div className='flex-e hud'>
-                    <div className='level-bar bg'></div>
+                    <div className='level-bar bg'>
+                        <div className='bar-interior-horizontal'></div>
+                    </div>
                     <div className='data flex-s'>
                         <div className='pp-container flex'>
-                            <div className='pp bg' style={{backgroundImage:`url("/assets/pets/${userProfile.profile.avatar}-${userProfile.profile.level}-profile.gif")`}}></div>
+                            <div className='pp bg' style={{ backgroundImage: `url("/assets/pets/${userProfile.profile.avatar}-${userProfile.profile.level}-profile.gif")` }}></div>
                         </div>
                         <div className='heart bg flex'><span id='level'>{userProfile.profile.level}</span></div>
                     </div>
                 </div>
             </div>
 
-            {showFAQ && <FAQ onClose={handleCloseFAQ}/>}
-            {showSupport && <Support onClose={handleCloseSupport}/>}
-            {showCalendar && <Calendar onClose={handleCloseCalendar}/>}
-            {showLibrary && <Library onClose={handleCloseLibrary}/>}
-            {showFriends && <Friends onClose={handleCloseFriends}/>}
-            {showEvolutionMap && <EvolutionMap onClose={handleCloseEvolutionMap}/>}
+            {showFAQ && <FAQ onClose={handleCloseFAQ} />}
+            {showSupport && <Support onClose={handleCloseSupport} />}
+            {showCalendar && <Calendar onClose={handleCloseCalendar} />}
+            {showLibrary && <Library onClose={handleCloseLibrary} />}
+            {showFriends && <Friends onClose={handleCloseFriends} />}
+            {showEvolutionMap && <EvolutionMap onClose={handleCloseEvolutionMap} />}
         </header>
     );
 };

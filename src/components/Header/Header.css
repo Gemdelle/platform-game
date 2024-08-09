@@ -80,6 +80,7 @@ header {
         opacity: 0;
         transform: translateX(-10%);
     }
+
     100% {
         opacity: 1;
         transform: translateX(0);
@@ -91,6 +92,7 @@ header {
         opacity: 1;
         transform: translateX(0);
     }
+
     100% {
         opacity: 0;
         transform: translateX(-10%);
@@ -104,6 +106,8 @@ header {
 /* HUD */
 
 .hud {
+    display: flex;
+    flex-direction: row;
     width: 30%;
     height: 100%;
     /* background-color: aquamarine; */
@@ -116,6 +120,20 @@ header {
     width: 22%;
     height: 50%;
     background-image: url('/public/assets/level-bar.png');
+}
+
+
+.bar-interior-horizontal {
+    width: 100%;
+    height: 50%;
+    background-color: rgb(41, 13, 21);
+    background-image: url(/public/assets/UI/question-bar-background-horizontal.png);
+    opacity: 100%;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+    margin-left: 6.5%;
+    margin-top: 6%;
+    filter: blur(50%);
 }
 
 .data {
@@ -146,7 +164,7 @@ header {
     /* background-color: rgb(65, 31, 31); */
     border-radius: 50%;
     color: white;
-  }
+}
 
 .heart {
     position: absolute;
@@ -162,3 +180,13 @@ header {
 }
 
 /* END HUD */
+
+/* START USER-STATS */
+
+.currency {
+    width: 25%;
+    height: 25%;
+    background-color: aqua;
+}
+
+/* END USER-STATS */

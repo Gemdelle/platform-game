@@ -45,7 +45,8 @@
     background-size: contain;
     background-repeat: no-repeat;
     /* background-color: red; */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
 }
 
 .corner-1 {
@@ -79,7 +80,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
+
     padding: 2vmax;
     padding-bottom: 3vmax;
     /* background-color: rgba(100,100,10,0.5); */
@@ -116,7 +117,8 @@ h1 {
 }
 
 ul {
-    list-style: none; /* Remove default list bullets */
+    list-style: none;
+    /* Remove default list bullets */
     padding: 0;
     margin: 0;
 }
@@ -125,12 +127,12 @@ li {
     margin-left: 3.5vw;
     text-align: left;
     font-size: 1.4vw;
-  }
+}
 
 /* li:last-child {
     margin-bottom: 1vw;
 } */
-  
+
 .heart-bullet {
     position: relative;
 }
@@ -166,7 +168,7 @@ li {
     cursor: pointer;
     transition: all 200ms ease-in-out;
     background-image: url(/public/assets/UI/heart-silver.gif);
-    background-size: 160% ;
+    background-size: 160%;
     color: black;
     z-index: 99;
 }
@@ -178,7 +180,7 @@ li {
     cursor: pointer;
     transition: all 200ms ease-in-out;
     background-image: url(/public/assets/UI/heart-gold.gif);
-    background-size: 160% ;
+    background-size: 160%;
     color: white;
     z-index: 99;
 }
@@ -207,9 +209,7 @@ li {
 }
 
 .level.default,
-.level.disabled {
-
-}
+.level.disabled {}
 
 .level span {
     margin-top: 2.2vw;
@@ -222,40 +222,60 @@ li {
 
 .course-progress-bar {
     position: absolute;
-    width: 1vmax;
-    height: 11vmax;
+   /*  background-color: #007bff; */
+    width: 4vmax;
+    height: 17vmax;
     background-image: url('/public/assets/question-bar.png');
     background-size: 100% 100%;
     background-position: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 2vmax;
-    padding-bottom: 3vmax;
+    justify-content: flex-end;
     background-repeat: no-repeat;
     left: 9.5%;
     top: 15%;
 }
 
 .course-bar-interior {
-    position: absolute;
-    width: 2vmax; /* Ajusta el ancho para que se adapte dentro del contenedor */
-    height: 13vmax; /* Ajusta la altura para que se adapte dentro del contenedor */
-    background-color: red;
-    border-radius: 50px;
-    margin-top: 0.9vmax; /* Alinea la barra al fondo del contenedor */
-    margin-bottom: auto; /* Alinea la barra al fondo del contenedor */
-    left: 1.65vmax;
+    width: 51.2%;
+    height: 80%;
+    /* height: 87.5%; */
+    background-color: rgb(41, 13, 21);
+    background-image: url(/public/assets/UI/question-bar-background.png);
+    background-size: 100% auto;
+    background-repeat: repeat-y;
+    background-position: center top;
+    border-radius: 30px 20px 50px 50px;
+    opacity: 100%;
+    margin-left: 4.35%;
+    margin-bottom: 29%;
+    filter: blur(50%);
+    animation: moveBackground 20s linear infinite;
 
 }
 
+@keyframes moveBackground {
+    0% {
+        background-position: center top;
+    }
+    50% {
+        background-position: center 100%;
+    }
+    100% {
+        background-position: center top;
+    }
+}
+
+
 html {
-    scroll-behavior: smooth; /* Habilita el desplazamiento suave */
+    scroll-behavior: smooth;
+    /* Habilita el desplazamiento suave */
 }
 
 .index-container {
-    position: fixed; /* Opcional: hace que el índice sea fijo en la pantalla */
+    position: fixed;
+    /* Opcional: hace que el índice sea fijo en la pantalla */
     top: 2%;
     left: 43%;
     background: #f0f0f0;
