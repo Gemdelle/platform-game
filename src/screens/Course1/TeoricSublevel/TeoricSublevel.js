@@ -1,9 +1,12 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import './TeoricSublevel.css';
 import {useUser} from "../../../components/utils/UserProvider";
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
 import TeoricRules from "./TeoricRules";
+import TeoricResults from "./TeoricResults";
+
+const audioSrc = "/assets/sounds/wrong-answer.mp3";
 
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -20,6 +23,7 @@ const TeoricSublevel = () => {
     const [selectedAnswer, setSelectedAnswer] = useState(null);
     const [answerState, setAnswerState] = useState(null);
     const [timeLeft, setTimeLeft] = useState(180);
+    const audioRef = useRef(new Audio(audioSrc));
     const [questionsToAnswer] = useState(shuffle([
         {
             questionText: 'Una clase puede definirse como...',
@@ -213,7 +217,7 @@ const TeoricSublevel = () => {
         }
     };
 
-    const handleCloseTeoricRules = () => {
+    const goHome = () => {
         navigate('/');
     }
 
@@ -244,7 +248,7 @@ const TeoricSublevel = () => {
             }, 1000)
         } else {
             setAnswerState("WRONG")
-
+            playAudio()
             setTimeout(()=> {
                 setSelectedAnswer(null);
                 setAnswerState(null)
@@ -263,13 +267,21 @@ const TeoricSublevel = () => {
         }
     };
 
+    const restart = () => {
+
+    }
+
+    const playAudio = () => {
+        audioRef.current.play();
+    };
+
     return (
         <div className='teoric-sublevel-container'>
             <div className="moving-sky"></div>
             {!hasStarted ? (
-                <TeoricRules onClose={handleCloseTeoricRules} handleGoNext={handleGoNext} />
+                <TeoricRules onClose={goHome} handleGoNext={handleGoNext} />
             ) : showScore ? (
-                <div className='score-section'>You scored {score} out of {questionsToAnswer.length}</div>
+                <TeoricResults onClose={goHome} handleGoNext={restart} score={score} questionsToAnswer={questionsToAnswer}/>
             ) : (
                 <>
                     <div className="question-container">
