@@ -357,7 +357,7 @@ button.button-teoric.selected {
 
 .score-bar {
   width: 10%;
-  height: 70%;
+  height: 65%;
   /* background-color: lightgoldenrodyellow; */
   position: absolute;
   left: -2vmax;
@@ -370,12 +370,12 @@ button.button-teoric.selected {
 }
 
 .correct-answers {
-  bottom: -2vmax;
+  margin-bottom: -8vh;
   /* background-color:lightblue; */
   width: 100%;
   height: 30%;
   position: absolute;
-  /* background-image: url(/public/assets/right-questions-background.png); */
+  background-image: url(/public/assets/right-questions-background.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -387,13 +387,14 @@ button.button-teoric.selected {
 }
 
 .bar-interior {
-  width: 53%;
+  width: 61%;
   /* height: 20%; */
-  /* background-color: rgb(41, 13, 21); */
   background-image: url(/public/assets/UI/question-bar-background.png);
   background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
   border-radius: 10px 10px 50px 50px;
-  margin-left: 5px;
+  margin-bottom: 4vh;
   filter: blur(50%);
   
 }
@@ -401,12 +402,11 @@ button.button-teoric.selected {
 .gold-heart {
   width: 8.5vmax;
   height: 10vmax;
-  /* background-color: white; */
   background-image: url(/public/assets/UI/heart-gold.png);
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
-  top: -50px;
+  top: -40px;
   transition: all 500ms ease-in-out;
   filter: brightness(40%);
 }
@@ -418,12 +418,11 @@ button.button-teoric.selected {
 .silver-heart {
   width: 7vmax;
   height: 10vmax;
-  /* background-color: white; */
   background-image: url(/public/assets/UI/heart-silver.png);
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
-  top: 100px;
+  top: 90px;
   transition: all 500ms ease-in-out;
   filter: brightness(40%);
 }
