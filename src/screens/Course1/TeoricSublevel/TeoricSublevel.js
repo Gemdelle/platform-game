@@ -173,18 +173,18 @@ const TeoricSublevel = () => {
     const audioRef = useRef(new Audio(audioSrc));
     const [questionsToAnswer, setQuestionsToAnswer] = useState(shuffle([...QUESTIONS_DATA]));
 
-    // useEffect(() => {
-    //     if (hasStarted && timeLeft > 0) {
-    //         const timer = setTimeout(() => {
-    //             setTimeLeft(timeLeft - 1);
-    //         }, 1000);
-    //
-    //         return () => clearTimeout(timer);
-    //     } else if (timeLeft === 0) {
-    //         handleFinish();
-    //         setShowScore(true);
-    //     }
-    // }, [timeLeft, hasStarted]);
+    useEffect(() => {
+        if (hasStarted && timeLeft > 0) {
+            const timer = setTimeout(() => {
+                setTimeLeft(timeLeft - 1);
+            }, 1000);
+
+            return () => clearTimeout(timer);
+        } else if (timeLeft === 0) {
+            handleFinish();
+            setShowScore(true);
+        }
+    }, [timeLeft, hasStarted]);
 
     const formatTime = (seconds) => {
         const minutes = Math.floor(seconds / 60);
@@ -339,8 +339,6 @@ const TeoricSublevel = () => {
                                 ))}
                             </div>
                             <div className='next-btn' onClick={handleAnswer}>NEXT</div>
-                            <div className='debug-btn' onClick={increment}>INCREMENT</div>
-                            <div className='debug-btn decrement' onClick={decrement}>DECREMENT</div>
                         </div>
                     </div>
                 </>
