@@ -308,7 +308,7 @@ const TeoricSublevel = () => {
                             <div className='score-bar'>
                                 <div className={`gold-heart ${score === 15 ? 'won-gold' : ''}`}></div>
                                 <div className={`silver-heart ${score >= 12 ? 'won-silver' : ''}`}></div>
-                                <div className='bar-interior' style={{ height: `${(score / 15) * 83}%` }}></div>
+                                <div className='bar-interior' style={{ height: `${(score / 15) * 100}%` }}></div>
                                 <div className='correct-answers'>{score}</div>
                             </div>
                             <div className='answer-section'>

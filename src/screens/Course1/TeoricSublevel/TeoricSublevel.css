@@ -52,8 +52,8 @@
 
 .question-opener {
   background-image: url(/public/assets/item-container.png);
-  background-size: contain;
-  background-position: 0% 100%;
+  background-size: 75%;
+  background-position: center 2.3vw;
   background-repeat: no-repeat;
   width: 15%;
   height: 100%;
@@ -375,7 +375,7 @@ button.button-teoric.selected {
   width: 100%;
   height: 30%;
   position: absolute;
-  background-image: url(/public/assets/right-questions-background.png);
+  /* background-image: url(/public/assets/right-questions-background.png); */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -389,13 +389,11 @@ button.button-teoric.selected {
 .bar-interior {
   width: 53%;
   /* height: 20%; */
-  background-color: rgb(41, 13, 21);
+  /* background-color: rgb(41, 13, 21); */
   background-image: url(/public/assets/UI/question-bar-background.png);
-  opacity: 100%;
   background-repeat: no-repeat;
   border-radius: 10px 10px 50px 50px;
   margin-left: 5px;
-  margin-bottom: 4.4vw;
   filter: blur(50%);
   
 }
@@ -408,7 +406,7 @@ button.button-teoric.selected {
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
-  top: -40px;
+  top: -50px;
   transition: all 500ms ease-in-out;
   filter: brightness(40%);
 }
@@ -425,7 +423,7 @@ button.button-teoric.selected {
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
-  top: 120px;
+  top: 100px;
   transition: all 500ms ease-in-out;
   filter: brightness(40%);
 }
