@@ -204,7 +204,7 @@ button.button-teoric.selected {
   width: 30%;
   height: 100%;
   /* background-color: #72dac0; */
-  animation: walk 60s linear;
+  animation: walk 180s linear;
 }
 
 @keyframes walk {
@@ -506,4 +506,10 @@ button.button-teoric.selected {
 .next-btn:hover {
   filter: opacity(1);
   scale: 105%;
+}
+
+.timer {
+  position: absolute;
+  bottom: 1.2vw;
+  left: 13.8vw;
 }

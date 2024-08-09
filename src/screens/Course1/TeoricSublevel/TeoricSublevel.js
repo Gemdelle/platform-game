@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './TeoricSublevel.css';
 import {useUser} from "../../../components/utils/UserProvider";
 import axios from "axios";
@@ -19,6 +19,7 @@ const TeoricSublevel = () => {
     const [hasStarted, setHasStarted] = useState(false);
     const [selectedAnswer, setSelectedAnswer] = useState(null);
     const [answerState, setAnswerState] = useState(null);
+    const [timeLeft, setTimeLeft] = useState(180);
     const [questionsToAnswer] = useState(shuffle([
         {
             questionText: 'Una clase puede definirse como...',
@@ -166,6 +167,25 @@ const TeoricSublevel = () => {
         },
     ]));
 
+    useEffect(() => {
+        if (hasStarted && timeLeft > 0) {
+            const timer = setTimeout(() => {
+                setTimeLeft(timeLeft - 1);
+            }, 1000);
+
+            return () => clearTimeout(timer);
+        } else if (timeLeft === 0) {
+            handleFinish();
+            setShowScore(true);
+        }
+    }, [timeLeft, hasStarted]);
+
+    const formatTime = (seconds) => {
+        const minutes = Math.floor(seconds / 60);
+        const remainingSeconds = seconds % 60;
+        return `${minutes < 10 ? '0' : ''}${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
+    };
+
     const handleFinish = async () => {
         try {
             const idToken = userProfile.id
@@ -246,54 +266,58 @@ const TeoricSublevel = () => {
     return (
         <div className='teoric-sublevel-container'>
             <div className="moving-sky"></div>
-            {!hasStarted ? (<TeoricRules onClose={handleCloseTeoricRules} handleGoNext={handleGoNext}/>) :
-                showScore ? (
-                    <div className='score-section'>You scored {score} out of {questionsToAnswer.length}</div>
-                ) : (
-                    [<div className="question-container">
-
+            {!hasStarted ? (
+                <TeoricRules onClose={handleCloseTeoricRules} handleGoNext={handleGoNext} />
+            ) : showScore ? (
+                <div className='score-section'>You scored {score} out of {questionsToAnswer.length}</div>
+            ) : (
+                <>
+                    <div className="question-container">
                         <div className='question-section'>
                             <div className='question-count question-progress'>
-                            <span className='current-question-number'><span
-                                className='number'>{currentQuestion + 1}</span>/{questionsToAnswer.length}</span>
+                                <span className='current-question-number'>
+                                    <span className='number'>{currentQuestion + 1}</span>/{questionsToAnswer.length}
+                                </span>
                             </div>
                             <div className='question-text'>{questionsToAnswer[currentQuestion].questionText}</div>
                         </div>
-                    </div>,
-                        <div className='content-container'>
-                            <div className='timer-container'>
-                                <div className='food'></div>
-                                <div className='steam'></div>
-                                <div className="pet-companion"
-                                     style={{backgroundImage: `url("/assets/pets/${userProfile.profile.avatar}-${userProfile.profile.level}.gif")`}}
-                                ></div>
+                        <div className='timer'>{formatTime(timeLeft)}</div>
+                    </div>
+                    <div className='content-container'>
+                        <div className='timer-container'>
+                            <div className='food'></div>
+                            <div className='steam'></div>
+                            <div className="pet-companion"
+                                 style={{ backgroundImage: `url("/assets/pets/${userProfile.profile.avatar}-${userProfile.profile.level}.gif")` }}
+                            ></div>
+                        </div>
+                        <div className='answers-container'>
+                            <div className='level-title'>{userProfile.progress.courses[0].name}</div>
+                            <div className='score-bar'>
+                                <div className={`gold-heart ${score === 15 ? 'won-gold' : ''}`}></div>
+                                <div className={`silver-heart ${score >= 12 ? 'won-silver' : ''}`}></div>
+                                <div className='bar-interior' style={{ height: `${(score / 15) * 83}%` }}></div>
+                                <div className='correct-answers'>{score}</div>
                             </div>
-                            <div className='answers-container'>
-                                <div className='level-title'>{userProfile.progress.courses[0].name}</div>
-                                <div className='score-bar'>
-                                    <div className={`gold-heart ${score === 15 ? 'won-gold':''}`}></div>
-                                    <div className={`silver-heart ${score >= 12 ? 'won-silver':''}`}></div>
-                                    <div className='bar-interior' style={{ height: `${(score / 15) * 83}%` }}></div>
-                                    <div className='correct-answers'>{score}</div>
-                                </div>
-                                <div className='answer-section'>
-                                    {questionsToAnswer[currentQuestion].answerOptions.map((answerOption) => (
-                                        <div className='answer-and-bullet'>
-                                            <div className={`${selectedAnswer && selectedAnswer === answerOption && answerState === "RIGHT" ? 'bullet-heart-alive' : 'bullet-heart-dead'}`}></div>
-                                            <div className='question-design'>
-                                                <div className=''></div>
-                                                <button className={`button-teoric ${selectedAnswer && selectedAnswer === answerOption && answerState !== "WRONG" ? "selected" : selectedAnswer && selectedAnswer === answerOption && answerState === "WRONG" ? "wrong-answer" : ""}`}
-                                                        onClick={() => handleAnswerButtonClick(answerOption)}>
-                                                    <span className='text-answer'>{answerOption.answerText}</span>
-                                                </button>
-                                                <div className='question-opener end'></div>
-                                            </div>
-                                        </div>))}
-                                </div>
-                                <div className='next-btn' onClick={handleAnswer}>NEXT</div>
+                            <div className='answer-section'>
+                                {questionsToAnswer[currentQuestion].answerOptions.map((answerOption) => (
+                                    <div className='answer-and-bullet'>
+                                        <div className={`${selectedAnswer && selectedAnswer === answerOption && answerState === "RIGHT" ? 'bullet-heart-alive' : 'bullet-heart-dead'}`}></div>
+                                        <div className='question-design'>
+                                            <button className={`button-teoric ${selectedAnswer && selectedAnswer === answerOption && answerState !== "WRONG" ? "selected" : selectedAnswer && selectedAnswer === answerOption && answerState === "WRONG" ? "wrong-answer" : ""}`}
+                                                    onClick={() => handleAnswerButtonClick(answerOption)}>
+                                                <span className='text-answer'>{answerOption.answerText}</span>
+                                            </button>
+                                            <div className='question-opener end'></div>
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
-                        </div>]
-                )}
+                            <div className='next-btn' onClick={handleAnswer}>NEXT</div>
+                        </div>
+                    </div>
+                </>
+            )}
         </div>
     );
 }
