@@ -55,7 +55,7 @@
     height: 45%;
     margin-bottom: -1vmax;
     /* background-color: aliceblue; */
-    /* background-image: url(/public/assets/orbs/orb-aquatic.png); */
+    background-image: url(/public/assets/orbs/orb-aquatic.png);
     /* background-image: url(/public/assets/orbs/orb-aerial.png); */
     /* background-image: url(/public/assets/orbs/orb-terrestrial.png); */
     background-size: contain;
@@ -76,10 +76,10 @@
 
   @keyframes subtle-glow {
     0%, 100% {
-      filter: drop-shadow(0 0 5px rgba(181, 184, 172, 0.9));
+      filter: drop-shadow(0 0 5px rgba(227, 230, 219, 0.9));
     }
     50% {
-      filter: drop-shadow(0 0 15px rgba(186, 190, 153, 0.9));
+      filter: drop-shadow(0 0 15px rgba(116, 118, 94, 0.9));
     }
   }
   

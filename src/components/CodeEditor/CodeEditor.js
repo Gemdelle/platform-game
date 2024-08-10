@@ -14,8 +14,8 @@ const CodeEditor = ({ className, onSubmit }) => {
             <div className='code-area bg'>
 
             <div className='arrows'>
-                <div className='arrow arr-2'></div>
-                <div className='arrow arr-1'></div>
+                <div className='arrow arr-left'></div>
+                <div className='arrow arr-right'></div>
             </div>
             <div className='title'>{className}.java</div>
             <textarea
@@ -26,7 +26,8 @@ const CodeEditor = ({ className, onSubmit }) => {
                 cols="50"
                 className='bg'
             ></textarea>
-            <button type="submit" className='compile-button'>Compile & Run</button>
+            <button type="submit" className='compile-button'><span>Compile</span> <span>&</span> <span>Run</span>
+            </button>
             </div>
         </form>
     );

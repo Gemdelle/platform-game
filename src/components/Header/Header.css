@@ -149,6 +149,7 @@ header {
     background-image: url('/public/assets/level-bar.png');
     display: flex;
     justify-content: flex-end;
+    align-items: center;
 }
 
 
@@ -218,5 +219,18 @@ header {
     height: 25%;
     background-color: aqua;
 } */
+
+.level-bar-progress {
+    height: 40%;
+    width: 30%;
+    /* background-color: blue; */
+    color: rgb(216, 216, 203);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), -2px -2px 4px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 6vmax;
+    font-size: larger;
+}
 
 /* END USER-STATS */
