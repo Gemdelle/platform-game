@@ -3,7 +3,7 @@ import CodeEditor from '../../../components/CodeEditor/CodeEditor';
 import OutputDisplay from '../../../components/OutputDisplay/OutputDisplay';
 import './Course1Sublevel1.css';
 import Header from "../../../components/Header/Header";
-import UserStories from '../../../components/UserStories/UserStories';
+import UserStories1Sublevel1 from '../../../components/UserStories/UserStories1Sublevel1';
 import Preview from '../../../components/Preview/Preview';
 import Instructions from "../../../components/Instructions/Instructions";
 import {useUser} from "../../../components/utils/UserProvider";
@@ -47,7 +47,7 @@ const Course1Sublevel1 = () => {
                 <OutputDisplay output={output}/>
             </div>
             <Preview previewImageUrl={`url("/assets/pets/caterpillar-1.gif")`}/>
-            <UserStories/>
+            <UserStories1Sublevel1/>
         </div>
     </div>);
 };

@@ -1,7 +1,7 @@
 .user-stories {
   width: 25%;
   height: 100%;
-  background-color: pink;
+  /* background-color: pink; */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -9,27 +9,28 @@
 
 .stories-container {
     padding-top: 2vw;
-    background-color: gray;
+    height: 100%;
+    margin-bottom: -20vmax;
 }
 
-ul {
+.user-stories ul {
   list-style: none; /* Remove default list bullets */
   padding: 0;
-  margin-bottom: -2vh;
-  max-height: 70%;
+  max-height: 65%;
   overflow: scroll;
   scroll-behavior: smooth;
   scrollbar-width:none;
-    z-index: 2;
-
+  z-index: 2;
+  background-color: coral;
+  margin-top: 55%;
 }
 
 .stories-container li {
-  margin: 0.4vw 0vw 0.8vw 4vw;
+  margin: 0.4vw 0vw 0.8vw 6vw;
   text-align: left;
   margin-bottom: 1.8vw;
   padding: 1px 1px;
-  font-size: 1.5vw;
+  font-size: 1.3vw;
 }
 
 .stories-container .heart-bullet {
@@ -40,7 +41,7 @@ ul {
 .stories-container .heart-bullet::before {
   content: "";
   left: 0.5vw;
-  transform: translateY(-40%);
+  transform: translateY(-50%);
   width: 3vw;
   height: 3vw;
   background-image: url("/public/assets/UI/heart.gif");
@@ -50,31 +51,58 @@ ul {
 /* DEAD HEART */
 .stories-container .heart-bullet::before {
     content: "";
-    left: 1.6vw;
+    left: 2vw;
     transform: translateY(-35%);
     width: 3vw;
     height: 3vw;
-    background-image: url("/public/assets/UI/heart-dead.png");
-    background-size: contain;
+    background-image: url("/public/assets/UI/heart-dead.png"), url("/public/assets/UI/dead-veins.png");
+    background-position: right, left;
+    background-size: contain, 100% 100%;
     background-repeat: no-repeat;
+    /* background-color: red; */
   }
 
 /* USER STORIES PROGRESS BAR */
 .bar {
     position: absolute;
-    right: 25%;
-    bottom: 3vh;
-    width: 2vw;
-    height: 75%;
-    background-color: cyan;
+    right: 23%;
+    bottom: 2.5vh;
+    width: 4.5vw;
+    height: 79%;
+    /* background-color: cyan; */
     z-index: 50;
+    background-image: url(/public/assets/question-bar.png);
+    background-position: center;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+}
+
+.stories-bar-interior {
+  background-image: url(/public/assets/UI/question-bar-background.png);
+  background-position: center;
+  background-size: 100% 120%;
+  background-repeat: no-repeat;
+  /* background-color: red; */
+  width: 58%;
+  height: 84%;
+  border-radius: 10px 10px 50px 50px;
+  margin-bottom: 2.2vmax;
 }
 
 .score {
-    margin-top: 16vh;
-    background-color: yellowgreen;
+    margin-top: 15.5vh;
+    /* background-color: yellowgreen; */
+    background-image: url(/public/assets/horizontal-small-frame.png);
+    background-position: center;
+    background-size: 100% 100%;
     color: black;
     z-index: 900;
-    height: 4vw;
-    width: 8vw;
+    height: 6.5vw;
+    width: 11vw;
+    margin-left: -4.5vmax;
+    font-size: 1.5vmax;
+    position: absolute;
 }

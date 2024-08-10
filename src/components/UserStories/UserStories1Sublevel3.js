@@ -18,7 +18,7 @@ const user_stories = [
 const UserStories = () => {
     return (
         <div className='user-stories'>
-            <div className='bar'></div>
+            <div className='bar'><div className='bar-interior'></div></div>
             <div className='score flex'>9/15</div>
             <ul>
                 <div className='stories-container'>
