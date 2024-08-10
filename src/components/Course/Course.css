@@ -123,8 +123,8 @@ ul {
     margin: 0;
 }
 
-li {
-    margin-left: 3.5vw;
+.course-description li {
+    margin-left: 2.5vw;
     text-align: left;
     font-size: 1.4vw;
 }
@@ -140,7 +140,7 @@ li {
 .heart-bullet::before {
     content: '';
     position: absolute;
-    left: 25%;
+    left: 0;
     width: 2.5vw;
     height: 1.7vw;
     background-image: url('/public/assets/UI/heart.gif');

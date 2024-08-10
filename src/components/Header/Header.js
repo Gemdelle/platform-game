@@ -11,7 +11,7 @@ import { auth } from "../../firebase";
 import { useUser } from "../utils/UserProvider";
 import { useNavigate } from "react-router-dom";
 
-const Header = () => {
+const Header = ({children}) => {
     const [showOptions, setShowOptions] = useState(true);
     const [animating, setAnimating] = useState(false);
     const [showFAQ, setShowFAQ] = useState(false);
@@ -125,14 +125,6 @@ const Header = () => {
                         </div>
                     )}
                 </div>
-                <div className='index'>
-                    <div className='index-option'>1</div>
-                    <div className='index-option'>2</div>
-                    <div className='index-option'>3</div>
-                    <div className='index-option'>4</div>
-                    <div className='index-option'>5</div>
-                    <div className='index-option'>6</div>
-                </div>
                 <div className='currency'></div>
                 <div className='flex-e hud'>
                     <div className='level-bar bg'>
@@ -153,6 +145,7 @@ const Header = () => {
             {showLibrary && <Library onClose={handleCloseLibrary} />}
             {showFriends && <Friends onClose={handleCloseFriends} />}
             {showEvolutionMap && <EvolutionMap onClose={handleCloseEvolutionMap} />}
+            {children}
         </header>
     );
 };
