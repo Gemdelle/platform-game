@@ -39,6 +39,7 @@ form {
     background-size: 100% 100%;
     background-repeat: no-repeat;
     margin-top: 20%;
+    z-index: 5;
 }
 
 .code-area {
@@ -79,12 +80,16 @@ pre {
 }
 
 .container {
-    margin: 0 auto;
-    margin-top: 4vh;
-    width: 95vw;
-    height: 92vh;
-    /* background-color: lightgoldenrodyellow; */
+    margin: 3vh 5vw;
+    width: 97vw;
+    height: 97vh;
+    background-color: black;
     justify-content: space-between;
+    /* background-image: url(/public/assets/calendar-background.png); */
+    background-position: bottom;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
   }
   
   .code-container {

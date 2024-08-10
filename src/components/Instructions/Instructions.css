@@ -3,8 +3,12 @@
     top: 1vw;
     left: 4vw;
     width: 63vw;
-    height: 4.5vw;
+    height: 8vw;
     background-color: blueviolet;
+    background-image: url(/public/assets/instructions-frame.png);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
 }
