@@ -7,12 +7,14 @@ const Course = ({
                     course: {
                         description,
                         item_count:itemCount,
+                        goals,
                         completed_sublevels,
                         name,
                         total: levels,
                         current: currentCourseLevel,
                         theoretical: {grade, score: {current, total}}
-                    }
+                    },
+                    courseNumber
                 }) => {
 
     let itemsRange = Array.from({length: itemCount}, (_, index) => index + 1);
@@ -60,20 +62,17 @@ const Course = ({
                         </div>
                     <div className='course-description'>
                         <span>{description}</span>
-                        <ul>
-                            {itemsRange.map((number, index) => {
-                                return (<div key={`${name}-${index}`}>
-                                    <div className='heart-bullet bg'></div>
-                                    <li>Item {number}</li>
-                                </div>);
-                            })}
-                        </ul>
-
+                        {goals.map((goal, index) => {
+                            return (<ul key={`goal-${index}`}>
+                                <div className='heart-bullet bg'></div>
+                                <li>{goal.description}</li>
+                            </ul>);
+                        })}
                     </div>
                 </div>
                 <div className='levels'>
                     <div
-                        className={`level flex bg ${grade === "SILVER" ? 'silver' : grade === "GOLD" ? 'gold' : 'default'}`}
+                        className={`level flex bg ${grade === "SILVER" ? 'silver' : grade === "GOLD" ? 'gold' : courseNumber === 1 ? 'default' : 'disabled'}`}
                         onClick={() => {
                             navigateToTheoretical()
                         }}><span>{current}</span></div>
