@@ -19,7 +19,7 @@ const Course1Sublevel2 = () => {
         try {
             const response = await axios.post('https://quiet-badlands-42095-c0012ddb8417.herokuapp.com/validate/course/1/2', {
                 class_code: classCode
-            },{
+            }, {
                 headers: {
                     'Authorization': `Bearer ${idToken}`
                 }
@@ -46,7 +46,8 @@ const Course1Sublevel2 = () => {
                     <CodeEditor onSubmit={handleCompileAndRun} className="Axolotl"/>
                     <OutputDisplay output={output}/>
                 </div>
-                <Preview previewImageUrl={`url("/assets/pets/axolotl-1.gif")`}/>
+                <Preview
+                    previewImageUrl={`url("/assets/eggs/${userProfile.profile.avatar === 'caterpillar' ? 'egg-terrestrial' : userProfile.profile.avatar === 'axolotl' ? 'egg-aquatic' : 'egg-aerial'}.png")`}/>
                 <UserStories/>
             </div>
         </div>

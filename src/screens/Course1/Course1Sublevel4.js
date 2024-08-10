@@ -46,7 +46,7 @@ const Course1Sublevel3 = () => {
                     <CodeEditor onSubmit={handleCompileAndRun} className="Pterodactyl"/>
                     <OutputDisplay output={output}/>
                 </div>
-                <Preview previewImageUrl={`url("/assets/pets/pterodactyl-1.gif")`}/>
+                <Preview previewImageUrl={`url("/assets/pets/caterpillar-1.gif")`}/>
                 <UserStories/>
             </div>
         </div>
