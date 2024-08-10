@@ -37,6 +37,12 @@ code {
   align-items: center;
 }
 
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .flex-e {
   display: flex;
   justify-content: flex-end;

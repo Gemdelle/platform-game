@@ -6,7 +6,7 @@
     align-items: center;
     height: 14%;
     margin-right: 2.5vw;
-    font-size:large;
+    font-size: large;
     /* background-color: red; */
 }
 
@@ -44,7 +44,7 @@ form {
 
 .code-area {
     width: 100%;
-    height: 100%; 
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -80,26 +80,22 @@ pre {
 }
 
 .container {
-    margin: 3vh 5vw;
-    width: 97vw;
-    height: 97vh;
-    background-color: black;
+    width: 96vw;
+    height: 100vh;
     justify-content: space-between;
-    /* background-image: url(/public/assets/calendar-background.png); */
     background-position: bottom;
     background-size: 100% 100%;
     background-repeat: no-repeat;
 
-  }
-  
-  .code-container {
+}
+
+.code-container {
+    background-image: url(/public/assets/output-area.png);
     width: 40%;
     height: 100%;
-    background-image: url(/public/assets/output-area.png);
-    background-position: bottom;
-    background-size: 80% 30%;
+    background-position: center 33.9vmax;
+    background-size: 80% 22%;
     background-repeat: no-repeat;
-    /* background-color: black; */
-  }
+}
 
 /* END CodeEditor */

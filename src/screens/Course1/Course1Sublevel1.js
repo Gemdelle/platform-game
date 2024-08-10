@@ -8,6 +8,7 @@ import Instructions from "../../components/Instructions/Instructions";
 import {useUser} from "../../components/utils/UserProvider";
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
+import './Course1Sublevels.css';
 
 const Course1Sublevel1 = () => {
     const [output, setOutput] = useState('');
@@ -37,7 +38,7 @@ const Course1Sublevel1 = () => {
     };
 
 
-    return (<div className="App">
+    return (<div className="course-level-1 flex">
         <Instructions/>
         <Header/>
         <div className='container flex'>
@@ -45,7 +46,7 @@ const Course1Sublevel1 = () => {
                 <CodeEditor onSubmit={handleCompileAndRun} className="Caterpillar"/>
                 <OutputDisplay output={output}/>
             </div>
-            <Preview
+            <Preview className="egg"
                 previewImageUrl={`url("/assets/eggs/${userProfile.profile.avatar === 'caterpillar' ? 'egg-terrestrial' : userProfile.profile.avatar === 'axolotl' ? 'egg-aquatic' : 'egg-aerial'}.png")`}/>
             <UserStories1Sublevel1/>
         </div>

@@ -1,9 +1,9 @@
 import React from 'react';
 import './Preview.css';
-const Preview = ({ previewImageUrl }) => {
+const Preview = ({ previewImageUrl, className }) => {
 
     return (
-        <div className='preview bg' style={{backgroundImage: previewImageUrl}}>
+        <div className={`preview bg ${className}`} style={{backgroundImage: previewImageUrl}}>
 
         </div>
     );

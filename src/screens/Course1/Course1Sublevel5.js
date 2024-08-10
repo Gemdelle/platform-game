@@ -38,7 +38,7 @@ const Course1Sublevel3 = () => {
     };
 
     return (
-        <div className="App">
+        <div className="course-level-1 flex">
             <Instructions/>
             <Header/>
             <div className='container flex'>

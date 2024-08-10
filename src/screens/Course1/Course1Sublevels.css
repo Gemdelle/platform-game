@@ -1,0 +1,24 @@
+.egg {
+    height: 50%;
+    animation: shake 2s ease-in-out infinite;
+    transform-origin: bottom center;
+    margin-top: 8vmax;
+}
+
+.course-level-1 {
+    font-family: 'BlackwoodCastle', sans-serif;
+    background-attachment: fixed;
+    background-size: 100% 50%;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-color: black;
+}
+
+
+@keyframes shake {
+    0% { transform: rotate(0); }
+    25% { transform: rotate(-1deg); }
+    50% { transform: rotate(2deg); }
+    75% { transform: rotate(-1deg); }
+    100% { transform: rotate(0); }
+}
