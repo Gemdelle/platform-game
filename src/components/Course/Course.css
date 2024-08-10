@@ -143,6 +143,17 @@ ul {
     left: 0;
     width: 2.5vw;
     height: 1.7vw;
+    background-image: url('/public/assets/UI/heart-dead.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.heart-bullet.completed::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 2.5vw;
+    height: 1.7vw;
     background-image: url('/public/assets/UI/heart.gif');
     background-size: contain;
     background-repeat: no-repeat;
@@ -215,6 +226,7 @@ ul {
 .level span {
     margin-top: 2.2vw;
     margin-left: 0.4vw;
+    text-shadow: 3px 3px 5px black, -3px -3px 5px rgb(66, 79, 39), 0 0 30px rgba(0, 0, 0, 1);
 }
 
 .level.default:hover {

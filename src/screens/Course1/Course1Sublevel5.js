@@ -40,6 +40,7 @@ const Course1Sublevel5 = () => {
 
     return (
         <div className="course-level-1 flex">
+            <div className="moving-course-sky"></div>
             <Instructions/>
             <Header/>
             <div className='container flex'>
@@ -47,7 +48,7 @@ const Course1Sublevel5 = () => {
                     <CodeEditor onSubmit={handleCompileAndRun} className="Pterodactyl"/>
                     <OutputDisplay output={output}/>
                 </div>
-                <Preview previewImageUrl={`url("/assets/pets/axolotl-1.gif")`}/>
+                <Preview previewImageUrl={`url("/assets/pets/caterpillar-1.gif")`}/>
                 <UserStories1Sublevel5/>
             </div>
         </div>
