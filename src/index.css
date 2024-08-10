@@ -58,15 +58,6 @@ code {
 
 /* CourseLevel */
 
-.container {
-  margin: 0 auto;
-  margin-top: 4vh;
-  width: 95vw;
-  height: 92vh;
-  background-color: lightgoldenrodyellow;
-  justify-content: space-between;
-}
-
 textarea{
   border: none;
 }
