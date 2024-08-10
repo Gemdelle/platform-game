@@ -6,7 +6,7 @@ const Course = ({
                     navigationUrl,
                     course: {
                         description,
-                        item_count:itemCount,
+                        item_count: itemCount,
                         goals,
                         completed_sublevels,
                         name,
@@ -19,7 +19,7 @@ const Course = ({
 
     let itemsRange = Array.from({length: itemCount}, (_, index) => index + 1);
     let levelsRange = Array.from({length: levels}, (_, index) => index + 1);
-    const [availableSubLevels] = useState([1,2,3,4,5,6, 16,22]);
+    const [availableSubLevels] = useState([1, 2, 3, 4, 5, 6, 16, 22]);
 
     const navigate = useNavigate();
     const navigateToCourse = (courseSublevel) => {
@@ -39,7 +39,7 @@ const Course = ({
             return (<div
                 className={className}
                 onClick={() => {
-                    if(availableSubLevels.includes(number)){
+                    if (availableSubLevels.includes(number)) {
                         navigateToCourse(number)
                     }
                 }}><span>{number}</span></div>);
@@ -58,8 +58,9 @@ const Course = ({
                 <div className='course-description-container'>
                     <h1>{name}</h1>
                     <div className='course-progress-bar'>
-                            <div className='course-bar-interior' style={{ height: `${(completed_sublevels ? completed_sublevels.length : 0 / levelsRange.length) * 100}%` }}></div>
-                        </div>
+                        <div className='course-bar-interior'
+                             style={{height: `${(completed_sublevels ? completed_sublevels.length : 0 / levelsRange.length) * 100}%`}}></div>
+                    </div>
                     <div className='course-description'>
                         <span>{description}</span>
                         {goals.map((goal, index) => {

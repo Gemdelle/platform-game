@@ -8,6 +8,7 @@ import Instructions from "../../components/Instructions/Instructions";
 import {useUser} from "../../components/utils/UserProvider";
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
+import UserStories1Sublevel2 from "../../components/UserStories/UserStories1Sublevel2";
 
 const Course1Sublevel2 = () => {
     const [output, setOutput] = useState('');
@@ -48,7 +49,7 @@ const Course1Sublevel2 = () => {
                 </div>
                 <Preview
                     previewImageUrl={`url("/assets/eggs/${userProfile.profile.avatar === 'caterpillar' ? 'egg-terrestrial' : userProfile.profile.avatar === 'axolotl' ? 'egg-aquatic' : 'egg-aerial'}.png")`}/>
-                <UserStories/>
+                <UserStories1Sublevel2/>
             </div>
         </div>
     );

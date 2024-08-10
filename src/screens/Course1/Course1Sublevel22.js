@@ -8,9 +8,8 @@ import Instructions from "../../components/Instructions/Instructions";
 import {useUser} from "../../components/utils/UserProvider";
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
-import UserStories1Sublevel3 from "../../components/UserStories/UserStories1Sublevel3";
 
-const Course1Sublevel3 = () => {
+const Course1Sublevel22 = () => {
     const [output, setOutput] = useState('');
     const navigate = useNavigate();
     const {userProfile, setUserProfile} = useUser();
@@ -18,9 +17,9 @@ const Course1Sublevel3 = () => {
     const handleCompileAndRun = async (className, classCode) => {
         const idToken = userProfile.id
         try {
-            const response = await axios.post('https://quiet-badlands-42095-c0012ddb8417.herokuapp.com/validate/course/1/3', {
+            const response = await axios.post('https://quiet-badlands-42095-c0012ddb8417.herokuapp.com/validate/course/1/22', {
                 class_code: classCode
-            }, {
+            },{
                 headers: {
                     'Authorization': `Bearer ${idToken}`
                 }
@@ -47,12 +46,11 @@ const Course1Sublevel3 = () => {
                     <CodeEditor onSubmit={handleCompileAndRun} className="Pterodactyl"/>
                     <OutputDisplay output={output}/>
                 </div>
-                <Preview
-                    previewImageUrl={`url("/assets/eggs/${userProfile.profile.avatar === 'caterpillar' ? 'egg-terrestrial' : userProfile.profile.avatar === 'axolotl' ? 'egg-aquatic' : 'egg-aerial'}.png")`}/>
-                <UserStories1Sublevel3/>
+                <Preview previewImageUrl={`url("/assets/pets/pterodactyl-1.gif")`}/>
+                <UserStories/>
             </div>
         </div>
     );
 };
 
-export default Course1Sublevel3;
+export default Course1Sublevel22;
