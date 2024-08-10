@@ -91,7 +91,8 @@ pre {
     height: 100%;
     background-image: url(/public/assets/output-area.png);
     background-position: bottom;
-    background-size: contain;
+    background-size: 80% 30%;
+    background-repeat: no-repeat;
     justify-content: flex-end;
   }
 
