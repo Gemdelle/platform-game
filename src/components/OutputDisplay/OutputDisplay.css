@@ -1,17 +1,21 @@
 /* OUTPUT */
 
 .output {
-    height: 20%;
+    height: 15%;
     width: 100%;
     /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 0.5vmax;
 }
 
 pre {
-    height: 80%;
+    height: 66%;
     width: 50%;
     padding: 0;
-    margin: 0;
-    /* background-color: aquamarine; */
+    margin: 0px;
+    /*background-color: aquamarine;*/
     background-color: transparent;
 }
 
