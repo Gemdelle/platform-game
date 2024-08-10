@@ -12,7 +12,6 @@
     background-position: center top;
     background-size: 100% 100%;
     background-repeat: no-repeat;
-
     position: absolute;
     top: 0;
     left: 0;
@@ -31,7 +30,7 @@
     background-position: 0 0;
     background-repeat: repeat;
     animation: travel 35s infinite linear;
-    filter: blur(8px) brightness(0.3) saturate(0.3);
+    filter: blur(8px) brightness(0.3) saturate(0);
     z-index: -1;
 }
 
