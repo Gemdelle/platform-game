@@ -79,6 +79,7 @@ const Home = () => {
                             key={`course-${index}`}
                             course={course}
                             navigationUrl={`/course/${index+1}/`}
+                            courseNumber={index+1}
                         />
                     )
                 })}
