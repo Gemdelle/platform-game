@@ -67,13 +67,6 @@ code {
   justify-content: space-between;
 }
 
-.code-container {
-  width: 40%;
-  height: 100%;
-  background-color: black;
-  justify-content: flex-end;
-}
-
 textarea{
   border: none;
 }

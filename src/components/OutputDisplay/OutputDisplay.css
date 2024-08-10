@@ -1,19 +1,18 @@
 /* OUTPUT */
 
 .output {
-    height: 10%;
-    width: 50%;
+    height: 20%;
+    width: 100%;
     /* background-color: blue; */
-    border: 2px solid black;
-    margin-top: 5vmax;
 }
 
 pre {
-    height: 100%;
-    width: 100%;
+    height: 80%;
+    width: 50%;
     padding: 0;
     margin: 0;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
+    background-color: transparent;
 }
 
 /* END OUTPUT */

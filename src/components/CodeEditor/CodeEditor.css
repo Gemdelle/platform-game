@@ -31,13 +31,14 @@
 form {
     width: 100%;
     height: 70%;
+    /* background-color: brown; */
     display: flex;
     flex-direction: column;
     background-image: url(/public/assets/coding-area.png);
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    
+    margin-top: 20%;
 }
 
 .code-area {
@@ -93,7 +94,7 @@ pre {
     background-position: bottom;
     background-size: 80% 30%;
     background-repeat: no-repeat;
-    justify-content: flex-end;
+    background-color: black;
   }
 
 /* END CodeEditor */
