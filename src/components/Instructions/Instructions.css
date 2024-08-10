@@ -55,14 +55,23 @@
     height: 45%;
     margin-bottom: -1vmax;
     /* background-color: aliceblue; */
-    background-image: url(/public/assets/orbs/orb-aquatic.png);
-    /* background-image: url(/public/assets/orbs/orb-aerial.png); */
-    /* background-image: url(/public/assets/orbs/orb-terrestrial.png); */
     background-size: contain;
     transform-origin: center;
     background-position: center;
     background-repeat: no-repeat;
     animation: spin 30s linear infinite, subtle-glow 5s ease-in-out infinite;
+}
+
+.instructions-orb.aquatic{
+    background-image: url(/public/assets/orbs/orb-aquatic.png);
+}
+
+.instructions-orb.aerial{
+    background-image: url(/public/assets/orbs/orb-aerial.png);
+}
+
+.instructions-orb.terrestrial{
+    background-image: url(/public/assets/orbs/orb-terrestrial.png);
 }
 
 @keyframes spin {
