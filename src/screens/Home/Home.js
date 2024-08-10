@@ -72,14 +72,14 @@ const Home = () => {
         return (
             <div className="App">
                 <Header>
-                    <div className='index'>
-                        <div className='index-option'>1</div>
-                        <div className='index-option'>2</div>
-                        <div className='index-option'>3</div>
-                        <div className='index-option'>4</div>
-                        <div className='index-option'>5</div>
-                        <div className='index-option'>6</div>
-                    </div>
+                    {/*<div className='index'>*/}
+                    {/*    <div className='index-option'>1</div>*/}
+                    {/*    <div className='index-option'>2</div>*/}
+                    {/*    <div className='index-option'>3</div>*/}
+                    {/*    <div className='index-option'>4</div>*/}
+                    {/*    <div className='index-option'>5</div>*/}
+                    {/*    <div className='index-option'>6</div>*/}
+                    {/*</div>*/}
                 </Header>
 
                 <div className='header-space'></div>
