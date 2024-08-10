@@ -10,29 +10,35 @@
     display: flex;
 }
 
+
+.instructions-container {
+    width: 65%;
+    height: 60%;
+    /* background-color: red; */
+    margin-bottom: 3vmax;
+    display: flex;
+    /* border: 2px solid white; */
+}
+
 .instructions-text {
     color: rgb(226, 219, 209);
-    font-size: 1.6vmax;
-    margin-bottom: 5vmax;
-    background-color: aliceblue;
-    /* max-width: 55%; */
+    font-size: 1.5vmax;
     text-align: center;
-    text-shadow: 1px 1px 2px black, -1px -1px 3px rgb(66, 79, 39);
+    text-shadow: 3px 3px 5px black, -3px -3px 5px rgb(66, 79, 39), 0 0 30px rgba(0, 0, 0, 1);
     font-weight: lighter;
     letter-spacing: 0.05vmax;
-    width: 55%;
+    width: 80%;
 }
 
 .instructions-opener,
 .instructions-closer {
     width: 10%;
-    height: 20%;
-    background-color: lightpink;
+    height: 70%;
+    /* background-color: lightpink; */
     background-image: url(/public/assets/item-container.png);
-    background-size: contain;
+    background-size: 100% 70%;
     background-repeat: no-repeat;
     background-position: center;
-    margin-bottom: 5vmax;
     transform: rotate(-90deg);
 }
 
