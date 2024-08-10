@@ -7,7 +7,7 @@
 
 /* DEFAULT CLASSES */
 
-.flex-s {
+/* .flex-s {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -37,25 +37,9 @@
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-}
+} */
 
 /* CourseLevel */
-
-.container {
-  margin: 0 auto;
-  margin-top: 4vh;
-  width: 95vw;
-  height: 92vh;
-  background-color: lightgoldenrodyellow;
-  justify-content: space-between;
-}
-
-.code-container {
-  width: 40%;
-  height: 100%;
-  background-color: black;
-  justify-content: flex-end;
-}
 
 /* END CourseLevel */
 
