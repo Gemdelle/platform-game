@@ -109,7 +109,7 @@ const Header = ({children}) => {
     return (
         <header>
             <div className='header-container'>
-                <div className='menu'>
+                {/* <div className='menu'>
                     <button onClick={handleSignOut}>Logout</button>
                     <div className='logo' onClick={handleLogoClick}></div>
                     {showOptions && (
@@ -124,7 +124,7 @@ const Header = ({children}) => {
 
                         </div>
                     )}
-                </div>
+                </div> */}
                 <div className='currency'></div>
                 <div className='flex-e hud'>
                     <div className='level-bar bg'>

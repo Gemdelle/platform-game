@@ -7,14 +7,36 @@
     /* background-color: blueviolet; */
     display: flex;
     align-items: center;
+    display: flex;
 }
 
 .instructions-text {
-    color: rgb(243, 239, 233);
-    font-size: 1.5vmax;
-    margin-left: 4vmax;
-    margin-bottom: 3.5vmax;
-    /* background-color: aliceblue; */
-    max-width: 55%;
+    color: rgb(226, 219, 209);
+    font-size: 1.6vmax;
+    margin-bottom: 5vmax;
+    background-color: aliceblue;
+    /* max-width: 55%; */
     text-align: center;
+    text-shadow: 1px 1px 2px black, -1px -1px 3px rgb(66, 79, 39);
+    font-weight: lighter;
+    letter-spacing: 0.05vmax;
+    width: 55%;
+}
+
+.instructions-opener,
+.instructions-closer {
+    width: 10%;
+    height: 20%;
+    background-color: lightpink;
+    background-image: url(/public/assets/item-container.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 5vmax;
+    transform: rotate(-90deg);
+}
+
+.instructions-opener {
+    margin-left: 2vmax;
+    transform: rotate(90deg);
 }
