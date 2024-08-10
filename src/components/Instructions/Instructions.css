@@ -1,14 +1,20 @@
 .instructions{
     position: absolute;
-    top: 1.5vmax;
-    left: 4vw;
-    width: 63vw;
-    height: 8vw;
-    background-color: blueviolet;
-    background-image: url(/public/assets/instructions-frame.png);
-    background-position: center;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 14vw;
+    /* background-color: blueviolet; */
     display: flex;
     align-items: center;
+}
+
+.instructions-text {
+    color: rgb(243, 239, 233);
+    font-size: 1.5vmax;
+    margin-left: 4vmax;
+    margin-bottom: 3.5vmax;
+    /* background-color: aliceblue; */
+    max-width: 55%;
+    text-align: center;
 }

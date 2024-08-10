@@ -12,6 +12,10 @@
     background-repeat: no-repeat;
     background-position: bottom center;
     background-color: black;
+    background-image: url(/public/assets/coding-border-background.png);
+    background-position: center top;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 
