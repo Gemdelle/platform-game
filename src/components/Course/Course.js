@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './Course.css';
 import {useNavigate} from "react-router-dom";
 
@@ -14,8 +14,10 @@ const Course = ({
                         theoretical: {grade, score: {current, total}}
                     }
                 }) => {
+
     let itemsRange = Array.from({length: itemCount}, (_, index) => index + 1);
     let levelsRange = Array.from({length: levels}, (_, index) => index + 1);
+    const [availableSubLevels] = useState([1,2,3,4,5,6, 16,22]);
 
     const navigate = useNavigate();
     const navigateToCourse = (courseSublevel) => {
@@ -31,11 +33,11 @@ const Course = ({
             let isCompleted = completed_sublevels && completed_sublevels.find((sublevelNumber) => {
                 return number === sublevelNumber
             }) !== undefined;
-            let className = `level flex bg ${grade !== "NONE" ? isCompleted ? 'completed' : currentCourseLevel === number ? 'default' : 'disabled' : 'disabled'}`;
+            let className = `level flex bg ${grade !== "NONE" ? isCompleted ? 'completed' : availableSubLevels.includes(number) ? 'default' : 'disabled' : 'disabled'}`;
             return (<div
                 className={className}
                 onClick={() => {
-                    if(className.includes("default")){
+                    if(availableSubLevels.includes(number)){
                         navigateToCourse(number)
                     }
                 }}><span>{number}</span></div>);
