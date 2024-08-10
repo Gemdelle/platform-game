@@ -136,7 +136,7 @@ const Header = () => {
                 <div className='currency'></div>
                 <div className='flex-e hud'>
                     <div className='level-bar bg'>
-                        <div className='bar-interior-horizontal'></div>
+                        <div className='bar-interior-horizontal' style={{ width: `${(userProfile.profile.current_xp / userProfile.profile.total_xp) * 100}%` }}></div>
                     </div>
                     <div className='data flex-s'>
                         <div className='pp-container flex'>
