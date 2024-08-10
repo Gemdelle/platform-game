@@ -1,10 +1,10 @@
 .user-stories {
-  width: 25%;
-  height: 100%;
-  /* background-color: pink; */
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+    width: 25%;
+    height: 100%;
+    /* background-color: pink; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .stories-container {
@@ -14,38 +14,39 @@
 }
 
 .user-stories ul {
-  list-style: none; /* Remove default list bullets */
-  padding: 0;
-  max-height: 65%;
-  overflow: scroll;
-  scroll-behavior: smooth;
-  scrollbar-width:none;
-  z-index: 2;
-  background-color: coral;
-  margin-top: 55%;
+    list-style: none; /* Remove default list bullets */
+    padding: 0;
+    max-height: 65%;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    z-index: 2;
+    background-color: coral;
+    margin-top: 55%;
+    height: 100%;
 }
 
 .stories-container li {
-  margin: 0.4vw 0vw 0.8vw 6vw;
-  text-align: left;
-  margin-bottom: 1.8vw;
-  padding: 1px 1px;
-  font-size: 1.3vw;
+    margin: 0.4vw 0vw 0.8vw 6vw;
+    text-align: left;
+    margin-bottom: 1.8vw;
+    padding: 1px 1px;
+    font-size: 1.3vw;
 }
 
 .stories-container .heart-bullet {
-  padding-left: 2vw;
-  margin-top: 7px
+    padding-left: 2vw;
+    margin-top: 7px
 }
 
 .stories-container .heart-bullet::before {
-  content: "";
-  left: 0.5vw;
-  transform: translateY(-50%);
-  width: 3vw;
-  height: 3vw;
-  background-image: url("/public/assets/UI/heart.gif");
-  background-size: contain;
+    content: "";
+    left: 0.5vw;
+    transform: translateY(-50%);
+    width: 3vw;
+    height: 3vw;
+    background-image: url("/public/assets/UI/heart.gif");
+    background-size: contain;
 }
 
 /* DEAD HEART */
@@ -60,7 +61,7 @@
     background-size: contain, 100% 100%;
     background-repeat: no-repeat;
     /* background-color: red; */
-  }
+}
 
 /* USER STORIES PROGRESS BAR */
 .bar {
@@ -81,15 +82,15 @@
 }
 
 .stories-bar-interior {
-  background-image: url(/public/assets/UI/question-bar-background.png);
-  background-position: center;
-  background-size: 100% 120%;
-  background-repeat: no-repeat;
-  /* background-color: red; */
-  width: 58%;
-  height: 84%;
-  border-radius: 10px 10px 50px 50px;
-  margin-bottom: 2.2vmax;
+    background-image: url(/public/assets/UI/question-bar-background.png);
+    background-position: center;
+    background-size: 100% 120%;
+    background-repeat: no-repeat;
+    /* background-color: red; */
+    width: 58%;
+    height: 84%;
+    border-radius: 10px 10px 50px 50px;
+    margin-bottom: 2.2vmax;
 }
 
 .score {
