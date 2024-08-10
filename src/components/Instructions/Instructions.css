@@ -40,9 +40,47 @@
     background-repeat: no-repeat;
     background-position: center;
     transform: rotate(-90deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .instructions-opener {
     margin-left: 2vmax;
     transform: rotate(90deg);
 }
+
+.instructions-orb {
+    width: 45%;
+    height: 45%;
+    margin-bottom: -1vmax;
+    /* background-color: aliceblue; */
+    /* background-image: url(/public/assets/orbs/orb-aquatic.png); */
+    /* background-image: url(/public/assets/orbs/orb-aerial.png); */
+    /* background-image: url(/public/assets/orbs/orb-terrestrial.png); */
+    background-size: contain;
+    transform-origin: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: spin 30s linear infinite, subtle-glow 5s ease-in-out infinite;
+}
+
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes subtle-glow {
+    0%, 100% {
+      filter: drop-shadow(0 0 5px rgba(181, 184, 172, 0.9));
+    }
+    50% {
+      filter: drop-shadow(0 0 15px rgba(186, 190, 153, 0.9));
+    }
+  }
+  
+  
