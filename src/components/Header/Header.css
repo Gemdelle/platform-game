@@ -32,14 +32,15 @@ header {
 }
 
 .index {
-    width: 20%;
-    height: 45%;
-    /* background-color: lightgray; */
+    width: 25vmax;
+    height: 6vmax;
     margin-left: 10vw;
     margin-bottom: 3vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    left: 24vmax;
 }
 
 .index-option {
