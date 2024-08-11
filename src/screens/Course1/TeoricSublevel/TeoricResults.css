@@ -98,17 +98,19 @@ textarea::placeholder {
 
 .close-btn-teoric-rules {
     background-image: url(/public/assets/UI/close-button.png);
-    width: 5vw;
-    height: 10vw;
+    width: 4vw;
+    height: 11vh;
     position: absolute;
-    right: 35vw;
-    top: 5vh;
+    right: 35.8vw;
+    top: 8vh;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     background-color: transparent;
     border: none;
     transition: all 300ms ease-in-out;
+    transform: rotate(-120deg);
+    /* background-color: blue; */
 }
 
 .close-btn-teoric-rules:hover {
