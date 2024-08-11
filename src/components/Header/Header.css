@@ -22,7 +22,6 @@ header {
 
 .menu {
     width: 20%;
-    height: 230%;
     /* background-color: lightgray; */
     margin-left: 9vw;
     display: flex;
@@ -30,6 +29,10 @@ header {
     align-items: center;
     /* border: 2px solid white; */
     margin-top: 30vh;
+}
+
+.menu.showing-options {
+    height: 230%;
 }
 
 .index {

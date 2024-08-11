@@ -10,11 +10,13 @@ import { signInWithPopup, GoogleAuthProvider, signInWithEmailAndPassword } from 
 import { useUser } from "../../components/utils/UserProvider";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import Evolution from "../../components/Evolution/Evolution";
 
 const Home = () => {
     const [, loading] = useAuthState(auth);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [showEvolution, setShowEvolution] = useState(false);
     const { userProfile, setUserProfile } = useUser();
     const navigate = useNavigate();
 
@@ -24,6 +26,10 @@ const Home = () => {
             setUserProfile(JSON.parse(storedUserProfile));
         }
     }, [setUserProfile]);
+
+    const handleCloseEvolution = ()=>{
+        setShowEvolution(false);
+    }
 
     const handleLogin = async (e) => {
         e.preventDefault();
@@ -103,6 +109,7 @@ const Home = () => {
                 <div className={`pet-static ${hasHatched ? 'home-hatched' : 'home-egg'}`} id="petStatic"
                      style={{backgroundImage: backgroundImage}}></div>
                 {/*<div className="pet-looker" id="petLooker" ></div>*/}
+                {showEvolution ? <Evolution onClose={handleCloseEvolution}/> : null}
             </div>
         );
     }

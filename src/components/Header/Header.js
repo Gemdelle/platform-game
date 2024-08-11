@@ -101,7 +101,7 @@ const Header = ({ children }) => {
     return (
         <header>
             <div className='header-container'>
-                <div className='menu'>
+                <div className={`menu ${showOptions ? 'showing-options' : ''}`}>
                     <div className='logo-container'>
                         <div className={`logo ${userProfile.profile.avatar === 'axolotl' ? 'aquatic' : userProfile.profile.avatar === 'caterpillar' ? 'terrestrial' : 'aerial'}`} onClick={handleLogoClick}></div></div>
                     {showOptions && (
