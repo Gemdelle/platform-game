@@ -48,7 +48,7 @@ const AvatarSelection = () => {
                         onClick={(e) => handleAvatarSelect(e, avatar)}
                     >
                         <img src={avatar.src} alt={avatar.alt} />
-                        <div className='avatar-orb-container'><div className='avatar-orb'></div></div>
+                        <div className='avatar-orb-container'><div className={`avatar-orb ${avatar.name === 'axolotl' ? 'aquatic' : avatar.name === 'caterpillar' ? 'terrestrial' : 'aerial'}`}></div></div>
                     </div>
                 ))}
                 

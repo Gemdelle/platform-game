@@ -138,11 +138,22 @@
 .avatar-orb {
   width: 70%;
   height: 70%;
-  background-image: url(/public/assets/orbs/orb-aerial.png);
   background-size: contain;
   background-position: top center;
   background-repeat: no-repeat;
   animation: spin 30s linear infinite, subtle-glow 5s ease-in-out infinite;
+}
+
+.avatar-orb.aerial {
+  background-image: url(/public/assets/orbs/orb-aerial.png);
+}
+
+.avatar-orb.aquatic {
+  background-image: url(/public/assets/orbs/orb-aquatic.png);
+}
+
+.avatar-orb.terrestrial {
+  background-image: url(/public/assets/orbs/orb-terrestrial.png);
 }
 
 

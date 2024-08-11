@@ -4,8 +4,7 @@ import {useUser} from "../utils/UserProvider";
 const Instructions = () => {
     const {userProfile} = useUser();
     const isAquatic = userProfile.profile.avatar === 'axolotl';
-    const isAerial = userProfile.profile.avatar === 'caterpillar';
-    const isTerrestrial = userProfile.profile.avatar === 'pterodactyl';
+    const isTerrestrial = userProfile.profile.avatar === 'caterpillar';
     return (
         <div className="instructions">
             <div className='instructions-container'>
