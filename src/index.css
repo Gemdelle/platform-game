@@ -3,6 +3,11 @@
   src: url('/public/assets/fonts/BlackwoodCastle.TTF') format('truetype');
 }
 
+@font-face {
+  font-family: 'BlackwoodCastleShallow';
+  src: url('/public/assets/fonts/BlackwoodCastleShallow.TTF') format('truetype');
+}
+
 body {
   margin: 0;
   font-family: 'BlackwoodCastle', sans-serif;

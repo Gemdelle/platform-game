@@ -3,20 +3,21 @@
 } */
 
 .avatar-selection-screen h1 {
-  width: 40%;
-  height: 9%;
+  width: 45%;
+  height: 7%;
   /* background-color: lightblue; */
   display: flex;
   justify-content: center;
   margin: 0;
-  font-size: 3vw;
+  font-size: 3.5vw;
   background-image: url(/public/assets/ornament.png);
   background-position: center;
-  background-size: contain;
+  background-size: 80% 90%;
   background-repeat: no-repeat;
-  color:rgb(234, 233, 208);
+  color:rgb(243, 242, 233);
   font-weight: lighter;
-
+  font-family: 'BlackwoodCastleShallow', sans-serif;
+  text-shadow: 1px 1px 1px rgba(121, 124, 114, 0.3), -1px -1px 1px rgba(54, 55, 53, 0.3), 0 0 5px rgba(46, 50, 37, 0.2);
 }
 
 
