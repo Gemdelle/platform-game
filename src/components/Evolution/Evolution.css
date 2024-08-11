@@ -1,0 +1,71 @@
+@font-face {
+    font-family: 'Vivaldi';
+    src: url('/public/assets/fonts/vivaldi-regular.ttf') format('truetype');
+}
+
+.custom-font {
+    font-family: 'Vivaldi', serif;
+}
+
+.evolution-text {
+    display: flex;
+    position: relative;
+    width: 2%;
+    height: 2%;
+    bottom: 37.3%;
+    left: 16.5%;
+    font-size: 2vmax;
+}
+
+.evolution-popup {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -2vh;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-size: 55% !important;
+    background-color: rgba(32, 39, 31, 0.95);
+    background-image: url(/public/assets/coding-area.png);
+    z-index: 999999;
+}
+
+.evolution {
+    /* background-color: aqua; */
+    background-image: url(/public/assets/level-description-background.png);
+    background-size: 100% 75%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    width: 35vw; /* Ajusta el tamaño del contenedor principal */
+    height: 55vh; /* Ajusta el tamaño del contenedor principal */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 4.4%;
+}
+
+.close-btn-calendar {
+    width: 7vw;
+    height: 10vw;
+    position: absolute;
+    right: 23vw;
+    top: 8vh;
+    background-image: url(/public/assets/UI/close-button.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    transition: all 300ms ease-in-out;
+}
+
+.close-btn-calendar:hover {
+    background-image: url(/public/assets/UI/close-button-active.png);
+    scale: 103%;
+    cursor: pointer;
+}
+
+

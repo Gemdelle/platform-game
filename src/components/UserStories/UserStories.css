@@ -44,24 +44,28 @@
     margin-top: 7px
 }
 
-.stories-container .heart-bullet::before {
-    content: "";
-    left: 0.5vw;
-    transform: translateY(-50%);
-    width: 3vw;
-    height: 3vw;
-    background-image: url("/public/assets/UI/heart.gif");
-    background-size: contain;
-}
 
 /* DEAD HEART */
-.stories-container .heart-bullet::before {
+.stories-container .heart-bullet.dead::before {
     content: "";
     left: 2vw;
     transform: translateY(-35%);
     width: 3vw;
     height: 3vw;
     background-image: url("/public/assets/UI/heart-dead.png"), url("/public/assets/UI/dead-veins.png");
+    background-position: right, left;
+    background-size: contain, 100% 100%;
+    background-repeat: no-repeat;
+    /* background-color: red; */
+}
+
+.stories-container .heart-bullet.alive::before {
+    content: "";
+    left: 2vw;
+    transform: translateY(-35%);
+    width: 3vw;
+    height: 3vw;
+    background-image: url("/public/assets/UI/heart.gif"), url("/public/assets/UI/dead-veins.png");
     background-position: right, left;
     background-size: contain, 100% 100%;
     background-repeat: no-repeat;
