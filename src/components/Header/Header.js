@@ -11,7 +11,7 @@ import { auth } from "../../firebase";
 import { useUser } from "../utils/UserProvider";
 import { useNavigate } from "react-router-dom";
 
-const Header = ({children}) => {
+const Header = ({ children }) => {
     const [showOptions, setShowOptions] = useState(true);
     const [animating, setAnimating] = useState(false);
     const [showFAQ, setShowFAQ] = useState(false);
@@ -111,7 +111,8 @@ const Header = ({children}) => {
             <div className='header-container'>
                 <div className='menu'>
                     <button onClick={handleSignOut}>Logout</button>
-                    <div className={`logo ${userProfile.profile.avatar === 'axolotl' ? 'aquatic' : userProfile.profile.avatar === 'caterpillar' ? 'terrestrial' : 'aerial'}`} onClick={handleLogoClick}></div>
+                    <div className='logo-container'>
+                        <div className={`logo ${userProfile.profile.avatar === 'axolotl' ? 'aquatic' : userProfile.profile.avatar === 'caterpillar' ? 'terrestrial' : 'aerial'}`} onClick={handleLogoClick}></div></div>
                     {showOptions && (
                         <div className={`options ${animating ? 'hidden' : ''}`}>
                             <div id='courses' onClick={handleCoursesClick}>Courses</div>
@@ -123,22 +124,24 @@ const Header = ({children}) => {
                             <div id='support' onClick={handleSupportClick}>Support</div>
 
                         </div>
+
                     )}
                 </div>
-                <div className='currency'></div>
-                <div className='flex-e hud'>
-                    <div className='level-bar bg'>
-                        <div className='level-bar-progress'>{`${userProfile.profile.current_xp} / ${userProfile.profile.total_xp}`}</div>
-                        <div className='bar-interior-horizontal' style={{ width: `${(userProfile.profile.current_xp / userProfile.profile.total_xp) * 100}%` }}></div>
+            </div>
+            <div className='currency'></div>
+            <div className='flex-e hud'>
+                <div className='level-bar bg'>
+                    <div className='level-bar-progress'>{`${userProfile.profile.current_xp} / ${userProfile.profile.total_xp}`}</div>
+                    <div className='bar-interior-horizontal' style={{ width: `${(userProfile.profile.current_xp / userProfile.profile.total_xp) * 100}%` }}></div>
+                </div>
+                <div className='data flex-s'>
+                    <div className='pp-container flex'>
+                        <div className='pp bg' style={{ backgroundImage: `url("/assets/pets/profile/${userProfile.profile.avatar}-${userProfile.profile.level}-profile.png")` }}></div>
                     </div>
-                    <div className='data flex-s'>
-                        <div className='pp-container flex'>
-                            <div className='pp bg' style={{ backgroundImage: `url("/assets/pets/profile/${userProfile.profile.avatar}-${userProfile.profile.level}-profile.png")` }}></div>
-                        </div>
-                        <div className='heart bg flex'><span id='level'>{userProfile.profile.level}</span></div>
-                    </div>
+                    <div className='heart bg flex'><span id='level'>{userProfile.profile.level}</span></div>
                 </div>
             </div>
+
 
             {showFAQ && <FAQ onClose={handleCloseFAQ} />}
             {showSupport && <Support onClose={handleCloseSupport} />}

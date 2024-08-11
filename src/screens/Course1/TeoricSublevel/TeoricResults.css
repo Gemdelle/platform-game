@@ -1,22 +1,24 @@
 .teoric-rules-popup {
     position: absolute;
-    top: -2vh;
+    top: 0;
     left: 0;
     height: 100vh;
     width: 100vw;
-    background-size: 65% !important;
-    background-color: rgba(32, 39, 31, 0.95);
-    background-image: url(/public/assets/support-background.png);
+    background-color: rgba(0, 0, 0, 0.9);
+    background-image: url(/public/assets/backgrounds/questionnaire-start-frame.png), url(/public/assets/backgrounds/questionnaire-start-background.png);
+    background-position: center 2vh, center;
+    background-size: 45%, 100%;
+    overflow: hidden;
 }
 
 .teoric-rules-content {
-    width: 45vw;
-    height: 53vh;
+    width: 40vw;
+    height: 80%;
     /* background-color: rgba(0.5, 0.5, 0.5, 0.5); */
-    margin: 26vh 28vw;
     display: flex;
     flex-direction: column;
     align-items: end;
+    margin: 5% auto;
 }
 
 .teoric-rules-text {
@@ -69,10 +71,13 @@ textarea::placeholder {
 }
 
 .teoric-rules-submit {
-    height: 35%;
-    width: 75%;
+    height: 11%;
+    width: 12%;
     /* background-color: pink; */
-    
+    position: absolute;
+    left: 28%;
+    top: 78%;
+    z-index: 99;
 }
 
 .submit-btn {
@@ -80,14 +85,15 @@ textarea::placeholder {
     background-image: url(/public/assets/UI/button.png);
     background-color: transparent;
     border: none;
-    width: 13vw;
-    height: 12vh;
+    width: 100%;
+    height: 100%;
+    letter-spacing: 0.08vmax;
+    color: rgb(65, 65, 53);
 }
 
 .submit-btn:hover {
     scale: 105%;
     cursor: pointer;
-    
 }
 
 .close-btn-teoric-rules {

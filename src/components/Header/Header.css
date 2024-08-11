@@ -23,8 +23,8 @@ header {
 .menu {
     width: 15%;
     height: 70%;
-    /* background-color: lightgray; */
-    margin-left: 3vw;
+    background-color: lightgray;
+    margin-left: 8vw;
     margin-bottom: 5vh;
     display: flex;
     justify-content: flex-end;
@@ -67,35 +67,43 @@ header {
     color: rgb(43, 44, 29);
 }
 
-.logo {
-    position: absolute;
-    top: -1.1vmax;
-    left: 0vw;
+.logo-container {
     height: 80%;
     width: 10%;
     cursor: pointer;
+    position: absolute;
+    top: -1.1vmax;
+    left: 0vw;
+    background-image: url(/public/assets/UI/menu-background.png);
+    background-position: center;
+    background-size: 75%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+}
+
+.logo {
+    height: 50%;
+    width: 50%;
     /* background-color: red; */
     animation: spin 30s linear infinite;
-}
-.logo.aerial {
-    background-image: url(/public/assets/orbs/orb-aerial.png), url(/public/assets/UI/menu-background.png);
-    background-position: center, center;
-    background-size: 40%, 65%;
+    background-position: center;
+    background-size: contain;
     background-repeat: no-repeat;
+}
+
+.logo.aerial {
+    background-image: url(/public/assets/orbs/orb-aerial.png);
 }
 
 .logo.aquatic {
-    background-image: url(/public/assets/orbs/orb-aquatic.png), url(/public/assets/UI/menu-background.png);
-    background-position: center, center;
-    background-size: 40%, 65%;
-    background-repeat: no-repeat;
+    background-image: url(/public/assets/orbs/orb-aquatic.png);
 }
 
 .logo.terrestrial {
-    background-image: url(/public/assets/orbs/orb-terrestrial.png), url(/public/assets/UI/menu-background.png);
-    background-position: center, center;
-    background-size: 40%, 65%;
-    background-repeat: no-repeat;
+    background-image: url(/public/assets/orbs/orb-terrestrial.png);
 }
 
 .options {
@@ -161,7 +169,7 @@ header {
 }
 
 .level-bar {
-    right: 11%;
+    right: 10%;
     top: 10%;
     position: absolute;
     width: 22%;
@@ -202,6 +210,7 @@ header {
     background-position-y: -30;
     background-repeat: no-repeat;
     color: white;
+    margin-right: 4vmax;
 }
 
 .pp {
@@ -222,6 +231,7 @@ header {
     height: 45%;
     background-image: url('/public/assets/UI/heart.gif');
     color: white;
+    margin-right: 4vmax;
 }
 
 .heart span {

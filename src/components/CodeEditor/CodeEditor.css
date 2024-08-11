@@ -16,7 +16,7 @@
 .arrows {
   position: absolute;
   top: 40%;
-  width: 34%;
+  width: 32%;
   height: 20%;
   /* background-color: white; */
   display: flex;
@@ -25,7 +25,7 @@
 }
 
 .arrow {
-  width: 13%;
+  width: 10%;
   height: 100%;
   /* background-color: red; */
   cursor: pointer;
