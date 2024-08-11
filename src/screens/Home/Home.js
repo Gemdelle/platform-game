@@ -52,7 +52,7 @@ const Home = () => {
         const result = await signInWithPopup(auth, provider);
         const idToken = await result.user.getIdToken()
 
-        const response = await axios.get('https://quiet-badlands-42095-c0012ddb8417.herokuapp.com/profile', {
+        const response = await axios.get('http://localhost:3001/profile', {
             headers: {
                 'Authorization': `Bearer ${idToken}`
             }

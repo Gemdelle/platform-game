@@ -181,7 +181,7 @@ const TeoricSublevel = () => {
 
             return () => clearTimeout(timer);
         } else if (timeLeft === 0) {
-            handleFinish();
+            handleFinish(score);
             setShowScore(true);
         }
     }, [timeLeft, hasStarted]);
@@ -192,13 +192,14 @@ const TeoricSublevel = () => {
         return `${minutes < 10 ? '0' : ''}${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
     };
 
-    const handleFinish = async () => {
+    const handleFinish = async (newScore) => {
         try {
             const idToken = userProfile.id
-            const response = await axios.post('https://quiet-badlands-42095-c0012ddb8417.herokuapp.com/validate/course/1/theoretical', {
+            debugger
+            const response = await axios.post('http://localhost:3001/validate/course/1/theoretical', {
                 theoretical: {
                     score: {
-                        current: score,
+                        current: newScore,
                         total: questionsToAnswer.length
                     }
                 }
@@ -236,31 +237,25 @@ const TeoricSublevel = () => {
     const handleAnswer = () => {
         if (!selectedAnswer || answerState === "WRONG" || answerState === "RIGHT" )
             return
-
         if (selectedAnswer.isCorrect) {
             setScore(score + 1);
             setAnswerState("RIGHT")
-            setTimeout(()=> {
-                setSelectedAnswer(null);
-                setAnswerState(null)
-            }, 1000)
+
         } else {
             setAnswerState("WRONG")
             playAudio()
-            setTimeout(()=> {
-                setSelectedAnswer(null);
-                setAnswerState(null)
-            }, 1000)
         }
 
         const nextQuestion = currentQuestion + 1;
         if (nextQuestion < questionsToAnswer.length) {
             setTimeout(()=> {
+                setSelectedAnswer(null);
+                setAnswerState(null)
                 setCurrentQuestion(nextQuestion);
             }, 1000)
 
         } else {
-            handleFinish();
+            handleFinish(score + 1);
             setShowScore(true);
         }
     };
