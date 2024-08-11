@@ -281,6 +281,7 @@ textarea::placeholder {
     background-color: transparent;
     border: none;
     transition: all 300ms ease-in-out;
+    transform: rotate(-120deg);
 }
 
 .close-btn-teoric-rules:hover {
