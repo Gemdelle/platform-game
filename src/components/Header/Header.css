@@ -267,14 +267,14 @@ header {
     margin-bottom: 3.5vh;
 }
 .pp.header-egg {
-    height: 60%;
+    height: 65%;
     width: 100%;
     color: white;
     animation: shake 2s ease-in-out infinite;
     transform-origin: center bottom;
     background-position: center;
     background-size: contain;
-    margin-bottom: 8.5vh;
+    margin-bottom: 5vh;
 }
 
 .heart {
