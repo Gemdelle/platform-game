@@ -71,9 +71,9 @@ header {
     position: absolute;
     top: -1.1vmax;
     left: 0vw;
-    background-image: url(/public/assets/orbs/orb-aerial.png), url(/public/assets/giphs/sparkle.gif);
+    background-image: url(/public/assets/orbs/orb-aerial.png), url(/public/assets/UI/menu-background.png);
     background-position: center, center;
-    background-size: 40%, 100% 100%;
+    background-size: 40%, 65%;
     background-repeat: no-repeat;
     height: 80%;
     width: 10%;
