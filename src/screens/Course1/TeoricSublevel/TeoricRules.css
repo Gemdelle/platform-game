@@ -44,9 +44,27 @@
     transform: rotate(-15deg);
 }
 
+.score-heart.silver {
+    background-image: url(/public/assets/UI/heart-silver.gif);
+    background-position: center;
+    background-size: 130% 120%;
+    background-repeat: no-repeat;
+}
+
+.score-heart.gold {
+    background-image: url(/public/assets/UI/heart-gold.gif);
+    background-position: center;
+    background-size: 130% 120%;
+    background-repeat: no-repeat;
+}
+
 .score-heart span {
     margin-top: 2.5vmax;
     color: rgb(245, 244, 240);
+    background-image: url(/public/assets/UI/number-background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7), -1px -1px 2px rgba(0, 0, 0, 0.7), 0 0 10px rgba(0, 0, 0, 0.5);
     font-size: large;
     transform: rotate(15deg);

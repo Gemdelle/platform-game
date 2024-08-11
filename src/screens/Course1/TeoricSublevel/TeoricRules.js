@@ -1,14 +1,17 @@
 import React from 'react';
 import './TeoricRules.css';
+import {useUser} from "../../../components/utils/UserProvider";
 
-const TeoricRules = ({ onClose, handleGoNext }) => {
+const TeoricRules = ({ onClose, handleGoNext, bestScore, total, grade }) => {
+  const {userProfile} = useUser();
+
   return (
     <div className='teoric-rules-popup bg'>
       <div className='teoric-rules-content'>
         <button onClick={onClose} className='close-btn-teoric-rules'></button>
         
         <div className='start-score-container'>
-          <div className='score-heart'><span>14 / 15</span></div>
+          <div className={`score-heart ${grade === "SILVER" ? 'silver' : grade === "GOLD" ? 'gold' : ''}`}><span>{`${bestScore} / ${total}`}</span></div>
           <span className='previous-score-txt'>Puntuación máxima</span>
         </div>
         <div className='start-rules'>
@@ -21,7 +24,7 @@ const TeoricRules = ({ onClose, handleGoNext }) => {
         </div>
         <div className='start-pet'>
         <div className='smoke'></div>
-          <div className='pet'></div>
+          <div className='pet' style={{backgroundImage: `url("/assets/pets/${userProfile.profile.avatar}-${userProfile.profile.level}.gif")`}}></div>
         </div>
         
         <div className='teoric-rules-submit flex'>

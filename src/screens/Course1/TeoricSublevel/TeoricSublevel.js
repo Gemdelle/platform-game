@@ -274,11 +274,14 @@ const TeoricSublevel = () => {
         audioRef.current.play();
     };
 
+    let bestScore = userProfile.progress.courses[0].theoretical.score.current;
+    let total = userProfile.progress.courses[0].theoretical.score.total;
+    let grade = userProfile.progress.courses[0].theoretical.grade;
     return (
         <div className='teoric-sublevel-container'>
             <div className="moving-sky"></div>
             {!hasStarted ? (
-                <TeoricRules onClose={goHome} handleGoNext={handleGoNext} />
+                <TeoricRules onClose={goHome} handleGoNext={handleGoNext} bestScore={bestScore} total={total} grade={grade}/>
             ) : showScore ? (
                 <TeoricResults onClose={goHome} handleGoNext={restart} score={score} questionsToAnswer={questionsToAnswer}/>
             ) : (
