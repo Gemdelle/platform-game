@@ -3,39 +3,44 @@
     src: url('/public/assets/fonts/vivaldi-regular.ttf') format('truetype');
 }
 
-.custom-font {
-    font-family: 'Vivaldi', serif;
-}
-
 .evolution-text {
     display: flex;
     position: relative;
     width: 2%;
+    height: 1.5%;
+    bottom: 40%;
+    left: 16%;
+    font-size: 3vmax;
+    color: rgb(65, 65, 53);
+}
+
+.evolution span {
+    display: flex;
+    position: relative;
     height: 2%;
-    bottom: 37.3%;
-    left: 16.5%;
     font-size: 2vmax;
+    color: rgb(110, 110, 94);
 }
 
 .evolution-popup {
-    position: absolute;
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
-    top: -2vh;
+    top: 0;
     left: 0;
     height: 100vh;
     width: 100vw;
     background-size: 55% !important;
     background-color: rgba(32, 39, 31, 0.95);
-    background-image: url(/public/assets/coding-area.png);
+    background-image: url(/public/assets/calendar-background.png);
     z-index: 999999;
 }
 
 .evolution {
     /* background-color: aqua; */
-    background-image: url(/public/assets/level-description-background.png);
-    background-size: 100% 75%;
+    background-image: url(/public/assets/pets/evolving-pet-1.gif);
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;
     width: 35vw; /* Ajusta el tamaño del contenedor principal */
