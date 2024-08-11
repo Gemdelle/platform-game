@@ -8,7 +8,7 @@ const TeoricRules = ({ onClose, handleGoNext }) => {
         <button onClick={onClose} className='close-btn-teoric-rules'></button>
         
         <div className='start-score-container'>
-          <div className='score-heart'></div>
+          <div className='score-heart'><span>14 / 15</span></div>
           <span className='previous-score-txt'>Puntuación máxima</span>
         </div>
         <div className='start-rules'>

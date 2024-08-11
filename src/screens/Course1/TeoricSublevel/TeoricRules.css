@@ -31,13 +31,25 @@
 
 .score-heart {
     margin-top: 1vmax;
-    height: 48%;
-    width: 15%;
+    height: 55%;
+    width: 18%;
     background-image: url(/public/assets/UI/heart.gif);
     background-position: center;
-    background-size: 110% 110%;
+    background-size: 130% 120%;
     background-repeat: no-repeat;
     /* background-color: aliceblue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-15deg);
+}
+
+.score-heart span {
+    margin-top: 2.5vmax;
+    color: rgb(245, 244, 240);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7), -1px -1px 2px rgba(0, 0, 0, 0.7), 0 0 10px rgba(0, 0, 0, 0.5);
+    font-size: large;
+    transform: rotate(15deg);
 }
 
 .previous-score-txt {
@@ -47,9 +59,9 @@
     text-align: center;
     display: flex;
     align-items: flex-start;
-    font-size: larger;
+    font-size: medium;
     line-height: 0.8vmax;
-    margin-top: 0.2vmax;
+    margin-top: 0.1vmax;
     color: rgb(99, 99, 82);
 }
 
@@ -150,12 +162,13 @@
     /* background-color: red; */
     background-image: url(/public/assets/steam.png);
     background-position: center;
-    background-size: 100% 160%;
+    background-size: 80% 100%;
     background-repeat: no-repeat;
     position: absolute;
     z-index: 5;
-    left: 0;
-    top: 0;
+    left: -0.5vmax;
+    top: 1.5vmax;
+    animation: steam 3s ease-in-out infinite;
 }
 
 .start-pet .pet {
@@ -238,18 +251,19 @@ textarea::placeholder {
 }
 
 .close-btn-teoric-rules {
-  width: 7vw;
-  height: 10vw;
-  position: absolute;
-  right: 22vw;
-  top: 15vh;
+    width: 5vw;
+    height: 6vw;
+    position: absolute;
+    right: 37vw;
+    top: 8vh;
   background-image: url(/public/assets/UI/close-button.png);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: transparent;
+  /* background-color: red; */
   border: none;
   transition: all 300ms ease-in-out;
+  transform: rotate(-105deg);
 }
 
 .close-btn-teoric-rules:hover {
