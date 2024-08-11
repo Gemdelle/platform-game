@@ -1,32 +1,32 @@
 .teoric-rules-popup {
-  position: absolute;
-  top: -2vh;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  /* background-color: rgba(32, 39, 31, 0.95); */
-  /* background-image: url(/public/assets/support-background.png); */
+    position: absolute;
+    top: -2vh;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    /* background-color: rgba(32, 39, 31, 0.95); */
+    /* background-image: url(/public/assets/support-background.png); */
 }
 
 .teoric-rules-content {
-  width: 45vw;
-  height: 53vh;
-  /* background-color: rgba(207, 194, 194, 0.6); */
-  margin: 26vh 28vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    width: 45vw;
+    height: 53vh;
+    /* background-color: rgba(207, 194, 194, 0.6); */
+    margin: 26vh 28vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .start-score-container {
-  /* background-color: rgba(255, 0, 0, 0.5); */
+    /* background-color: rgba(255, 0, 0, 0.5); */
 
-  height: 35%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    height: 35%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .score-heart {
@@ -84,12 +84,12 @@
 }
 
 .start-rules {
-  /* background-color: rgba(0, 0, 255, 0.5); */
-  height: 40%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    /* background-color: rgba(0, 0, 255, 0.5); */
+    height: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .questionnaire-rules {
@@ -164,14 +164,14 @@
           </ul> */
 
 .start-pet {
-  /* background-color: rgba(0, 255, 0, 0.5); */
-  height: 25%;
-  width: 65%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  position: relative;
-  margin: 0 auto;
+    /* background-color: rgba(0, 255, 0, 0.5); */
+    height: 25%;
+    width: 65%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
 }
 
 .start-pet .smoke {
@@ -200,92 +200,91 @@
 }
 
 .teoric-rules-text {
-  width: 100%;
-  height: 25%;
-  /* background-color: blue; */
+    width: 100%;
+    height: 25%;
+    /* background-color: blue; */
 }
 
 .teoric-rules-text h2 {
-  width: 45%;
-  height: 10%;
-  /* background-color: white; */
-  font-size: 2vmax;
-  margin-top: 1vw;
+    width: 45%;
+    height: 10%;
+    /* background-color: white; */
+    font-size: 2vmax;
+    margin-top: 1vw;
 }
 
 .teoric-rules-text p {
-  width: 70%;
-  margin-left: 7vw;
-  /* background-color: pink; */
-  text-align: left;
-  font-size: 1vw;
-  margin-top: 1vw;
+    width: 70%;
+    margin-left: 7vw;
+    /* background-color: pink; */
+    text-align: left;
+    font-size: 1vw;
+    margin-top: 1vw;
 }
 
 .teoric-rules-text-area {
-  width: 65%;
-  height: 32%;
-  margin: 0;
-  padding: 1vmax;
-  margin: 0 auto;
-  resize: none;
-  /* background-color: white; */
+    width: 65%;
+    height: 32%;
+    margin: 0;
+    padding: 1vmax;
+    margin: 0 auto;
+    resize: none;
+    /* background-color: white; */
 }
 
 textarea:focus {
-  outline: none;
+    outline: none;
 }
 
 textarea::placeholder {
-  font-style: italic;
+    font-style: italic;
 }
 
 .teoric-rules-message {
-  /* background-color: rgba(0.5, 0.5, 0.5, 0.5); */
-  width: 100%;
-  height: 100%;
-  border: none;
+    /* background-color: rgba(0.5, 0.5, 0.5, 0.5); */
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 .teoric-rules-submit {
-  height: 35%;
-  width: 75%;
-  /* background-color: pink; */
+    height: 35%;
+    width: 75%;
+    /* background-color: pink; */
 }
 
 .submit-btn {
-  transition: all 500ms ease-in-out;
-  background-image: url(/public/assets/UI/button.png);
-  background-color: transparent;
-  border: none;
-  width: 13vw;
-  height: 12vh;
-  position: absolute;
+    transition: all 500ms ease-in-out;
+    background-image: url(/public/assets/UI/button.png);
+    background-color: transparent;
+    border: none;
+    width: 13vw;
+    height: 12vh;
+    position: absolute;
 }
 
 .submit-btn:hover {
-  scale: 105%;
-  cursor: pointer;
+    scale: 105%;
+    cursor: pointer;
 }
 
 .close-btn-teoric-rules {
+    background-image: url(/public/assets/UI/close-button.png);
     width: 5vw;
-    height: 6vw;
+    height: 10vw;
     position: absolute;
-    right: 37vw;
-    top: 8vh;
-  background-image: url(/public/assets/UI/close-button.png);
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  /* background-color: red; */
-  border: none;
-  transition: all 300ms ease-in-out;
-  transform: rotate(-105deg);
+    right: 35vw;
+    top: 5vh;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    transition: all 300ms ease-in-out;
 }
 
 .close-btn-teoric-rules:hover {
-  background-image: url(/public/assets/UI/close-button-active.png);
-  scale: 103%;
-  cursor: pointer;
+    background-image: url(/public/assets/UI/close-button-active.png);
+    scale: 103%;
+    cursor: pointer;
 }

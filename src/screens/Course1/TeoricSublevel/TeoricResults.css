@@ -97,18 +97,18 @@ textarea::placeholder {
 }
 
 .close-btn-teoric-rules {
-    width: 7vw;
+    background-image: url(/public/assets/UI/close-button.png);
+    width: 5vw;
     height: 10vw;
-   position: absolute;
-   right: 22vw;
-   top: 15vh;
-   background-image: url(/public/assets/UI/close-button.png);
-   background-size: contain;
-   background-position: center;
-   background-repeat: no-repeat;
-   background-color: transparent;
-   border: none;
-   transition: all 300ms ease-in-out;
+    position: absolute;
+    right: 35vw;
+    top: 5vh;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    transition: all 300ms ease-in-out;
 }
 
 .close-btn-teoric-rules:hover {
