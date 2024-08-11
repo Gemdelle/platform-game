@@ -38,6 +38,7 @@ const AvatarSelection = () => {
 
     return (
         <div className="avatar-selection-screen">
+            <div className='avatar-moving-background'></div>
             <h1>Hatch you egg</h1>
             <div className="avatar-list">
                 {avatars.map((avatar) => (

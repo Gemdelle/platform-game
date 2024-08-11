@@ -21,7 +21,7 @@
 
 
 
-.avatar-selection-screen {
+/* .avatar-selection-screen {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,13 +29,29 @@
   height: 100vh;
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.8);
-  /* background-image: url(/public/assets/backgrounds/pet-select-background.gif); */
-  background-image: url(/public/assets/avatar-selection-background.png);
+  background-image: url(/public/assets/backgrounds/avatar-selection.jpg);
   background-size: 210%;
   background-position: center;
   background-repeat: no-repeat;
-  background-repeat: repeat-x;
   animation: travel 120s linear infinite;
+} */
+
+.avatar-selection-screen {
+  height: 100vh;
+  width: 100vw;
+}
+
+.avatar-moving-background {
+  height: 100vh;
+  width: 100vw;
+  background-image: url(/public/assets/backgrounds/avatar-selection.jpg);
+  background-size: 50% 50%;
+  background-position: 0 0;
+  background-repeat: repeat;
+  animation: travel 28s infinite linear;
+  filter: blur(6px) brightness(0.8);
+  z-index: -999;
+  position: absolute;
 }
 
 @keyframes travel {

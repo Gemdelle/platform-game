@@ -436,7 +436,7 @@ button.button-teoric.selected {
   width: 11.5%;
   height: 18%;
   /* background-color: burlywood; */
-  background-image: url(/public/assets/UI/heart-dead.png);
+  background-image: url(/public/assets/UI/heart-dead.png), url(/public/assets/UI/dead-veins.png);
   background-position: center, -1.3vmax center ;
   background-size: contain, 120% 90%;
   background-repeat: no-repeat;
@@ -445,26 +445,13 @@ button.button-teoric.selected {
   z-index: 99;
 }
 
-.veins {
-  width: 11.5%;
-  height: 18%;
-  /* background-color: burlywood; */
-  background-image: url(/public/assets/UI/dead-veins.png);
-  background-position: -1.3vmax center ;
-  background-size: 120% 90%;
-  background-repeat: no-repeat;
-  margin-left: 1vmax;
-  position: absolute;
-  z-index: 97;
-}
-
 .bullet-heart-alive {
   width: 11.5%;
   height: 80%;
   /* background-color: burlywood; */
-  background-image: url(/public/assets/UI/heart.gif);
-  background-position: center;
-  background-size: contain;
+  background-image: url(/public/assets/UI/heart.gif), url(/public/assets/UI/veins.png);
+  background-position: center, -1.3vmax center ;
+  background-size: contain, 120% 90%;
   background-repeat: no-repeat;
   margin-left: 1vmax;
   position: absolute;
