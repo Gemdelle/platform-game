@@ -107,6 +107,18 @@ header {
     background-image: url(/public/assets/orbs/orb-terrestrial.png);
 }
 
+.logo.egg-aerial {
+    background-image: url(/public/assets/eggs/egg-aerial.png);
+}
+
+.logo.egg-aquatic {
+    background-image: url(/public/assets/eggs/egg-aquatic.png);
+}
+
+.logo.egg-terrestrial {
+    background-image: url(/public/assets/eggs/egg-terrestrial.png);
+}
+
 .options {
     width: 100%;
     height: 100%;
@@ -241,7 +253,7 @@ header {
     margin-right: 4vmax;
 }
 
-.pp {
+.pp.header-hatched {
     height: 60%;
     width: 100%;
     color: white;
@@ -250,6 +262,16 @@ header {
     background-position: center;
     background-size: contain;
     margin-bottom: 3.5vh;
+}
+.pp.header-egg {
+    height: 60%;
+    width: 100%;
+    color: white;
+    animation: shake 2s ease-in-out infinite;
+    transform-origin: center bottom;
+    background-position: center;
+    background-size: contain;
+    margin-bottom: 8.5vh;
 }
 
 .heart {
@@ -302,4 +324,12 @@ header {
     50% {
         transform: scaleY(1.03);
     }
+}
+
+@keyframes shake {
+    0% { transform: rotate(0); }
+    25% { transform: rotate(-1deg); }
+    50% { transform: rotate(2deg); }
+    75% { transform: rotate(-1deg); }
+    100% { transform: rotate(0); }
 }

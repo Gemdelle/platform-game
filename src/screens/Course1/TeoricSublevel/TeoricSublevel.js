@@ -277,6 +277,14 @@ const TeoricSublevel = () => {
     let bestScore = userProfile.progress.courses[0].theoretical.score.current;
     let total = userProfile.progress.courses[0].theoretical.score.total;
     let grade = userProfile.progress.courses[0].theoretical.grade;
+
+    const isAquatic = userProfile.profile.avatar === 'axolotl';
+    const isTerrestrial = userProfile.profile.avatar === 'caterpillar';
+    const hasHatched = userProfile.profile.level > 1;
+    let hatchedBackgroundImage = `url("/assets/pets/evolutions/${isAquatic ? 'aquatic' : isTerrestrial ? 'terrestrial' : 'aerial'}/${userProfile.profile.level}.png")`;
+    let eggBackgroundImage = `url("/assets/eggs/${isAquatic ? 'egg-aquatic' : isTerrestrial ? 'egg-terrestrial' : 'egg-aerial'}.png")`;
+    let backgroundImage = hasHatched ? hatchedBackgroundImage : eggBackgroundImage
+
     return (
         <div className='teoric-sublevel-container'>
             <div className="moving-sky"></div>
@@ -302,7 +310,7 @@ const TeoricSublevel = () => {
                             <div className='food'></div>
                             <div className='steam'></div>
                             <div className="pet-companion"
-                                 style={{ backgroundImage: `url("/assets/pets/${userProfile.profile.avatar}-${userProfile.profile.level}.gif")` }}
+                                 style={{ backgroundImage: backgroundImage }}
                             ></div>
                         </div>
                         <div className='answers-container'>
