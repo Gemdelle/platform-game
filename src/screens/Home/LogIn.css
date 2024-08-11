@@ -1,0 +1,135 @@
+.log-in-container {
+  width: 60vw;
+  height: 100vh;
+  /* background-color: red; */
+  background-image: url(/public/assets/popup.png);
+  background-position: center 3vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+  margin: 0 auto;
+}
+
+.log-in-options {
+  /* background-color: violet; */
+  margin-bottom: 11vh;
+  height: 30%;
+  width: 40%;
+}
+
+.log-in-form {
+  width: 100%;
+  height: 80%;
+  background: transparent;
+  margin: 0;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.log-in-form input {
+  width: 90%;
+  height: 30%;
+  background-image: url(/public/assets/UI/menu-option.png);
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+}
+
+input {
+  text-indent: 2.5vw;
+  font-size: 2.2vh;
+  font-family: BlackWoodCastle;
+}
+
+input::placeholder {
+  text-indent: 12%;
+  font-family: BlackWoodCastle;
+  font-size: 0.9vw;
+  letter-spacing: 0.1vw;
+  color: rgb(163, 165, 157);
+}
+
+input:focus {
+  outline: none;
+}
+
+.log-in-container button {
+  background-color: transparent;
+  border: none;
+  background-image: url(/public/assets/UI/button.png);
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 9vw;
+  height: 6vh;
+  margin: 0;
+  padding: 0;
+  /* background-color: white; */
+  /* border: 2px solid black; */
+  color: rgb(90, 90, 79);
+  transition: all 500ms ease-in-out;
+}
+
+.log-in-container button:hover {
+  scale: 103%;
+  cursor: pointer;
+}
+
+.log-in-form button {
+  /* background-color: blueviolet; */
+}
+
+.sign-in-google {
+  margin-bottom: 10vh !important;
+  height: 13%;
+}
+
+.pet-frog {
+  position: absolute;
+  width: 15vw;
+  height: 25vh;
+  right: 33vw;
+  bottom: 20vh;
+  background-image: url(/public/assets/pets/frog_happy.gif);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* background-color: aliceblue; */
+  transform-origin: bottom;
+  /* background-color: red; */
+}
+
+.pet-frog:hover {
+  animation: jump 2s ease-in-out infinite;
+  cursor: pointer;
+}
+
+@keyframes jump {
+  0% {
+    transform: scaleY(0.5) translateY(0);
+  }
+  20% {
+    transform: scaleY(1.5) translateY(-200px); /* Salto más alto */
+  }
+  50% {
+    transform: scaleY(1) translateY(0); /* Tamaño original en el suelo */
+  }
+  80% {
+    transform: scaleY(1) translateY(0); /* Quietud en el suelo */
+  }
+  100% {
+    transform: scaleY(0.5) translateY(0); /* Regresa al tamaño inicial */
+  }
+}

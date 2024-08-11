@@ -1,20 +1,21 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 
 import './Home.css';
+import './LogIn.css';
 import Header from "../../components/Header/Header";
 import Course from "../../components/Course/Course";
-import {useAuthState} from "react-firebase-hooks/auth";
-import {auth} from "../../firebase";
-import {signInWithPopup, GoogleAuthProvider, signInWithEmailAndPassword} from 'firebase/auth';
-import {useUser} from "../../components/utils/UserProvider";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../../firebase";
+import { signInWithPopup, GoogleAuthProvider, signInWithEmailAndPassword } from 'firebase/auth';
+import { useUser } from "../../components/utils/UserProvider";
 import axios from "axios";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
     const [, loading] = useAuthState(auth);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const {userProfile, setUserProfile} = useUser();
+    const { userProfile, setUserProfile } = useUser();
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -88,37 +89,41 @@ const Home = () => {
                         <Course
                             key={`course-${index}`}
                             course={course}
-                            navigationUrl={`/course/${index+1}/`}
-                            courseNumber={index+1}
+                            navigationUrl={`/course/${index + 1}/`}
+                            courseNumber={index + 1}
                         />
                     )
                 })}
-                 <div className="pet-static" id="petStatic" style={{backgroundImage: `url("/assets/pets/${userProfile.profile.avatar}-${userProfile.profile.level}.gif")`}}></div>
+                <div className="pet-static" id="petStatic" style={{ backgroundImage: `url("/assets/pets/${userProfile.profile.avatar}-${userProfile.profile.level}.gif")` }}></div>
                 {/*<div className="pet-looker" id="petLooker" ></div>*/}
             </div>
         );
     }
     return (
         <div className="App">
-            <form onSubmit={handleLogin}>
-                <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Email"
-                    required
-                />
-                <input
-                    type="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    placeholder="Password"
-                    required
-                />
-                <button type="submit">Login</button>
-            </form>
-            <button onClick={signInWithGoogle}>Sign In with Google</button>
-
+            <div className='log-in-container' >
+                <div className='log-in-options'>
+                <form className='log-in-form' onSubmit={handleLogin}>
+                    <input
+                        type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder="Email"
+                        required
+                    />
+                    <input
+                        type="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        placeholder="Password"
+                        required
+                    />
+                    <button type="submit">Sign In</button>
+                </form>
+                <button className='sign-in-google' onClick={signInWithGoogle}>Gmail</button>
+                </div>
+                <div className='pet-frog'></div>
+            </div>
         </div>
     );
 
