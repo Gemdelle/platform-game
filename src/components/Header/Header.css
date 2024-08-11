@@ -181,7 +181,7 @@ header {
 }
 
 
-.bar-interior-horizontal {
+.bar-interior-horizontal { 
     height: 48%;
     background-color: rgb(41, 13, 21);
     background-image: url(/public/assets/UI/question-bar-background-horizontal.png);
