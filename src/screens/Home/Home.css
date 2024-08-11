@@ -85,6 +85,7 @@ header {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  transform-origin: center bottom;
   transform: scaleX(-1);
   height: 12vw;
   width: 13vw;
