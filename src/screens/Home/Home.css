@@ -78,7 +78,9 @@ header {
 /* MENU */
 
 /* PET */
-.pet-static {
+
+.pet-static.home-egg {
+  animation: shake 2s ease-in-out infinite;
   position: fixed;
   background-position: center;
   background-size: contain;
@@ -91,17 +93,37 @@ header {
   left: 5vw;
   top: 70vh;
 }
-  /* animation: breathe 2s ease-in-out infinite;
+
+.pet-static.home-hatched {
+  animation: breathe 2s ease-in-out infinite;
+  position: fixed;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: scaleX(-1);
+  height: 12vw;
+  width: 13vw;
+  /* background-color: red; */
+  z-index: 900;
+  left: 5vw;
+  top: 70vh;
+}
+@keyframes breathe {
+  0%, 100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(1.03);
+  }
 }
 
-/*@keyframes breathe {*/
-/*  0%, 100% {*/
-/*    transform: scaleY(1);*/
-/*  }*/
-/*  50% {*/
-/*    transform: scaleY(1.04);*/
-/*  }*/
-/*}*/
+@keyframes shake {
+  0% { transform: rotate(0); }
+  25% { transform: rotate(-1deg); }
+  50% { transform: rotate(2deg); }
+  75% { transform: rotate(-1deg); }
+  100% { transform: rotate(0); }
+}
 
 .pet-looker {
   position: fixed;

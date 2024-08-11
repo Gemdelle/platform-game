@@ -70,6 +70,12 @@ const Home = () => {
         return <div>Loading...</div>;
     }
     if (userProfile) {
+        const isAquatic = userProfile.profile.avatar === 'axolotl';
+        const isTerrestrial = userProfile.profile.avatar === 'caterpillar';
+        const hasHatched = userProfile.profile.level > 1;
+        let hatchedBackgroundImage = `url("/assets/pets/evolutions/${isAquatic ? 'aquatic' : isTerrestrial ? 'terrestrial' : 'aerial'}/${userProfile.profile.level}.png")`;
+        let eggBackgroundImage = `url("/assets/eggs/${isAquatic ? 'egg-aquatic' : isTerrestrial ? 'egg-terrestrial' : 'egg-aerial'}.png")`;
+        let backgroundImage = hasHatched ? hatchedBackgroundImage : eggBackgroundImage
         return (
             <div className="App">
                 <Header>
@@ -94,7 +100,8 @@ const Home = () => {
                         />
                     )
                 })}
-                <div className="pet-static" id="petStatic" style={{ backgroundImage: `url("/assets/pets/${userProfile.profile.avatar}-${userProfile.profile.level}.gif")` }}></div>
+                <div className={`pet-static ${hasHatched ? 'home-hatched' : 'home-egg'}`} id="petStatic"
+                     style={{backgroundImage: backgroundImage}}></div>
                 {/*<div className="pet-looker" id="petLooker" ></div>*/}
             </div>
         );

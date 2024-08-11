@@ -12,7 +12,7 @@ import { useUser } from "../utils/UserProvider";
 import { useNavigate } from "react-router-dom";
 
 const Header = ({ children }) => {
-    const [showOptions, setShowOptions] = useState(true);
+    const [showOptions, setShowOptions] = useState(false);
     const [animating, setAnimating] = useState(false);
     const [showFAQ, setShowFAQ] = useState(false);
     const [showSupport, setShowSupport] = useState(false);
@@ -29,17 +29,6 @@ const Header = ({ children }) => {
         setUserProfile(null);
         navigate('/');
     };
-
-    useEffect(() => {
-        const savedState = localStorage.getItem('showOptions');
-        if (savedState !== null) {
-            setShowOptions(JSON.parse(savedState));
-        }
-    }, []);
-
-    useEffect(() => {
-        localStorage.setItem('showOptions', showOptions);
-    }, [showOptions]);
 
     const handleLogoClick = () => {
         if (showOptions) {
@@ -103,9 +92,12 @@ const Header = ({ children }) => {
     };
 
     const handleCoursesClick = () => {
-        navigate('/'); // Ruta a la que quieres redirigir
+        navigate('/');
     };
-
+    const hasHatched = userProfile.profile.level > 1;
+    let hatchedBackgroundImage = `url("/assets/pets/profile/${userProfile.profile.avatar}-${userProfile.profile.level}-profile.png")`;
+    let eggBackgroundImage = `url("/assets/eggs/${userProfile.profile.avatar === 'axolotl' ? 'egg-aquatic' : userProfile.profile.avatar === 'caterpillar' ? 'egg-terrestrial' : 'egg-aerial'}.png")`;
+    let backgroundImage = hasHatched ? hatchedBackgroundImage : eggBackgroundImage
     return (
         <header>
             <div className='header-container'>
@@ -135,7 +127,7 @@ const Header = ({ children }) => {
                 </div>
                 <div className='data flex-s'>
                     <div className='pp-container flex'>
-                        <div className='pp bg' style={{ backgroundImage: `url("/assets/pets/profile/${userProfile.profile.avatar}-${userProfile.profile.level}-profile.png")` }}></div>
+                        <div className={`pp bg ${hasHatched ? 'header-hatched' : 'header-egg'}`} style={{ backgroundImage: backgroundImage }}></div>
                     </div>
                     <div className='heart bg flex'><span id='level'>{userProfile.profile.level}</span></div>
                 </div>
