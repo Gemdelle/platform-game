@@ -226,7 +226,18 @@ ul {
 .level span {
     margin-top: 2.2vw;
     margin-left: 0.4vw;
-    text-shadow: 3px 3px 5px black, -3px -3px 5px rgb(66, 79, 39), 0 0 30px rgba(0, 0, 0, 1);
+    color: white;
+    font-weight: lighter;
+    background-image: url(/public/assets/UI/number-background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 50%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
 }
 
 .level.default:hover {
