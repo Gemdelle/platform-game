@@ -12,7 +12,7 @@ import { useUser } from "../utils/UserProvider";
 import { useNavigate } from "react-router-dom";
 
 const Header = ({ children }) => {
-    const [showOptions, setShowOptions] = useState(true);
+    const [showOptions, setShowOptions] = useState(false);
     const [animating, setAnimating] = useState(false);
     const [showFAQ, setShowFAQ] = useState(false);
     const [showSupport, setShowSupport] = useState(false);
@@ -29,17 +29,6 @@ const Header = ({ children }) => {
         setUserProfile(null);
         navigate('/');
     };
-
-    useEffect(() => {
-        const savedState = localStorage.getItem('showOptions');
-        if (savedState !== null) {
-            setShowOptions(JSON.parse(savedState));
-        }
-    }, []);
-
-    useEffect(() => {
-        localStorage.setItem('showOptions', showOptions);
-    }, [showOptions]);
 
     const handleLogoClick = () => {
         if (showOptions) {
