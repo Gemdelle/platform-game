@@ -39,7 +39,7 @@ const AvatarSelection = () => {
     return (
         <div className="avatar-selection-screen">
             <div className='avatar-moving-background'></div>
-            <h1>Hatch you egg</h1>
+            <h1>Hatch your egg</h1>
             <div className="avatar-list">
                 {avatars.map((avatar) => (
                     <div
@@ -48,8 +48,10 @@ const AvatarSelection = () => {
                         onClick={(e) => handleAvatarSelect(e, avatar)}
                     >
                         <img src={avatar.src} alt={avatar.alt} />
+                        <div className='avatar-orb-container'><div className='avatar-orb'></div></div>
                     </div>
                 ))}
+                
             </div>
         </div>
     );
