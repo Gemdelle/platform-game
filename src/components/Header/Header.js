@@ -109,7 +109,7 @@ const Header = ({children}) => {
     return (
         <header>
             <div className='header-container'>
-                {/* <div className='menu'>
+                <div className='menu'>
                     <button onClick={handleSignOut}>Logout</button>
                     <div className='logo' onClick={handleLogoClick}></div>
                     {showOptions && (
@@ -124,11 +124,11 @@ const Header = ({children}) => {
 
                         </div>
                     )}
-                </div> */}
+                </div>
                 <div className='currency'></div>
                 <div className='flex-e hud'>
                     <div className='level-bar bg'>
-                        <div className='level-bar-progress'>100 / 150</div>
+                        <div className='level-bar-progress'>{`${userProfile.profile.current_xp} / ${userProfile.profile.total_xp}`}</div>
                         <div className='bar-interior-horizontal' style={{ width: `${(userProfile.profile.current_xp / userProfile.profile.total_xp) * 100}%` }}></div>
                     </div>
                     <div className='data flex-s'>

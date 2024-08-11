@@ -160,8 +160,6 @@ header {
     opacity: 100%;
     background-repeat: no-repeat;
     border-radius: 10px 50px 50px 10px;
-    margin-left: 6.5%;
-    margin-top: 6%;
     filter: blur(50%);
 }
 
@@ -229,8 +227,9 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 6vmax;
+    margin-right: 8vmax;
     font-size: larger;
+    position: absolute;
 }
 
 /* END USER-STATS */
