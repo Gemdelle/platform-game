@@ -192,8 +192,7 @@ ul {
 
 .level.gold {
     width: 4.5vw;
-    height: 7vw;
-    margin: 0.4vw 0.1vw;
+    height: 6vw;
     cursor: pointer;
     transition: all 200ms ease-in-out;
     background-image: url(/public/assets/UI/heart-gold.gif);
