@@ -90,7 +90,17 @@ header {
   left: 8vw;
   top: 35vmax;
   transform: scaleX(-1); /* Refleja el elemento horizontalmente */
+  /*animation: breathe 2s ease-in-out infinite;*/
 }
+
+/*@keyframes breathe {*/
+/*  0%, 100% {*/
+/*    transform: scaleY(1);*/
+/*  }*/
+/*  50% {*/
+/*    transform: scaleY(1.04);*/
+/*  }*/
+/*}*/
 
 .pet-looker {
   position: fixed;
