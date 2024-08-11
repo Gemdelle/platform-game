@@ -17,7 +17,6 @@ const Course = ({
                     courseNumber
                 }) => {
 
-    let itemsRange = Array.from({length: itemCount}, (_, index) => index + 1);
     let levelsRange = Array.from({length: levels}, (_, index) => index + 1);
     const [availableSubLevels] = useState([1, 2, 3, 4, 5, 6, 16, 22]);
 
