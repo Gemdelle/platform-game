@@ -7,7 +7,7 @@
     background-color: rgba(0, 0, 0, 0.9);
     background-image: url(/public/assets/backgrounds/questionnaire-start-frame.png), url(/public/assets/backgrounds/questionnaire-start-background.png);
     background-position: center 2vh, center;
-    background-size: 45%, 100%;
+    background-size: 90vh, cover;
     overflow: hidden;
 }
 
