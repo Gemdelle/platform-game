@@ -196,7 +196,7 @@ const TeoricSublevel = () => {
         try {
             const idToken = userProfile.id
             debugger
-            const response = await axios.post('http://localhost:3001/validate/course/1/theoretical', {
+            const response = await axios.post('https://quiet-badlands-42095-c0012ddb8417.herokuapp.com/validate/course/1/theoretical', {
                 theoretical: {
                     score: {
                         current: newScore,

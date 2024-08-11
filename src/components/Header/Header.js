@@ -111,7 +111,7 @@ const Header = ({children}) => {
             <div className='header-container'>
                 <div className='menu'>
                     <button onClick={handleSignOut}>Logout</button>
-                    <div className='logo' onClick={handleLogoClick}></div>
+                    <div className={`logo ${userProfile.profile.avatar === 'axolotl' ? 'aquatic' : userProfile.profile.avatar === 'caterpillar' ? 'terrestrial' : 'aerial'}`} onClick={handleLogoClick}></div>
                     {showOptions && (
                         <div className={`options ${animating ? 'hidden' : ''}`}>
                             <div id='courses' onClick={handleCoursesClick}>Courses</div>
