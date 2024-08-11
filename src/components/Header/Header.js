@@ -110,19 +110,18 @@ const Header = ({ children }) => {
         <header>
             <div className='header-container'>
                 <div className='menu'>
-                    <button onClick={handleSignOut}>Logout</button>
                     <div className='logo-container'>
                         <div className={`logo ${userProfile.profile.avatar === 'axolotl' ? 'aquatic' : userProfile.profile.avatar === 'caterpillar' ? 'terrestrial' : 'aerial'}`} onClick={handleLogoClick}></div></div>
                     {showOptions && (
                         <div className={`options ${animating ? 'hidden' : ''}`}>
-                            <div id='courses' onClick={handleCoursesClick}>Courses</div>
-                            <div id='library' onClick={handleLibraryClick}>Library</div>
-                            <div id='evolutionMap' onClick={handleEvolutionMapClick}>Evolution Map</div>
-                            <div id='friends' onClick={handleFriendsClick}>Friends (coming soon)</div>
-                            <div id='calendar' onClick={handleCalendarClick}>Calendar</div>
-                            <div id='faq' onClick={handleFAQClick}>FAQ</div>
-                            <div id='support' onClick={handleSupportClick}>Support</div>
-
+                            <div className='menu-option' id='courses' onClick={handleCoursesClick}>Courses</div>
+                            <div className='menu-option' id='library' onClick={handleLibraryClick}>Library</div>
+                            <div className='menu-option' id='evolutionMap' onClick={handleEvolutionMapClick}>Evolution Map</div>
+                            <div className='menu-option' id='friends' onClick={handleFriendsClick}>Friends (coming soon)</div>
+                            <div className='menu-option' id='calendar' onClick={handleCalendarClick}>Calendar</div>
+                            <div className='menu-option' id='faq' onClick={handleFAQClick}>FAQ</div>
+                            <div className='menu-option' id='support' onClick={handleSupportClick}>Support</div>
+                            <button className='log-out-btn' onClick={handleSignOut}>Logout</button>
                         </div>
 
                     )}

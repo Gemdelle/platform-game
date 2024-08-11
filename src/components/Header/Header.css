@@ -21,14 +21,15 @@ header {
 /* MENU */
 
 .menu {
-    width: 15%;
-    height: 70%;
-    background-color: lightgray;
-    margin-left: 8vw;
-    margin-bottom: 5vh;
+    width: 20%;
+    height: 230%;
+    /* background-color: lightgray; */
+    margin-left: 9vw;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    /* border: 2px solid white; */
+    margin-top: 30vh;
 }
 
 .index {
@@ -127,6 +128,33 @@ header {
 
 .options.hidden {
     animation: fadeOutLeft 1s forwards;
+}
+
+.menu-option {
+    /* background-color: red; */
+    height: 13%;
+    background-image: url(/public/assets/UI/menu-option.png);
+    background-size: 100% 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.2vh;
+    color: rgb(65, 65, 53);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2), -2px -2px 6px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.log-out-btn {
+    height: 20%;
+    background-image: url(/public/assets/horizontal-small-frame.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    color: rgb(81, 81, 66);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2), -2px -2px 6px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Keyframes for the animations */
