@@ -194,8 +194,8 @@
     width: 60%;
     height: 100%;
     background-image: url(/public/assets/pets/axolotl-1.gif);
-    background-position: center -0.7vmax;
-    background-size: 80% 120%;
+    background-position: center;
+    background-size: contain;
     background-repeat: no-repeat;
 }
 
