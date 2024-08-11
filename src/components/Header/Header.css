@@ -185,12 +185,14 @@ header {
 }
 
 .pp {
-    height: 80%;
+    height: 60%;
     width: 100%;
     /*background-image: url('/public/assets/pets/caterpillar-1-profile.gif');*/
     /* background-color: rgb(65, 31, 31); */
     border-radius: 50%;
     color: white;
+    animation: breathe 2s ease-in-out infinite;
+    transform-origin: center bottom;
 }
 
 .heart {
@@ -233,3 +235,13 @@ header {
 }
 
 /* END USER-STATS */
+
+
+@keyframes breathe {
+    0%, 100% {
+        transform: scaleY(1);
+    }
+    50% {
+        transform: scaleY(1.03);
+    }
+}

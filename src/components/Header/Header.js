@@ -133,7 +133,7 @@ const Header = ({children}) => {
                     </div>
                     <div className='data flex-s'>
                         <div className='pp-container flex'>
-                            <div className='pp bg' style={{ backgroundImage: `url("/assets/pets/${userProfile.profile.avatar}-${userProfile.profile.level}-profile.gif")` }}></div>
+                            <div className='pp bg' style={{ backgroundImage: `url("/assets/pets/profile/${userProfile.profile.avatar}-${userProfile.profile.level}-profile.png")` }}></div>
                         </div>
                         <div className='heart bg flex'><span id='level'>{userProfile.profile.level}</span></div>
                     </div>

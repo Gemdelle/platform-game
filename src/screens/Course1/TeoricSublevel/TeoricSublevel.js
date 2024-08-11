@@ -233,15 +233,6 @@ const TeoricSublevel = () => {
         setSelectedAnswer(answerOption);
     };
 
-    const increment = () => {
-        setScore(score + 1);
-    }
-    const decrement = () => {
-        if (score - 1 < 0)
-            return
-        setScore(score - 1);
-    }
-
     const handleAnswer = () => {
         if (!selectedAnswer || answerState === "WRONG" || answerState === "RIGHT" )
             return
