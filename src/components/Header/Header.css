@@ -181,14 +181,14 @@ header {
 }
 
 
-.bar-interior-horizontal { 
-    height: 48%;
-    background-color: rgb(41, 13, 21);
+.bar-interior-horizontal {
     background-image: url(/public/assets/UI/question-bar-background-horizontal.png);
+    height: 49%;
+    background-color: rgb(41, 13, 21);
     opacity: 100%;
     background-repeat: no-repeat;
     border-radius: 10px 50px 50px 10px;
-    filter: blur(50%);
+    margin-bottom: 1%;
 }
 
 .data {
@@ -216,12 +216,12 @@ header {
 .pp {
     height: 60%;
     width: 100%;
-    /*background-image: url('/public/assets/pets/caterpillar-1-profile.gif');*/
-    /* background-color: rgb(65, 31, 31); */
-    border-radius: 50%;
     color: white;
     animation: breathe 2s ease-in-out infinite;
     transform-origin: center bottom;
+    background-position: center;
+    background-size: contain;
+    margin-bottom: 3.5vh;
 }
 
 .heart {

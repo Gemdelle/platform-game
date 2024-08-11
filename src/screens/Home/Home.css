@@ -83,14 +83,15 @@ header {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  height: 22vw;
-  width: 15%;
+  transform: scaleX(-1);
+  height: 12vw;
+  width: 13vw;
   /* background-color: red; */
-  z-index: 999;
-  left: 3vw;
-  top: 72vh;
-  transform: scaleX(-1); /* Refleja el elemento horizontalmente */
-  /*animation: breathe 2s ease-in-out infinite;*/
+  z-index: 900;
+  left: 5vw;
+  top: 70vh;
+}
+  /* animation: breathe 2s ease-in-out infinite;
 }
 
 /*@keyframes breathe {*/
