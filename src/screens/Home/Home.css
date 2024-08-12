@@ -1,4 +1,8 @@
 /* src/Home.css */
+html {
+  cursor: url('/public/assets/cursors/cursor-default.png') 16 16, default;
+}
+
 @font-face {
   font-family: 'BlackwoodCastle';
   src: url('/public/assets/fonts/BlackwoodCastle.TTF') format('truetype');
