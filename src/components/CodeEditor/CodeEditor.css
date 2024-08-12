@@ -13,6 +13,12 @@
   color: rgb(65, 65, 53);
 }
 
+.cheat {
+  position: absolute;
+  left: 69vh;
+  top: 18vh;
+}
+
 .arrows {
   position: absolute;
   top: 40%;
