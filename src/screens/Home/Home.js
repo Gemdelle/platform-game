@@ -16,7 +16,7 @@ const Home = () => {
     const [, loading] = useAuthState(auth);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [showEvolution, setShowEvolution] = useState(true);
+    const [showEvolution, setShowEvolution] = useState(false);
     const { userProfile, setUserProfile } = useUser();
     const navigate = useNavigate();
 
