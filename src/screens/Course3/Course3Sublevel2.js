@@ -154,7 +154,7 @@ const Course3Sublevel2 = () => {
     return (
         <div className="course-level-1 flex">
             <div className="moving-course-sky"></div>
-            <Instructions/>
+            <Instructions instructions={"2. Crear tres instancias de la clase 'Beetlesweet'. Para caramelos_dulces, sweetness 100 y honeyTeaspoons 20; para caramelos_neutros, usa sweetness 50 y honeyTeaspoons 10; y para caramelos_acidos, usa sweetness 0 y honeyTeaspoons 1. Los siguientes valores son comunes: duration 60, baking 10, cooked true, beetles 15, gelatinBoxes 5."}/>
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>

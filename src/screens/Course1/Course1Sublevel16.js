@@ -94,7 +94,7 @@ const Course1Sublevel16 = () => {
     return (
         <div className="course-level-1 flex">
             <div className="moving-course-sky"></div>
-            <Instructions/>
+            <Instructions instructions={"16. Definir la clase 'Beetlesweet'. Debe tener los atributos type, sweetness, duration, baking, hard, cookingMinutes, count, beetles, honeyTeaSpoons, gelatinBoxes."}/>
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>

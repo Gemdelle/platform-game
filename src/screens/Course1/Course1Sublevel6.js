@@ -73,7 +73,7 @@ const Course1Sublevel6 = () => {
     return (
         <div className="course-level-1 flex">
             <div className="moving-course-sky"></div>
-            <Instructions/>
+            <Instructions instructions={"6. Definir  la clase 'Terrestrial'. Debe tener el atributo nombre, favoriteFood, birthDay, birthMonth, birthYear, legs, eyes, antennae, weight y height."}/>
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>

@@ -28,6 +28,10 @@
     font-weight: lighter;
     letter-spacing: 0.05vmax;
     width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3vh;
 }
 
 .instructions-opener,
