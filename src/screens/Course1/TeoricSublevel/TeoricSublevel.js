@@ -40,7 +40,7 @@ const QUESTIONS_DATA = [
         questionText: 'La instanciación de una clase se hace en...',
         answerOptions: [
             {answerText: 'Cada clase nueva que se crea de manera automática.', isCorrect: false, isSelected: false},
-            {answerText: 'El programa principal.', isCorrect: true, isSelected: false},
+            {answerText: 'Programa principal o cualquier otro método que necesite instanciar algún objeto.', isCorrect: true, isSelected: false},
             {answerText: 'Cualquier lado.', isCorrect: false, isSelected: false},
             {answerText: 'La clase del nombre más largo.', isCorrect: false, isSelected: false},
         ],
