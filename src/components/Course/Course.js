@@ -76,7 +76,7 @@ const Course = ({
                 </div>
                 <div className='levels'>
                     <div
-                        className={`level flex bg ${grade === "SILVER" ? 'silver' : grade === "GOLD" ? 'gold' : courseNumber === 1 ? 'default' : 'disabled'}`}
+                        className={`level flex bg ${grade === "SILVER" ? 'silver' : grade === "GOLD" ? 'gold' : (courseNumber === 1 || courseNumber === 2) ? 'default' : 'disabled'}`}
                         onClick={() => {
                             navigateToTheoretical()
                         }}><span>{current}</span></div>

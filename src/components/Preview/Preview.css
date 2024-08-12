@@ -3,3 +3,21 @@
     height: 100%;
     /* background-color: blue; */
   }
+
+.hatched {
+    animation: breathe 2s ease-in-out infinite;
+    width: 30%;
+    height: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@keyframes breathe {
+    0%, 100% {
+        transform: scaleY(1);
+    }
+    50% {
+        transform: scaleY(1.04);
+    }
+}

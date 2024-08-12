@@ -101,7 +101,7 @@ const Course1Sublevel16 = () => {
                     <CodeEditor onSubmit={handleCompileAndRun} className="Beetlesweet" correctAnswer={correctAnswer}/>
                     <OutputDisplay output={output}/>
                 </div>
-                <Preview previewImageUrl={`url("/assets/food/beetlesweets.png")`}/>
+                <Preview previewImageUrl={`url("/assets/previews/beetlesweet.png")`}/>
                 <UserStories1Sublevel16 validations={validations}/>
             </div>
         </div>

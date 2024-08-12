@@ -10,6 +10,9 @@ import axios from "axios";
 import {useNavigate} from "react-router-dom";
 import './Course1Sublevels.css';
 
+const correctAnswer = 'public class Egg {\n' +
+    '}'
+
 const Course1Sublevel1 = () => {
     const [output, setOutput] = useState('');
     const [, setInvalidations] = useState([]);
@@ -65,7 +68,7 @@ const Course1Sublevel1 = () => {
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>
-                    <CodeEditor onSubmit={handleCompileAndRun} className="Egg"/>
+                    <CodeEditor onSubmit={handleCompileAndRun} className="Egg" correctAnswer={correctAnswer}/>
                     <OutputDisplay output={output}/>
                 </div>
                 <Preview className="egg"

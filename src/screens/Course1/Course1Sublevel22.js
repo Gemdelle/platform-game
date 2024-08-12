@@ -107,7 +107,7 @@ const Course1Sublevel22 = () => {
                     <CodeEditor onSubmit={handleCompileAndRun} className="Caterpillar" previousCode={previousCode} correctAnswer={correctAnswer}/>
                     <OutputDisplay output={output}/>
                 </div>
-                <Preview previewImageUrl={`url("/assets/pets/caterpillar-1.gif")`}/>
+                <Preview className="hatched" previewImageUrl={`url("/assets/pets/evolutions/terrestrial/1.png")`}/>
                 <UserStories1Sublevel22 validations={validations}/>
             </div>
         </div>

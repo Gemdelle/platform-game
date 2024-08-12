@@ -8,7 +8,18 @@ import {useUser} from "../../components/utils/UserProvider";
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
 import UserStories1Sublevel6 from "../../components/UserStories/UserStories1Sublevel6";
-
+const correctAnswer = 'public class Terrestrial {\n' +
+    'private String name;\n' +
+    'private String favoriteFood;\n' +
+    'private int birthDay;\n' +
+    'private int birthMonth;\n' +
+    'private int birthYear;\n' +
+    'private int legs;\n' +
+    'private int eyes;\n' +
+    'private int antennae;\n' +
+    'private double weight;\n' +
+    'private double height;\n' +
+    '}'
 const Course1Sublevel6 = () => {
     const [output, setOutput] = useState('');
     const navigate = useNavigate();
@@ -66,10 +77,10 @@ const Course1Sublevel6 = () => {
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>
-                    <CodeEditor onSubmit={handleCompileAndRun} className="Caterpillar"/>
+                    <CodeEditor onSubmit={handleCompileAndRun} className="Caterpillar" correctAnswer={correctAnswer}/>
                     <OutputDisplay output={output}/>
                 </div>
-                <Preview previewImageUrl={`url("/assets/pets/caterpillar-1.gif")`}/>
+                <Preview className="hatched" previewImageUrl={`url("/assets/pets/evolutions/terrestrial/1.png")`}/>
                 <UserStories1Sublevel6 validations={validations}/>
             </div>
         </div>

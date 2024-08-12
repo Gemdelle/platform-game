@@ -9,6 +9,9 @@ import axios from "axios";
 import {useNavigate} from "react-router-dom";
 import UserStories1Sublevel5 from "../../components/UserStories/UserStories1Sublevel5";
 
+const correctAnswer = 'public class Terrestrial {\n' +
+    'private String name;\n' +
+    '}'
 const Course1Sublevel5 = () => {
     const [output, setOutput] = useState('');
     const navigate = useNavigate();
@@ -64,10 +67,10 @@ const Course1Sublevel5 = () => {
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>
-                    <CodeEditor onSubmit={handleCompileAndRun} className="Caterpillar"/>
+                    <CodeEditor onSubmit={handleCompileAndRun} className="Caterpillar" correctAnswer={correctAnswer}/>
                     <OutputDisplay output={output}/>
                 </div>
-                <Preview previewImageUrl={`url("/assets/pets/caterpillar-1.gif")`}/>
+                <Preview className="hatched" previewImageUrl={`url("/assets/pets/evolutions/terrestrial/1.png")`}/>
                 <UserStories1Sublevel5 validations={validations}/>
             </div>
         </div>

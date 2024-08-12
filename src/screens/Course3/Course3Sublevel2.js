@@ -161,7 +161,7 @@ const Course3Sublevel2 = () => {
                     <CodeEditor onSubmit={handleCompileAndRun} className="Main" previousCode={previousCode} correctAnswer={correctAnswer}/>
                     <OutputDisplay output={output}/>
                 </div>
-                <Preview previewImageUrl={`url("/assets/pets/caterpillar-1.gif")`}/>
+                <Preview className="hatched" previewImageUrl={`url("/assets/pets/evolutions/terrestrial/1.png")`} shouldProceed={shouldProceed} correctAnswerOutputImage={`url("/assets/previews/preview-instancias.png")`}/>
                 <UserStories3Sublevel2 validations={validations}/>
             </div>
         </div>

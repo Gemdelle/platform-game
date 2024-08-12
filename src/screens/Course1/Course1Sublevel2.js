@@ -9,6 +9,10 @@ import axios from "axios";
 import {useNavigate} from "react-router-dom";
 import UserStories1Sublevel2 from "../../components/UserStories/UserStories1Sublevel2";
 
+const correctAnswer = 'public class Egg {\n' +
+    'private String color;\n' +
+    '}'
+
 const Course1Sublevel2 = () => {
     const [output, setOutput] = useState('');
     const navigate = useNavigate();
@@ -67,7 +71,7 @@ const Course1Sublevel2 = () => {
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>
-                    <CodeEditor onSubmit={handleCompileAndRun} className="Egg"/>
+                    <CodeEditor onSubmit={handleCompileAndRun} className="Egg" correctAnswer={correctAnswer}/>
                     <OutputDisplay output={output}/>
                 </div>
                 <Preview className="egg"
