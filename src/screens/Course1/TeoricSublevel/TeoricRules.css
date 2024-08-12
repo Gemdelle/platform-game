@@ -224,11 +224,13 @@
 
 .teoric-rules-text p {
     width: 70%;
-    margin-left: 7vw;
+    height: 30%;
+    margin: 0 auto;
+    text-align: center;
     /* background-color: pink; */
-    text-align: left;
-    font-size: 1vw;
-    margin-top: 1vw;
+    font-size: 2vw;
+    margin-top: 40vh;
+    color: rgb(233, 235, 211);
 }
 
 .teoric-rules-text-area {
@@ -299,3 +301,4 @@ textarea::placeholder {
     scale: 103%;
     cursor: pointer;
 }
+
