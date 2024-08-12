@@ -2,32 +2,32 @@ import React from 'react';
 import './UserStories.css';
 
 const user_stories = [
-    "The class name should be Aquatic",
-    "Aquatic should have a String attribute <name>",
-    "Aquatic should have a double attribute <weight>",
-    "Aquatic should have a double attribute <height>",
-    "Aquatic should have an int attribute <birthDay>",
-    "Aquatic should have an int attribute <birthMonth>",
-    "Aquatic should have an int attribute <birthYear>",
-    "Aquatic should have an int attribute <legs>",
-    "Aquatic should have an int attribute <eyes>",
-    "Aquatic should have an int attribute <fins>",
-    "Aquatic should have an int attribute <tails>",
-    "All of the attributes should be private"
+    {
+        description: "The class name should be Terrestrial",
+        validation: "VALID_CLASS_STRUCTURE"
+    },
   ];
 
-const UserStories = () => {
+const UserStories1Sublevel4 = ({validations}) => {
   return (
-    <div className='user-stories'>
-      <div className='bar'><div className='bar-interior'></div></div>
-      <div className='score flex'>9/15</div>
-      <ul>
-        <div className='stories-container'>
-          {user_stories.map((user_story)=>{ return (<div><div className='heart-bullet bg'></div><li>{user_story}</li></div>)})}
-        </div>
-      </ul>
-    </div>
+      <div className='user-stories'>
+          <div className='bar'>
+              <div className='stories-bar-interior' style={{ height: `${(validations.length / user_stories.length) * 84}%` }}></div>
+          </div>
+          <div className='score flex'>{validations.length} / {user_stories.length}</div>
+          <ul>
+              <div className='stories-container'>
+                  {user_stories.map(({description: user_story, validation}) => {
+                      return (<div>
+                          <div
+                              className={`heart-bullet bg ${validations.includes(validation) ? 'alive' : 'dead'}`}></div>
+                          <li>{user_story}</li>
+                      </div>)
+                  })}
+              </div>
+          </ul>
+      </div>
   );
 };
 
-export default UserStories;
+export default UserStories1Sublevel4;

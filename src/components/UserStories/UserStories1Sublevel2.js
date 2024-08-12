@@ -2,23 +2,36 @@ import React from 'react';
 import './UserStories.css';
 
 const user_stories = [
-      "The class name should be Terrestrial",
-      "Terrestrial should have a String attribute <name>",
-      "The attribute <name> should be private"
+    {
+        description: "The class name should be Egg",
+        validation: "VALID_CLASS_STRUCTURE"
+    },
+    {
+        description: "Egg should have a String attribute color",
+        validation: "VALID_ATTRIBUTE_COLOR"
+    }
   ];
 
-const UserStories = () => {
+const UserStories1Sublevel2 = ({validations}) => {
     return (
         <div className='user-stories'>
-            <div className='bar'><div className='user-bar-interior'></div></div>
-            <div className='score flex'>9/15</div>
+            <div className='bar'>
+                <div className='stories-bar-interior' style={{ height: `${(validations.length / user_stories.length) * 84}%` }}></div>
+            </div>
+            <div className='score flex'>{validations.length} / {user_stories.length}</div>
             <ul>
                 <div className='stories-container'>
-                {user_stories.map((user_story)=>{ return (<div><div className='heart-bullet bg'></div><li>{user_story}</li></div>)})}
+                    {user_stories.map(({description: user_story, validation}) => {
+                        return (<div>
+                            <div
+                                className={`heart-bullet bg ${validations.includes(validation) ? 'alive' : 'dead'}`}></div>
+                            <li>{user_story}</li>
+                        </div>)
+                    })}
                 </div>
             </ul>
         </div>
     );
 };
 
-export default UserStories;
+export default UserStories1Sublevel2;

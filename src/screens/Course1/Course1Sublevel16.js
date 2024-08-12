@@ -1,8 +1,7 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import CodeEditor from '../../components/CodeEditor/CodeEditor';
 import OutputDisplay from '../../components/OutputDisplay/OutputDisplay';
 import Header from "../../components/Header/Header";
-import UserStories from '../../components/UserStories/UserStories';
 import Preview from '../../components/Preview/Preview';
 import Instructions from "../../components/Instructions/Instructions";
 import {useUser} from "../../components/utils/UserProvider";
@@ -13,7 +12,18 @@ import UserStories1Sublevel16 from "../../components/UserStories/UserStories1Sub
 const Course1Sublevel16 = () => {
     const [output, setOutput] = useState('');
     const navigate = useNavigate();
+    const [, setInvalidations] = useState([]);
+    const [validations, setValidations] = useState([]);
+    const [shouldProceed, setShouldProceed] = useState(false);
     const {userProfile, setUserProfile} = useUser();
+
+    useEffect(() => {
+        if (shouldProceed) {
+            setTimeout(()=> {
+                navigate('/');
+            },2500)
+        }
+    }, [shouldProceed, setUserProfile, navigate, userProfile]);
 
     const handleCompileAndRun = async (className, classCode) => {
         const idToken = userProfile.id
@@ -26,13 +36,24 @@ const Course1Sublevel16 = () => {
                 }
             });
             if (response.data.error) {
+                if (response.data.invalidations){
+                    setInvalidations(response.data.invalidations)
+                }
+                if (response.data.validations) {
+                    setValidations(response.data.validations);
+                }
                 throw Error(response.data.error)
             }
-            setUserProfile(response.data);
-            localStorage.setItem('userProfile', JSON.stringify(response.data));
-            setTimeout(() => {
-                navigate('/');
-            }, 500);
+
+            if (response.data.validations) {
+                setValidations(response.data.validations);
+            }
+
+            if (response.data.validations.length === 2) {
+                setShouldProceed(true);
+            }
+            setUserProfile(response.data.userProfile);
+            localStorage.setItem('userProfile', JSON.stringify(response.data.userProfile));
         } catch (error) {
             setOutput('An error occurred while compiling and running the code.');
         }
@@ -45,11 +66,12 @@ const Course1Sublevel16 = () => {
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>
-                    <CodeEditor onSubmit={handleCompileAndRun} className="Pterodactyl"/>
+                    <CodeEditor onSubmit={handleCompileAndRun} className="Axolotl"/>
                     <OutputDisplay output={output}/>
                 </div>
-                <Preview previewImageUrl={`url("/assets/pets/pterodactyl-1.gif")`}/>
-                <UserStories1Sublevel16/>
+                <Preview className="egg"
+                         previewImageUrl={`url("/assets/eggs/${userProfile.profile.avatar === 'caterpillar' ? 'egg-terrestrial' : userProfile.profile.avatar === 'axolotl' ? 'egg-aquatic' : 'egg-aerial'}.png")`}/>
+                <UserStories1Sublevel16 validations={validations}/>
             </div>
         </div>
     );

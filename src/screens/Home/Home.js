@@ -9,14 +9,15 @@ import { auth } from "../../firebase";
 import { signInWithPopup, GoogleAuthProvider, signInWithEmailAndPassword } from 'firebase/auth';
 import { useUser } from "../../components/utils/UserProvider";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
 import Evolution from "../../components/Evolution/Evolution";
 
 const Home = () => {
+    const navigationParams = useLocation();
     const [, loading] = useAuthState(auth);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [showEvolution, setShowEvolution] = useState(true);
+    const [showEvolution, setShowEvolution] = useState(navigationParams.state && navigationParams.state.isEvolving);
     const { userProfile, setUserProfile } = useUser();
     const navigate = useNavigate();
 
@@ -79,7 +80,7 @@ const Home = () => {
         const isAquatic = userProfile.profile.avatar === 'axolotl';
         const isTerrestrial = userProfile.profile.avatar === 'caterpillar';
         const hasHatched = userProfile.profile.level > 1;
-        let hatchedBackgroundImage = `url("/assets/pets/evolutions/${isAquatic ? 'aquatic' : isTerrestrial ? 'terrestrial' : 'aerial'}/${userProfile.profile.level}.png")`;
+        let hatchedBackgroundImage = `url("/assets/pets/evolutions/${isAquatic ? 'aquatic' : isTerrestrial ? 'terrestrial' : 'aerial'}/${userProfile.profile.level - 1}.png")`;
         let eggBackgroundImage = `url("/assets/eggs/${isAquatic ? 'egg-aquatic' : isTerrestrial ? 'egg-terrestrial' : 'egg-aerial'}.png")`;
         let backgroundImage = hasHatched ? hatchedBackgroundImage : eggBackgroundImage
         return (

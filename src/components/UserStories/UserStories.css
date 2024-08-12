@@ -37,6 +37,7 @@
     padding: 1px 1px;
     font-size: 1.3vw;
     color: rgb(65, 65, 53);
+    max-width: 65%;
 }
 
 .stories-container .heart-bullet {
@@ -63,9 +64,9 @@
     content: "";
     left: 2vw;
     transform: translateY(-35%);
-    width: 3vw;
-    height: 3vw;
-    background-image: url("/public/assets/UI/heart.gif"), url("/public/assets/UI/dead-veins.png");
+    width: 4vw;
+    height: 4vw;;
+    background-image: url("/public/assets/UI/heart.gif"), url("/public/assets/UI/veins.png");
     background-position: right, left;
     background-size: contain, 100% 100%;
     background-repeat: no-repeat;
