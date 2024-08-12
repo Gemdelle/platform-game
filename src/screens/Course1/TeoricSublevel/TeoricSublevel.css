@@ -451,7 +451,7 @@ button.button-teoric.selected {
   /* background-color: burlywood; */
   background-image: url(/public/assets/UI/heart.gif), url(/public/assets/UI/veins.png);
   background-position: center, -1.3vmax center ;
-  background-size: contain, 120% 90%;
+  background-size: contain, contain;
   background-repeat: no-repeat;
   margin-left: 1vmax;
   position: absolute;
