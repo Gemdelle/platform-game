@@ -2,33 +2,36 @@ import React from 'react';
 import './UserStories.css';
 
 const user_stories = [
-    "The class name should be Aerial",
-    "Aerial should have a String attribute <name>",
-    "Aerial should have a double attribute <weight>",
-    "Aerial should have a double attribute <height>",
-    "Aerial should have an int attribute <birthDay>",
-    "Aerial should have an int attribute <birthMonth>",
-    "Aerial should have an int attribute <birthYear>",
-    "Aerial should have an int attribute <legs>",
-    "Aerial should have an int attribute <arms>",
-    "Aerial should have an int attribute <eyes>",
-    "Aerial should have an int attribute <wings>",
-    "Aerial should have an int attribute <tails>",
-    "All of the attributes should be private"
+    {
+        description: "The class name should be Terrestrial",
+        validation: "VALID_CLASS_STRUCTURE"
+    },
+    {
+        description: "Terrestrial should have a String attribute name",
+        validation: "VALID_ATTRIBUTE_NAME"
+    }
 ];
 
-const UserStories = () => {
+const UserStories1Sublevel5 = ({validations}) => {
   return (
-    <div className='user-stories'>
-      <div className='bar'></div>
-      <div className='score flex'>9/15</div>
-      <ul>
-        <div className='stories-container'>
-        {user_stories.map((user_story)=>{ return (<div><div className='heart-bullet bg'></div><li>{user_story}</li></div>)})}
-        </div>
-      </ul>
-    </div>
+      <div className='user-stories'>
+          <div className='bar'>
+              <div className='stories-bar-interior' style={{ height: `${(validations.length / user_stories.length) * 84}%` }}></div>
+          </div>
+          <div className='score flex'>{validations.length} / {user_stories.length}</div>
+          <ul>
+              <div className='stories-container'>
+                  {user_stories.map(({description: user_story, validation}) => {
+                      return (<div>
+                          <div
+                              className={`heart-bullet bg ${validations.includes(validation) ? 'alive' : 'dead'}`}></div>
+                          <li>{user_story}</li>
+                      </div>)
+                  })}
+              </div>
+          </ul>
+      </div>
   );
 };
 
-export default UserStories;
+export default UserStories1Sublevel5;

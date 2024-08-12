@@ -2,21 +2,24 @@ import React from 'react';
 import './UserStories.css';
 
 const user_stories = [
-  "The class name should be Ohrant",
-  "Ohrant should have a String attribute <flavour>",
-  "Ohrant should have a String attribute <period>",
-  "Ohrant should have a String attribute <soilType>",
-  "Ohrant should have a double attribute <size>",
-  "Ohrant should have a double attribute <weight>",
-  "Ohrant should have a boolean attribute <seeds>",
-  "Ohrant should have a boolean attribute <skin>",
-  "Ohrant should have a static int attribute <instances>",
-  "Ohrant should have a boolean attribute <regeneration>",
-  "Ohrant should have a double attribute <vibraniumConcentration>",
+  "The class name should be Undyum",
+  "Undyum should have a String attribute <name>",
+  "Undyum should have a String attribute <mood>",
+  "Undyum should have a double attribute <weight>",
+  "Undyum should have a double attribute <height>",
+  "Undyum should have an int attribute <birthDay>",
+  "Undyum should have an int attribute <birthMonth>",
+  "Undyum should have an int attribute <birthYear>",
+  "Undyum should have an int attribute <legs>",
+  "Undyum should have an int attribute <eyes>",
+  "Undyum should have an int attribute <antennae>",
+  "Undyum should have a List<String> attribute <food>",
+  "Undyum should have a List<String> attribute <toys>",
+  "Undyum should have an int attribute <happiness>",
   "All of the attributes should be private"
 ];
 
-const UserStories = () => {
+const UserStories1Sublevel22 = ({validations}) => {
   return (
       <div className='user-stories'>
         <div className='bar'>
@@ -38,4 +41,4 @@ const UserStories = () => {
   );
 };
 
-export default UserStories;
+export default UserStories1Sublevel22;

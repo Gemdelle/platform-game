@@ -7,7 +7,7 @@ const TeoricRules = ({onClose, handleGoNext, bestScore, total, grade}) => {
     const isAquatic = userProfile.profile.avatar === 'axolotl';
     const isTerrestrial = userProfile.profile.avatar === 'caterpillar';
     const hasHatched = userProfile.profile.level > 1;
-    let hatchedBackgroundImage = `url("/assets/pets/evolutions/${isAquatic ? 'aquatic' : isTerrestrial ? 'terrestrial' : 'aerial'}/${userProfile.profile.level}.png")`;
+    let hatchedBackgroundImage = `url("/assets/pets/evolutions/${isAquatic ? 'aquatic' : isTerrestrial ? 'terrestrial' : 'aerial'}/${userProfile.profile.level-1}.png")`;
     let eggBackgroundImage = `url("/assets/eggs/${isAquatic ? 'egg-aquatic' : isTerrestrial ? 'egg-terrestrial' : 'egg-aerial'}.png")`;
     let backgroundImage = hasHatched ? hatchedBackgroundImage : eggBackgroundImage
     return (

@@ -95,7 +95,7 @@ const Header = ({ children }) => {
         navigate('/');
     };
     const hasHatched = userProfile.profile.level > 1;
-    let hatchedBackgroundImage = `url("/assets/pets/profile/${userProfile.profile.avatar}-${userProfile.profile.level}-profile.png")`;
+    let hatchedBackgroundImage = `url("/assets/pets/profile/${userProfile.profile.avatar}-${userProfile.profile.level-1}-profile.png")`;
     let eggBackgroundImage = `url("/assets/eggs/${userProfile.profile.avatar === 'axolotl' ? 'egg-aquatic' : userProfile.profile.avatar === 'caterpillar' ? 'egg-terrestrial' : 'egg-aerial'}.png")`;
     let backgroundImage = hasHatched ? hatchedBackgroundImage : eggBackgroundImage
     return (

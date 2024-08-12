@@ -12,7 +12,7 @@ import './Course1Sublevels.css';
 
 const Course1Sublevel1 = () => {
     const [output, setOutput] = useState('');
-    const [invalidations, setInvalidations] = useState([]);
+    const [, setInvalidations] = useState([]);
     const [validations, setValidations] = useState([]);
     const [shouldProceed, setShouldProceed] = useState(false);
     const navigate = useNavigate();
@@ -21,8 +21,6 @@ const Course1Sublevel1 = () => {
     useEffect(() => {
         if (shouldProceed) {
             setTimeout(()=> {
-                setUserProfile(userProfile);
-                localStorage.setItem('userProfile', JSON.stringify(userProfile));
                 navigate('/course/1/2');
             },2500)
         }
@@ -53,6 +51,8 @@ const Course1Sublevel1 = () => {
             if (response.data.validations.length === 1) {
                 setShouldProceed(true);
             }
+            setUserProfile(response.data.userProfile);
+            localStorage.setItem('userProfile', JSON.stringify(response.data.userProfile));
         } catch (error) {
             setOutput('An error occurred while compiling and running the code.');
         }

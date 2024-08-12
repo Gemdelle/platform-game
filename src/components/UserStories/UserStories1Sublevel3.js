@@ -2,31 +2,52 @@ import React from 'react';
 import './UserStories.css';
 
 const user_stories = [
-      "The class name should be Terrestrial",
-      "Terrestrial should have a String attribute <name>",
-      "Terrestrial should have a double attribute <weight>",
-      "Terrestrial should have a double attribute <height>",
-      "Terrestrial should have an int attribute <birthDay>",
-      "Terrestrial should have an int attribute <birthMonth>",
-      "Terrestrial should have an int attribute <birthYear>",
-      "Terrestrial should have an int attribute <legs>",
-      "Terrestrial should have an int attribute <eyes>",
-      "Terrestrial should have an int attribute <antennae>",
-      "All of the attributes should be private",
+    {
+        description: "The class name should be Egg",
+        validation: "VALID_CLASS_STRUCTURE"
+    },
+    {
+        description: "Egg should have a String attribute color",
+        validation: "VALID_ATTRIBUTE_COLOR"
+    },
+    {
+        description: "Egg should have a int attribute hatchingDays",
+        validation: "VALID_ATTRIBUTE_HATCHING_DAYS"
+    },
+    {
+        description: "Egg should have a double attribute weight",
+        validation: "VALID_ATTRIBUTE_WEIGHT"
+    },
+    {
+        description: "Egg should have a double attribute temperature",
+        validation: "VALID_ATTRIBUTE_TEMPERATURE"
+    },
+    {
+        description: "Egg should have a double attribute hatchTemperature",
+        validation: "VALID_ATTRIBUTE_HATCH_TEMPERATURE"
+    }
   ];
 
-const UserStories = () => {
+const UserStories1Sublevel3 = ({validations}) => {
     return (
         <div className='user-stories'>
-            <div className='bar'><div className='bar-interior'></div></div>
-            <div className='score flex'>9/15</div>
+            <div className='bar'>
+                <div className='stories-bar-interior' style={{ height: `${(validations.length / user_stories.length) * 84}%` }}></div>
+            </div>
+            <div className='score flex'>{validations.length} / {user_stories.length}</div>
             <ul>
                 <div className='stories-container'>
-                {user_stories.map((user_story)=>{ return (<div><div className='heart-bullet bg'></div><li>{user_story}</li></div>)})}
+                    {user_stories.map(({description: user_story, validation}) => {
+                        return (<div>
+                            <div
+                                className={`heart-bullet bg ${validations.includes(validation) ? 'alive' : 'dead'}`}></div>
+                            <li>{user_story}</li>
+                        </div>)
+                    })}
                 </div>
             </ul>
         </div>
     );
 };
 
-export default UserStories;
+export default UserStories1Sublevel3;
