@@ -23,7 +23,18 @@ const correctAnswer = 'public class Terrestrial {\n' +
     '    private final String mother;\n' +
     '    private final String father;\n' +
     '}'
-
+const previousCode = 'public class Terrestrial {\n' +
+    '    private String name;\n' +
+    '    private String favoriteFood;\n' +
+    '    private int birthDay;\n' +
+    '    private int birthMonth;\n' +
+    '    private int birthYear;\n' +
+    '    private int legs;\n' +
+    '    private int eyes;\n' +
+    '    private int antennae;\n' +
+    '    private double weight;\n' +
+    '    private double height;\n' +
+    '}'
 const Course1Sublevel22 = () => {
     const [output, setOutput] = useState('');
     const navigate = useNavigate();
@@ -93,7 +104,7 @@ const Course1Sublevel22 = () => {
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>
-                    <CodeEditor onSubmit={handleCompileAndRun} className="Caterpillar" correctAnswer={correctAnswer}/>
+                    <CodeEditor onSubmit={handleCompileAndRun} className="Caterpillar" previousCode={previousCode} correctAnswer={correctAnswer}/>
                     <OutputDisplay output={output}/>
                 </div>
                 <Preview previewImageUrl={`url("/assets/pets/caterpillar-1.gif")`}/>

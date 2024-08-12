@@ -16,15 +16,15 @@ const user_stories = [
     },
     {
         description: "Terrestrial should have a int attribute birthDay",
-        validation: "VALID_ATTRIBUTE_BIRTHDAY"
+        validation: "VALID_ATTRIBUTE_BIRTH_DAY"
     },
     {
         description: "Terrestrial should have a int attribute birthMonth",
-        validation: "VALID_ATTRIBUTE_BIRTHMONTH"
+        validation: "VALID_ATTRIBUTE_BIRTH_MONTH"
     },
     {
         description: "Terrestrial should have a int attribute birthYear",
-        validation: "VALID_ATTRIBUTE_BIRTHYEAR"
+        validation: "VALID_ATTRIBUTE_BIRTH_YEAR"
     },
     {
         description: "Terrestrial should have a int attribute legs",
