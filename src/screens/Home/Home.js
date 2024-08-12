@@ -109,7 +109,6 @@ const Home = () => {
                 })}
                 <div className={`pet-static ${hasHatched ? 'home-hatched' : 'home-egg'}`} id="petStatic"
                      style={{backgroundImage: backgroundImage}}></div>
-                {/*<div className="pet-looker" id="petLooker" ></div>*/}
                 {showEvolution ? <Evolution onClose={handleCloseEvolution}/> : null}
             </div>
         );

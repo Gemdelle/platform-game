@@ -7,9 +7,11 @@ import Instructions from "../../components/Instructions/Instructions";
 import {useUser} from "../../components/utils/UserProvider";
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
-import UserStories1Sublevel22 from "../../components/UserStories/UserStories1Sublevel22";
+import UserStories2Sublevel1 from "../../components/UserStories/Course2/UserStories2Sublevel1";
+
 
 const correctAnswer = 'public class Terrestrial {\n' +
+    '// 01. ATTRIBUTES\n' +
     '    private final String name;\n' +
     '    private String favoriteFood;\n' +
     '    private final int birthDay;\n' +
@@ -22,9 +24,41 @@ const correctAnswer = 'public class Terrestrial {\n' +
     '    private double height;\n' +
     '    private final String mother;\n' +
     '    private final String father;\n' +
+    '\n' +
+    '// 02. CONSTRUCTOR\n' +
+    '    public Terrestrial(String name, String favoriteFood, int birthDay, int birthMonth, int birthYear,int legs, int eyes, int antennae, double weight, double height, String mother, String father) {\n' +
+    '        this.name = name;\n' +
+    '        this.favoriteFood = favoriteFood;\n' +
+    '        this.birthDay = birthDay;\n' +
+    '        this.birthMonth = birthMonth;\n' +
+    '        this.birthYear = birthYear;\n' +
+    '        this.legs = legs;\n' +
+    '        this.eyes = eyes;\n' +
+    '        this.antennae = antennae;\n' +
+    '        this.weight = weight;\n' +
+    '        this.height = height;\n' +
+    '        this.mother = mother;\n' +
+    '        this.father = father;\n' +
+    '    }\n' +
     '}'
 
-const Course1Sublevel22 = () => {
+const previousCode = 'public class Terrestrial {\n' +
+    '// 01. ATTRIBUTES\n' +
+    '    private final String name;\n' +
+    '    private String favoriteFood;\n' +
+    '    private final int birthDay;\n' +
+    '    private final int birthMonth;\n' +
+    '    private final int birthYear;\n' +
+    '    private final int legs;\n' +
+    '    private final int eyes;\n' +
+    '    private final int antennae;\n' +
+    '    private double weight;\n' +
+    '    private double height;\n' +
+    '    private final String mother;\n' +
+    '    private final String father;\n'+
+    '}'
+
+const Course2Sublevel1 = () => {
     const [output, setOutput] = useState('');
     const navigate = useNavigate();
     const [, setInvalidations] = useState([]);
@@ -43,19 +77,25 @@ const Course1Sublevel22 = () => {
     const handleCompileAndRun = async (className, classCode) => {
         const cheatActivated = userProfile.email === "miludecastrobc@gmail.com" || userProfile.email === "milagros.de613@comunidad.ub.edu.ar" || userProfile.email === "gonzalo.contogrobly@gmail.com"
         if (cheatActivated) {
-            setValidations(["VALID_CLASS_STRUCTURE",
-                "VALID_ATTRIBUTE_MOTHER",
-                "VALID_ATTRIBUTE_FATHER",
-                "VALID_ATTRIBUTE_BIRTHDAY",
-                "VALID_ATTRIBUTE_BIRTHMONTH",
-                "VALID_ATTRIBUTE_BIRTHYEAR",
-                "VALID_ATTRIBUTES_PRIVATE"]);
+            setValidations(["VALID_CONSTRUCTOR_STRUCTURE",
+                "VALID_CONSTRUCTOR_NAME",
+                "VALID_CONSTRUCTOR_FAVORITE_FOOD",
+                "VALID_CONSTRUCTOR_BIRTHDAY",
+                "VALID_CONSTRUCTOR_BIRTHMONTH",
+                "VALID_CONSTRUCTOR_BIRTHYEAR",
+                "VALID_CONSTRUCTOR_LEGS",
+                "VALID_CONSTRUCTOR_EYES",
+                "VALID_CONSTRUCTOR_ANTENNAE",
+                "VALID_CONSTRUCTOR_WEIGHT",
+                "VALID_CONSTRUCTOR_HEIGHT",
+                "VALID_CONSTRUCTOR_MOTHER",
+                "VALID_CONSTRUCTOR_FATHER"]);
             setShouldProceed(true);
             return
         }
         const idToken = userProfile.id
         try {
-            const response = await axios.post('https://quiet-badlands-42095-c0012ddb8417.herokuapp.com/validate/course/1/22', {
+            const response = await axios.post('https://quiet-badlands-42095-c0012ddb8417.herokuapp.com/validate/course/2/1', {
                 class_code: classCode
             },{
                 headers: {
@@ -93,14 +133,14 @@ const Course1Sublevel22 = () => {
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>
-                    <CodeEditor onSubmit={handleCompileAndRun} className="Caterpillar" correctAnswer={correctAnswer}/>
+                    <CodeEditor onSubmit={handleCompileAndRun} className="Caterpillar" previousCode={previousCode} correctAnswer={correctAnswer}/>
                     <OutputDisplay output={output}/>
                 </div>
                 <Preview previewImageUrl={`url("/assets/pets/caterpillar-1.gif")`}/>
-                <UserStories1Sublevel22 validations={validations}/>
+                <UserStories2Sublevel1 validations={validations}/>
             </div>
         </div>
     );
 };
 
-export default Course1Sublevel22;
+export default Course2Sublevel1;

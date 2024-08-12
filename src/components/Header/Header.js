@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { signOut } from "firebase/auth";
 import './Header.css';
 import FAQ from "../../components/FAQ/FAQ";

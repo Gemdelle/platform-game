@@ -7,9 +7,31 @@ import Instructions from "../../components/Instructions/Instructions";
 import {useUser} from "../../components/utils/UserProvider";
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
-import UserStories1Sublevel2 from "../../components/UserStories/UserStories1Sublevel2";
+import UserStories3Sublevel1 from "../../components/UserStories/Course3/UserStories3Sublevel1";
 
-const Course1Sublevel2 = () => {
+
+const correctAnswer = 'public class Main {\n' +
+    '    public static void main (String[] arg) {\n' +
+    '        Terrestrial terrestrial = new Terrestrial(\n' +
+    '                "Aggro",         // name\n' +
+    '                "Jellyscuit",    // favoriteFood\n' +
+    '                15,              // birthDay\n' +
+    '                6,               // birthMonth\n' +
+    '                1983,            // birthYear\n' +
+    '                6,               // legs\n' +
+    '                2,               // eyes\n' +
+    '                1,               // antennae\n' +
+    '                62.0,            // weight\n' +
+    '                0.78,            // height\n' +
+    '                "Ephra",         // mother\n' +
+    '                "Agnalym"        // father\n' +
+    '        );\n' +
+    '\n' +
+    '    }\n' +
+    '}'
+
+
+const Course3Sublevel1 = () => {
     const [output, setOutput] = useState('');
     const navigate = useNavigate();
     const [, setInvalidations] = useState([]);
@@ -20,22 +42,39 @@ const Course1Sublevel2 = () => {
     useEffect(() => {
         if (shouldProceed) {
             setTimeout(()=> {
-                navigate('/course/1/3');
+                navigate('/');
             },2500)
         }
     }, [shouldProceed, setUserProfile, navigate, userProfile]);
 
     const handleCompileAndRun = async (className, classCode) => {
+        const cheatActivated = userProfile.email === "miludecastrobc@gmail.com" || userProfile.email === "milagros.de613@comunidad.ub.edu.ar" || userProfile.email === "gonzalo.contogrobly@gmail.com"
+        if (cheatActivated) {
+            setValidations(["VALID_CLASS_INSTANCE",
+                "VALID_ATTRIBUTE_NAME",
+                "VALID_ATTRIBUTE_FAVORITEFOOD",
+                "VALID_ATTRIBUTE_BIRTHDAY",
+                "VALID_ATTRIBUTE_BIRTHMONTH",
+                "VALID_ATTRIBUTE_BIRTHYEAR",
+                "VALID_ATTRIBUTE_LEGS",
+                "VALID_ATTRIBUTE_EYES",
+                "VALID_ATTRIBUTE_ANTENNAE",
+                "VALID_ATTRIBUTE_WEIGHT",
+                "VALID_ATTRIBUTE_HEIGHT",
+                "VALID_ATTRIBUTE_MOTHER",
+                "VALID_ATTRIBUTE_FATHER"]);
+            setShouldProceed(true);
+            return
+        }
         const idToken = userProfile.id
         try {
-            const response = await axios.post('https://quiet-badlands-42095-c0012ddb8417.herokuapp.com/validate/course/1/2', {
+            const response = await axios.post('https://quiet-badlands-42095-c0012ddb8417.herokuapp.com/validate/course/2/1', {
                 class_code: classCode
-            }, {
+            },{
                 headers: {
                     'Authorization': `Bearer ${idToken}`
                 }
             });
-
             if (response.data.error) {
                 if (response.data.invalidations){
                     setInvalidations(response.data.invalidations)
@@ -67,15 +106,14 @@ const Course1Sublevel2 = () => {
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>
-                    <CodeEditor onSubmit={handleCompileAndRun} className="Egg"/>
+                    <CodeEditor onSubmit={handleCompileAndRun} className="Main" correctAnswer={correctAnswer}/>
                     <OutputDisplay output={output}/>
                 </div>
-                <Preview className="egg"
-                    previewImageUrl={`url("/assets/eggs/${userProfile.profile.avatar === 'caterpillar' ? 'egg-terrestrial' : userProfile.profile.avatar === 'axolotl' ? 'egg-aquatic' : 'egg-aerial'}.png")`}/>
-                <UserStories1Sublevel2 validations={validations}/>
+                <Preview previewImageUrl={`url("/assets/pets/caterpillar-1.gif")`}/>
+                <UserStories3Sublevel1 validations={validations}/>
             </div>
         </div>
     );
 };
 
-export default Course1Sublevel2;
+export default Course3Sublevel1;

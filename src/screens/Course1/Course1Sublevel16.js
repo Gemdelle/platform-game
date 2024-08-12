@@ -98,11 +98,10 @@ const Course1Sublevel16 = () => {
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>
-                    <CodeEditor onSubmit={handleCompileAndRun} className="Axolotl" correctAnswer={correctAnswer}/>
+                    <CodeEditor onSubmit={handleCompileAndRun} className="Beetlesweet" correctAnswer={correctAnswer}/>
                     <OutputDisplay output={output}/>
                 </div>
-                <Preview className="egg"
-                         previewImageUrl={`url("/assets/eggs/${userProfile.profile.avatar === 'caterpillar' ? 'egg-terrestrial' : userProfile.profile.avatar === 'axolotl' ? 'egg-aquatic' : 'egg-aerial'}.png")`}/>
+                <Preview previewImageUrl={`url("/assets/food/beetlesweets.png")`}/>
                 <UserStories1Sublevel16 validations={validations}/>
             </div>
         </div>

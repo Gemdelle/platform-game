@@ -12,7 +12,7 @@ const EvolutionMap = ({ onClose }) => {
     }else {
       import('./EvolutionMapAerial.css');
     }
-  }, []);
+  }, [userProfile]);
 
   return (
     <div className='evolutionMap-popup bg'>

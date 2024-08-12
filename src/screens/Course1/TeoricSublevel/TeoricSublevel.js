@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 import './TeoricSublevel.css';
 import {useUser} from "../../../components/utils/UserProvider";
 import axios from "axios";
@@ -172,29 +172,13 @@ const TeoricSublevel = () => {
     const [timeLeft, setTimeLeft] = useState(180);
     const audioRef = useRef(new Audio(audioSrc));
     const [questionsToAnswer, setQuestionsToAnswer] = useState(shuffle([...QUESTIONS_DATA]));
+    const [currentQuestion, setCurrentQuestion] = React.useState(0);
+    const [showScore, setShowScore] = React.useState(false);
+    const [score, setScore] = React.useState(0);
 
-    useEffect(() => {
-        if (hasStarted && timeLeft > 0) {
-            const timer = setTimeout(() => {
-                setTimeLeft(timeLeft - 1);
-            }, 1000);
-
-            return () => clearTimeout(timer);
-        } else if (timeLeft === 0) {
-            handleFinish(score);
-            setShowScore(true);
-        }
-    }, [timeLeft, hasStarted]);
-
-    const formatTime = (seconds) => {
-        const minutes = Math.floor(seconds / 60);
-        const remainingSeconds = seconds % 60;
-        return `${minutes < 10 ? '0' : ''}${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
-    };
-
-    const handleFinish = async (newScore) => {
+    const handleFinish = useCallback(async (newScore) => {
         try {
-            const idToken = userProfile.id
+            const idToken = userProfile.id;
             const response = await axios.post('https://quiet-badlands-42095-c0012ddb8417.herokuapp.com/validate/course/1/theoretical', {
                 theoretical: {
                     score: {
@@ -213,6 +197,25 @@ const TeoricSublevel = () => {
         } catch (error) {
             console.error("Error logging in:", error.message);
         }
+    }, [userProfile.id, questionsToAnswer.length, setUserProfile]);
+
+    useEffect(() => {
+        if (hasStarted && timeLeft > 0) {
+            const timer = setTimeout(() => {
+                setTimeLeft(timeLeft - 1);
+            }, 1000);
+
+            return () => clearTimeout(timer);
+        } else if (timeLeft === 0) {
+            handleFinish(score);
+            setShowScore(true);
+        }
+    }, [timeLeft, hasStarted, handleFinish, score]);
+
+    const formatTime = (seconds) => {
+        const minutes = Math.floor(seconds / 60);
+        const remainingSeconds = seconds % 60;
+        return `${minutes < 10 ? '0' : ''}${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
     };
 
     const goHome = () => {
@@ -223,11 +226,6 @@ const TeoricSublevel = () => {
         setHasStarted(true)
     }
 
-    const [currentQuestion, setCurrentQuestion] = React.useState(0);
-
-    const [showScore, setShowScore] = React.useState(false);
-
-    const [score, setScore] = React.useState(0);
 
     const handleAnswerButtonClick = (answerOption) => {
         setSelectedAnswer(answerOption);

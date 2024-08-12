@@ -1,13 +1,12 @@
 import React, {useEffect} from 'react';
 import './Evolution.css';
 
-
 const Evolution = ({onClose}) => {
     useEffect(() => {
         setTimeout(() => {
             onClose();
         }, 13000)
-    }, []);
+    }, [onClose]);
     return (
         <div className='evolution-popup bg'>
             <p className='evolution-text'>Event</p>

@@ -6,19 +6,21 @@ const Course = ({
                     navigationUrl,
                     course: {
                         description,
-                        item_count: itemCount,
                         goals,
                         completed_sublevels,
                         name,
                         total: levels,
-                        current: currentCourseLevel,
                         theoretical: {grade, score: {current, total}}
                     },
                     courseNumber
                 }) => {
 
     let levelsRange = Array.from({length: levels}, (_, index) => index + 1);
-    const [availableSubLevels] = useState([1, 2, 3, 4, 5, 6, 16, 22]);
+    const [availableSubLevels] = useState({
+        1: [1, 2, 3, 4, 5, 6, 16, 22],
+        2: [1],
+        3: [1,2]
+    });
 
     const navigate = useNavigate();
     const navigateToCourse = (courseSublevel) => {
@@ -34,11 +36,13 @@ const Course = ({
             let isCompleted = completed_sublevels && completed_sublevels.find((sublevelNumber) => {
                 return number === sublevelNumber
             }) !== undefined;
-            let className = `level flex bg ${grade !== "NONE" ? isCompleted ? 'completed' : availableSubLevels.includes(number) ? 'default' : 'disabled' : 'disabled'}`;
+            let className2 = `level flex bg ${(availableSubLevels[courseNumber] && availableSubLevels[courseNumber].includes(number)) ? 'default' : 'disabled'}`;
+
+            let className = `level flex bg ${grade !== "NONE" ? isCompleted ? 'completed' : (availableSubLevels[courseNumber] && availableSubLevels[courseNumber].includes(number)) ? 'default' : 'disabled' : 'disabled'}`;
             return (<div
-                className={className}
+                className={courseNumber <= 1 ? className : className2}
                 onClick={() => {
-                    if (availableSubLevels.includes(number)) {
+                    if (availableSubLevels[courseNumber].includes(number)) {
                         navigateToCourse(number)
                     }
                 }}><span>{number}</span></div>);

@@ -12,6 +12,9 @@ import Course1Sublevel5 from "./screens/Course1/Course1Sublevel5";
 import Course1Sublevel6 from "./screens/Course1/Course1Sublevel6";
 import Course1Sublevel16 from "./screens/Course1/Course1Sublevel16";
 import Course1Sublevel22 from "./screens/Course1/Course1Sublevel22";
+import Course2Sublevel1 from "./screens/Course2/Course2Sublevel1";
+import Course3Sublevel1 from "./screens/Course3/Course3Sublevel1";
+import Course3Sublevel2 from "./screens/Course3/Course3Sublevel2";
 
 const App = () => {
     return (
@@ -29,6 +32,9 @@ const App = () => {
                     <Route path="/course/1/6" element={<Course1Sublevel6/>}/>
                     <Route path="/course/1/16" element={<Course1Sublevel16/>}/>
                     <Route path="/course/1/22" element={<Course1Sublevel22/>}/>
+                    <Route path="/course/2/1" element={<Course2Sublevel1/>}/>
+                    <Route path="/course/3/1" element={<Course3Sublevel1/>}/>
+                    <Route path="/course/3/2" element={<Course3Sublevel2/>}/>
                 </Routes>
             </div>
         </Router>

@@ -3,8 +3,8 @@ import React, {useState} from 'react';
 import './CodeEditor.css';
 import {useUser} from "../utils/UserProvider";
 
-const CodeEditor = ({className, onSubmit, correctAnswer}) => {
-    const [classCode, setClassCode] = useState('');
+const CodeEditor = ({className, onSubmit, previousCode, correctAnswer}) => {
+    const [classCode, setClassCode] = useState(previousCode || '');
     const {userProfile} = useUser();
     const cheatActivated = userProfile.email === "miludecastrobc@gmail.com" || userProfile.email === "milagros.de613@comunidad.ub.edu.ar" || userProfile.email === "gonzalo.contogrobly@gmail.com"
     const handleSubmit = (e) => {
