@@ -102,7 +102,7 @@ const Course3Sublevel1 = () => {
     return (
         <div className="course-level-1 flex">
             <div className="moving-course-sky"></div>
-            <Instructions/>
+            <Instructions instructions={"1. Crear una instancia de la clase 'Terrestrial' con los siguientes valores: name \"Aggro\", favoriteFood \"Jellyscuit\", birthDay 15, birthMonth 6, birthYear 1983, legs 6, eyes 2, antennae 1, weight 62.0, height 0.78, mother \"Ephra\" y father \"Agnalym\"."}/>
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>

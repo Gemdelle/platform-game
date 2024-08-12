@@ -68,7 +68,7 @@ const Course1Sublevel3 = () => {
     return (
         <div className="course-level-1 flex">
             <div className="moving-course-sky"></div>
-            <Instructions/>
+            <Instructions instructions={"3. Definir  la clase 'Egg'. Debe tener los atributos color, hatchingDays, weight, temperature, hatchTemperature."}/>
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>
