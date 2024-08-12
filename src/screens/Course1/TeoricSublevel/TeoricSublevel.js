@@ -75,7 +75,7 @@ const QUESTIONS_DATA = [
     {
         questionText: 'Los atributos sirven',
         answerOptions: [
-            {answerText: 'Determinar las propiedades o características de un objeto', isCorrect: false, isSelected: false},
+            {answerText: 'Determinar cuánto va a tardar crear una instancia de la clase', isCorrect: false, isSelected: false},
             {answerText: 'Determinar qué tanto nos gusta una clase', isCorrect: false, isSelected: false},
             {answerText: 'Determinar cuántas veces se puede crear un objeto', isCorrect: false, isSelected: false},
             {answerText: 'Determinar las propiedades o características de un objeto', isCorrect: true, isSelected: false},
