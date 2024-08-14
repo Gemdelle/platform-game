@@ -36,22 +36,22 @@ const Class3 = ({ onClose }) => {
   };
 
   return (
-    <div className='class1-popup bg'>
-      <div className='class1-content'>
-        <h2 className='class1-h2'>Library</h2>
-        <div className='class1-content1'>
-          <button onClick={onClose} className='close-btn-class1'></button>
+    <div className='class3-popup bg'>
+      <div className='class3-content'>
+        <h2 className='class3-h2'>Library</h2>
+        <div className='class3-content1'>
+          <button onClick={onClose} className='close-btn-class3'></button>
           <div className='text-content'>
-            <p className='class1-description-p'>{currentText}</p>
+            <p className='class3-description-p'>{currentText}</p>
           </div>
 
           <div className='giph-content'>
             <div className='giph' style={{ backgroundImage: `url(${images[currentImageIndex]})` }}></div>
           </div>
 
-          <div className='arrows-class1'>
-            <div className='arrow-left-class1' onClick={handleLeftClick}></div>
-            <div className='arrow-left-class1 arrow-right-class1' onClick={handleRightClick}></div>
+          <div className='arrows-class3'>
+            <div className='arrow-left-class3' onClick={handleLeftClick}></div>
+            <div className='arrow-left-class3 arrow-right-class3' onClick={handleRightClick}></div>
           </div>
         </div>
       </div>

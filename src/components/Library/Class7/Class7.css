@@ -91,31 +91,37 @@
     /* La imagen se establecerá dinámicamente desde React */
     background-size: contain;
     background-repeat: no-repeat;
-    display: flex;
-    
+    display: flex; 
 }
 
 .arrows-class7 {
     position: absolute;
     display: flex;
     justify-content: center;
-    width: 350vw;
-
+    width: 353vw;
+    margin-right: 1.1%;
+    margin-top: 1.3%;
 }
 
 .arrow-left-class7 {
     width: 4vw;
-    height: 12vh;
-    background-image: url(/public/assets/UI/arrow.png);
+    height: 15vh;
+    background-image: url(/public/assets/arrows/left-arrow.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    margin: 0 10.4%;
-    cursor: pointer;
+    margin: 0 10.6%;
+    cursor: pointer; 
 }
 
 .arrow-right-class7 {
     transform: rotate(180deg);
+}
+
+.arrow-left-class7:hover {
+    background-image: url(/public/assets/arrows/left-arrow.png);
+    scale: 110%;
+    cursor: pointer;
 }
 
 .close-btn-class7 {
