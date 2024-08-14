@@ -28,7 +28,7 @@ const Library = ({ onClose }) => {
         <button onClick={onClose} className='close-btn-library'></button>
         <h2 className='library-h2'>Library</h2>
         <div className='library-content'>
-          <h3 className='library-h3'>Teoría Clases y Atributos</h3>
+          <h3 className='library-h3'>1. Teoría Clases y Atributos</h3>
           <div className='index-content'>
             <button onClick={() => handleButtonClick(<Class1 onClose={handleCloseOverlay} />)} className='btn-library1'>Conceptos clase</button>
             <button onClick={() => handleButtonClick(<Class2 onClose={handleCloseOverlay} />)} className='btn-library1'>Conceptos atributos primitivos</button>
