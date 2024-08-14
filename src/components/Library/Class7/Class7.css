@@ -1,0 +1,140 @@
+.class7-h2 {
+    font-size: 2.2vmax;
+    margin-bottom: 42%; /* Ajusta este valor para bajar o subir el texto */
+    margin-left: 1.5%;
+}
+
+.class7-description-p {
+    font-size: 2.5vmax; /* Aumenta el tamaño de la fuente */
+    margin-left: 15%;
+    padding: 0; /* Elimina padding */
+    width: 80%; /* Ocupa todo el ancho del contenedor */
+    text-align: justify; /* Justifica el texto para que ocupe todo el espacio horizontal */
+    line-height: 1.2; /* Ajusta el interlineado para que el texto no ocupe más espacio del necesario */
+}
+
+.class7-popup {
+    position: absolute;
+    top: -2vh;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-size: 65% !important;
+    background-color: rgba(32, 39, 31, 0.95) url(/public/assets/evolution-map.png);
+    background-size: contain;
+    background-position: center;
+}
+
+.class7-content {
+    position: absolute;
+    top: 2vh;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(/public/assets/evolution-map.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.class7-content1 {
+    /* Perdón por hacer otro sino no me sale xd */
+    position: absolute;
+    top: 13%;
+    left: 8%;
+    height: 75%;
+    width: 85%;
+    background-size: 65% !important;
+    /* background-color: rgba(30, 255, 0, 0.95); */
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.class7-description-p {
+    font-size: 2.2vmax;
+    margin-top: 4%; /* Ajusta este valor para bajar o subir el texto */
+    margin-right: 38%;
+}
+
+.text-content {
+    width: 63%;
+    height: 100%;
+    /* background-color: rgb(145, 1, 1); */
+    background-position: center;
+}
+
+.giph-content {
+    width: 37%;
+    height: 100%;
+    /* background-color: black; */
+    display: flex;
+    background-position:right;
+    align-items: center;
+    left: 20%;
+    top: 20%;
+}
+
+.giph {
+    width: 75%;
+    height: 87%;
+    margin-top: 6%;
+    margin-left: 2%;
+    background-color: black;
+    /* La imagen se establecerá dinámicamente desde React */
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    
+}
+
+.arrows-class7 {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 350vw;
+
+}
+
+.arrow-left-class7 {
+    width: 4vw;
+    height: 12vh;
+    background-image: url(/public/assets/UI/arrow.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 10.4%;
+    cursor: pointer;
+}
+
+.arrow-right-class7 {
+    transform: rotate(180deg);
+}
+
+.close-btn-class7 {
+   width: 7vw;
+   height: 10vw;
+   position: absolute;
+   right: -0.5vw;
+   top: -8.6vh;
+   background-image: url(/public/assets/UI/close-button.png);
+   background-size: contain;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-color: transparent;
+   border: none;
+   transition: all 300ms ease-in-out;
+}
+
+.close-btn-class7:hover {
+    background-image: url(/public/assets/UI/close-button-active.png);
+    scale: 103%;
+    cursor: pointer;
+}

@@ -1,41 +1,49 @@
 import React, { useState } from 'react';
 import './Library.css';
+import Class1 from './Class1/Class1'; // Asegúrate de importar Class1
+import Class2 from './Class2/Class2'; // Asegúrate de importar Class2
+import Class3 from './Class3/Class3'; // Asegúrate de importar Class3
+import Class4 from './Class4/Class4'; // Asegúrate de importar Class4
+import Class5 from './Class5/Class5'; // Asegúrate de importar Class5
+import Class6 from './Class6/Class6'; // Asegúrate de importar Class6
+import Class7 from './Class7/Class7'; // Asegúrate de importar Class7
 
 const Library = ({ onClose }) => {
-  const images = [
-    '/assets/giph1.png',
-    '/assets/giph2.png',
-    '/assets/giph3.png', 
-    '/assets/giph4.png'
-  ];
+  const [showOverlay, setShowOverlay] = useState(false);
+  const [currentClass, setCurrentClass] = useState(null); // Estado para mostrar clases específicas
 
-  const [currentImageIndex, setCurrentImageIndex] = useState(0); // Índice de imagen inicial
-
-  const handleLeftClick = () => {
-    setCurrentImageIndex((prevIndex) => 
-      (prevIndex - 1 + images.length) % images.length
-    ); // Cambia a la imagen anterior
+  const handleButtonClick = (classComponent) => {
+    setCurrentClass(classComponent);
+    setShowOverlay(true); // Muestra overlay
   };
 
-  const handleRightClick = () => {
-    setCurrentImageIndex((prevIndex) => 
-      (prevIndex + 1) % images.length
-    ); // Cambia a la imagen siguiente
+  const handleCloseOverlay = () => {
+    setShowOverlay(false);
+    setCurrentClass(null); // Cierra el componente actual
   };
 
   return (
-    <div className='library-popup bg'>
-      <div className='library-content'>
+    <div className='library-popup'>
+      <div className='library-container'>
         <button onClick={onClose} className='close-btn-library'></button>
         <h2 className='library-h2'>Library</h2>
-        <p className='library-description-p'>Public Class</p>
+        <div className='library-content'>
+          <h3 className='library-h3'>Teoría Clases y Atributos</h3>
+          <div className='index-content'>
+            <button onClick={() => handleButtonClick(<Class1 onClose={handleCloseOverlay} />)} className='btn-library1'>Conceptos clase</button>
+            <button onClick={() => handleButtonClick(<Class2 onClose={handleCloseOverlay} />)} className='btn-library1'>Conceptos atributos primitivos</button>
+            <button onClick={() => handleButtonClick(<Class3 onClose={handleCloseOverlay} />)} className='btn-library1'>Conceptos atributos estáticos</button>
+            <button onClick={() => handleButtonClick(<Class4 onClose={handleCloseOverlay} />)} className='btn-library1'>Conceptos atributos finales</button>
+            <button onClick={() => handleButtonClick(<Class5 onClose={handleCloseOverlay} />)} className='btn-library1'>Conceptos instancia</button>
+            <button onClick={() => handleButtonClick(<Class6 onClose={handleCloseOverlay} />)} className='btn-library1'>Crear una clase</button>
+            <button onClick={() => handleButtonClick(<Class7 onClose={handleCloseOverlay} />)} className='btn-library1'>Definir atributos</button>
+          </div>
+        </div>
       </div>
-      <div className='giph' style={{ backgroundImage: `url(${images[currentImageIndex]})` }}>
-      </div>
-      <div className='arrows-library'>
-        <div className='arrow-left-library' onClick={handleLeftClick}></div>
-        <div className='arrow-left-library arrow-right-library' onClick={handleRightClick}></div>
-      </div>
+      {showOverlay && (
+        <div className='center-overlay' onClick={handleCloseOverlay}></div>
+      )}
+      {currentClass}
     </div>
   );
 };
