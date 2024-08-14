@@ -38,7 +38,7 @@ const Class2 = ({ onClose }) => {
   return (
     <div className='class2-popup bg'>
       <div className='class2-content'>
-        <h2 className='class2-h2'>Class2</h2>
+        <h2 className='class2-h2'>Library</h2>
         <div className='class2-content1'>
           <button onClick={onClose} className='close-btn-class2'></button>
           <div className='text-content'>
