@@ -7,21 +7,25 @@
 
 /* START CARD */
 
-.card {
-    display: none;
-    background-color: yellowgreen;
+/* START CARD */
+
+.card{
+    background-color: green;
+    width: 100%;
+    height: 100%;
+}
+
+.index {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent; /* Ajusta según sea necesario */
     width: 100%;
     height: 100%;
 }
 
 /* END CARD */
 
-.index {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* display: none; */
-}
 
 .close-btn-class1 {
     width: 7vw;
