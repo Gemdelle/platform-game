@@ -44,6 +44,9 @@ const Class1Sub1 = ({ onClose }) => {
       <div className='class1Sub1-content'>
         <h2 className='class1Sub1-h2'>Library</h2>
         <div className='class1Sub1-content1'>
+
+          <div className='cardNumber'>{currentIndex+1}</div>
+
           <button onClick={onClose} className='close-btn-class1Sub1'></button>
           <div className={`text-content ${classes[currentIndex-1]}`}>
             <p className='class1Sub1-description-p'>{texts[currentIndex]}</p>

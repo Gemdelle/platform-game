@@ -1,12 +1,7 @@
 import React, { useState } from 'react';
+import '../Library.css';
 import './Class1.css';
-import Class1Sub1 from './Class1Sub1/Class1Sub1';
-import Class1Sub2 from './Class1Sub2/Class1Sub2';
-import Class1Sub3 from './Class1Sub3/Class1Sub3';
-import Class1Sub4 from './Class1Sub4/Class1Sub4';
-import Class1Sub5 from './Class1Sub5/Class1Sub5';
-import Class1Sub6 from './Class1Sub6/Class1Sub6';
-import Class1Sub7 from './Class1Sub7/Class1Sub7';
+
 
 const Class1 = ({ onClose }) => {
   const [showOverlay, setShowOverlay] = useState(false);
@@ -22,20 +17,44 @@ const Class1 = ({ onClose }) => {
     setCurrentClass(null); // Cierra el componente actual
   };
 
+// New access
+  const images = [
+    '/assets/giph1.png',
+    '/assets/giph2.png',
+    '/assets/giph3.png',
+    '/assets/giph4.png'
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0); 
+
+  const handleLeftClick = () => {
+     setCurrentIndex((prevIndex) => {
+       const newIndex = (prevIndex - 1 + images.length) % images.length;
+       return newIndex;
+     });
+  };
+
+  const handleRightClick = () => {
+    setCurrentIndex((prevIndex) => {
+      const newIndex = (prevIndex + 1) % images.length;
+      return newIndex;
+    });
+  };
+
   return (
-    <div className='class1-popup bg'>
-      <div className='class1-container'>
-        <button onClick={onClose} className='close-btn-class1'></button>
+    <div className='library-popup'>
+      <div className='library-container'>
+        <button onClick={onClose} className='close-btn'></button>
         <h2 className='class1-h2'>Library</h2>
         <div className='class1-content'>
           <div className='index-content'>
-            <button onClick={() => handleButtonClick(<Class1Sub1 onClose={handleCloseOverlay} />)} className='btn-class11'>Conceptos clase</button>
-            <button onClick={() => handleButtonClick(<Class1Sub2 onClose={handleCloseOverlay} />)} className='btn-class11'>Conceptos atributos primitivos</button>
-            <button onClick={() => handleButtonClick(<Class1Sub3 onClose={handleCloseOverlay} />)} className='btn-class11'>Conceptos atributos estáticos</button>
-            <button onClick={() => handleButtonClick(<Class1Sub4 onClose={handleCloseOverlay} />)} className='btn-class11'>Conceptos atributos finales</button>
-            <button onClick={() => handleButtonClick(<Class1Sub5 onClose={handleCloseOverlay} />)} className='btn-class11'>Conceptos instancia</button>
-            <button onClick={() => handleButtonClick(<Class1Sub6 onClose={handleCloseOverlay} />)} className='btn-class11'>Crear una clase</button>
-            <button onClick={() => handleButtonClick(<Class1Sub7 onClose={handleCloseOverlay} />)} className='btn-class11'>Definir atributos</button>
+            <button className='btn-class11'>Conceptos clase</button>
+            <button className='btn-class11'>Conceptos atributos primitivos</button>
+            <button className='btn-class11'>Conceptos atributos estáticos</button>
+            <button className='btn-class11'>Conceptos atributos finales</button>
+            <button className='btn-class11'>Conceptos instancia</button>
+            <button className='btn-class11'>Crear una clase</button>
+            <button className='btn-class11'>Definir atributos</button>
           </div>
         </div>
       </div>
@@ -43,6 +62,12 @@ const Class1 = ({ onClose }) => {
         <div className='center-overlay' onClick={handleCloseOverlay}></div>
       )}
       {currentClass}
+
+      <div className=''>{currentIndex+1}</div>
+      <div className='library-arrows'>
+            <div className='arrow-left' onClick={handleLeftClick}></div>
+            <div className='arrow-right' onClick={handleRightClick}></div>
+      </div>
     </div>
   );
 };
