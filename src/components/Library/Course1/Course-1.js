@@ -50,7 +50,8 @@ const Course1 = ({ onClose }) => {
           <div className='library-index'>{currentIndex+1}</div>
         </div>
         <div className='card-content'>
-          <div className='index-content'>
+
+          <div className='index'>
             <button className='btn-course-option'>Conceptos clase</button>
             <button className='btn-course-option'>Conceptos atributos primitivos</button>
             <button className='btn-course-option'>Conceptos atributos estáticos</button>
@@ -59,6 +60,9 @@ const Course1 = ({ onClose }) => {
             <button className='btn-course-option'>Crear una clase</button>
             <button className='btn-course-option'>Definir atributos</button>
           </div>
+
+          <div className='card'></div>
+
         </div>
       </div>
 
