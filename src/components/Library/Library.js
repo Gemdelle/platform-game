@@ -30,12 +30,12 @@ const Library = ({ onClose }) => {
         <div className='library-content'>
           <h3 className='library-h3'>Teoría Cursos</h3>
           <div className='index-content'>
-            <button onClick={() => handleButtonClick(<Class1 onClose={handleCloseOverlay} />)} className='btn-library1'>1. ATRIBUTOS</button>
-            <button onClick={() => handleButtonClick(<Class2 onClose={handleCloseOverlay} />)} className='btn-library1'>2. CONSTRUCTOR</button>
-            <button onClick={() => handleButtonClick(<Class3 onClose={handleCloseOverlay} />)} className='btn-library1'>3. INSTANCIACIÓN</button>
-            <button onClick={() => handleButtonClick(<Class4 onClose={handleCloseOverlay} />)} className='btn-library1'>4. SETTERS & GETTERS</button>
-            <button onClick={() => handleButtonClick(<Class5 onClose={handleCloseOverlay} />)} className='btn-library1'>5. MÉTODOS</button>
-            <button onClick={() => handleButtonClick(<Class6 onClose={handleCloseOverlay} />)} className='btn-library1'>6. ATRIBUTOS AVANZADOS</button>
+            <button onClick={() => handleButtonClick(<Class1 onClose={handleCloseOverlay} />)} className='btn-library'>1. ATRIBUTOS</button>
+            <button onClick={() => handleButtonClick(<Class2 onClose={handleCloseOverlay} />)} className='btn-library'>2. CONSTRUCTOR</button>
+            <button onClick={() => handleButtonClick(<Class3 onClose={handleCloseOverlay} />)} className='btn-library'>3. INSTANCIACIÓN</button>
+            <button onClick={() => handleButtonClick(<Class4 onClose={handleCloseOverlay} />)} className='btn-library'>4. SETTERS & GETTERS</button>
+            <button onClick={() => handleButtonClick(<Class5 onClose={handleCloseOverlay} />)} className='btn-library'>5. MÉTODOS</button>
+            <button onClick={() => handleButtonClick(<Class6 onClose={handleCloseOverlay} />)} className='btn-library'>6. ATRIBUTOS AVANZADOS</button>
           </div>
         </div>
       </div>

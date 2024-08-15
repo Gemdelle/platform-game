@@ -19,8 +19,8 @@
     left: 0;
     height: 100vh;
     width: 100vw;
-    background-image: url(/public/assets/evolution-map.png);
-    background-size: contain;
+    background-image: url(/public/assets/frames/biggest-frame-clean.png);
+    background-size: 95% 95%;
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
@@ -56,10 +56,10 @@
     flex-direction: column;
     align-items: center;
     width: 80%;
-    height: 70%;
+    height: 75%;
     /* background-color: lightblue; */
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -70,9 +70,10 @@
     height: 80%;
     width: 80%;
     /* background-color: lightcoral; */
+    margin-bottom: 3vh;
 }
 
-.btn-library1 {
+.btn-library {
     width: 100%;
     height: 4.5vmax;
     font-size: 3vh; 
@@ -83,11 +84,14 @@
     background-repeat: no-repeat;
     border: none;
     transition: all 300ms ease-in-out;
+    background-color: transparent;
+    /* background-color: red; */
+    color: rgb(74, 78, 65);
 }
 
-.btn-library1:hover {
-    background-color: rgba(0, 0, 0, 0.3); 
-    transform: scale(1.05); 
+.btn-library:hover {
+    transform: scale(1.03); 
+    filter:sepia(0.25)
 }
 
 .close-btn-library {
