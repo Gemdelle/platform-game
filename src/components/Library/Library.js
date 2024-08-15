@@ -1,11 +1,6 @@
 import React, { useState } from 'react';
 import './Library.css';
-import Class1 from './Class1/Class1';
-import Class2 from './Class2/Class2';
-import Class3 from './Class3/Class3';
-import Class4 from './Class4/Class4';
-import Class5 from './Class5/Class5';
-import Class6 from './Class6/Class6';
+import Course1 from './Course1/Course-1';
 
 
 const Library = ({ onClose }) => {
@@ -30,12 +25,12 @@ const Library = ({ onClose }) => {
         <div className='library-content'>
           <h3 className='library-h3'>Teoría Cursos</h3>
           <div className='index-content'>
-            <button onClick={() => handleButtonClick(<Class1 onClose={handleCloseOverlay} />)} className='btn-library'>1. ATRIBUTOS</button>
-            <button onClick={() => handleButtonClick(<Class2 onClose={handleCloseOverlay} />)} className='btn-library'>2. CONSTRUCTOR</button>
-            <button onClick={() => handleButtonClick(<Class3 onClose={handleCloseOverlay} />)} className='btn-library'>3. INSTANCIACIÓN</button>
-            <button onClick={() => handleButtonClick(<Class4 onClose={handleCloseOverlay} />)} className='btn-library'>4. SETTERS & GETTERS</button>
-            <button onClick={() => handleButtonClick(<Class5 onClose={handleCloseOverlay} />)} className='btn-library'>5. MÉTODOS</button>
-            <button onClick={() => handleButtonClick(<Class6 onClose={handleCloseOverlay} />)} className='btn-library'>6. ATRIBUTOS AVANZADOS</button>
+            <button className='btn-library' onClick={() => handleButtonClick(<Course1 onClose={handleCloseOverlay} />)}>1. ATRIBUTOS</button>
+            <button className='btn-library'>2. CONSTRUCTOR</button>
+            <button className='btn-library'>3. INSTANCIACIÓN</button>
+            <button className='btn-library'>4. SETTERS & GETTERS</button>
+            <button className='btn-library'>5. MÉTODOS</button>
+            <button className='btn-library'>6. ATRIBUTOS AVANZADOS</button>
           </div>
         </div>
       </div>

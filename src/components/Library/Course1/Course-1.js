@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import '../Library.css';
-import './Class1.css';
+import './Models.css';
 
 
-const Class1 = ({ onClose }) => {
+const Course1 = ({ onClose }) => {
   const [showOverlay, setShowOverlay] = useState(false);
   const [currentClass, setCurrentClass] = useState(null); // Estado para mostrar clases específicas
 
@@ -45,25 +45,28 @@ const Class1 = ({ onClose }) => {
     <div className='library-popup'>
       <div className='library-container'>
         <button onClick={onClose} className='close-btn'></button>
-        <h2 className='class1-h2'>Library</h2>
-        <div className='class1-content'>
+        <div className='card-header'>
+          <h2 className='class1-h2'>Library</h2>
+          <div className='library-index'>{currentIndex+1}</div>
+        </div>
+        <div className='card-content'>
           <div className='index-content'>
-            <button className='btn-class11'>Conceptos clase</button>
-            <button className='btn-class11'>Conceptos atributos primitivos</button>
-            <button className='btn-class11'>Conceptos atributos estáticos</button>
-            <button className='btn-class11'>Conceptos atributos finales</button>
-            <button className='btn-class11'>Conceptos instancia</button>
-            <button className='btn-class11'>Crear una clase</button>
-            <button className='btn-class11'>Definir atributos</button>
+            <button className='btn-course-option'>Conceptos clase</button>
+            <button className='btn-course-option'>Conceptos atributos primitivos</button>
+            <button className='btn-course-option'>Conceptos atributos estáticos</button>
+            <button className='btn-course-option'>Conceptos atributos finales</button>
+            <button className='btn-course-option'>Conceptos instancia</button>
+            <button className='btn-course-option'>Crear una clase</button>
+            <button className='btn-course-option'>Definir atributos</button>
           </div>
         </div>
       </div>
+
       {showOverlay && (
         <div className='center-overlay' onClick={handleCloseOverlay}></div>
       )}
       {currentClass}
 
-      <div className=''>{currentIndex+1}</div>
       <div className='library-arrows'>
             <div className='arrow-left' onClick={handleLeftClick}></div>
             <div className='arrow-right' onClick={handleRightClick}></div>
@@ -72,4 +75,4 @@ const Class1 = ({ onClose }) => {
   );
 };
 
-export default Class1;
+export default Course1;

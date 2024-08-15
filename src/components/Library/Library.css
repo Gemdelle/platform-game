@@ -130,3 +130,44 @@
     align-items: center;
     justify-content: center;
 }
+
+/* COURSES */
+
+.btn-course-option {
+    margin: 10px;
+    width: 500px;
+    padding: 2.5% 20%; 
+    font-size: 3vh; 
+    color: #000000;
+    background-image: url(/public/assets/UI/menu-option.png);
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-course-option:hover {
+    background-color: rgba(0, 0, 0, 0.3); 
+    transform: scale(1.05); 
+}
+
+/* END COURSES */
+
+.library-index {
+    height: 8vw;
+    width: 8vw;
+    /* background-color: aqua; */
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 3vh;
+    left: 46vw;
+    font-size: 2vmax;
+    /* background-image: url(/public/assets/ornament.png); */
+    background-position: center 3vmax;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
