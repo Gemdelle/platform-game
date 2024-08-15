@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './Class7.css';
+import './Class3Sub1.css';
 
-const Class7 = ({ onClose }) => {
+const Class3Sub1 = ({ onClose }) => {
   const images = [
     '/assets/giph1.png',
     '/assets/giph2.png',
@@ -36,22 +36,22 @@ const Class7 = ({ onClose }) => {
   };
 
   return (
-    <div className='class7-popup bg'>
-      <div className='class7-content'>
-        <h2 className='class7-h2'>Library</h2>
-        <div className='class7-content1'>
-          <button onClick={onClose} className='close-btn-class7'></button>
+    <div className='class3Sub1-popup bg'>
+      <div className='class3Sub1-content'>
+        <h2 className='class3Sub1-h2'>Library</h2>
+        <div className='class3Sub1-content1'>
+          <button onClick={onClose} className='close-btn-class3Sub1'></button>
           <div className='text-content'>
-            <p className='class7-description-p'>{currentText}</p>
+            <p className='class3Sub1-description-p'>{currentText}</p>
           </div>
 
           <div className='giph-content'>
             <div className='giph' style={{ backgroundImage: `url(${images[currentImageIndex]})` }}></div>
           </div>
 
-          <div className='arrows-class7'>
-            <div className='arrow-left-class7' onClick={handleLeftClick}></div>
-            <div className='arrow-left-class7 arrow-right-class7' onClick={handleRightClick}></div>
+          <div className='arrows-class3Sub1'>
+            <div className='arrow-left-class3Sub1' onClick={handleLeftClick}></div>
+            <div className='arrow-left-class3Sub1 arrow-right-class3Sub1' onClick={handleRightClick}></div>
           </div>
         </div>
       </div>
@@ -59,4 +59,4 @@ const Class7 = ({ onClose }) => {
   );
 };
 
-export default Class7;
+export default Class3Sub1;

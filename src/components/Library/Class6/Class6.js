@@ -1,60 +1,48 @@
 import React, { useState } from 'react';
 import './Class6.css';
+import Class6Sub1 from './Class6Sub1/Class6Sub1';
+import Class6Sub2 from './Class6Sub2/Class6Sub2';
+import Class6Sub3 from './Class6Sub3/Class6Sub3';
+import Class6Sub4 from './Class6Sub4/Class6Sub4';
+import Class6Sub5 from './Class6Sub5/Class6Sub5';
+import Class6Sub6 from './Class6Sub6/Class6Sub6';
+import Class6Sub7 from './Class6Sub7/Class6Sub7';
 
 const Class6 = ({ onClose }) => {
-  const images = [
-    '/assets/giph1.png',
-    '/assets/giph2.png',
-    '/assets/giph3.png',
-    '/assets/giph4.png'
-  ];
+  const [showOverlay, setShowOverlay] = useState(false);
+  const [currentClass, setCurrentClass] = useState(null); // Estado para mostrar clases específicas
 
-  const texts = [
-    'Public Class: This class is a fundamental concept in programming where we define the blueprint of objects. It encapsulates data for the object and methods to manipulate that data. Public classes are accessible from anywhere in the application, making them essential for shared functionality.',
-    'Another Class: This class focuses on encapsulating behavior and data that are related to a specific type of object. It is an extension of basic classes, incorporating additional features and methods to perform complex tasks. It demonstrates how to use inheritance to extend functionality.',
-    'Yet Another Class: In this class, we explore advanced features such as interfaces and abstract classes. These concepts allow for more flexible and reusable code by defining contracts that classes must adhere to. This approach helps in designing scalable and maintainable systems.',
-    'Final Class: This class provides an overview of polymorphism and its applications. Polymorphism allows objects of different classes to be treated as objects of a common superclass. This capability is crucial for implementing dynamic method calls and achieving a high degree of flexibility in your code.'
-  ];
-
-  const [currentImageIndex, setCurrentImageIndex] = useState(0); // Índice de imagen inicial
-  const [currentText, setCurrentText] = useState(texts[0]); // Texto inicial
-
-  const handleLeftClick = () => {
-    setCurrentImageIndex((prevIndex) => {
-      const newIndex = (prevIndex - 1 + images.length) % images.length;
-      setCurrentText(texts[newIndex]); // Cambia el texto basado en el nuevo índice
-      return newIndex;
-    });
+  const handleButtonClick = (classComponent) => {
+    setCurrentClass(classComponent);
+    setShowOverlay(true); // Muestra overlay
   };
 
-  const handleRightClick = () => {
-    setCurrentImageIndex((prevIndex) => {
-      const newIndex = (prevIndex + 1) % images.length;
-      setCurrentText(texts[newIndex]); // Cambia el texto basado en el nuevo índice
-      return newIndex;
-    });
+  const handleCloseOverlay = () => {
+    setShowOverlay(false);
+    setCurrentClass(null); // Cierra el componente actual
   };
 
   return (
     <div className='class6-popup bg'>
-      <div className='class6-content'>
+      <div className='class6-container'>
+        <button onClick={onClose} className='close-btn-class6'></button>
         <h2 className='class6-h2'>Library</h2>
-        <div className='class6-content1'>
-          <button onClick={onClose} className='close-btn-class6'></button>
-          <div className='text-content'>
-            <p className='class6-description-p'>{currentText}</p>
-          </div>
-
-          <div className='giph-content'>
-            <div className='giph' style={{ backgroundImage: `url(${images[currentImageIndex]})` }}></div>
-          </div>
-
-          <div className='arrows-class6'>
-            <div className='arrow-left-class6' onClick={handleLeftClick}></div>
-            <div className='arrow-left-class6 arrow-right-class6' onClick={handleRightClick}></div>
+        <div className='class6-content'>
+          <div className='index-content'>
+            <button onClick={() => handleButtonClick(<Class6Sub1 onClose={handleCloseOverlay} />)} className='btn-class61'>1. ATRIBUTOS</button>
+            <button onClick={() => handleButtonClick(<Class6Sub2 onClose={handleCloseOverlay} />)} className='btn-class61'>1. ATRIBUTOS</button>
+            <button onClick={() => handleButtonClick(<Class6Sub3 onClose={handleCloseOverlay} />)} className='btn-class61'>1. ATRIBUTOS</button>
+            <button onClick={() => handleButtonClick(<Class6Sub4 onClose={handleCloseOverlay} />)} className='btn-class61'>1. ATRIBUTOS</button>
+            <button onClick={() => handleButtonClick(<Class6Sub5 onClose={handleCloseOverlay} />)} className='btn-class61'>1. ATRIBUTOS</button>
+            <button onClick={() => handleButtonClick(<Class6Sub6 onClose={handleCloseOverlay} />)} className='btn-class61'>1. ATRIBUTOS</button>
+            <button onClick={() => handleButtonClick(<Class6Sub7 onClose={handleCloseOverlay} />)} className='btn-class61'>1. ATRIBUTOS</button>
           </div>
         </div>
       </div>
+      {showOverlay && (
+        <div className='center-overlay' onClick={handleCloseOverlay}></div>
+      )}
+      {currentClass}
     </div>
   );
 };

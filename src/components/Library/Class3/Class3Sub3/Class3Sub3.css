@@ -1,10 +1,10 @@
-.class7-h2 {
+.class3Sub3-h2 {
     font-size: 2.2vmax;
     margin-bottom: 42%; /* Ajusta este valor para bajar o subir el texto */
     margin-left: 1.5%;
 }
 
-.class7-description-p {
+.class3Sub3-description-p {
     font-size: 2.5vmax; /* Aumenta el tamaño de la fuente */
     margin-left: 15%;
     padding: 0; /* Elimina padding */
@@ -13,7 +13,7 @@
     line-height: 1.2; /* Ajusta el interlineado para que el texto no ocupe más espacio del necesario */
 }
 
-.class7-popup {
+.class3Sub3-popup {
     position: absolute;
     top: -2vh;
     left: 0;
@@ -25,7 +25,7 @@
     background-position: center;
 }
 
-.class7-content {
+.class3Sub3-content {
     position: absolute;
     top: 2vh;
     left: 0;
@@ -41,7 +41,7 @@
     justify-content: center;
 }
 
-.class7-content1 {
+.class3Sub3-content1 {
     /* Perdón por hacer otro sino no me sale xd */
     position: absolute;
     top: 13%;
@@ -58,7 +58,7 @@
     justify-content: center;
 }
 
-.class7-description-p {
+.class3Sub3-description-p {
     font-size: 2.2vmax;
     margin-top: 4%; /* Ajusta este valor para bajar o subir el texto */
     margin-right: 38%;
@@ -94,7 +94,7 @@
     display: flex; 
 }
 
-.arrows-class7 {
+.arrows-class3Sub3 {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -103,7 +103,7 @@
     margin-top: 1.3%;
 }
 
-.arrow-left-class7 {
+.arrow-left-class3Sub3 {
     width: 4vw;
     height: 15vh;
     background-image: url(/public/assets/arrows/left-arrow.png);
@@ -114,17 +114,17 @@
     cursor: pointer; 
 }
 
-.arrow-right-class7 {
+.arrow-right-class3Sub3 {
     transform: rotate(180deg);
 }
 
-.arrow-left-class7:hover {
+.arrow-left-class3Sub3:hover {
     background-image: url(/public/assets/arrows/left-arrow.png);
     scale: 110%;
     cursor: pointer;
 }
 
-.close-btn-class7 {
+.close-btn-class3Sub3 {
    width: 7vw;
    height: 10vw;
    position: absolute;
@@ -139,7 +139,7 @@
    transition: all 300ms ease-in-out;
 }
 
-.close-btn-class7:hover {
+.close-btn-class3Sub3:hover {
     background-image: url(/public/assets/UI/close-button-active.png);
     scale: 103%;
     cursor: pointer;

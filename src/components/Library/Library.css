@@ -34,7 +34,6 @@
     margin: 0;
     position: absolute;
     top: 5%;
-    /* Asegúrate de que esté centrado horizontalmente */
     left: 50.75%;
     transform: translateX(-50%);
 }
@@ -45,7 +44,6 @@
     margin: 0;
     position: absolute;
     top: 15%;
-    /* Asegúrate de que esté centrado horizontalmente */
     left: 50%;
     transform: translateX(-50%);
 }
@@ -57,9 +55,8 @@
     align-items: center;
     /* background: #ffffff; */ /* Color de fondo del contenedor */
     border-radius: 10px;
-   /*  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-    margin-top: 6%; /* Asegúrate de que haya suficiente espacio debajo del título */
-    padding: 20px; /* Espacio dentro del contenedor */
+    margin-top: 6%; 
+    padding: 20px;
 }
 
 .index-content {
@@ -69,13 +66,13 @@
 }
 
 .btn-library1 {
-    margin: 10px; /* Espacio entre botones */
-    width: 500px; /* Ancho fijo para los botones */
-    padding: 2.5% 20%; /* Ajusta el padding para el tamaño del botón */
-    font-size: 3vh; /* Tamaño de fuente */
+    margin: 10px;
+    width: 500px;
+    padding: 2.5% 20%; 
+    font-size: 3vh; 
     color: #000000;
     background-image: url(/public/assets/UI/menu-option.png);
-    background-size: cover; /* Asegúrate de que la imagen cubra todo el botón */
+    background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;
     border: none;
@@ -83,8 +80,8 @@
 }
 
 .btn-library1:hover {
-    background-color: rgba(0, 0, 0, 0.3); /* Cambio de color al pasar el mouse */
-    transform: scale(1.05); /* Efecto de agrandamiento al pasar el mouse */
+    background-color: rgba(0, 0, 0, 0.3); 
+    transform: scale(1.05); 
 }
 
 .close-btn-library {
