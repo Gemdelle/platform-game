@@ -201,7 +201,6 @@ ul {
     background-size: 62% !important;
     color: white;
     z-index: 99;
-    filter: sepia(3);
 }
 
 .level.default {
