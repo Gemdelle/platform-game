@@ -167,18 +167,6 @@ ul {
 
 /* END COURSE DESCRIPTION */
 
-.level.completed {
-    width: 4.5vw;
-    height: 6vw;
-    cursor: pointer;
-    transition: all 200ms ease-in-out;
-    background-image: url(/public/assets/UI/heart.gif);
-    background-size: cover !important;
-    background-size: contain;
-    color: white;
-    z-index: 99;
-}
-
 .level.silver {
     width: 4.5vw;
     height: 6vw;
@@ -190,21 +178,25 @@ ul {
     z-index: 99;
 }
 
-.level.gold {
+.level.gold,
+.level.completed {
     width: 4.5vw;
     height: 6vw;
+    background-size: 160%;
     cursor: pointer;
     transition: all 200ms ease-in-out;
     background-image: url(/public/assets/UI/heart-gold.gif);
-    background-size: 160%;
     color: white;
     z-index: 99;
+}
+
+.level.completed {
+    background-image: url(/public/assets/UI/heart.gif);
 }
 
 .level.disabled {
     width: 4.5vw;
     height: 6vw;
-    /* margin: 0.4vw 0.1vw; */
     background-image: url(/public/assets/UI/heart-dead.png);
     background-size: 62% !important;
     color: white;
@@ -215,18 +207,13 @@ ul {
 .level.default {
     width: 4.5vw;
     height: 6vw;
-    /* margin: 0.4vw 0.1vw; */
     cursor: pointer;
     transition: all 200ms ease-in-out;
     background-image: url(/public/assets/UI/heart-dead.png);
     background-size: 62% !important;
-    /* background-size: 100% 100%; */
     color: white;
     z-index: 99;
 }
-
-.level.default,
-.level.disabled {}
 
 .level span {
     margin-top: 2.2vw;
