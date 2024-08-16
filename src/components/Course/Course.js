@@ -7,20 +7,14 @@ const Course = ({
                     course: {
                         description,
                         goals,
-                        completed_sublevels,
+                        completed_sub_levels,
                         name,
                         total: levels,
                         theoretical: {grade, score: {current, total}}
                     },
                     courseNumber
                 }) => {
-
     let levelsRange = Array.from({length: levels}, (_, index) => index + 1);
-    const [availableSubLevels] = useState({
-        1: [1, 2, 3, 4, 5, 6, 16, 22],
-        2: [1],
-        3: [1,2]
-    });
 
     const navigate = useNavigate();
     const navigateToCourse = (courseSublevel) => {
@@ -33,16 +27,15 @@ const Course = ({
 
     function createLevelHearts() {
         return levelsRange.map((number) => {
-            let isCompleted = completed_sublevels && completed_sublevels.find((sublevelNumber) => {
+            let isCompleted = completed_sub_levels && completed_sub_levels.find((sublevelNumber) => {
                 return number === sublevelNumber
             }) !== undefined;
-            let className2 = `level flex bg ${(availableSubLevels[courseNumber] && availableSubLevels[courseNumber].includes(number)) ? 'default' : 'disabled'}`;
-
-            let className = `level flex bg ${grade !== "NONE" ? isCompleted ? 'completed' : (availableSubLevels[courseNumber] && availableSubLevels[courseNumber].includes(number)) ? 'default' : 'disabled' : 'disabled'}`;
+            let nextAvailableSubLevel = completed_sub_levels.length+1;
+            let className = `level flex bg ${grade !== "NONE" ? isCompleted ? 'completed' : nextAvailableSubLevel === number ? 'default' : 'disabled' : 'disabled'}`;
             return (<div
-                className={courseNumber <= 1 ? className : className2}
+                className={className}
                 onClick={() => {
-                    if (availableSubLevels[courseNumber].includes(number)) {
+                    if (nextAvailableSubLevel === number) {
                         navigateToCourse(number)
                     }
                 }}><span>{number}</span></div>);
@@ -62,7 +55,7 @@ const Course = ({
                     <h1>{name}</h1>
                     <div className='course-progress-bar'>
                         <div className='course-bar-interior'
-                             style={{height: `${(completed_sublevels ? completed_sublevels.length : 0 / levelsRange.length) * 100}%`}}></div>
+                             style={{height: `${(completed_sub_levels ? completed_sub_levels.length : 0 / levelsRange.length) * 100}%`}}></div>
                     </div>
                     <div className='course-description'>
                         <span>{description}</span>
