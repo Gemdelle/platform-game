@@ -171,3 +171,12 @@
     background-size: 100%;
 }
 
+.frog-happy-grey {
+ background-image: url(/public/assets/pets/frog/frog_happy.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(1) brightness(3);
+    width: 30vh;
+    height: 30vh;
+}

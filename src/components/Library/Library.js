@@ -1,7 +1,29 @@
 import React, { useState } from 'react';
 import './Library.css';
-import Course1 from './Course1/Course-1';
+import Course from './Course1/Course';
 
+const levels = [
+  {
+    title: "1. ATRIBUTOS",
+    subLevels: [
+      {
+        title: "Conceptos atributos primitivos",
+        slides: [
+          {
+            subtitle: "Datos primitivos vs. no primitivos",
+            texts: [
+                <div>En Java se utilizan tipos de datos primitivos y no primitivos. Las diferencias más importantes son cuatro.</div>
+            ],
+            previews: [
+                <div className="frog-happy-grey"></div>
+            ]
+          }
+        ],
+
+      }
+    ]
+  }
+]
 
 const Library = ({ onClose }) => {
   const [showOverlay, setShowOverlay] = useState(false);
@@ -25,7 +47,10 @@ const Library = ({ onClose }) => {
         <div className='library-content'>
           <h3 className='library-h3'>Teoría Cursos</h3>
           <div className='index-content'>
-            <button className='btn-library' onClick={() => handleButtonClick(<Course1 onClose={handleCloseOverlay} />)}>1. ATRIBUTOS</button>
+            {levels.map((level, index)=> (
+                <button key={"index-content-"+index} className='btn-library' onClick={() => handleButtonClick(<Course onClose={handleCloseOverlay} title={level.title} subLevels={level.subLevels} />)}>{level.title}</button>
+            ))}
+
             <button className='btn-library'>2. CONSTRUCTOR</button>
             <button className='btn-library'>3. INSTANCIACIÓN</button>
             <button className='btn-library'>4. SETTERS & GETTERS</button>

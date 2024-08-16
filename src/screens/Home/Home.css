@@ -132,7 +132,7 @@ header {
 
 .pet-looker {
   position: fixed;
-  background-image: url(/public/assets/pets/axolotl-1.gif);
+  background-image: url(/public/assets/pets/axolotl/axolotl-1.png);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
