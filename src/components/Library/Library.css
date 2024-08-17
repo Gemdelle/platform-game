@@ -165,11 +165,14 @@
     align-items: center;
     top: 3vh;
     left: 46vw;
-    font-size: 2vmax;
+    font-size: 2.5vmax;
     /* background-image: url(/public/assets/ornament.png); */
     background-position: center 3vmax;
     background-repeat: no-repeat;
     background-size: 100%;
+    font-family: BlackwoodCastleShallow;
+    font-weight: bold;
+    color: rgb(65, 65, 53);
 }
 
 .frog-happy-grey {

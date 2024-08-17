@@ -101,15 +101,6 @@
 }
 /* USER PROGRESS */
 
-/* <div className='progress-container'>
-                    <div className='progress-and-button'>
-                        <div className='button'></div>
-                        <div className='progress'>
-                            1/{currentIndex}
-                        </div>
-                    </div>
-                </div> */
-
 .progress-container {
     width: 35vh;
     height: 30vh;
