@@ -1,7 +1,7 @@
 /* src/Home.css */
 
 body, html {
-  cursor: none;
+  cursor: none !important;
 }
 
 @font-face {
