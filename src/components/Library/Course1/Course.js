@@ -5,16 +5,16 @@ import Slides from "./Slides";
 
 const Course = ({ onClose, title, subLevels }) => {
   const [showOverlay, setShowOverlay] = useState(false);
-  const [currentClass, setCurrentClass] = useState(null); // Estado para mostrar clases específicas
+  const [currentClass, setCurrentClass] = useState(null);
 
   const handleButtonClick = (classComponent) => {
     setCurrentClass(classComponent);
-    setShowOverlay(true); // Muestra overlay
+    setShowOverlay(true);
   };
 
   const handleCloseOverlay = () => {
     setShowOverlay(false);
-    setCurrentClass(null); // Cierra el componente actual
+    setCurrentClass(null);
   };
 
   return (
