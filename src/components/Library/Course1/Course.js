@@ -3,7 +3,7 @@ import '../Library.css';
 import Slides from "./Slides";
 
 
-const Course = ({ onClose, title, subLevels }) => {
+const Course = ({ onClose, title, subLevels, levelIndex, updateSlideCompletion, totalSlides, completedSlides, levels }) => {
   const [showOverlay, setShowOverlay] = useState(false);
   const [currentClass, setCurrentClass] = useState(null);
 
@@ -25,8 +25,18 @@ const Course = ({ onClose, title, subLevels }) => {
           <div className='library-content'>
             <h3 className='library-h3'>{title}</h3>
             <div className='index-content'>
-              {subLevels.map((subLevel, index)=> (
-                  <button key={"index-content-"+index} className='btn-library' onClick={() => handleButtonClick(<Slides onClose={handleCloseOverlay} subLevel={subLevel} />)}>{subLevel.title}</button>
+              {subLevels.map((subLevel, subIndex) => (
+                  <button key={"index-content-" + subIndex} className='btn-library' onClick={() => handleButtonClick(
+                      <Slides
+                          onClose={handleCloseOverlay}
+                          subLevel={levels[levelIndex].subLevels[subIndex]}
+                          levelIndex={levelIndex}
+                          subLevelIndex={subIndex}
+                          updateSlideCompletion={updateSlideCompletion}
+                          totalSlides={totalSlides}
+                          completedSlides={completedSlides}
+                      />
+                  )}>{subLevel.title}</button>
               ))}
             </div>
           </div>
@@ -40,3 +50,6 @@ const Course = ({ onClose, title, subLevels }) => {
 };
 
 export default Course;
+
+
+
