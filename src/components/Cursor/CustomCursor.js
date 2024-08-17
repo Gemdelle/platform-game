@@ -18,10 +18,11 @@ const CustomCursor = () => {
                 position: 'fixed',
                 left: `${position.x}px`,
                 top: `${position.y}px`,
-                width: '32px',
+                width: '60px',
                 height: 'auto',
                 pointerEvents: 'none',
                 zIndex: 9999,
+                filter: 'saturate(2)'
             }}
             alt="Custom cursor"
         />
