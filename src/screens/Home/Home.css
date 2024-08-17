@@ -1,6 +1,7 @@
 /* src/Home.css */
-html {
-  cursor: url('/public/assets/cursors/cursor-default.png') 16 16, default !important;
+
+body, html {
+  cursor: none;
 }
 
 @font-face {

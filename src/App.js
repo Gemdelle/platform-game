@@ -16,11 +16,13 @@ import Course2Sublevel1 from "./screens/Course2/Course2Sublevel1";
 import Course3Sublevel1 from "./screens/Course3/Course3Sublevel1";
 import Course3Sublevel2 from "./screens/Course3/Course3Sublevel2";
 import Teoric2Sublevel from "./screens/Course2/TeoricSublevel/Teoric2Sublevel";
+import CustomCursor from "./components/Cursor/CustomCursor";
 
 const App = () => {
     return (
         <Router>
             <div>
+                <CustomCursor />
                 <Routes>
                     <Route path="/" element={<Home/>}/>
                     <Route path="/avatar-selection" element={<AvatarSelection/>}/>
