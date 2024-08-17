@@ -16,6 +16,15 @@ const Slides = ({ onClose, subLevel:{ title, slides} }) => {
         <div className='library-popup'>
             <div className='library-container'>
                 <button onClick={onClose} className='close-btn-library'></button>
+                <div className='progress-container'>
+                    <div className='progress-and-button'>
+                        <div className='button'></div>
+                        <div className='progress'>
+                            <span className='correct'>28</span>
+                            <span className='total'>29</span>
+                        </div>
+                    </div>
+                </div>
                 <div className='card-header'>
                     <div className='library-index'>{currentIndex + 1}</div>
                 </div>

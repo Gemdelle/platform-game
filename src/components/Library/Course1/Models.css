@@ -66,7 +66,7 @@
 
 .library-arrows {
     position: absolute;
-    width: 89vw;
+    width: 87vw;
     height: 15vh;
     margin-top: 4vh;
 }
@@ -74,7 +74,7 @@
 .arrow-left,
 .arrow-right {
     background-image: url(/public/assets/arrows/left-arrow.png);
-    width: 5vw;
+    width: 3.5vw;
     height: 100%;
     background-size: contain;
     background-repeat: no-repeat;
@@ -99,3 +99,67 @@
     scale: 110%;
     cursor: pointer;
 }
+/* USER PROGRESS */
+
+/* <div className='progress-container'>
+                    <div className='progress-and-button'>
+                        <div className='button'></div>
+                        <div className='progress'>
+                            1/{currentIndex}
+                        </div>
+                    </div>
+                </div> */
+
+.progress-container {
+    width: 35vh;
+    height: 30vh;
+    /* background-color: aquamarine; */
+    position: absolute;
+    right: 20vh;
+    top: 3vh;
+    background-image: url(/public/assets/theory-progress/theory-progress-container.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.progress-and-button {
+    /* background-color: red; */
+    width: 85%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.progress-and-button .button {
+    width: 40%;
+    height: 60%;
+    /* background-color: antiquewhite; */
+    background-image: url(/public/assets/theory-progress/level.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.progress {
+    height: 50%;
+    width: 59%;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2vmax;
+    color: rgb(65, 65, 53);
+text-shadow: 1px 1px 1px rgba(121, 124, 114, 0.3), -1px -1px 1px rgba(54, 55, 53, 0.3), 0 0 5px rgba(46, 50, 37, 0.2);
+}
+
+.progress span {
+    text-align: center;
+}
+
+/* END USER PROGRESS */
