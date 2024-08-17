@@ -74,8 +74,9 @@
 .course-description-container {
     width: 80%;
     background-image: url('/public/assets/level-description-background.png');
-    background-size: 100% 100%;
+    background-size: 93% 100%;
     background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -120,6 +121,7 @@ h1 {
 
 .course-description span {
     font-size: 1.6vw;
+    margin-bottom: 1vh;
 }
 
 ul {
@@ -127,39 +129,38 @@ ul {
     /* Remove default list bullets */
     padding: 0;
     margin: 0;
+    height: 5vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .course-description li {
-    margin-left: 2.5vw;
+    margin-left: 0.5vw;
     text-align: left;
     font-size: 1.4vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    /* background-color: brown; */
 }
-
-/* li:last-child {
-    margin-bottom: 1vw;
-} */
 
 .heart-bullet {
-    position: relative;
-}
-
-.heart-bullet::before {
-    content: '';
-    position: absolute;
     left: 0;
-    width: 2.5vw;
-    height: 1.7vw;
+    width: 3%;
+    height: 100%;
     background-image: url('/public/assets/UI/heart-dead.png');
-    background-size: contain;
+    background-size: 80% 80%;
     background-repeat: no-repeat;
+    /* background-color: red; */
 }
 
-.heart-bullet.completed::before {
+.heart-bullet.completed {
     content: '';
     position: absolute;
     left: 0;
     width: 2.5vw;
-    height: 1.7vw;
+    height: 100%;
     background-image: url('/public/assets/UI/heart.gif');
     background-size: contain;
     background-repeat: no-repeat;
@@ -248,8 +249,8 @@ ul {
     align-items: center;
     justify-content: flex-end;
     background-repeat: no-repeat;
-    left: 9.5%;
-    top: 15%;
+    left: 18vh;
+    top: 18vh;
 }
 
 .course-bar-interior {
