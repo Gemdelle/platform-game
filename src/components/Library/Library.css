@@ -66,7 +66,7 @@
 .index-content {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     height: 80%;
     width: 80%;
@@ -192,4 +192,52 @@
     background-size: cover;
     width: 30vh;
     height: 30vh;
+}
+
+/* General styling for code blocks */
+pre-java {
+    background-color: #2e3440;
+    color: #d8dee9;
+    padding: 20px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+/* Styling for code element */
+code-java {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+}
+
+/* Keyword styling */
+.language-java .keyword {
+    color: #81a1c1;
+    font-weight: bold;
+}
+
+/* Class name styling */
+.language-java .class-name {
+    color: #8fbcbb;
+    font-weight: bold;
+}
+
+/* Function name styling */
+.language-java .function {
+    color: #88c0d0;
+}
+
+/* String value styling */
+.language-java .string {
+    color: #a3be8c;
+}
+
+/* Comment styling */
+.language-java .comment {
+    color: #616e88;
+    font-style: italic;
+}
+
+/* Number styling */
+.language-java .number {
+    color: #b48ead;
 }

@@ -137,6 +137,14 @@
     cursor: pointer;
 }
 
+.progress-and-button .button.completed {
+    background-image: url(/public/assets/theory-progress/level-done.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
 .progress {
     height: 50%;
     width: 59%;
