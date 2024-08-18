@@ -12,7 +12,8 @@ const Course = ({
         total: levels,
         theoretical: { grade, score: { current, total } }
     },
-    courseNumber
+    courseNumber,
+    theoricalLevel
 }) => {
     let levelsRange = Array.from({ length: levels }, (_, index) => index + 1);
 
@@ -42,6 +43,22 @@ const Course = ({
         });
     }
 
+    function countTotalSlides() {
+        if(!theoricalLevel)
+            return
+        return theoricalLevel.subLevels.reduce((subTotal, subLevel) => {
+            return subTotal + (subLevel.slides ? subLevel.slides.length : 0);
+        }, 0);
+    }
+
+    function countCompletedSlides() {
+        if(!theoricalLevel)
+            return
+        return theoricalLevel.subLevels.reduce((subTotal, subLevel) => {
+            return subTotal + (subLevel.slides ? subLevel.slides.filter(slide => slide.completed).length : 0);
+        }, 0);
+    }
+
     return (
         <div className='course' id='course-1'>
             <div className='course-container flex-c'>
@@ -69,7 +86,7 @@ const Course = ({
                         <div className='user-progress-container'>
                             <div className='frog-reader'></div>
                             <div className='book clickable'></div>
-                            <div className='progress'>25 / 30</div>
+                            <div className='progress'>{countCompletedSlides()} / {countTotalSlides()}</div>
                         </div>
                     </div>
 

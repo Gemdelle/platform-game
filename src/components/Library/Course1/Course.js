@@ -2,19 +2,18 @@ import React, { useState } from 'react';
 import '../Library.css';
 import Slides from "./Slides";
 
-
 const Course = ({ onClose, title, subLevels, levelIndex, updateSlideCompletion, totalSlides, completedSlides, levels }) => {
   const [showOverlay, setShowOverlay] = useState(false);
-  const [currentClass, setCurrentClass] = useState(null);
+  const [selectedSubLevelIndex, setSelectedSubLevelIndex] = useState(null);
 
-  const handleButtonClick = (classComponent) => {
-    setCurrentClass(classComponent);
+  const handleButtonClick = (subIndex) => {
+    setSelectedSubLevelIndex(subIndex);
     setShowOverlay(true);
   };
 
   const handleCloseOverlay = () => {
     setShowOverlay(false);
-    setCurrentClass(null);
+    setSelectedSubLevelIndex(null);
   };
 
   return (
@@ -26,17 +25,13 @@ const Course = ({ onClose, title, subLevels, levelIndex, updateSlideCompletion, 
             <h3 className='library-h3'>{title}</h3>
             <div className='index-content'>
               {subLevels.map((subLevel, subIndex) => (
-                  <button key={"index-content-" + subIndex} className='btn-library' onClick={() => handleButtonClick(
-                      <Slides
-                          onClose={handleCloseOverlay}
-                          subLevel={levels[levelIndex].subLevels[subIndex]}
-                          levelIndex={levelIndex}
-                          subLevelIndex={subIndex}
-                          updateSlideCompletion={updateSlideCompletion}
-                          totalSlides={totalSlides}
-                          completedSlides={completedSlides}
-                      />
-                  )}>{subLevel.title}</button>
+                  <button
+                      key={"index-content-" + subIndex}
+                      className='btn-library'
+                      onClick={() => handleButtonClick(subIndex)}
+                  >
+                    {subLevel.title}
+                  </button>
               ))}
             </div>
           </div>
@@ -44,12 +39,21 @@ const Course = ({ onClose, title, subLevels, levelIndex, updateSlideCompletion, 
         {showOverlay && (
             <div className='center-overlay' onClick={handleCloseOverlay}></div>
         )}
-        {currentClass}
+        {showOverlay && selectedSubLevelIndex !== null && (
+            <Slides
+                onClose={handleCloseOverlay}
+                subLevel={levels[levelIndex].subLevels[selectedSubLevelIndex]}
+                levelIndex={levelIndex}
+                subLevelIndex={selectedSubLevelIndex}
+                updateSlideCompletion={updateSlideCompletion}
+                totalSlides={totalSlides}
+                completedSlides={completedSlides}
+            />
+        )}
       </div>
   );
 };
 
 export default Course;
-
 
 

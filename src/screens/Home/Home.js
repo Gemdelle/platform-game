@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 
 import './Home.css';
 import './LogIn.css';
 import Header from "../../components/Header/Header";
 import Course from "../../components/Course/Course";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../firebase";
-import { signInWithPopup, GoogleAuthProvider, signInWithEmailAndPassword } from 'firebase/auth';
-import { useUser } from "../../components/utils/UserProvider";
+import {useAuthState} from "react-firebase-hooks/auth";
+import {auth} from "../../firebase";
+import {signInWithPopup, GoogleAuthProvider, signInWithEmailAndPassword} from 'firebase/auth';
+import {useLevel, useUser} from "../../components/utils/UserProvider";
 import axios from "axios";
 import {useLocation, useNavigate} from "react-router-dom";
 import Evolution from "../../components/Evolution/Evolution";
@@ -18,8 +18,11 @@ const Home = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [showEvolution, setShowEvolution] = useState(navigationParams.state && navigationParams.state.isEvolving);
-    const { userProfile, setUserProfile } = useUser();
+    const {userProfile, setUserProfile} = useUser();
+    const {userLevels} = useLevel()
     const navigate = useNavigate();
+    const [theoricalLevels, setTheoricalLevels] = useState(userLevels);
+
 
     useEffect(() => {
         const storedUserProfile = localStorage.getItem('userProfile');
@@ -28,7 +31,11 @@ const Home = () => {
         }
     }, [setUserProfile]);
 
-    const handleCloseEvolution = ()=>{
+    useEffect(() => {
+        setTheoricalLevels(prev => userLevels)
+    }, [userLevels]);
+
+    const handleCloseEvolution = () => {
         setShowEvolution(false);
     }
 
@@ -104,6 +111,7 @@ const Home = () => {
                             course={course}
                             navigationUrl={`/course/${index + 1}/`}
                             courseNumber={index + 1}
+                            theoricalLevel = {theoricalLevels[index]}
                         />
                     )
                 })}
@@ -115,26 +123,26 @@ const Home = () => {
     }
     return (
         <div className="App">
-            <div className='log-in-container' >
+            <div className='log-in-container'>
                 <div className='log-in-options'>
-                <form className='log-in-form' onSubmit={handleLogin}>
-                    <input
-                        type="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        placeholder="Email"
-                        required
-                    />
-                    <input
-                        type="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        placeholder="Password"
-                        required
-                    />
-                    <button type="submit" className="clickable">Sign In</button>
-                </form>
-                <button className='sign-in-google clickable' onClick={signInWithGoogle}>Gmail</button>
+                    <form className='log-in-form' onSubmit={handleLogin}>
+                        <input
+                            type="email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            placeholder="Email"
+                            required
+                        />
+                        <input
+                            type="password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            placeholder="Password"
+                            required
+                        />
+                        <button type="submit" className="clickable">Sign In</button>
+                    </form>
+                    <button className='sign-in-google clickable' onClick={signInWithGoogle}>Gmail</button>
                 </div>
                 <div className='pet-frog'></div>
             </div>

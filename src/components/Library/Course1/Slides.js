@@ -1,10 +1,9 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import '../Library.css';
 import './Models.css';
 
 const Slides = ({ onClose, subLevel: { title, slides }, levelIndex, subLevelIndex, updateSlideCompletion, totalSlides, completedSlides }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
-
     const handleLeftClick = () => {
         setCurrentIndex((prevIndex) => (prevIndex - 1 + slides.length) % slides.length);
     };
