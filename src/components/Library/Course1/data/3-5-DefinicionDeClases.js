@@ -12,7 +12,7 @@ const temas_3_5 = {
                     <br></br><br></br>   
                     Una clase se define como:
                 </div>,
-                <div>modificadorAcceso class nombreClase { contenido }</div>,
+                <div>modificadorAcceso class nombreClase '{' contenido '}'</div>,
                 <div>En el espacio donde va el contenido más adelante se van a definir los componentes que suelen tener la mayoría de las clases:</div>,
                 <div>
                     // 01. ATRIBUTOS <br></br>
