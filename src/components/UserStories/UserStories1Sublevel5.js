@@ -22,7 +22,7 @@ const UserStories1Sublevel5 = ({validations}) => {
           <ul>
               <div className='stories-container'>
                   {user_stories.map(({description: user_story, validation}) => {
-                      return (<div>
+                      return (<div className='a-user-story'> 
                           <div
                               className={`heart-bullet bg ${validations.includes(validation) ? 'alive' : 'dead'}`}></div>
                           <li>{user_story}</li>

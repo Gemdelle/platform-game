@@ -8,20 +8,19 @@
 }
 
 .stories-container {
-    padding-top: 2vw;
     height: 100%;
-    margin-bottom: -20vmax;
+    margin-bottom: -6vmax;
+    background-color: violet;
 }
 
 .user-stories ul {
     list-style: none; /* Remove default list bullets */
-    padding: 0.1vmax;
     max-height: 65%;
     overflow: scroll;
     scroll-behavior: smooth;
     scrollbar-width: none;
     z-index: 2;
-    /* background-color: coral; */
+    background-color: coral;
     background-image: url("/public/assets/user-stories-background.png");
     background-size: 100% 100%;
     background-position: center;
@@ -30,29 +29,36 @@
     height: 100%;
 }
 
+.a-user-story {
+    width: 80%;
+    height: auto;
+    min-height: 4vmax;
+    /* background-color: lightblue; */
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5vh;
+    margin-bottom: 3vh;
+}
+
 .stories-container li {
-    margin: 0.4vw 0vw 0.8vw 6vw;
     text-align: left;
-    margin-bottom: 1.8vw;
-    padding: 1px 1px;
-    font-size: 1.3vw;
+    font-size: 1.5vw;
     color: rgb(65, 65, 53);
-    max-width: 65%;
+    width: 80%;
+    /* background-color: gray; */
+    margin-top: 1.5vh;
 }
 
 .stories-container .heart-bullet {
-    padding-left: 2vw;
-    margin-top: 7px
+    content: "";
+    /* background-color: brown; */
+    width: 15%;
+    height: 3.5vmax;
 }
 
 
 /* DEAD HEART */
-.stories-container .heart-bullet.dead::before {
-    content: "";
-    left: 2vw;
-    transform: translateY(-35%);
-    width: 3vw;
-    height: 3vw;
+.stories-container .heart-bullet.dead {
     background-image: url("/public/assets/UI/heart-dead.png"), url("/public/assets/UI/dead-veins.png");
     background-position: right, left;
     background-size: contain, 100% 100%;
@@ -60,12 +66,10 @@
     /* background-color: red; */
 }
 
-.stories-container .heart-bullet.alive::before {
+.stories-container .heart-bullet.alive {
     content: "";
     left: 2vw;
     transform: translateY(-35%);
-    width: 4vw;
-    height: 4vw;;
     background-image: url("/public/assets/UI/heart.gif"), url("/public/assets/UI/veins.png");
     background-position: right, left;
     background-size: contain, 100% 100%;
