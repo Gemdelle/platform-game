@@ -362,9 +362,10 @@ html {
     bottom: 40%;
     right: 10%;
     bottom: -10%;
+    z-index: 9;
 }
 
-.user-progress-container.book:hover {
+.user-progress-container .book:hover {
     cursor: pointer;
     scale: 103%;
 }
