@@ -22,7 +22,7 @@ const App = () => {
     return (
         <Router>
             <div>
-                {/*<CustomCursor />*/}
+                <CustomCursor />
                 <Routes>
                     <Route path="/" element={<Home/>}/>
                     <Route path="/avatar-selection" element={<AvatarSelection/>}/>

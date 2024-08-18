@@ -6,7 +6,9 @@ const CustomCursor = () => {
 
     const updateCursorType = useCallback((x, y) => {
         const target = document.elementFromPoint(x, y);
-        setIsPointer(window.getComputedStyle(target).cursor === 'pointer');
+        if (target) {
+            setIsPointer(window.getComputedStyle(target).cursor === 'pointer');
+        }
     }, []);
 
     useEffect(() => {
@@ -19,8 +21,8 @@ const CustomCursor = () => {
         const lerp = (start, end, factor) => start + (end - start) * factor;
 
         const animate = () => {
-            currentX = lerp(currentX, targetX, 0.1);
-            currentY = lerp(currentY, targetY, 0.1);
+            currentX = lerp(currentX, targetX, 1);
+            currentY = lerp(currentY, targetY, 1);
 
             if (cursorRef.current) {
                 cursorRef.current.style.transform = `translate(${currentX}px, ${currentY}px)`;
