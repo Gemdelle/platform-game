@@ -223,6 +223,18 @@ header {
     align-items: center;
 }
 
+@keyframes expandContract {
+    0% {
+        width: var(--initial-width);
+    }
+    50% {
+        width: calc(var(--initial-width) + 0.5%);
+    }
+    100% {
+        width: var(--initial-width);
+    }
+}
+
 
 .bar-interior-horizontal {
     background-image: url(/public/assets/UI/question-bar-background-horizontal.png);

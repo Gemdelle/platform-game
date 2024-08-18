@@ -123,7 +123,14 @@ const Header = ({ children }) => {
             <div className='flex-e hud'>
                 <div className='level-bar bg'>
                     <div className='level-bar-progress'>{`${userProfile.profile.current_xp} / ${userProfile.profile.total_xp}`}</div>
-                    <div className='bar-interior-horizontal' style={{ width: `${(userProfile.profile.current_xp / userProfile.profile.total_xp) * 100}%` }}></div>
+                    <div
+                        className='bar-interior-horizontal'
+                        style={{
+                            width: `${(userProfile.profile.current_xp / userProfile.profile.total_xp) * 100}%`,
+                            '--initial-width': `${(userProfile.profile.current_xp / userProfile.profile.total_xp) * 100}%`,
+                            animation: 'expandContract 1s ease-in-out infinite'
+                        }}
+                    ></div>
                 </div>
                 <div className='data flex-s'>
                     <div className='pp-container flex'>
