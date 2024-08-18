@@ -19,8 +19,8 @@ const CustomCursor = () => {
         const lerp = (start, end, factor) => start + (end - start) * factor;
 
         const animate = () => {
-            currentX = lerp(currentX, targetX, 0.2);
-            currentY = lerp(currentY, targetY, 0.2);
+            currentX = lerp(currentX, targetX, 0.1);
+            currentY = lerp(currentY, targetY, 0.1);
 
             if (cursorRef.current) {
                 cursorRef.current.style.transform = `translate(${currentX}px, ${currentY}px)`;
