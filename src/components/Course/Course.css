@@ -81,6 +81,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
 
     padding: 2vmax;
     padding-bottom: 3vmax;
@@ -249,8 +250,8 @@ ul {
     align-items: center;
     justify-content: flex-end;
     background-repeat: no-repeat;
-    left: 18vh;
-    top: 18vh;
+    left: 0;
+    bottom: 0;
 }
 
 .course-bar-interior {
@@ -323,3 +324,67 @@ html {
     padding: 2rem;
     margin: 2rem 0;
 }
+
+/* FROG READER START */
+
+.user-progress-container {
+    position: absolute;
+    width: 20%;
+    height: 55%;
+    /* background-color: goldenrod; */
+    right: 7%;
+    bottom: 5%;
+}
+
+.frog-reader {
+    width: 90%;
+    height: 70%;
+    /* background-color: rosybrown; */
+    background-image: url(/public/assets/theory-progress/study-frog/study-frog.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 10%;
+    margin-top: 15%;
+    transform-origin: center bottom;
+    animation: breathe 4s ease-in-out infinite;
+}
+
+.user-progress-container .book {
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    /* background-color: brown; */
+    background-image: url(/public/assets/theory-progress/study-frog/book.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    bottom: 40%;
+    right: 10%;
+    bottom: -10%;
+}
+
+.user-progress-container.book:hover {
+    cursor: pointer;
+    scale: 103%;
+}
+
+.user-progress-container .progress {
+    width: 80%;
+    height: 15%;
+    position: absolute;
+    /* background-color: brown; */
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 0%;
+    right: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(240, 250, 215);
+    font-size: 1.5vw;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7), -1px -1px 2px rgba(0, 0, 0, 0.7), 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* FROG READER END */

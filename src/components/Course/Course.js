@@ -1,20 +1,20 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './Course.css';
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Course = ({
-                    navigationUrl,
-                    course: {
-                        description,
-                        goals,
-                        completed_sub_levels,
-                        name,
-                        total: levels,
-                        theoretical: {grade, score: {current, total}}
-                    },
-                    courseNumber
-                }) => {
-    let levelsRange = Array.from({length: levels}, (_, index) => index + 1);
+    navigationUrl,
+    course: {
+        description,
+        goals,
+        completed_sub_levels,
+        name,
+        total: levels,
+        theoretical: { grade, score: { current, total } }
+    },
+    courseNumber
+}) => {
+    let levelsRange = Array.from({ length: levels }, (_, index) => index + 1);
 
     const navigate = useNavigate();
     const navigateToCourse = (courseSublevel) => {
@@ -30,7 +30,7 @@ const Course = ({
             let isCompleted = completed_sub_levels && completed_sub_levels.find((sublevelNumber) => {
                 return number === sublevelNumber
             }) !== undefined;
-            let nextAvailableSubLevel = completed_sub_levels.length+1;
+            let nextAvailableSubLevel = completed_sub_levels.length + 1;
             let className = `level flex bg ${grade !== "NONE" ? isCompleted ? 'completed' : nextAvailableSubLevel === number ? 'default' : 'disabled' : 'disabled'}`;
             return (<div
                 className={className}
@@ -55,7 +55,7 @@ const Course = ({
                     <h1>{name}</h1>
                     <div className='course-progress-bar'>
                         <div className='course-bar-interior'
-                             style={{height: `${(completed_sub_levels ? completed_sub_levels.length : 0 / levelsRange.length) * 100}%`}}></div>
+                            style={{ height: `${(completed_sub_levels ? completed_sub_levels.length : 0 / levelsRange.length) * 100}%` }}></div>
                     </div>
                     <div className='course-description'>
                         <span>{description}</span>
@@ -65,7 +65,14 @@ const Course = ({
                                 <li>{goal.description}</li>
                             </ul>);
                         })}
+
+                        <div className='user-progress-container'>
+                            <div className='frog-reader'></div>
+                            <div className='book'></div>
+                            <div className='progress'>25 / 30</div>
+                        </div>
                     </div>
+
                 </div>
                 <div className='levels'>
                     <div
