@@ -31,11 +31,11 @@ const Course = ({
                 return number === sublevelNumber
             }) !== undefined;
             let nextAvailableSubLevel = completed_sub_levels.length + 1;
-            let className = `level clickable flex bg ${grade !== "NONE" ? isCompleted ? 'completed' : nextAvailableSubLevel === number ? 'default' : 'disabled' : 'disabled'}`;
+            let className = `level flex bg ${grade !== "NONE" ? isCompleted ? 'completed clickable' : nextAvailableSubLevel === number ? 'default clickable' : 'disabled' : 'disabled'}`;
             return (<div
                 className={className}
                 onClick={() => {
-                    if (nextAvailableSubLevel === number) {
+                    if (isCompleted || nextAvailableSubLevel === number) {
                         navigateToCourse(number)
                     }
                 }}><span>{number}</span></div>);
@@ -76,7 +76,7 @@ const Course = ({
                 </div>
                 <div className='levels'>
                     <div
-                        className={`level clickable flex bg ${grade === "SILVER" ? 'silver' : grade === "GOLD" ? 'gold' : (courseNumber === 1 || courseNumber === 2) ? 'default' : 'disabled'}`}
+                        className={`level flex bg ${grade === "SILVER" ? 'silver clickable' : grade === "GOLD" ? 'gold clickable' : (courseNumber === 1 || courseNumber === 2) ? 'default clickable' : 'disabled'}`}
                         onClick={() => {
                             navigateToTheoretical()
                         }}><span>{current}</span></div>
