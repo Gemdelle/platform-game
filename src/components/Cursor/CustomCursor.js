@@ -1,41 +1,68 @@
-import {useEffect, useState} from "react";
+import React, { useEffect, useState, useCallback, useRef } from "react";
 
 const CustomCursor = () => {
-    const [position, setPosition] = useState({ x: 0, y: 0 });
+    const cursorRef = useRef(null);
     const [isPointer, setIsPointer] = useState(false);
 
+    const updateCursorType = useCallback((x, y) => {
+        const target = document.elementFromPoint(x, y);
+        setIsPointer(window.getComputedStyle(target).cursor === 'pointer');
+    }, []);
+
     useEffect(() => {
-        const updatePosition = (e) => {
-            setPosition({ x: e.clientX, y: e.clientY });
+        let animationFrameId;
+        let currentX = 0;
+        let currentY = 0;
+        let targetX = 0;
+        let targetY = 0;
+
+        const lerp = (start, end, factor) => start + (end - start) * factor;
+
+        const animate = () => {
+            currentX = lerp(currentX, targetX, 0.2);
+            currentY = lerp(currentY, targetY, 0.2);
+
+            if (cursorRef.current) {
+                cursorRef.current.style.transform = `translate(${currentX}px, ${currentY}px)`;
+            }
+
+            animationFrameId = requestAnimationFrame(animate);
         };
 
-        const updateCursorType = () => {
-            const target = document.elementFromPoint(position.x, position.y);
-            setIsPointer(window.getComputedStyle(target).cursor === 'pointer');
+        const onMouseMove = (e) => {
+            targetX = e.clientX;
+            targetY = e.clientY;
+            updateCursorType(targetX, targetY);
         };
 
-        window.addEventListener('mousemove', (e) => {
-            updatePosition(e);
-            updateCursorType();
-        });
+        window.addEventListener('mousemove', onMouseMove);
+        animationFrameId = requestAnimationFrame(animate);
 
         return () => {
-            window.removeEventListener('mousemove', updatePosition);
+            window.removeEventListener('mousemove', onMouseMove);
+            cancelAnimationFrame(animationFrameId);
         };
-    }, [position.x, position.y]);
+    }, [updateCursorType]);
 
     return (
-        <div style={{ position: 'fixed', pointerEvents: 'none', zIndex: 9999 }}>
+        <div
+            ref={cursorRef}
+            style={{
+                position: 'fixed',
+                pointerEvents: 'none',
+                zIndex: 9999,
+                width: '60px',
+                height: '60px',
+                marginLeft: '-30px',
+                marginTop: '-30px',
+            }}
+        >
             <img
                 src="/assets/cursors/cursor-default.png"
                 style={{
                     position: 'absolute',
-                    left: `${position.x - 16}px`,
-                    top: `${position.y - 16}px`,
-                    width: '60px',
-                    height: 'auto',
-                    pointerEvents: 'none',
-                    zIndex: 9999,
+                    width: '100%',
+                    height: '100%',
                     filter: 'saturate(2)',
                     opacity: isPointer ? 0 : 1,
                     transition: 'opacity 0.1s',
@@ -46,12 +73,8 @@ const CustomCursor = () => {
                 src="/assets/cursors/cursor-pointer.png"
                 style={{
                     position: 'absolute',
-                    left: `${position.x - 16}px`,
-                    top: `${position.y - 16}px`,
-                    width: '60px',
-                    height: 'auto',
-                    pointerEvents: 'none',
-                    zIndex: 9999,
+                    width: '100%',
+                    height: '100%',
                     filter: 'saturate(2)',
                     opacity: isPointer ? 1 : 0,
                     transition: 'opacity 0.1s',
@@ -62,4 +85,4 @@ const CustomCursor = () => {
     );
 };
 
-export default CustomCursor;
+export default React.memo(CustomCursor);
