@@ -1,0 +1,135 @@
+#container {
+    position: absolute;
+    left: 6%;
+    top: 66%;
+    transform: translate(-50%, 0);
+}
+
+.activity {
+    opacity: 0;
+    height: 0;
+    transition: 300ms all ease;
+    position: absolute;
+    pointer-events: none;
+    left: 50%;
+    top: 4.8rem;
+    transform: translatex(-50%);
+}
+
+.activity .item {
+    max-height: 0;
+    opacity: 0;
+    margin: 1rem;
+    padding: 2rem;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 1.8rem;
+    text-align: left;
+    background: rgba(54, 47, 33, 0.1);
+    outline: 2px solid orangered;
+    border-radius: 0.6rem;
+    transition: 300ms background ease-in-out;
+}
+
+.activity .item:hover {
+    background: rgba(54, 47, 33, 0.05);
+}
+
+.active .activity {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    pointer-events: auto;
+}
+
+.active .activity .item {
+    animation: 800ms ease-in 500ms 1 forwards itemLoad;
+}
+
+.activity-button {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-family: inherit;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    padding: 1.2rem 2.4rem;
+    border: none;
+    border-radius: 0.8rem;
+    color: #362f21;
+    border: 0.2rem solid #362f21;
+    background: none;
+    position: relative;
+    min-width: 0;
+    min-height: 0;
+    transition: 300ms color ease-in-out, 300ms background ease-in-out, 300ms min-width 0ms ease-in-out, 300ms min-height 300ms ease-in-out;
+}
+
+.activity-button .buttonText {
+    position: relative;
+    top: 0;
+    transition: 300ms top 280ms ease-in-out;
+}
+
+.activity-button::before {
+    content: "1";
+    letter-spacing: 0;
+    color: #e6e1d6;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    padding: 0 0.7rem;
+    height: 2.4rem;
+    background: radial-gradient(orangered 50%, red 75%);
+    border-radius: 1.2rem;
+    position: absolute;
+    top: -1.2rem;
+    left: 0.7rem;
+}
+
+.activity-button:hover {
+    background: #362f21;
+    color: #e6e1d6;
+}
+
+.activity-button:focus,
+.activity-button:active {
+    background: #e6e1d6;
+    color: #362f21;
+}
+
+.active .activity-button {
+    min-width: 36rem;
+    min-height: 36rem;
+}
+
+.active .activity-button:hover {
+    background: #e6e1d6;
+    color: #362f21;
+}
+
+.active .activity-button::before {
+    animation: 600ms ease-in 500ms 1 forwards notiPop;
+}
+
+.active .activity-button .buttonText {
+    top: -15rem;
+}
+
+.clicked:not(.active) button::before {
+    display: none;
+}
+
+@keyframes itemLoad {
+    to {
+        opacity: 1;
+        max-height: 20rem;
+        outline: 2px solid transparent;
+    }
+}
+
+@keyframes notiPop {
+    to {
+        transform: scale(0);
+    }
+}

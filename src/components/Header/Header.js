@@ -10,6 +10,7 @@ import EvolutionMap from '../EvolutionMap/EvolutionMap';
 import { auth } from "../../firebase";
 import { useUser } from "../utils/UserProvider";
 import { useNavigate } from "react-router-dom";
+import ActivityButton from "../ActivityButton/ActivityButton";
 
 const Header = ({ children }) => {
     const [showOptions, setShowOptions] = useState(false);
@@ -117,6 +118,7 @@ const Header = ({ children }) => {
                         </div>
 
                     )}
+                    <ActivityButton/>
                 </div>
             </div>
             <div className='currency'></div>
