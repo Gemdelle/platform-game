@@ -72,8 +72,8 @@ const CustomCursor = () => {
                 position: 'fixed',
                 pointerEvents: 'none',
                 zIndex: 9999,
-                width: '60px',
-                height: '60px',
+                width: '8.5vh',
+                height: '7.5vh',
                 marginLeft: '-30px',
                 marginTop: '-30px',
             }}
@@ -82,9 +82,8 @@ const CustomCursor = () => {
                 src="/assets/cursors/cursor-default.png"
                 style={{
                     position: 'absolute',
-                    width: '100%',
-                    height: '100%',
-                    filter: 'saturate(2)',
+                    width: '4.3vh',
+                    height: '5.5vh',
                     opacity: isPointer ? 0 : 1,
                     transition: 'opacity 0.1s',
                 }}
