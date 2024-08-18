@@ -45,7 +45,6 @@
 .close-btn-class1:hover {
     background-image: url(/public/assets/UI/close-button-active.png);
     scale: 103%;
-    cursor: pointer;
 }
 
 .center-overlay {
@@ -79,7 +78,6 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    cursor: pointer;
     transition: all 300ms ease-in-out;
     position: absolute;
 }
@@ -97,7 +95,6 @@
 .arrow-right:hover {
     background-image: url(/public/assets/arrows/left-arrow.png);
     scale: 110%;
-    cursor: pointer;
 }
 /* USER PROGRESS */
 
@@ -134,7 +131,6 @@
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    cursor: pointer;
 }
 
 .progress-and-button .button.completed {
@@ -142,7 +138,6 @@
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    cursor: pointer;
 }
 
 .progress {

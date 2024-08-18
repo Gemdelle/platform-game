@@ -92,7 +92,6 @@ textarea::placeholder {
 
 .submit-btn:hover {
     scale: 105%;
-    cursor: pointer;
 }
 
 .close-btn-teoric-rules {
@@ -115,5 +114,4 @@ textarea::placeholder {
 .close-btn-teoric-rules:hover {
     background-image: url(/public/assets/UI/close-button-active.png);
     scale: 103%;
-    cursor: pointer;
 }

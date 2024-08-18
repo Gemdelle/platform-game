@@ -33,5 +33,4 @@
 .close-btn-faq:hover {
     background-image: url(/public/assets/UI/close-button-active.png);
     scale: 103%;
-    cursor: pointer;
 }

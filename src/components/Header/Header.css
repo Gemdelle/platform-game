@@ -58,7 +58,6 @@ header {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    cursor: pointer;
     filter: brightness(0.6);
     transition: all 500ms ease-in-out;
     font-size: 1.3vmax;
@@ -74,7 +73,6 @@ header {
 .logo-container {
     height: 80%;
     width: 10%;
-    cursor: pointer;
     position: absolute;
     top: -1.1vmax;
     left: 0vw;
@@ -131,9 +129,6 @@ header {
     top: 0;
 }
 
-.options div {
-    cursor: pointer;
-}
 
 /* Menu Animation */
 

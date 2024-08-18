@@ -173,7 +173,6 @@ ul {
 .level.silver {
     width: 4.5vw;
     height: 6vw;
-    cursor: pointer;
     transition: all 200ms ease-in-out;
     background-image: url(/public/assets/UI/heart-silver.gif);
     background-size: 160%;
@@ -186,7 +185,6 @@ ul {
     width: 4.5vw;
     height: 6vw;
     background-size: 160%;
-    cursor: pointer;
     transition: all 200ms ease-in-out;
     background-image: url(/public/assets/UI/heart-gold.gif);
     color: white;
@@ -209,7 +207,6 @@ ul {
 .level.default {
     width: 4.5vw;
     height: 6vw;
-    cursor: pointer;
     transition: all 200ms ease-in-out;
     background-image: url(/public/assets/UI/heart-dead.png);
     background-size: 62% !important;
@@ -368,7 +365,6 @@ html {
 }
 
 .user-progress-container .book:hover {
-    cursor: pointer;
     scale: 103%;
 }
 

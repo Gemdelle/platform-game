@@ -31,7 +31,6 @@
 .close-btn-evolutionmap:hover {
     background-image: url(/public/assets/UI/close-button-active.png);
     scale: 103%;
-    cursor: pointer;
 }
 
 .evolutionMap-content {
@@ -128,7 +127,6 @@
     animation: breathe 3s ease-in-out infinite;
     transform-origin: center bottom;
     filter: brightness(0);
-    cursor: pointer;
 }
 
 .pet-xp {

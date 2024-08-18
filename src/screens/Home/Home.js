@@ -132,9 +132,9 @@ const Home = () => {
                         placeholder="Password"
                         required
                     />
-                    <button type="submit">Sign In</button>
+                    <button type="submit" className="clickable">Sign In</button>
                 </form>
-                <button className='sign-in-google' onClick={signInWithGoogle}>Gmail</button>
+                <button className='sign-in-google clickable' onClick={signInWithGoogle}>Gmail</button>
                 </div>
                 <div className='pet-frog'></div>
             </div>

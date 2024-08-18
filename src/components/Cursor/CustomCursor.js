@@ -4,12 +4,31 @@ const CustomCursor = () => {
     const cursorRef = useRef(null);
     const [isPointer, setIsPointer] = useState(false);
 
+    const isClickableElement = useCallback((element) => {
+        if (!element) return false;
+
+        const clickableElements = ['A', 'BUTTON', 'INPUT', 'SELECT', 'TEXTAREA'];
+
+        let currentElement = element;
+        while (currentElement) {
+            if (clickableElements.includes(currentElement.tagName)) {
+                return true;
+            }
+
+            if (currentElement.hasAttribute('onclick') ||
+                currentElement.getAttribute('role') === 'button' ||
+                currentElement.classList.contains('clickable')) {
+                return true;
+            }
+            currentElement = currentElement.parentElement;
+        }
+        return false;
+    }, []);
+
     const updateCursorType = useCallback((x, y) => {
         const target = document.elementFromPoint(x, y);
-        if (target) {
-            setIsPointer(window.getComputedStyle(target).cursor === 'pointer');
-        }
-    }, []);
+        setIsPointer(isClickableElement(target));
+    }, [isClickableElement]);
 
     useEffect(() => {
         let animationFrameId;

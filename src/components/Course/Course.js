@@ -31,7 +31,7 @@ const Course = ({
                 return number === sublevelNumber
             }) !== undefined;
             let nextAvailableSubLevel = completed_sub_levels.length + 1;
-            let className = `level flex bg ${grade !== "NONE" ? isCompleted ? 'completed' : nextAvailableSubLevel === number ? 'default' : 'disabled' : 'disabled'}`;
+            let className = `level clickable flex bg ${grade !== "NONE" ? isCompleted ? 'completed' : nextAvailableSubLevel === number ? 'default' : 'disabled' : 'disabled'}`;
             return (<div
                 className={className}
                 onClick={() => {
@@ -68,7 +68,7 @@ const Course = ({
 
                         <div className='user-progress-container'>
                             <div className='frog-reader'></div>
-                            <div className='book'></div>
+                            <div className='book clickable'></div>
                             <div className='progress'>25 / 30</div>
                         </div>
                     </div>
@@ -76,7 +76,7 @@ const Course = ({
                 </div>
                 <div className='levels'>
                     <div
-                        className={`level flex bg ${grade === "SILVER" ? 'silver' : grade === "GOLD" ? 'gold' : (courseNumber === 1 || courseNumber === 2) ? 'default' : 'disabled'}`}
+                        className={`level clickable flex bg ${grade === "SILVER" ? 'silver' : grade === "GOLD" ? 'gold' : (courseNumber === 1 || courseNumber === 2) ? 'default' : 'disabled'}`}
                         onClick={() => {
                             navigateToTheoretical()
                         }}><span>{current}</span></div>

@@ -44,7 +44,7 @@ const AvatarSelection = () => {
                 {avatars.map((avatar) => (
                     <div
                         key={avatar.id}
-                        className={`avatar-item ${selectedAvatar === avatar ? 'selected' : ''}`}
+                        className={`avatar-item clickable ${selectedAvatar === avatar ? 'selected' : ''}`}
                         onClick={(e) => handleAvatarSelect(e, avatar)}
                     >
                         <img src={avatar.src} alt={avatar.alt} />

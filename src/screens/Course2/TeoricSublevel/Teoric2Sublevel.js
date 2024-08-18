@@ -324,7 +324,7 @@ const Teoric2Sublevel = () => {
                                         <div className={`${selectedAnswer && selectedAnswer === answerOption && answerState === "RIGHT" ? 'bullet-heart-alive' : 'bullet-heart-dead'}`}></div>
                                         <div className="veins"></div>
                                         <div className='question-design'>
-                                            <button className={`button-teoric ${selectedAnswer && selectedAnswer === answerOption && answerState !== "WRONG" ? "selected" : selectedAnswer && selectedAnswer === answerOption && answerState === "WRONG" ? "wrong-answer" : ""}`}
+                                            <button className={`button-teoric clickable ${selectedAnswer && selectedAnswer === answerOption && answerState !== "WRONG" ? "selected" : selectedAnswer && selectedAnswer === answerOption && answerState === "WRONG" ? "wrong-answer" : ""}`}
                                                     onClick={() => handleAnswerButtonClick(answerOption)}>
                                                 <span className='text-answer'>{answerOption.answerText}</span>
                                             </button>
@@ -333,7 +333,7 @@ const Teoric2Sublevel = () => {
                                     </div>
                                 ))}
                             </div>
-                            <div className='next-btn' onClick={handleAnswer}>NEXT</div>
+                            <div className='next-btn clickable' onClick={handleAnswer}>NEXT</div>
                         </div>
                     </div>
                 </>

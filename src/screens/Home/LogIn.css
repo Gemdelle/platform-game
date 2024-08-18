@@ -84,7 +84,6 @@ input:focus {
 
 .log-in-container button:hover {
   scale: 103%;
-  cursor: pointer;
 }
 
 .log-in-form button {
@@ -113,7 +112,6 @@ input:focus {
 
 .pet-frog:hover {
   animation: jump 2s ease-in-out infinite;
-  cursor: pointer;
 }
 
 @keyframes jump {

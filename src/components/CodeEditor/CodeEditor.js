@@ -21,8 +21,8 @@ const CodeEditor = ({className, onSubmit, previousCode, correctAnswer}) => {
             <div className='code-area bg'>
 
                 <div className='arrows'>
-                    <div className='arrow arr-left'></div>
-                    <div className='arrow arr-right'></div>
+                    <div className='arrow arr-left clickable'></div>
+                    <div className='arrow arr-right clickable'></div>
                 </div>
                 <div className='title'>{className}.java</div>
                 <textarea
@@ -33,7 +33,7 @@ const CodeEditor = ({className, onSubmit, previousCode, correctAnswer}) => {
                     cols="50"
                     className='bg'
                 ></textarea>
-                <button type="submit" className='compile-button'><span>Compile</span> <span>&</span> <span>Run</span>
+                <button type="submit" className='compile-button clickable'><span>Compile</span> <span>&</span> <span>Run</span>
                 </button>
                 {cheatActivated ? (<div className='compile-button cheat' onClick={executeCheat}><span>Cheat</span></div>) : null}
             </div>

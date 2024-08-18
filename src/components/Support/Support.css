@@ -86,8 +86,6 @@ textarea::placeholder {
 
 .submit-btn:hover {
     scale: 105%;
-    cursor: pointer;
-    
 }
 
 .close-btn-support {
@@ -108,5 +106,4 @@ textarea::placeholder {
 .close-btn-support:hover {
     background-image: url(/public/assets/UI/close-button-active.png);
     scale: 103%;
-    cursor: pointer;
 }

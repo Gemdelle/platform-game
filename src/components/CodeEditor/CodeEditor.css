@@ -35,12 +35,10 @@
   width: 10%;
   height: 100%;
   /* background-color: red; */
-  cursor: pointer;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
   transition: all 200ms ease-in-out;
-  cursor: pointer;
 }
 
 .arrow:hover {
@@ -94,7 +92,6 @@ textarea:focus {
 .compile-button {
   background-color: transparent;
   border: none;
-  cursor: pointer;
   margin-right: 2vw;
   /* background-color: pink; */
   height: 13%;

@@ -102,18 +102,18 @@ const Header = ({ children }) => {
         <header>
             <div className='header-container'>
                 <div className={`menu ${showOptions ? 'showing-options' : ''}`}>
-                    <div className='logo-container'>
+                    <div className='logo-container clickable'>
                         <div className={`logo ${userProfile.profile.avatar === 'axolotl' ? 'aquatic' : userProfile.profile.avatar === 'caterpillar' ? 'terrestrial' : 'aerial'}`} onClick={handleLogoClick}></div></div>
                     {showOptions && (
                         <div className={`options ${animating ? 'hidden' : ''}`}>
-                            <div className='menu-option' id='courses' onClick={handleCoursesClick}>Courses</div>
-                            <div className='menu-option' id='library' onClick={handleLibraryClick}>Library</div>
-                            <div className='menu-option' id='evolutionMap' onClick={handleEvolutionMapClick}>Evolution Map</div>
-                            <div className='menu-option' id='friends' onClick={handleFriendsClick}>Friends (coming soon)</div>
-                            <div className='menu-option' id='calendar' onClick={handleCalendarClick}>Calendar</div>
-                            <div className='menu-option' id='faq' onClick={handleFAQClick}>FAQ</div>
-                            <div className='menu-option' id='support' onClick={handleSupportClick}>Support</div>
-                            <button className='log-out-btn' onClick={handleSignOut}>Logout</button>
+                            <div className='menu-option clickable' id='courses' onClick={handleCoursesClick}>Courses</div>
+                            <div className='menu-option clickable' id='library' onClick={handleLibraryClick}>Library</div>
+                            <div className='menu-option clickable' id='evolutionMap' onClick={handleEvolutionMapClick}>Evolution Map</div>
+                            <div className='menu-option clickable' id='friends' onClick={handleFriendsClick}>Friends (coming soon)</div>
+                            <div className='menu-option clickable' id='calendar' onClick={handleCalendarClick}>Calendar</div>
+                            <div className='menu-option clickable' id='faq' onClick={handleFAQClick}>FAQ</div>
+                            <div className='menu-option clickable' id='support' onClick={handleSupportClick}>Support</div>
+                            <button className='log-out-btn clickable' onClick={handleSignOut}>Logout</button>
                         </div>
 
                     )}
