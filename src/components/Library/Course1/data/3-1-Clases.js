@@ -1,7 +1,7 @@
 import React from "react";
 
-export default {
-    title: "Conceptos Clase",
+const temas_3_1 = {
+    title: "Clases",
     slides: [
         {
             completed: false,
@@ -281,3 +281,5 @@ export default {
         }
     ]
 }
+
+export default temas_3_1

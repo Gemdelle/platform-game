@@ -1,7 +1,7 @@
 import React from "react";
 
-export default {
-    title: "Python vs. Java",
+const temas_2_1 = {
+    title: "Lenguaje tipado vs. no tipado",
     slides: [
         {
             completed: false,
@@ -224,3 +224,5 @@ export default {
         },
     ]
 }
+
+export default temas_2_1 

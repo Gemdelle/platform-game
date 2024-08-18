@@ -1,25 +1,51 @@
 import React, { useState } from 'react';
 import './Library.css';
 import Course from './Course1/Course';
-import conceptosPrimitivos from "./Course1/data/ConceptosPrimitivos";
-import conceptosClase from "./Course1/data/ConceptosClase";
-import PythonVsJava from "./Course1/data/PythonVsJava";
+import temas_1_0 from './Course1/data/1-0-Temas';
+import temas_1_1 from './Course1/data/1-1-DatosPrimitivosYNoPrimitivos';
+import temas_1_2 from './Course1/data/1-2-Diferencias';
+import temas_1_3 from './Course1/data/1-3-Metodos';
+import temas_2_0 from './Course1/data/2-0-Temas';
+import temas_2_1 from './Course1/data/2-1-LenguajeTipadoVsNoTipado';
+import temas_2_2 from './Course1/data/2-2-Sintaxis';
+import temas_2_3 from './Course1/data/2-3-VentajasYDesventajas';
+import temas_3_0 from './Course1/data/3-0-Temas';
+import temas_3_1 from './Course1/data/3-1-Clases';
+import temas_3_2 from './Course1/data/3-2-Objetos';
+import temas_3_3 from './Course1/data/3-3-AtributosStatic';
+import temas_3_4 from './Course1/data/3-4-AtributosFinal';
+import temas_3_5 from './Course1/data/3-5-DefinicionDeClases';
+import temas_3_6 from './Course1/data/3-6-DefinicionDeAtirbutos';
 
 const levels = [
   {
-    title: "1. TIPOS DE DATOS"
+    title: "1. TIPOS DE DATOS", 
+    subLevels: [
+      temas_1_0,
+      temas_1_1,
+      temas_1_2,
+      temas_1_3
+    ]
   },
   {
     title: "2. JAVA VS. PYTHON",
     subLevels: [
-      PythonVsJava
+      temas_2_0,
+      temas_2_1,
+      temas_2_2,
+      temas_2_3
     ]
   },
   {
     title: "3. CLASES Y ATRIBUTOS",
     subLevels: [
-      conceptosPrimitivos,
-      conceptosClase,
+      temas_3_0,
+      temas_3_1,
+      temas_3_2,
+      temas_3_3,
+      temas_3_4,
+      temas_3_5,
+      temas_3_6
     ]
   },
   {
