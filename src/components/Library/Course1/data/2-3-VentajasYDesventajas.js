@@ -5,24 +5,13 @@ const temas_2_3 = {
     slides: [
         {
             completed: false,
-            subtitle: "-",
-            texts: [
-                <div>text</div>
+            subtitle: "Ventajas y desventajas de lenguajes tipados y no tipados",
+            texts: [ /* Diapositiva 44 */
+              
             ],
+
             previews: [
-                <div className="frog-happy-grey"></div>,
-                <div>image description</div>
-            ]
-        },
-        {
-            completed: false,
-            subtitle: "-",
-            texts: [
-                <div>text</div>
-            ],
-            previews: [
-                <div className="frog-happy-grey"></div>,
-                <div>image description</div>
+                
             ]
         }
     ]

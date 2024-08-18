@@ -9,16 +9,26 @@ const temas_3_0 = {
             texts: [
                 <div>En este curso, el objetivo es:</div>,
                 <ol>
-                    <li>item 1</li>
-                    <li>item 2</li>
-                    <li>item 3</li>
-                    <li>item 4</li>
+                    <li><b>Entender</b> el concepto de clase e instancia (sólo es importante el concepto, en el curso Instancias se va a aprender a crear objetos).</li>
+                    <li>Aprender a definir una clase.</li>
+                    <li>Aprender a definir atributos de una clase.</li>
                 </ol>,
-                <div>conclusión</div>
             ],
             previews: [
-                <div className="frog-happy-grey"></div>,
-                <div>image description</div>
+                <div className="flex-col">
+                    <div className="frog-txt-container">
+                        <div className="frog-happy-invert"></div>,
+                        <div>clase</div>
+                    </div>
+                    <div className="frog-txt-container">
+                        <div className="frog-happy-grey"></div>,
+                        <div>clase + atributos</div>
+                    </div>
+                    <div className="frog-txt-container">
+                        <div className="frog-happy"></div>,
+                        <div>instancia</div>
+                    </div>
+                </div>
             ]
         }
     ]
