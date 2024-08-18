@@ -14,10 +14,10 @@ const temas_3_6 = {
                 </div>,
                 <div>modificadorAcceso tipoDato nombreAtributo;<br></br><br></br>
                 public class Rana {<br></br>
-                private String nombre;<br></br>
-                private int edad;<br></br>
-                private double altura;<br></br>
-                private boolean feliz;<br></br>
+                // private String nombre;<br></br>
+                // private int edad;<br></br>
+                // private double altura;<br></br>
+                // private boolean feliz;<br></br>
                 }
                 </div>
             ],
@@ -35,10 +35,10 @@ const temas_3_6 = {
                 </div>,
                 <div>
                     public class Rana {<br></br>
-                        private String nombreGenetico;<br></br>
-                        private int edad;<br></br>
-                        private double altura;<br></br>
-                        private boolean feliz;
+                        // private String nombreGenetico;<br></br>
+                        // private int edad;<br></br>
+                        // private double altura;<br></br>
+                        // private boolean feliz;
                     }
                 </div>
             ],
