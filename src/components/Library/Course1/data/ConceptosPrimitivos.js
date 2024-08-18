@@ -8,7 +8,10 @@ export default {
             subtitle: "Datos primitivos vs. no primitivos",
             texts: [
                 <div>En Java se utilizan tipos de datos primitivos y no primitivos. Las diferencias más importantes son
-                    cuatro.</div>
+                    cuatro. <br/><br/>
+                    En Java se utilizan tipos de datos primitivos y no primitivos. Las diferencias más importantes son
+                    cuatro.
+                </div>
             ],
             previews: [
                 <div className="frog-happy-grey"></div>
