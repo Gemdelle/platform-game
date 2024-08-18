@@ -3,19 +3,23 @@ import './Library.css';
 import Course from './Course1/Course';
 import conceptosPrimitivos from "./Course1/data/ConceptosPrimitivos";
 import conceptosClase from "./Course1/data/ConceptosClase";
+import PythonVsJava from "./Course1/data/PythonVsJava";
 
 const levels = [
   {
     title: "1. TIPOS DE DATOS"
   },
   {
-    title: "2. JAVA VS. PYTHON"
+    title: "2. JAVA VS. PYTHON",
+    subLevels: [
+      PythonVsJava
+    ]
   },
   {
     title: "3. CLASES Y ATRIBUTOS",
     subLevels: [
       conceptosPrimitivos,
-      conceptosClase
+      conceptosClase,
     ]
   },
   {
