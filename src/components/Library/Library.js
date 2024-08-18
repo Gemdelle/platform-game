@@ -6,26 +6,32 @@ import conceptosClase from "./Course1/data/ConceptosClase";
 
 const levels = [
   {
-    title: "1. ATRIBUTOS",
+    title: "1. TIPOS DE DATOS"
+  },
+  {
+    title: "2. JAVA VS. PYTHON"
+  },
+  {
+    title: "3. CLASES Y ATRIBUTOS",
     subLevels: [
       conceptosPrimitivos,
       conceptosClase
     ]
   },
   {
-    title: "2. CONSTRUCTOR"
+    title: "4. CONSTRUCTOR"
   },
   {
-    title: "3. INSTANCIACIÓN"
+    title: "5. INSTANCIACIÓN"
   },
   {
-    title: "4. SETTERS & GETTERS"
+    title: "6. SETTERS & GETTERS"
   },
   {
-    title: "5. MÉTODOS"
+    title: "7. MÉTODOS"
   },
   {
-    title: "6. ATRIBUTOS AVANZADOS"
+    title: "8. ATRIBUTOS AVANZADOS"
   }
 ]
 
