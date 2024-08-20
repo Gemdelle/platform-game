@@ -1,6 +1,6 @@
 // src/App.js
 import React from 'react';
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Routes, useNavigate} from 'react-router-dom';
 import Home from './screens/Home/Home';
 import Course1Sublevel1 from "./screens/Course1/Course1Sublevel1";
 import AvatarSelection from "./screens/AvatarSelection/AvatarSelection";
@@ -17,6 +17,7 @@ import Course3Sublevel1 from "./screens/Course3/Course3Sublevel1";
 import Course3Sublevel2 from "./screens/Course3/Course3Sublevel2";
 import Teoric2Sublevel from "./screens/Course2/TeoricSublevel/Teoric2Sublevel";
 import CustomCursor from "./components/Cursor/CustomCursor";
+import Library from "./components/Library/Library";
 
 const App = () => {
     return (
@@ -26,6 +27,8 @@ const App = () => {
                 <Routes>
                     <Route path="/" element={<Home/>}/>
                     <Route path="/avatar-selection" element={<AvatarSelection/>}/>
+                    <Route path="/library/intro" element={<Library />}/>
+                    <Route path="/library/:courseNumber" element={<Library />}/>
                     <Route path="/course/1/theoretical" element={<TeoricSublevel/>}/>
                     <Route path="/course/1/1" element={<Course1Sublevel1/>}/>
                     <Route path="/course/1/2" element={<Course1Sublevel2/>}/>

@@ -26,6 +26,10 @@ const Course = ({
         navigate(`${navigationUrl}theoretical`);
     };
 
+    const navigateToTheory = ()=> {
+        navigate(`/library/${courseNumber-1}`);
+    }
+
     function createLevelHearts() {
         return levelsRange.map((number) => {
             let isCompleted = completed_sub_levels && completed_sub_levels.find((sublevelNumber) => {
@@ -85,7 +89,7 @@ const Course = ({
 
                         <div className='user-progress-container'>
                             <div className='frog-reader'></div>
-                            <div className='book clickable'></div>
+                            <div className='book clickable' onClick={navigateToTheory}></div>
                             <div className='progress'>{countCompletedSlides()} / {countTotalSlides()}</div>
                         </div>
                     </div>

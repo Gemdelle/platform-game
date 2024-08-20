@@ -1,16 +1,23 @@
-import React, {useEffect, useMemo, useState} from 'react';
+import React, {useMemo, useState} from 'react';
 import './Library.css';
 import Course from './Course1/Course';
 import {useLevel} from "../utils/UserProvider";
+import {useNavigate, useParams} from "react-router-dom";
 
-const Library = ({onClose}) => {
-    const [showOverlay, setShowOverlay] = useState(false);
-    const [selectedCourseIndex, setSelectedCourseIndex] = useState(null);
+const Library = () => {
+    const { courseNumber } = useParams();
+    const [showOverlay, setShowOverlay] = useState(!!courseNumber);
+    const [selectedCourseIndex, setSelectedCourseIndex] = useState(courseNumber??null);
     const {userLevels, setUserLevels} = useLevel();
+    const navigate = useNavigate();
 
     const handleButtonClick = (index) => {
         setSelectedCourseIndex(index);
         setShowOverlay(true);
+    };
+
+    const onClose = () => {
+        navigate(-1);
     };
 
     const handleCloseOverlay = () => {

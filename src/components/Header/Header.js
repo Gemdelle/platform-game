@@ -18,7 +18,6 @@ const Header = ({ children }) => {
     const [showFAQ, setShowFAQ] = useState(false);
     const [showSupport, setShowSupport] = useState(false);
     const [showCalendar, setShowCalendar] = useState(false);
-    const [showLibrary, setShowLibrary] = useState(false);
     const [showFriends, setShowFriends] = useState(false);
     const [showEvolutionMap, setShowEvolutionMap] = useState(false);
     const { userProfile, setUserProfile } = useUser();
@@ -69,11 +68,7 @@ const Header = ({ children }) => {
     };
 
     const handleLibraryClick = () => {
-        setShowLibrary(true);
-    };
-
-    const handleCloseLibrary = () => {
-        setShowLibrary(false);
+        navigate("/library/intro");
     };
 
     const handleFriendsClick = () => {
@@ -146,7 +141,6 @@ const Header = ({ children }) => {
             {showFAQ && <FAQ onClose={handleCloseFAQ} />}
             {showSupport && <Support onClose={handleCloseSupport} />}
             {showCalendar && <Calendar onClose={handleCloseCalendar} />}
-            {showLibrary && <Library onClose={handleCloseLibrary} />}
             {showFriends && <Friends onClose={handleCloseFriends} />}
             {showEvolutionMap && <EvolutionMap onClose={handleCloseEvolutionMap} />}
             {children}
