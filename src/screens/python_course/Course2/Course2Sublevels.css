@@ -1,0 +1,53 @@
+.egg {
+    height: 50%;
+    animation: shake 2s ease-in-out infinite;
+    transform-origin: bottom center;
+    margin-top: 8vmax;
+}
+
+.course-level-1 {
+    font-family: 'BlackwoodCastle', sans-serif;
+    background-attachment: fixed;
+    background-image: url(/public/assets/coding-border-background.png);
+    background-position: center top;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.moving-course-sky {
+    background-image: url(/public/assets/seamless-coding-background.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 20% 50%;
+    background-position: 0 0;
+    background-repeat: repeat;
+    animation: travel 35s infinite linear;
+    filter: blur(8px) brightness(0.3) saturate(0);
+    z-index: -1;
+}
+
+@keyframes travel {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -100% 0;
+    }
+}
+
+
+@keyframes shake {
+    0% { transform: rotate(0); }
+    25% { transform: rotate(-1deg); }
+    50% { transform: rotate(2deg); }
+    75% { transform: rotate(-1deg); }
+    100% { transform: rotate(0); }
+}

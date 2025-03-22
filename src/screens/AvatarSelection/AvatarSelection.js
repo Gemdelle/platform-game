@@ -19,7 +19,7 @@ const AvatarSelection = () => {
         try {
             setSelectedAvatar(avatar);
             const idToken = userProfile.id
-            const response = await axios.put('https://quiet-badlands-42095-c0012ddb8417.herokuapp.com/select-pet', {pet_selected: avatar.name},{
+            const response = await axios.put('http://localhost:3001/select-pet', {pet_selected: avatar.name},{
                 headers: {
                     'Authorization': `Bearer ${idToken}`
                 }

@@ -1,0 +1,165 @@
+/* html {
+  overflow: hidden;
+} */
+
+.avatar-selection-screen h1 {
+  width: 45%;
+  height: 7%;
+  /* background-color: lightblue; */
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  font-size: 3.5vw;
+  background-image: url(/public/assets/ornament.png);
+  background-position: center;
+  background-size: 80% 90%;
+  background-repeat: no-repeat;
+  color:rgb(243, 242, 233);
+  font-weight: lighter;
+  font-family: 'BlackwoodCastleShallow', sans-serif;
+  text-shadow: 1px 1px 1px rgba(121, 124, 114, 0.3), -1px -1px 1px rgba(54, 55, 53, 0.3), 0 0 5px rgba(46, 50, 37, 0.2);
+}
+
+
+
+/* .avatar-selection-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.8);
+  background-image: url(/public/assets/backgrounds/avatar-selection.jpg);
+  background-size: 210%;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: travel 120s linear infinite;
+} */
+
+.avatar-selection-screen {
+  height: 100vh;
+  width: 100vw;
+}
+
+.avatar-moving-background {
+  height: 100vh;
+  width: 100vw;
+  background-image: url(/public/assets/backgrounds/avatar-selection.png);
+  background-size: 50% 50%;
+  background-position: 0 0;
+  background-repeat: repeat;
+  animation: travel 35s infinite linear;
+  filter: blur(6px) brightness(0.3);
+  z-index: -999;
+  position: absolute;
+}
+
+@keyframes travel {
+            0% {
+                background-position: 0 0;
+            }
+            50% {
+                background-position: 100% 0;
+            }
+            100% {
+              background-position: 0 0;
+            }
+        }
+
+.avatar-list {
+  margin-top: 0.5vmax;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: lightcoral; */
+  width: 90%;
+  height: 80%;
+}
+
+.avatar-item {
+  width: 80%;
+  height: 100%;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  background-image: url(/public/assets/pet-selection.png);
+  background-position: center;
+  /* background-color: red; */
+  background-size: 85% 85%;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+@keyframes shake {
+  0% { transform: rotate(0); }
+  25% { transform: rotate(-1deg); }
+  50% { transform: rotate(2deg); }
+  75% { transform: rotate(-1deg); }
+  100% { transform: rotate(0); }
+}
+
+.avatar-item img {
+  width: 45%;
+  height: 50%;
+  filter: brightness(0);
+  transition: all 500ms ease-in-out;
+  margin-bottom: 2vmax;
+}
+
+.avatar-item:hover {
+  transform: scale(1.05);
+  img {
+    filter:brightness(1);
+    animation: shake 2s ease-in-out infinite;
+    transform-origin: bottom center;
+  }
+}
+
+.avatar-orb-container {
+  width: 30%;
+  height: 20%;
+  /* background-color: red; */
+  position: absolute;
+  background-image: url(/public/assets/character-frame.png);
+  background-size: 120% 100%;
+  background-position: top center;
+  background-repeat: no-repeat;
+  bottom: 0vmax;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar-orb {
+  width: 70%;
+  height: 70%;
+  background-size: contain;
+  background-position: top center;
+  background-repeat: no-repeat;
+  animation: spin 30s linear infinite, subtle-glow 5s ease-in-out infinite;
+}
+
+.avatar-orb.aerial {
+  background-image: url(/public/assets/orbs/orb-aerial.png);
+}
+
+.avatar-orb.aquatic {
+  background-image: url(/public/assets/orbs/orb-aquatic.png);
+}
+
+.avatar-orb.terrestrial {
+  background-image: url(/public/assets/orbs/orb-terrestrial.png);
+}
+
+
+.avatar-selection-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,123 @@
+/* OUTPUT */
+
+.output {
+    height: 60vh;
+    width: 65vh;
+     background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 0.5vmax;
+    position: relative;
+}
+
+.output .delete {
+    width: 100%;
+    height: 100%;
+    background-image: url(/public/assets/bugs/bug-delete.png);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.output .add {
+    width: 100%;
+    height: 100%;
+    background-image: url(/public/assets/bugs/bug-add.png);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.output .eddit {
+    width: 100%;
+    height: 100%;
+    background-image: url(/public/assets/bugs/bug-edit.png);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.bug-slot-1 {
+    width: 5vh;
+    height: 5vh;
+    position: absolute;
+    right: 5vh;
+    top: 5vh;
+    background-color: red;
+}
+
+.bug-slot-2 {
+    width: 5vh;
+    height: 5vh;
+    position: absolute;
+    right: 5vh;
+    top: 20vh;
+    background-color: blueviolet;
+}
+
+.bug-slot-3 {
+    width: 5vh;
+    height: 5vh;
+    position: absolute;
+    right: 5vh;
+    top: 40vh;
+    background-color: grey;
+}
+
+.bug-slot-4 {
+    width: 5vh;
+    height: 5vh;
+    position: absolute;
+    right: 5vh;
+    top: 50vh;
+    background-color: yellowgreen;
+}
+
+.bug-slot-5 {
+    width: 5vh;
+    height: 5vh;
+    position: absolute;
+    right: 20vh;
+    top: 50vh;
+    background-color: brown;
+}
+
+.bug-slot-6 {
+    width: 5vh;
+    height: 5vh;
+    position: absolute;
+    right: 28vh;
+    top: 50vh;
+    background-color: beige;
+}
+
+.bug-slot-7 {
+    width: 5vh;
+    height: 5vh;
+    position: absolute;
+    right: 35vh;
+    top: 50vh;
+    background-color: white;
+}
+
+.bug-slot-8 {
+    width: 5vh;
+    height: 5vh;
+    position: absolute;
+    right: 55vh;
+    top: 50vh;
+    background-color: darkgoldenrod;
+}
+
+
+pre {
+    height: 66%;
+    width: 50%;
+    padding: 0;
+    margin: 0px;
+    /*background-color: aquamarine;*/
+    background-color: transparent;
+}
+
+/* END OUTPUT */

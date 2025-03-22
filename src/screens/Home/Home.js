@@ -6,7 +6,7 @@ import Header from "../../components/Header/Header";
 import Course from "../../components/Course/Course";
 import {useAuthState} from "react-firebase-hooks/auth";
 import {auth} from "../../firebase";
-import {signInWithPopup, GoogleAuthProvider, signInWithEmailAndPassword} from 'firebase/auth';
+import {GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup} from 'firebase/auth';
 import {useLevel, useUser} from "../../components/utils/UserProvider";
 import axios from "axios";
 import {useLocation, useNavigate} from "react-router-dom";
@@ -44,7 +44,7 @@ const Home = () => {
         try {
             const result = await signInWithEmailAndPassword(auth, email, password);
             const idToken = await result.user.getIdToken()
-            const response = await axios.get('https://quiet-badlands-42095-c0012ddb8417.herokuapp.com/profile', {
+            const response = await axios.get('http://localhost:3001/profile', {
                 headers: {
                     'Authorization': `Bearer ${idToken}`
                 }
@@ -54,9 +54,9 @@ const Home = () => {
             localStorage.setItem('userProfile', JSON.stringify(response.data));
 
             if (response.data.profile.avatar === 'default_avatar') {
-                navigate('/avatar-selection')
+                navigate('/course/1/1')
             }
-
+            navigate('/course/1/1')
             console.log("Login successful");
         } catch (error) {
             console.error("Error logging in:", error.message);
@@ -67,7 +67,7 @@ const Home = () => {
         const result = await signInWithPopup(auth, provider);
         const idToken = await result.user.getIdToken()
 
-        const response = await axios.get('https://quiet-badlands-42095-c0012ddb8417.herokuapp.com/profile', {
+        const response = await axios.get('http://localhost:3001/profile', {
             headers: {
                 'Authorization': `Bearer ${idToken}`
             }
@@ -76,14 +76,14 @@ const Home = () => {
         setUserProfile(response.data);
         localStorage.setItem('userProfile', JSON.stringify(response.data));
         if (response.data.profile.avatar === 'default_avatar') {
-            navigate('/avatar-selection')
+            navigate('/course-selection')
         }
     };
 
     if (loading) {
         return <div>Loading...</div>;
     }
-    if (userProfile) {
+    if (userProfile && userProfile.profile.current_course) {
         const isAquatic = userProfile.profile.avatar === 'axolotl';
         const isTerrestrial = userProfile.profile.avatar === 'caterpillar';
         const hasHatched = userProfile.profile.level > 1;
@@ -104,7 +104,8 @@ const Home = () => {
                 </Header>
 
                 <div className='header-space'></div>
-                {userProfile.progress.courses.map((course, index) => {
+                {userProfile.profile.current_course === "java" ? userProfile.progress.courses.map((course, index) => {
+
                     return (
                         <Course
                             key={`course-${index}`}
@@ -114,7 +115,20 @@ const Home = () => {
                             theoricalLevel = {theoricalLevels[index]}
                         />
                     )
-                })}
+                }) : userProfile.progress.courses_python.map((course, index) => {
+
+                    return (
+                        <Course
+                            key={`course-${index}`}
+                            course={course}
+                            navigationUrl={`/course-python/${index + 1}/`}
+                            courseNumber={index + 1}
+                            theoricalLevel = {theoricalLevels[index]}
+                        />
+                    )
+                })
+
+                }
                 <div className={`pet-static ${hasHatched ? 'home-hatched' : 'home-egg'}`} id="petStatic"
                      style={{backgroundImage: backgroundImage}}></div>
                 {showEvolution ? <Evolution onClose={handleCloseEvolution}/> : null}
