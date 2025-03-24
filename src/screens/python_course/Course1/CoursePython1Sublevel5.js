@@ -2,23 +2,38 @@ import React, {useEffect, useState} from 'react';
 import CodeEditor from '../../../components/CodeEditor/CodeEditor';
 import OutputDisplay from '../../../components/OutputDisplay/OutputDisplay';
 import Header from "../../../components/Header/Header";
-import Preview from '../../../components/Preview/Preview';
 import Instructions from "../../../components/Instructions/Instructions";
 import {useUser} from "../../../components/utils/UserProvider";
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
-import UserStories1Sublevel5 from "../user_stories/Course1/UserStories1Sublevel5";
+import UserStoriesSublevel from "../user_stories/UserStoriesSublevel";
 
-const correctAnswer = 'public class Terrestrial {\n' +
-    'private String name;\n' +
-    '}'
+const correctAnswer = '“””\n' +
+    'Glenn T. Seaborg (1912-1999) fue un químico estadounidense que descubrió varios elementos transuránicos, incluido el plutonio El elemento seaborgio (Sg) fue nombrado en su honor.\n' +
+    '“””\n' +
+    '“””\n' +
+    'quote1 = "La alquimia fue la predecesora de la química moderna." # Carl Jung\n' +
+    '“””\n' +
+    'quote2 = "Cada elemento tiene su propia identidad." # Glenn T. Seaborg\n' +
+    '“””\n' +
+    'quote3 = "La ciencia y la paz triunfarán sobre la ignorancia y la guerra." # Louis Pasteur\n' +
+    '“””\n'
+const user_stories = [
+    {
+        action: "ADD",
+        description: "Comentar las quotes que no corresponden al autor del comentario.",
+        validation: "VALID_VARIABLE_DECLARATION"
+    }
+];
+
 const CoursePython1Sublevel5 = () => {
     const [output, setOutput] = useState('');
-    const navigate = useNavigate();
     const [, setInvalidations] = useState([]);
     const [validations, setValidations] = useState([]);
     const [shouldProceed, setShouldProceed] = useState(false);
+    const navigate = useNavigate();
     const {userProfile, setUserProfile} = useUser();
+
     useEffect(() => {
         if (shouldProceed) {
             setTimeout(()=> {
@@ -26,22 +41,21 @@ const CoursePython1Sublevel5 = () => {
             },2500)
         }
     }, [shouldProceed, setUserProfile, navigate, userProfile]);
+
     const handleCompileAndRun = async (className, classCode) => {
         const idToken = userProfile.id
         try {
             const response = await axios.post('http://localhost:3001/validate/course-python/1/5', {
                 class_code: classCode
-            },{
+            }, {
                 headers: {
                     'Authorization': `Bearer ${idToken}`
                 }
             });
+
             if (response.data.error) {
                 if (response.data.invalidations){
                     setInvalidations(response.data.invalidations)
-                }
-                if (response.data.validations) {
-                    setValidations(response.data.validations);
                 }
                 throw Error(response.data.error)
             }
@@ -50,7 +64,7 @@ const CoursePython1Sublevel5 = () => {
                 setValidations(response.data.validations);
             }
 
-            if (response.data.validations.length === 2) {
+            if (response.data.validations.length === 1) {
                 setShouldProceed(true);
             }
             setUserProfile(response.data.userProfile);
@@ -63,15 +77,26 @@ const CoursePython1Sublevel5 = () => {
     return (
         <div className="course-level-1 flex">
             <div className="moving-course-sky"></div>
-            <Instructions instructions={"5. Definir  la clase 'Terrestrial'. Debe tener el atributo nombre."}/>
+            <Instructions instructions={"❧ 0.2 Comentarios multilínea “”” “””"}/>
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>
-                    <CodeEditor onSubmit={handleCompileAndRun} className="Caterpillar" correctAnswer={correctAnswer}/>
-                    <OutputDisplay output={output}/>
+                    <CodeEditor
+                        onSubmit={handleCompileAndRun}
+                        className="Egg"
+                        correctAnswer={correctAnswer}
+                        previousCode='“””
+Glenn T. Seaborg (1912-1999) fue un químico estadounidense que descubrió varios elementos transuránicos, incluido el plutonio El elemento seaborgio (Sg) fue nombrado en su honor.
+“””
+quote1 = "La alquimia fue la predecesora de la química moderna." # Carl Jung
+quote2 = "Cada elemento tiene su propia identidad." # Glenn T. Seaborg
+quote3 = "La ciencia y la paz triunfarán sobre la ignorancia y la guerra." # Louis Pasteur
+'
+                        placeholder="Escriba el codigo aqui"
+                    />
                 </div>
-                <Preview className="hatched" previewImageUrl={`url("/assets/pets/caterpillar/caterpillar-1.png")`}/>
-                <UserStories1Sublevel5 validations={validations}/>
+                <OutputDisplay output={output} user_stories={user_stories}/>
+                <UserStoriesSublevel validations={validations} user_stories={user_stories}/>
             </div>
         </div>
     );

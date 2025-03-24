@@ -8,16 +8,20 @@ import axios from "axios";
 import {useNavigate} from "react-router-dom";
 import UserStoriesSublevel from "../user_stories/UserStoriesSublevel";
 
-const correctAnswer = 'quote = "Todo es cuestión de átomos." # Richard Feynman'
+
+const correctAnswer = 'bromo_cantidad_sustancia = “2”  # mol\n' +
+    'bromo_cantidad_sustancia = int(bromo_cantidad_sustancia)  # mol\n' +
+    '\n' +
+    'print(f”La cantidad de sustancia a analizar de Bromo es de {bromo_cantidad_sustancia.}”)\n'
 const user_stories = [
     {
-        action: "EDIT",
-        description: "Corregir el código para que la variable quede habilitada y el nombre del autor comentado en la misma línea.",
+        action: "DELETE",
+        description: "En el laboratorio se registraron los datos de cantidad de sustancia en formato caracter. Se convirtieron a enteros, pero el único valor correctamente registrado es Bromo. Eliminar Borrar las variables que corresponden a otros elementos.",
         validation: "VALID_VARIABLE_DECLARATION"
     }
 ];
 
-const CoursePython1Sublevel3 = () => {
+const Course4Sublevel1 = () => {
     const [output, setOutput] = useState('');
     const [, setInvalidations] = useState([]);
     const [validations, setValidations] = useState([]);
@@ -28,7 +32,7 @@ const CoursePython1Sublevel3 = () => {
     useEffect(() => {
         if (shouldProceed) {
             setTimeout(()=> {
-                navigate('/course-python/1/4');
+                navigate('/course-python/4/2');
             },2500)
         }
     }, [shouldProceed, setUserProfile, navigate, userProfile]);
@@ -36,7 +40,7 @@ const CoursePython1Sublevel3 = () => {
     const handleCompileAndRun = async (className, classCode) => {
         const idToken = userProfile.id
         try {
-            const response = await axios.post('http://localhost:3001/validate/course-python/1/3', {
+            const response = await axios.post('http://localhost:3001/validate/course-python/4/1', {
                 class_code: classCode
             }, {
                 headers: {
@@ -68,7 +72,7 @@ const CoursePython1Sublevel3 = () => {
     return (
         <div className="course-level-1 flex">
             <div className="moving-course-sky"></div>
-            <Instructions instructions={"0.1 Comentarios de una línea #"}/>
+            <Instructions instructions={"❧ 3.1. str a int"}/>
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>
@@ -76,8 +80,13 @@ const CoursePython1Sublevel3 = () => {
                         onSubmit={handleCompileAndRun}
                         className="Egg"
                         correctAnswer={correctAnswer}
-                        previousCode='% quote = "Todo es cuestión de átomos." %
-% Richard Feynman
+                        previousCode='bromo_cantidad_sustancia = “2”  # mol
+cobre_cantidad_sustancia = “5”  # mol
+
+bromo_cantidad_sustancia = int(bromo_cantidad_sustancia)  # mol
+cobre_cantidad_sustancia = int(cobre_cantidad_sustancia)  # mol
+
+#print(f”La cantidad de sustancia a analizar de Bromo es de {bromo_cantidad_sustancia.}”)
 '
                         placeholder="Escriba el codigo aqui"
                     />
@@ -89,4 +98,4 @@ const CoursePython1Sublevel3 = () => {
     );
 };
 
-export default CoursePython1Sublevel3;
+export default Course4Sublevel1;

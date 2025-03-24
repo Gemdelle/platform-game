@@ -8,16 +8,32 @@ import axios from "axios";
 import {useNavigate} from "react-router-dom";
 import UserStoriesSublevel from "../user_stories/UserStoriesSublevel";
 
-const correctAnswer = 'quote = "Todo es cuestión de átomos." # Richard Feynman'
+
+const correctAnswer = '“””\n' +
+    'El número atómico de (O) es 8.\n' +
+    'El número atómico de (Mg) es 12.\n' +
+    'El número atómico de (Cl) es 17.\n' +
+    '“””\n' +
+    '\n' +
+    'oxigeno_simbolo = "O"\n' +
+    'magnesio_simbolo = "Mg"\n' +
+    'cloro_simbolo = "Cl"\n' +
+    '\n' +
+    'oxigeno_numero_atomico = 8\n' +
+    'magnesio_numero_atomico = 12\n' +
+    'cloro_numero_atomico = 17\n' +
+    'oxigeno_numero_atomico = 8\n' +
+    '\n' +
+    'print(f"El número atómico de ({oxigeno_simbolo}) es {oxigeno_numero_atomico}.\\nEl número atómico de ({magnesio_simbolo}) es {magnesio_numero_atomico}.\\nEl número atómico de ({cloro_simbolo}) es {cloro_numero_atomico}.")\n'
 const user_stories = [
     {
-        action: "EDIT",
-        description: "Corregir el código para que la variable quede habilitada y el nombre del autor comentado en la misma línea.",
+        action: "DELETE",
+        description: "Eliminar únicamente las asignaciones que hacen que el resultado sea erróneo.",
         validation: "VALID_VARIABLE_DECLARATION"
     }
 ];
 
-const CoursePython1Sublevel3 = () => {
+const Course3Sublevel16 = () => {
     const [output, setOutput] = useState('');
     const [, setInvalidations] = useState([]);
     const [validations, setValidations] = useState([]);
@@ -28,7 +44,7 @@ const CoursePython1Sublevel3 = () => {
     useEffect(() => {
         if (shouldProceed) {
             setTimeout(()=> {
-                navigate('/course-python/1/4');
+                navigate('/course-python/3/17');
             },2500)
         }
     }, [shouldProceed, setUserProfile, navigate, userProfile]);
@@ -36,7 +52,7 @@ const CoursePython1Sublevel3 = () => {
     const handleCompileAndRun = async (className, classCode) => {
         const idToken = userProfile.id
         try {
-            const response = await axios.post('http://localhost:3001/validate/course-python/1/3', {
+            const response = await axios.post('http://localhost:3001/validate/course-python/3/16', {
                 class_code: classCode
             }, {
                 headers: {
@@ -68,7 +84,7 @@ const CoursePython1Sublevel3 = () => {
     return (
         <div className="course-level-1 flex">
             <div className="moving-course-sky"></div>
-            <Instructions instructions={"0.1 Comentarios de una línea #"}/>
+            <Instructions instructions={"❧ 2.6 Sobreescribir variables de tipo int"}/>
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>
@@ -76,8 +92,24 @@ const CoursePython1Sublevel3 = () => {
                         onSubmit={handleCompileAndRun}
                         className="Egg"
                         correctAnswer={correctAnswer}
-                        previousCode='% quote = "Todo es cuestión de átomos." %
-% Richard Feynman
+                        previousCode='“””
+El número atómico de (O) es 8.
+El número atómico de (Mg) es 12.
+El número atómico de (Cl) es 17.
+“””
+
+oxigeno_simbolo = "O"
+magnesio_simbolo = "Mg"
+cloro_simbolo = "Cl"
+
+oxigeno_numero_atomico = 5
+magnesio_numero_atomico = 12
+cloro_numero_atomico = 17
+oxigeno_numero_atomico = 8
+magnesio_numero_atomico = 16
+oxigeno_numero_atomico = 5
+
+# print(f"El número atómico de ({oxigeno_simbolo}) es {oxigeno_numero_atomico}.\nEl número atómico de ({magnesio_simbolo}) es {magnesio_numero_atomico}.\nEl número atómico de ({cloro_simbolo}) es {cloro_numero_atomico}.")
 '
                         placeholder="Escriba el codigo aqui"
                     />
@@ -89,4 +121,4 @@ const CoursePython1Sublevel3 = () => {
     );
 };
 
-export default CoursePython1Sublevel3;
+export default Course3Sublevel16;

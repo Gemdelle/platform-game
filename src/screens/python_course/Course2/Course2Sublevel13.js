@@ -8,16 +8,20 @@ import axios from "axios";
 import {useNavigate} from "react-router-dom";
 import UserStoriesSublevel from "../user_stories/UserStoriesSublevel";
 
-const correctAnswer = 'quote = "Todo es cuestión de átomos." # Richard Feynman'
+
+const correctAnswer = 'acido_clorhidrico_nombre = "Ácido clorhídrico"\n' +
+    'acido_clorhidrico_formula = "HCl"\n' +
+    '\n' +
+    'print(f"El compuesto {acido_clorhidrico_nombre} tiene la fórmula {acido_clorhidrico_formula}.")\n'
 const user_stories = [
     {
-        action: "EDIT",
-        description: "Corregir el código para que la variable quede habilitada y el nombre del autor comentado en la misma línea.",
+        action: "DELETE",
+        description: "Imprimir correctamente los datos del ácido clorhídrico. Incluir el punto final.",
         validation: "VALID_VARIABLE_DECLARATION"
     }
 ];
 
-const CoursePython1Sublevel3 = () => {
+const Course2Sublevel13 = () => {
     const [output, setOutput] = useState('');
     const [, setInvalidations] = useState([]);
     const [validations, setValidations] = useState([]);
@@ -28,7 +32,7 @@ const CoursePython1Sublevel3 = () => {
     useEffect(() => {
         if (shouldProceed) {
             setTimeout(()=> {
-                navigate('/course-python/1/4');
+                navigate('/course-python/2/14');
             },2500)
         }
     }, [shouldProceed, setUserProfile, navigate, userProfile]);
@@ -36,7 +40,7 @@ const CoursePython1Sublevel3 = () => {
     const handleCompileAndRun = async (className, classCode) => {
         const idToken = userProfile.id
         try {
-            const response = await axios.post('http://localhost:3001/validate/course-python/1/3', {
+            const response = await axios.post('http://localhost:3001/validate/course-python/2/13', {
                 class_code: classCode
             }, {
                 headers: {
@@ -68,7 +72,7 @@ const CoursePython1Sublevel3 = () => {
     return (
         <div className="course-level-1 flex">
             <div className="moving-course-sky"></div>
-            <Instructions instructions={"0.1 Comentarios de una línea #"}/>
+            <Instructions instructions={"❧ 1.5 Impresión formateada "}/>
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>
@@ -76,8 +80,10 @@ const CoursePython1Sublevel3 = () => {
                         onSubmit={handleCompileAndRun}
                         className="Egg"
                         correctAnswer={correctAnswer}
-                        previousCode='% quote = "Todo es cuestión de átomos." %
-% Richard Feynman
+                        previousCode='acido_clorhidrico_nombre = "Ácido clorhídrico"
+acido_clorhidrico_formula = "HCl"
+
+print(f"El compuesto {"acido_clorhidrico_nombre"} tiene la fórmula {"acido_clorhidrico_formula"}.")
 '
                         placeholder="Escriba el codigo aqui"
                     />
@@ -89,4 +95,4 @@ const CoursePython1Sublevel3 = () => {
     );
 };
 
-export default CoursePython1Sublevel3;
+export default Course2Sublevel13;

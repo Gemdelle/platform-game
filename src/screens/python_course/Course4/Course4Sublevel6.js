@@ -8,16 +8,29 @@ import axios from "axios";
 import {useNavigate} from "react-router-dom";
 import UserStoriesSublevel from "../user_stories/UserStoriesSublevel";
 
-const correctAnswer = 'quote = "Todo es cuestión de átomos." # Richard Feynman'
+
+const correctAnswer = 'helio_masa = “4.0026”  # g/mol\n' +
+    'helio_volumen = “22.4”  # L (volumen molar a condiciones estándar)\n' +
+    'helio_cantidad_sustancia = “1”  # mol\n' +
+    '\n' +
+    'helio_masa = float(4.0026)  # g/mol\n' +
+    'helio_volumen = float(22.4)  # L (volumen molar a condiciones estándar)\n' +
+    'helio_cantidad_sustancia = int(1)  # mol\n' +
+    '\n' +
+    'unidad_masa = “g/mol”\n' +
+    'unidad_volumen = “L” \n' +
+    'unidad_sustancia = “mol”\n' +
+    '\n' +
+    'print(f“Masa Helio: {helio_masa} {unidad_masa}\\nVolumen Helio: {helio_volumen} {unidad_volumen}\\n{helio_sustancia} {unidad_sustancia}”)\n'
 const user_stories = [
     {
         action: "EDIT",
-        description: "Corregir el código para que la variable quede habilitada y el nombre del autor comentado en la misma línea.",
+        description: "Los registros anteriores se hicieron muy mal, entonces para este analisis se dejaron los datos originales. Convertir los datos a valor real. Declarar las variables con las unidades correspondientes. Definir la impresión para que quede exactamente el mismo formato que el texto comentado.",
         validation: "VALID_VARIABLE_DECLARATION"
     }
 ];
 
-const CoursePython1Sublevel3 = () => {
+const Course4Sublevel6 = () => {
     const [output, setOutput] = useState('');
     const [, setInvalidations] = useState([]);
     const [validations, setValidations] = useState([]);
@@ -28,7 +41,7 @@ const CoursePython1Sublevel3 = () => {
     useEffect(() => {
         if (shouldProceed) {
             setTimeout(()=> {
-                navigate('/course-python/1/4');
+                navigate('/course-python/4/7');
             },2500)
         }
     }, [shouldProceed, setUserProfile, navigate, userProfile]);
@@ -36,7 +49,7 @@ const CoursePython1Sublevel3 = () => {
     const handleCompileAndRun = async (className, classCode) => {
         const idToken = userProfile.id
         try {
-            const response = await axios.post('http://localhost:3001/validate/course-python/1/3', {
+            const response = await axios.post('http://localhost:3001/validate/course-python/4/6', {
                 class_code: classCode
             }, {
                 headers: {
@@ -68,7 +81,7 @@ const CoursePython1Sublevel3 = () => {
     return (
         <div className="course-level-1 flex">
             <div className="moving-course-sky"></div>
-            <Instructions instructions={"0.1 Comentarios de una línea #"}/>
+            <Instructions instructions={"❧ 3.2 str a float"}/>
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>
@@ -76,8 +89,17 @@ const CoursePython1Sublevel3 = () => {
                         onSubmit={handleCompileAndRun}
                         className="Egg"
                         correctAnswer={correctAnswer}
-                        previousCode='% quote = "Todo es cuestión de átomos." %
-% Richard Feynman
+                        previousCode='“””
+Masa Helio: 4.0026 g/mol
+Volumen Helio: 22.4 L
+Cantidad sustancia Helio: 1 mol
+“””
+
+helio_masa = “4.0026”  # g/mol
+helio_volumen = “22.4”  # L (volumen molar a condiciones estándar)
+helio_cantidad_sustancia = “1”  # mol
+
+unidad_masa = “g/mol”
 '
                         placeholder="Escriba el codigo aqui"
                     />
@@ -89,4 +111,4 @@ const CoursePython1Sublevel3 = () => {
     );
 };
 
-export default CoursePython1Sublevel3;
+export default Course4Sublevel6;

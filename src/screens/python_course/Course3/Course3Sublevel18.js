@@ -8,16 +8,45 @@ import axios from "axios";
 import {useNavigate} from "react-router-dom";
 import UserStoriesSublevel from "../user_stories/UserStoriesSublevel";
 
-const correctAnswer = 'quote = "Todo es cuestión de átomos." # Richard Feynman'
+
+const correctAnswer = '“””\n' +
+    'Cantidad de elementos: …\n' +
+    'Cantidad de metaloides: …\n' +
+    'Cantidad de no metaloides: …\n' +
+    'Z(Si) es 14.\n' +
+    'Z(Cl) es 17.\n' +
+    'Z(K) es 19.\n' +
+    '“””\n' +
+    '\n' +
+    'silicio_es_metaloide = True\n' +
+    'cloro_es_metaloide = False\n' +
+    'potasio_es_metaloide = False\n' +
+    '\n' +
+    'cantidad_elementos = 6\n' +
+    'cantidad_elementos_no_metaloides = 1\n' +
+    'cantidad_elementos_metaloides = 3\n' +
+    'cantidad_elementos = 3\n' +
+    'cantidad_elementos_no_metaloides = 2\n' +
+    'cantidad_elementos_metaloides = 1\n' +
+    '\n' +
+    'silicio_simbolo = Si\n' +
+    'silicio_numero_atomico = 14\n' +
+    'potasio_simbolo = K\n' +
+    'potasio_numero_atomico = 18\n' +
+    'potasio_numero_atomico = 19\n' +
+    'cloro_simbolo = Cl\n' +
+    'cloro_numero_atomico = 17\n' +
+    '\n' +
+    '# print(f”Cantidad de elementos: {cantidad_elementos}\\nCantidad de metaloides: {cantidad_elementos_metaloides}\\n Cantidad de no metaloides: {cantidad_elementos_no_metaloides}\\nZ(silicio_simbolo) es {silicio_numero_atomico}.\\nZ(cloro_simbolo) es {cloro_numero_atomico}.\\nZ(potasio_simbolo) es {potasio_numero_atomico}.”)\n'
 const user_stories = [
     {
         action: "EDIT",
-        description: "Corregir el código para que la variable quede habilitada y el nombre del autor comentado en la misma línea.",
+        description: "Sobreescribir los valores de las variables según la información del comentario. Completar los valores desconocidos … en la impresión. Definir la impresión para que quede exactamente el mismo formato que el texto comentado.",
         validation: "VALID_VARIABLE_DECLARATION"
     }
 ];
 
-const CoursePython1Sublevel3 = () => {
+const Course3Sublevel18 = () => {
     const [output, setOutput] = useState('');
     const [, setInvalidations] = useState([]);
     const [validations, setValidations] = useState([]);
@@ -28,7 +57,7 @@ const CoursePython1Sublevel3 = () => {
     useEffect(() => {
         if (shouldProceed) {
             setTimeout(()=> {
-                navigate('/course-python/1/4');
+                navigate('/course-python/4/1');
             },2500)
         }
     }, [shouldProceed, setUserProfile, navigate, userProfile]);
@@ -36,7 +65,7 @@ const CoursePython1Sublevel3 = () => {
     const handleCompileAndRun = async (className, classCode) => {
         const idToken = userProfile.id
         try {
-            const response = await axios.post('http://localhost:3001/validate/course-python/1/3', {
+            const response = await axios.post('http://localhost:3001/validate/course-python/3/18', {
                 class_code: classCode
             }, {
                 headers: {
@@ -68,7 +97,7 @@ const CoursePython1Sublevel3 = () => {
     return (
         <div className="course-level-1 flex">
             <div className="moving-course-sky"></div>
-            <Instructions instructions={"0.1 Comentarios de una línea #"}/>
+            <Instructions instructions={"❧ 2.6 Sobreescribir variables de tipo int"}/>
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>
@@ -76,8 +105,31 @@ const CoursePython1Sublevel3 = () => {
                         onSubmit={handleCompileAndRun}
                         className="Egg"
                         correctAnswer={correctAnswer}
-                        previousCode='% quote = "Todo es cuestión de átomos." %
-% Richard Feynman
+                        previousCode='“””
+Cantidad de elementos: …
+Cantidad de metaloides: …
+Cantidad de no metaloides: …
+Z(Si) es 14.
+Z(Cl) es 17.
+Z(K) es 19.
+“””
+
+silicio_es_metaloide = “True”
+cloro_es_metaloide = “False”
+potasio_es_metaloide = “False”
+
+cantidad_elementos = 6
+cantidad_elementos_no_metaloides = 1
+cantidad_elementos_metaloides = 3
+
+silicio_simbolo = Si
+silicio_numero_atomico = 14
+potasio_simbolo = K
+potasio_numero_atomico = 18
+cloro_simbolo = Cl
+cloro_numero_atomico = 17
+
+# print(f”Cantidad de elementos: \nCantidad de metaloides: \n Cantidad de no metaloides: \n”)
 '
                         placeholder="Escriba el codigo aqui"
                     />
@@ -89,4 +141,4 @@ const CoursePython1Sublevel3 = () => {
     );
 };
 
-export default CoursePython1Sublevel3;
+export default Course3Sublevel18;

@@ -8,16 +8,21 @@ import axios from "axios";
 import {useNavigate} from "react-router-dom";
 import UserStoriesSublevel from "../user_stories/UserStoriesSublevel";
 
-const correctAnswer = 'quote = "Todo es cuestión de átomos." # Richard Feynman'
+
+const correctAnswer = 'hierro_masa = float(55.845)  # g/mol\n' +
+    'hierro_volumen = float(7.1)  # L (volumen molar estimado)\n' +
+    'hierro_cantidad_sustancia = int(4)  # mol\n' +
+    '\n' +
+    'print(f”Masa Hierro: {hierro_masa} g/mol\\nVolumen Hierro: {hierro_volumen} L\\nCantidad sustancia Hierro: {hierro_cantidad_sustancia} mol”)\n'
 const user_stories = [
     {
-        action: "EDIT",
-        description: "Corregir el código para que la variable quede habilitada y el nombre del autor comentado en la misma línea.",
+        action: "ADD",
+        description: "Como el registro anterior tenía un exceso de transformación de datos, para este registro se transformaron solo algunos. Transformar los datos que falten. Declarar las variables con las unidades correspondientes. Imprimir todos los datos.",
         validation: "VALID_VARIABLE_DECLARATION"
     }
 ];
 
-const CoursePython1Sublevel3 = () => {
+const Course4Sublevel5 = () => {
     const [output, setOutput] = useState('');
     const [, setInvalidations] = useState([]);
     const [validations, setValidations] = useState([]);
@@ -28,7 +33,7 @@ const CoursePython1Sublevel3 = () => {
     useEffect(() => {
         if (shouldProceed) {
             setTimeout(()=> {
-                navigate('/course-python/1/4');
+                navigate('/course-python/4/6');
             },2500)
         }
     }, [shouldProceed, setUserProfile, navigate, userProfile]);
@@ -36,7 +41,7 @@ const CoursePython1Sublevel3 = () => {
     const handleCompileAndRun = async (className, classCode) => {
         const idToken = userProfile.id
         try {
-            const response = await axios.post('http://localhost:3001/validate/course-python/1/3', {
+            const response = await axios.post('http://localhost:3001/validate/course-python/4/5', {
                 class_code: classCode
             }, {
                 headers: {
@@ -68,7 +73,7 @@ const CoursePython1Sublevel3 = () => {
     return (
         <div className="course-level-1 flex">
             <div className="moving-course-sky"></div>
-            <Instructions instructions={"0.1 Comentarios de una línea #"}/>
+            <Instructions instructions={"❧ 3.2 str a float"}/>
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>
@@ -76,8 +81,11 @@ const CoursePython1Sublevel3 = () => {
                         onSubmit={handleCompileAndRun}
                         className="Egg"
                         correctAnswer={correctAnswer}
-                        previousCode='% quote = "Todo es cuestión de átomos." %
-% Richard Feynman
+                        previousCode='hierro_masa = float(55.845)  # g/mol
+hierro_volumen = 7.1  # L (volumen molar estimado)
+hierro_cantidad_sustancia = 4  # mol
+
+print(f”Masa Hierro: {hierro_masa} g/mol\n”)
 '
                         placeholder="Escriba el codigo aqui"
                     />
@@ -89,4 +97,4 @@ const CoursePython1Sublevel3 = () => {
     );
 };
 
-export default CoursePython1Sublevel3;
+export default Course4Sublevel5;

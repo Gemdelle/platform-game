@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Header from "../../../components/Header/Header";
-import UserStories1Sublevel1 from '../user_stories/Course1/UserStories1Sublevel1';
+import UserStoriesSublevel from '../user_stories/UserStoriesSublevel';
 import Instructions from "../../../components/Instructions/Instructions";
 import {useUser} from "../../../components/utils/UserProvider";
 import axios from "axios";
@@ -82,7 +82,7 @@ const CoursePython1Sublevel1 = () => {
                     />
                 </div>
                 <OutputDisplay output={output} user_stories={user_stories}/>
-                <UserStories1Sublevel1 validations={validations} user_stories={user_stories}/>
+                <UserStoriesSublevel validations={validations} user_stories={user_stories}/>
             </div>
         </div>
     );

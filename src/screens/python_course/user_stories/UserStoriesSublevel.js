@@ -1,18 +1,9 @@
 import React from 'react';
-import '../../../../components/UserStories/UserStories.css';
+import '../../../components/UserStories/UserStories.css';
 
-const user_stories = [
-    {
-        description: "The class name should be Egg",
-        validation: "VALID_CLASS_STRUCTURE"
-    },
-    {
-        description: "Egg should have a String attribute color",
-        validation: "VALID_ATTRIBUTE_COLOR"
-    }
-  ];
 
-const UserStories1Sublevel2 = ({validations}) => {
+
+const UserStoriesSublevel = ({validations, user_stories}) => {
     return (
         <div className='user-stories'>
             <div className='bar'>
@@ -22,7 +13,7 @@ const UserStories1Sublevel2 = ({validations}) => {
             <ul>
                 <div className='stories-container'>
                     {user_stories.map(({description: user_story, validation}) => {
-                        return (<div className='a-user-story'> 
+                        return (<div className='a-user-story'>
                             <div
                                 className={`heart-bullet bg ${validations.includes(validation) ? 'alive' : 'dead'}`}></div>
                             <li>{user_story}</li>
@@ -34,4 +25,4 @@ const UserStories1Sublevel2 = ({validations}) => {
     );
 };
 
-export default UserStories1Sublevel2;
+export default UserStoriesSublevel;

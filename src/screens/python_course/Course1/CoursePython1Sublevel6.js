@@ -2,36 +2,37 @@ import React, {useEffect, useState} from 'react';
 import CodeEditor from '../../../components/CodeEditor/CodeEditor';
 import OutputDisplay from '../../../components/OutputDisplay/OutputDisplay';
 import Header from "../../../components/Header/Header";
-import Preview from '../../../components/Preview/Preview';
 import Instructions from "../../../components/Instructions/Instructions";
 import {useUser} from "../../../components/utils/UserProvider";
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
-import UserStories1Sublevel6 from "../user_stories/Course1/UserStories1Sublevel6";
-const correctAnswer = 'public class Terrestrial {\n' +
-    'private String name;\n' +
-    'private String favoriteFood;\n' +
-    'private int birthDay;\n' +
-    'private int birthMonth;\n' +
-    'private int birthYear;\n' +
-    'private int legs;\n' +
-    'private int eyes;\n' +
-    'private int antennae;\n' +
-    'private double weight;\n' +
-    'private double height;\n' +
-    '}'
+import UserStoriesSublevel from "../user_stories/UserStoriesSublevel";
+
+const correctAnswer = '“””\n' +
+    'Theodore Gray es un químico, escritor y divulgador científico conocido por su pasión por la tabla periódica. Es cofundador de Wolfram Research y autor de libros como The Elements, donde presenta la química de forma visual e interactiva.\n' +
+    '“””\n' +
+    '\n' +
+    'quote = "Los elementos son los átomos de la tabla periódica, pero la química es la sinfonía de sus combinaciones." # Theodore Gray\n'
+const user_stories = [
+    {
+        action: "EDIT",
+        description: "Comentar la información del autor en formato multilínea y el nombre del autor después de la frase en la misma línea.",
+        validation: "VALID_VARIABLE_DECLARATION"
+    }
+];
+
 const CoursePython1Sublevel6 = () => {
     const [output, setOutput] = useState('');
-    const navigate = useNavigate();
     const [, setInvalidations] = useState([]);
     const [validations, setValidations] = useState([]);
     const [shouldProceed, setShouldProceed] = useState(false);
+    const navigate = useNavigate();
     const {userProfile, setUserProfile} = useUser();
 
     useEffect(() => {
         if (shouldProceed) {
             setTimeout(()=> {
-                navigate('/');
+                navigate('/course-python/1/7');
             },2500)
         }
     }, [shouldProceed, setUserProfile, navigate, userProfile]);
@@ -41,17 +42,15 @@ const CoursePython1Sublevel6 = () => {
         try {
             const response = await axios.post('http://localhost:3001/validate/course-python/1/6', {
                 class_code: classCode
-            },{
+            }, {
                 headers: {
                     'Authorization': `Bearer ${idToken}`
                 }
             });
+
             if (response.data.error) {
                 if (response.data.invalidations){
                     setInvalidations(response.data.invalidations)
-                }
-                if (response.data.validations) {
-                    setValidations(response.data.validations);
                 }
                 throw Error(response.data.error)
             }
@@ -60,7 +59,7 @@ const CoursePython1Sublevel6 = () => {
                 setValidations(response.data.validations);
             }
 
-            if (response.data.validations.length === 11) {
+            if (response.data.validations.length === 1) {
                 setShouldProceed(true);
             }
             setUserProfile(response.data.userProfile);
@@ -73,15 +72,23 @@ const CoursePython1Sublevel6 = () => {
     return (
         <div className="course-level-1 flex">
             <div className="moving-course-sky"></div>
-            <Instructions instructions={"6. Definir  la clase 'Terrestrial'. Debe tener el atributo nombre, favoriteFood, birthDay, birthMonth, birthYear, legs, eyes, antennae, weight y height."}/>
+            <Instructions instructions={"❧ 0.2 Comentarios multilínea “”” “””"}/>
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>
-                    <CodeEditor onSubmit={handleCompileAndRun} className="Caterpillar" correctAnswer={correctAnswer}/>
-                    <OutputDisplay output={output}/>
+                    <CodeEditor
+                        onSubmit={handleCompileAndRun}
+                        className="Egg"
+                        correctAnswer={correctAnswer}
+                        previousCode='Theodore Gray es un químico, escritor y divulgador científico conocido por su pasión por la tabla periódica. Es cofundador de Wolfram Research y autor de libros como The Elements, donde presenta la química de forma visual e interactiva.
+
+quote = "Los elementos son los átomos de la tabla periódica, pero la química es la sinfonía de sus combinaciones." - Theodore Gray
+'
+                        placeholder="Escriba el codigo aqui"
+                    />
                 </div>
-                <Preview className="hatched" previewImageUrl={`url("/assets/pets/caterpillar/caterpillar-1.png")`}/>
-                <UserStories1Sublevel6 validations={validations}/>
+                <OutputDisplay output={output} user_stories={user_stories}/>
+                <UserStoriesSublevel validations={validations} user_stories={user_stories}/>
             </div>
         </div>
     );
