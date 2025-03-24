@@ -73,6 +73,8 @@ import Course4Sublevel9 from "./screens/python_course/Course4/Course4Sublevel9";
 import Course4Sublevel10 from "./screens/python_course/Course4/Course4Sublevel10";
 import Course4Sublevel11 from "./screens/python_course/Course4/Course4Sublevel11";
 import Course4Sublevel12 from "./screens/python_course/Course4/Course4Sublevel12";
+import Course8Sublevel1 from "./screens/python_course/Course8/Course8Sublevel1";
+import Teoric3Sublevel from "./screens/python_course/Course3/TeoricSublevel/Teoric3Sublevel";
 
 const App = () => {
     return (
@@ -126,6 +128,7 @@ const App = () => {
                     <Route path="/course-python/2/17" element={<Course2Sublevel17/>}/>
                     <Route path="/course-python/2/18" element={<Course2Sublevel18/>}/>
 
+                    <Route path="/course-python/3/theoretical" element={<Teoric3Sublevel/>}/>
                     <Route path="/course-python/3/1" element={<Course3Sublevel1/>}/>
                     <Route path="/course-python/3/2" element={<Course3Sublevel2/>}/>
                     <Route path="/course-python/3/3" element={<Course3Sublevel3/>}/>
@@ -157,6 +160,8 @@ const App = () => {
                     <Route path="/course-python/4/10" element={<Course4Sublevel10/>}/>
                     <Route path="/course-python/4/11" element={<Course4Sublevel11/>}/>
                     <Route path="/course-python/4/12" element={<Course4Sublevel12/>}/>
+
+                    <Route path="/course-python/8/1" element={<Course8Sublevel1/>}/>
                 </Routes>
             </div>
         </Router>
