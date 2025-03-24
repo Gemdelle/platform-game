@@ -330,7 +330,7 @@ html {
     width: 20%;
     height: 55%;
     /* background-color: goldenrod; */
-    right: 7%;
+    right: 0%;
     bottom: 5%;
 }
 
@@ -342,7 +342,7 @@ html {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    margin-left: 10%;
+    margin-left: 15%;
     margin-top: 15%;
     transform-origin: center bottom;
     animation: breathe 4s ease-in-out infinite;
@@ -381,7 +381,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgb(240, 250, 215);
+    color: rgb(27, 27, 33);
     font-size: 1.5vw;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7), -1px -1px 2px rgba(0, 0, 0, 0.7), 0 0 10px rgba(0, 0, 0, 0.5);
 }
