@@ -113,7 +113,7 @@ const Header = ({ children }) => {
                         </div>
 
                     )}
-                    <ActivityButton/>
+                    {/*<ActivityButton/>*/}
                 </div>
             </div>
             <div className='currency'></div>
