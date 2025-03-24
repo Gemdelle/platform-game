@@ -13,18 +13,10 @@ const QUESTIONS_DATA = [
         questionText: 'Una clase puede definirse como...',
         answerOptions: [
             {answerText: 'Un contenedor de datos.', isCorrect: false, isSelected: false},
-            {
-                answerText: 'Una colección de variables y funciones que trabajan juntas bajo un nombre común.',
-                isCorrect: false, isSelected: false
-            },
-            {
-                answerText: 'Una plantilla que define las características y el comportamiento de las instancias.',
-                isCorrect: true, isSelected: false
-            },
-            {
-                answerText: 'Una función que devuelve una instancia de un objeto con propiedades específicas. ',
-                isCorrect: false, isSelected: false
-            },
+            {answerText: 'Una colección de variables y funciones que trabajan juntas bajo un nombre común.',
+            isCorrect: false, isSelected: false},
+            {answerText: 'Una plantilla que define las características y el comportamiento de las instancias.',isCorrect: true, isSelected: false},
+            {answerText: 'Una función que devuelve una instancia de un objeto con propiedades específicas. ',isCorrect: false, isSelected: false},
         ],
     },
     {
