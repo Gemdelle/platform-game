@@ -159,6 +159,7 @@ pre {
     overflow: scroll;
     scrollbar-color: transparent;
     scrollbar-width: none;
+    color: white;
 }
 
 /* END OUTPUT */
