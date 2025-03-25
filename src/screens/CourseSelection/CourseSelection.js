@@ -35,13 +35,13 @@ const CourseSelection = () => {
             <h1>Select Your Course</h1>
             <div className="avatar-list">
                 <div
-                    className={`avatar-item clickable`}
+                    className={`avatar-item clickable pet-bg`}
                     onClick={(e) => handleAvatarSelect(e, "python")}
-                >Python</div>
+                ><div className="python-pet"></div><span>Python</span></div>
                 <div
-                    className={`avatar-item clickable`}
+                    className={`avatar-item clickable pet-bg`}
                     onClick={(e) => handleAvatarSelect(e, "java")}
-                >Java</div>
+                ><div className="java-pet"></div><span>Java</span></div>
             </div>
         </div>
     );

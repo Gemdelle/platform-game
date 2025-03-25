@@ -9,10 +9,10 @@
   display: flex;
   justify-content: center;
   margin: 0;
-  font-size: 3.5vw;
+  font-size: 2.5vw;
   background-image: url(/public/assets/ornament.png);
   background-position: center;
-  background-size: 80% 90%;
+  background-size: 70% 70%;
   background-repeat: no-repeat;
   color:rgb(243, 242, 233);
   font-weight: lighter;
@@ -162,4 +162,41 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.python-pet,
+.java-pet {
+  width: 65%;
+  height: 70%;
+  /* background-color: red; */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.python-pet {
+  background-image: url(/public/assets/theory-progress/python-pet.png);
+}
+
+.java-pet {
+  background-image: url(/public/assets/theory-progress/java-pet.png);
+}
+
+.pet-bg {
+  height: 35vw;
+  width: 30vw;
+  background-size: contain;
+}
+
+.avatar-list {
+  width: 65vw;
+  /* background-color: red; */
+}
+
+.avatar-list span {
+  /* background-color: white; */
+  margin: 0 auto;
+  position: absolute;
+  top: 8%;
+  font-size: 1.5vw;
+  color: rgb(59, 69, 48);
 }

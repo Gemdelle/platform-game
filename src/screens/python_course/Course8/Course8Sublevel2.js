@@ -106,7 +106,7 @@ output.getvalue()
                 <div className='code-container flex-c'>
                     <CodeEditor
                         onSubmit={handleCompileAndRun}
-                        className="❧ 7.1 if - No igual que (!=)"
+                        title="7.1 if - No igual que (!=)"
                         correctAnswer={correctAnswer}
                         previousCode='"""
 Átomos (H₂O) = 3

@@ -107,7 +107,7 @@ output.getvalue()
                 <div className='code-container flex-c'>
                     <CodeEditor
                         onSubmit={handleCompileAndRun}
-                        className="❧ 7.3 if/else - Mayor que (>)"
+                        title="7.3 if/else - Mayor que (>)"
                         correctAnswer={correctAnswer}
                         previousCode='"""
 Temperatura actual: 5°C
