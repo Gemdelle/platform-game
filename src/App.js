@@ -89,6 +89,9 @@ import Course8Sublevel12 from "./screens/python_course/Course8/Course8Sublevel12
 import CoursePython2Sublevel1 from "./screens/python_course/Course2/CoursePython2Sublevel1";
 import CoursePython3Sublevel1 from "./screens/python_course/Course3/CoursePython3Sublevel1";
 import CoursePython3Sublevel2 from "./screens/python_course/Course3/CoursePython3Sublevel2";
+import Course6Sublevel13 from "./screens/python_course/Course6/Course6Sublevel13";
+import Course6Sublevel14 from "./screens/python_course/Course6/Course6Sublevel14";
+import Course6Sublevel15 from "./screens/python_course/Course6/Course6Sublevel15";
 
 const App = () => {
     return (
@@ -174,6 +177,10 @@ const App = () => {
                     <Route path="/course-python/4/10" element={<Course4Sublevel10/>}/>
                     <Route path="/course-python/4/11" element={<Course4Sublevel11/>}/>
                     <Route path="/course-python/4/12" element={<Course4Sublevel12/>}/>
+
+                    <Route path="/course-python/6/13" element={<Course6Sublevel13/>}/>
+                    <Route path="/course-python/6/14" element={<Course6Sublevel14/>}/>
+                    <Route path="/course-python/6/15" element={<Course6Sublevel15/>}/>
 
                     <Route path="/course-python/8/1" element={<Course8Sublevel1/>}/>
                     <Route path="/course-python/8/2" element={<Course8Sublevel2/>}/>
