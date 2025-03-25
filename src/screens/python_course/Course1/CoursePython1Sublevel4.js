@@ -70,13 +70,13 @@ const CoursePython1Sublevel4 = () => {
     return (
         <div className="course-level-1 flex">
             <div className="moving-course-sky"></div>
-            <Instructions instructions={"❧ 0.2 Comentarios multilínea “”” “””"}/>
+            <Instructions instructions={"Deshabilitar la variable."}/>
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>
                     <CodeEditor
                         onSubmit={handleCompileAndRun}
-                        className="Egg"
+                        title="0.2 Comentarios multilínea “”” “””"
                         correctAnswer={correctAnswer}
                         previousCode='quote = "Si la química no existiera, la vida no sería posible."'
                         placeholder="Escriba el codigo aqui"

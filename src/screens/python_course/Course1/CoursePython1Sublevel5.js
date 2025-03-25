@@ -77,13 +77,13 @@ const CoursePython1Sublevel5 = () => {
     return (
         <div className="course-level-1 flex">
             <div className="moving-course-sky"></div>
-            <Instructions instructions={"❧ 0.2 Comentarios multilínea “”” “””"}/>
+            <Instructions instructions={"Comentar las quotes que no corresponden al autor del comentario."}/>
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>
                     <CodeEditor
                         onSubmit={handleCompileAndRun}
-                        className="Egg"
+                        title="0.2 Comentarios multilínea “”” “””"
                         correctAnswer={correctAnswer}
                         previousCode='“””
 Glenn T. Seaborg (1912-1999) fue un químico estadounidense que descubrió varios elementos transuránicos, incluido el plutonio El elemento seaborgio (Sg) fue nombrado en su honor.

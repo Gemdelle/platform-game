@@ -68,13 +68,13 @@ const CoursePython1Sublevel3 = () => {
     return (
         <div className="course-level-1 flex">
             <div className="moving-course-sky"></div>
-            <Instructions instructions={"0.1 Comentarios de una línea #"}/>
+            <Instructions instructions={"Corregir el código para que la variable quede habilitada y el nombre del autor comentado en la misma línea."}/>
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>
                     <CodeEditor
                         onSubmit={handleCompileAndRun}
-                        className="Egg"
+                        title="0.1 Comentarios de una línea #"
                         correctAnswer={correctAnswer}
                         previousCode='% quote = "Todo es cuestión de átomos." %
 % Richard Feynman

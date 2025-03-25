@@ -72,13 +72,13 @@ const CoursePython1Sublevel6 = () => {
     return (
         <div className="course-level-1 flex">
             <div className="moving-course-sky"></div>
-            <Instructions instructions={"❧ 0.2 Comentarios multilínea “”” “””"}/>
+            <Instructions instructions={"Comentar la información del autor en formato multilínea y el nombre del autor después de la frase en la misma línea."}/>
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>
                     <CodeEditor
                         onSubmit={handleCompileAndRun}
-                        className="Egg"
+                        title="0.2 Comentarios multilínea “”” “””"
                         correctAnswer={correctAnswer}
                         previousCode='Theodore Gray es un químico, escritor y divulgador científico conocido por su pasión por la tabla periódica. Es cofundador de Wolfram Research y autor de libros como The Elements, donde presenta la química de forma visual e interactiva.
 
