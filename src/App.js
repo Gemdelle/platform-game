@@ -76,6 +76,10 @@ import Course4Sublevel12 from "./screens/python_course/Course4/Course4Sublevel12
 import Course8Sublevel1 from "./screens/python_course/Course8/Course8Sublevel1";
 import Teoric3Sublevel from "./screens/python_course/Course3/TeoricSublevel/Teoric3Sublevel";
 import Course8Sublevel2 from "./screens/python_course/Course8/Course8Sublevel2";
+import Course8Sublevel3 from "./screens/python_course/Course8/Course8Sublevel3";
+import Course8Sublevel4 from "./screens/python_course/Course8/Course8Sublevel4";
+import Course8Sublevel5 from "./screens/python_course/Course8/Course8Sublevel5";
+import Course8Sublevel6 from "./screens/python_course/Course8/Course8Sublevel6";
 
 const App = () => {
     return (
@@ -164,6 +168,10 @@ const App = () => {
 
                     <Route path="/course-python/8/1" element={<Course8Sublevel1/>}/>
                     <Route path="/course-python/8/2" element={<Course8Sublevel2/>}/>
+                    <Route path="/course-python/8/3" element={<Course8Sublevel3/>}/>
+                    <Route path="/course-python/8/4" element={<Course8Sublevel4/>}/>
+                    <Route path="/course-python/8/5" element={<Course8Sublevel5/>}/>
+                    <Route path="/course-python/8/6" element={<Course8Sublevel6/>}/>
                 </Routes>
             </div>
         </Router>

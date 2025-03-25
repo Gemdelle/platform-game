@@ -9,14 +9,19 @@ import UserStoriesSublevel from "../user_stories/UserStoriesSublevel";
 import axios from "axios";
 
 const correctAnswer = '"""\n' +
-    'Átomos (H₂O) = 3\n' +
-    'El agua está formada por {atomos} átomos.\n' +
+    'Temperatura  actual: 26°C\n' +
     '"""\n' +
     '\n' +
-    'atomos = 3\n' +
+    'temperatura_actual = 26\n' +
+    'temperatura_fusion = 0\n' +
     '\n' +
-    'if atomos != 1:\n' +
-    '   print(f"El agua está formada por {atomos} átomos.")\n'
+    'if temperatura_actual < temperatura_fusion:\n' +
+    '    mensaje = "La temperatura está por debajo de 0°C. Está congelando."\n' +
+    'else:\n' +
+    '    mensaje = "La temperatura está por encima de 0°C. No está congelando."\n' +
+    '\n' +
+    'print(f"La temperatura ingresada es {temperatura_actual}°C.\\n{mensaje}")\n'
+
 const user_stories = [
     {
         action: "DELETE",
@@ -25,7 +30,7 @@ const user_stories = [
     }
 ];
 
-const Course8Sublevel3 = () => {
+const Course8Sublevel5 = () => {
     const [output, setOutput] = useState('');
     const [validations, setValidations] = useState([]);
     const [shouldProceed, setShouldProceed] = useState(false);
@@ -45,7 +50,7 @@ const Course8Sublevel3 = () => {
     useEffect(() => {
         if (shouldProceed) {
             setTimeout(() => {
-                navigate('/course-python/8/4');
+                navigate('/course-python/8/6');
             }, 2500);
         }
     }, [shouldProceed]);
@@ -69,10 +74,9 @@ output.getvalue()
             result = result.trim();
 
             setOutput(result);
-
-            if (result === "El agua está formada por 3 átomos.") {
+            if (result === "La temperatura ingresada es 26°C.\nLa temperatura está por encima de 0°C. No está congelando.") {
                 const idToken = userProfile.id
-                const response = await axios.post('http://localhost:3001/validate/course-python/8/3', {
+                const response = await axios.post('http://localhost:3001/validate/course-python/8/5', {
                     class_code: classCode
                 }, {
                     headers: {
@@ -100,20 +104,26 @@ output.getvalue()
     return (
         <div className="course-level-1 flex">
             <div className="moving-course-sky"></div>
-            <Instructions instructions={"Definir si una molécula de agua (H₂O) está formado por un único átomo. Declarar las variables necesarias.  Definir la impresión para que quede exactamente el mismo formato que el texto comentado."}/>
+            <Instructions instructions={"Sabiendo que el punto de fusión del agua es 0°C, determinar el estado del agua. Declarar las variables necesarias."}/>
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>
                     <CodeEditor
                         onSubmit={handleCompileAndRun}
-                        className="❧ 7.1 if - No igual que (!=)"
+                        className="❧ 7.2 if/else - Menor que (<)"
                         correctAnswer={correctAnswer}
                         previousCode='"""
-Átomos (H₂O) = 3
-El agua está formada por {atomos} átomos.
+Temperatura  actual: 26°C
 """
 
-if atomos 1:
+temperatura_actual =
+temperatura_fusion =
+
+if :
+    mensaje = "La temperatura está por debajo de 0°C. Está congelando."
+    mensaje = "La temperatura está por encima de 0°C. No está congelando."
+
+f"La temperatura ingresada es {temperatura}°C.\n{mensaje}"
 '
                         placeholder="Escriba el codigo aqui"
                     />
@@ -125,4 +135,4 @@ if atomos 1:
     );
 };
 
-export default Course8Sublevel3;
+export default Course8Sublevel5;

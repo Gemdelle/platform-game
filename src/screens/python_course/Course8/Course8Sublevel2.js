@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import CodeEditor from '../../../components/CodeEditor/CodeEditor';
-import OutputDisplay from '../../../components/OutputDisplay/OutputDisplay';
+import OutputDisplay from "../OutputDisplay/OutputDisplay";
 import Header from "../../../components/Header/Header";
 import Instructions from "../../../components/Instructions/Instructions";
 import {useUser} from "../../../components/utils/UserProvider";
@@ -25,7 +25,7 @@ const user_stories = [
     }
 ];
 
-const Course8Sublevel1 = () => {
+const Course8Sublevel2 = () => {
     const [output, setOutput] = useState('');
     const [validations, setValidations] = useState([]);
     const [shouldProceed, setShouldProceed] = useState(false);
@@ -125,4 +125,4 @@ if atomos 1:
     );
 };
 
-export default Course8Sublevel1;
+export default Course8Sublevel2;

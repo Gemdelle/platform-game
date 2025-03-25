@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import CodeEditor from '../../../components/CodeEditor/CodeEditor';
-import OutputDisplay from '../../../components/OutputDisplay/OutputDisplay';
+import OutputDisplay from "../OutputDisplay/OutputDisplay";
 import Header from "../../../components/Header/Header";
 import Instructions from "../../../components/Instructions/Instructions";
 import {useUser} from "../../../components/utils/UserProvider";
@@ -28,7 +28,7 @@ const user_stories = [
     }
 ];
 
-const Course8Sublevel1 = () => {
+const Course8Sublevel4 = () => {
     const [output, setOutput] = useState('');
     const [validations, setValidations] = useState([]);
     const [shouldProceed, setShouldProceed] = useState(false);
@@ -72,7 +72,7 @@ output.getvalue()
             result = result.trim();
 
             setOutput(result);
-            if (result === "La temperatura ingresada es {temperatura_actual}°C.\n{mensaje}") {
+            if (result === "La temperatura ingresada es -2.3°C.\nLa temperatura está por debajo de 0°C. Está congelando.") {
                 const idToken = userProfile.id
                 const response = await axios.post('http://localhost:3001/validate/course-python/8/4', {
                     class_code: classCode
@@ -133,4 +133,4 @@ else:
     );
 };
 
-export default Course8Sublevel1;
+export default Course8Sublevel4;

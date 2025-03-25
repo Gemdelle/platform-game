@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import CodeEditor from '../../../components/CodeEditor/CodeEditor';
-import OutputDisplay from '../../../components/OutputDisplay/OutputDisplay';
+import OutputDisplay from "../OutputDisplay/OutputDisplay";
 import Header from "../../../components/Header/Header";
 import Instructions from "../../../components/Instructions/Instructions";
 import {useUser} from "../../../components/utils/UserProvider";
