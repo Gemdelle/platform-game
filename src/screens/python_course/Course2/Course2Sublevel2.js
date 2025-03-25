@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import CodeEditor from '../../../components/CodeEditor/CodeEditor';
+import CodeEditor from "../CodeEditor/CodeEditor";
 import OutputDisplay from "../OutputDisplay/OutputDisplay";
 import Header from "../../../components/Header/Header";
 import Instructions from "../../../components/Instructions/Instructions";

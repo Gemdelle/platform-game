@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import CodeEditor from '../../../components/CodeEditor/CodeEditor';
+import CodeEditor from "../CodeEditor/CodeEditor";
 import OutputDisplay from "../OutputDisplay/OutputDisplay";
 import Header from "../../../components/Header/Header";
 import Instructions from "../../../components/Instructions/Instructions";
@@ -17,9 +17,9 @@ const correctAnswer = '"""\n' +
     'temperatura_fusion = 373\n' +
     '\n' +
     'if  temperatura_actual < temperatura_fusion:  \n' +
-    '   print(“El agua no se está evaporando.”)\n' +
+    '   print("El agua no se está evaporando.")\n' +
     'else:\n' +
-    '   print(“El agua se está evaporando.”)\n'
+    '   print("El agua se está evaporando.")\n'
 
 const user_stories = [
     {
@@ -73,8 +73,7 @@ output.getvalue()
             result = result.trim();
 
             setOutput(result);
-            debugger
-            if (result === "La temperatura ingresada es 26°C.\nLa temperatura está por encima de 0°C. No está congelando.") {
+            if (result === "El agua no se está evaporando.") {
                 const idToken = userProfile.id
                 const response = await axios.post('http://localhost:3001/validate/course-python/8/6', {
                     class_code: classCode
