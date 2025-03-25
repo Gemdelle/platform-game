@@ -8,15 +8,10 @@ import {useNavigate} from "react-router-dom";
 import UserStoriesSublevel from "../user_stories/UserStoriesSublevel";
 import axios from "axios";
 
-const correctAnswer = '"""\n' +
-    'Átomos (H₂O) = 3\n' +
-    'El agua está formada por {atomos} átomos.\n' +
-    '"""\n' +
+const correctAnswer = 'atomos_carbono = 1\n' +
+    'atomos_fluor = 1 * 4\n' +
     '\n' +
-    'atomos = 3\n' +
-    '\n' +
-    'if atomos != 1:\n' +
-    '   print(f"El agua está formada por {atomos} átomos.")\n'
+    'print(f"El Tetrafluoruro de carbono tiene {atomos_carbono} átomos de Carbono y {atomos_fluor} átomos de Flúor.")\n'
 const user_stories = [
     {
         action: "DELETE",
@@ -25,7 +20,7 @@ const user_stories = [
     }
 ];
 
-const Course8Sublevel2 = () => {
+const Course6Sublevel13 = () => {
     const [output, setOutput] = useState('');
     const [validations, setValidations] = useState([]);
     const [shouldProceed, setShouldProceed] = useState(false);
@@ -45,7 +40,7 @@ const Course8Sublevel2 = () => {
     useEffect(() => {
         if (shouldProceed) {
             setTimeout(() => {
-                navigate('/course-python/8/3');
+                navigate('/course-python/6/14');
             }, 2500);
         }
     }, [navigate, shouldProceed]);
@@ -69,10 +64,9 @@ output.getvalue()
             result = result.trim();
 
             setOutput(result);
-
-            if (result === "El agua está formada por 3 átomos.") {
+            if (result === "El Tetrafluoruro de carbono tiene 1 átomos de Carbono y 4 átomos de Flúor.") {
                 const idToken = userProfile.id
-                const response = await axios.post('http://localhost:3001/validate/course-python/8/2', {
+                const response = await axios.post('http://localhost:3001/validate/course-python/6/13', {
                     class_code: classCode
                 }, {
                     headers: {
@@ -100,20 +94,18 @@ output.getvalue()
     return (
         <div className="course-level-1 flex">
             <div className="moving-course-sky"></div>
-            <Instructions instructions={"Definir el tipo del agua; se sabe que no es un metal. Declarar las variables necesarias."}/>
+            <Instructions instructions={"Sabiendo que los átomos de Flúor son el cuádruple que los átomos de carbono, calcular la cantidad de átomos de Flúor en el Tetrafluoruro de carbono. Verificar que la operación sea correcta."}/>
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>
                     <CodeEditor
                         onSubmit={handleCompileAndRun}
-                        title="7.1 if - No igual que (!=)"
+                        className="❧ 5.5 Multiplicación con variables (*)"
                         correctAnswer={correctAnswer}
-                        previousCode='"""
-Átomos (H₂O) = 3
-El agua está formada por {atomos} átomos.
-"""
+                        previousCode='atomos_carbono = str(1)
+atomos_fluor = 1 * 4 + 2
 
-if atomos 1:
+# print(f"El Tetrafluoruro de carbono tiene {atomos_carbono} átomos de Carbono y {atomos_fluor} átomos de Flúor.")
 '
                         placeholder="Escriba el codigo aqui"
                     />
@@ -125,4 +117,4 @@ if atomos 1:
     );
 };
 
-export default Course8Sublevel2;
+export default Course6Sublevel13;

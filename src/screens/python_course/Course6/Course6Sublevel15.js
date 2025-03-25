@@ -9,23 +9,26 @@ import UserStoriesSublevel from "../user_stories/UserStoriesSublevel";
 import axios from "axios";
 
 const correctAnswer = '"""\n' +
-    'Átomos (H₂O) = 3\n' +
-    'El agua está formada por {atomos} átomos.\n' +
+    'La Trimetilamina tiene un total de <total_atomos> átomos.\n' +
     '"""\n' +
     '\n' +
-    'atomos = 3\n' +
+    'atomos_nitrogeno = 1\n' +
+    'atomos_carbono =  atomos_nitrogeno * 3\n' +
+    'átomos_hidrógeno = atomos_carbono * 3\n' +
     '\n' +
-    'if atomos != 1:\n' +
-    '   print(f"El agua está formada por {atomos} átomos.")\n'
+    'total_atomos = atomos_nitrogeno  + atomos_carbono + átomos_hidrógeno\n' +
+    '\n' +
+    'print(f"La Trimetilamina tiene un total de {total_atomos} átomos.")\n'
+
 const user_stories = [
     {
-        action: "DELETE",
+        action: "EDIT",
         description: "Definir el estado en el que se encuentra el agua. Corregir las variables en caso de ser necesario.",
         validation: "VALID_VARIABLE_DECLARATION"
     }
 ];
 
-const Course8Sublevel2 = () => {
+const Course6Sublevel15 = () => {
     const [output, setOutput] = useState('');
     const [validations, setValidations] = useState([]);
     const [shouldProceed, setShouldProceed] = useState(false);
@@ -45,7 +48,7 @@ const Course8Sublevel2 = () => {
     useEffect(() => {
         if (shouldProceed) {
             setTimeout(() => {
-                navigate('/course-python/8/3');
+                navigate('/');
             }, 2500);
         }
     }, [navigate, shouldProceed]);
@@ -69,10 +72,9 @@ output.getvalue()
             result = result.trim();
 
             setOutput(result);
-
-            if (result === "El agua está formada por 3 átomos.") {
+            if (result === "La Trimetilamina tiene un total de 13 átomos.") {
                 const idToken = userProfile.id
-                const response = await axios.post('http://localhost:3001/validate/course-python/8/2', {
+                const response = await axios.post('http://localhost:3001/validate/course-python/6/15', {
                     class_code: classCode
                 }, {
                     headers: {
@@ -100,20 +102,21 @@ output.getvalue()
     return (
         <div className="course-level-1 flex">
             <div className="moving-course-sky"></div>
-            <Instructions instructions={"Definir el tipo del agua; se sabe que no es un metal. Declarar las variables necesarias."}/>
+            <Instructions instructions={"Sabiendo la siguiente información de la Trimetilamina, calcular la cantidad de átomos de cada elemento y la cantidad total: la cantidad de átomos de Carbono corresponde al triple de átomos de Nitrógeno, y la cantidad de átomos de Hidrógeno corresponde al triple de átomos de Carbono."}/>
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>
                     <CodeEditor
                         onSubmit={handleCompileAndRun}
-                        title="7.1 if - No igual que (!=)"
+                        className="❧ 5.5 Multiplicación con variables (*)"
                         correctAnswer={correctAnswer}
                         previousCode='"""
-Átomos (H₂O) = 3
-El agua está formada por {atomos} átomos.
+La Trimetilamina tiene un total de <total_atomos> átomos.
 """
 
-if atomos 1:
+atomos_nitrogeno = 1
+atomos_carbono =
+atomos_hidrogeno =
 '
                         placeholder="Escriba el codigo aqui"
                     />
@@ -125,4 +128,4 @@ if atomos 1:
     );
 };
 
-export default Course8Sublevel2;
+export default Course6Sublevel15;

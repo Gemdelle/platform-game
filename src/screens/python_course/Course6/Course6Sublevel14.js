@@ -8,24 +8,19 @@ import {useNavigate} from "react-router-dom";
 import UserStoriesSublevel from "../user_stories/UserStoriesSublevel";
 import axios from "axios";
 
-const correctAnswer = '"""\n' +
-    'Átomos (H₂O) = 3\n' +
-    'El agua está formada por {atomos} átomos.\n' +
-    '"""\n' +
+const correctAnswer = 'atomos_carbono = 6\n' +
+    'atomos_totales = 6 * 3\n' +
     '\n' +
-    'atomos = 3\n' +
-    '\n' +
-    'if atomos != 1:\n' +
-    '   print(f"El agua está formada por {atomos} átomos.")\n'
+    'print(f"El Hexaclorociclohexano tiene un total de {atomos_totales} átomos.")\n'
 const user_stories = [
     {
-        action: "DELETE",
+        action: "ADD",
         description: "Definir el estado en el que se encuentra el agua. Corregir las variables en caso de ser necesario.",
         validation: "VALID_VARIABLE_DECLARATION"
     }
 ];
 
-const Course8Sublevel2 = () => {
+const Course6Sublevel14 = () => {
     const [output, setOutput] = useState('');
     const [validations, setValidations] = useState([]);
     const [shouldProceed, setShouldProceed] = useState(false);
@@ -45,7 +40,7 @@ const Course8Sublevel2 = () => {
     useEffect(() => {
         if (shouldProceed) {
             setTimeout(() => {
-                navigate('/course-python/8/3');
+                navigate('/course-python/6/15');
             }, 2500);
         }
     }, [navigate, shouldProceed]);
@@ -70,9 +65,9 @@ output.getvalue()
 
             setOutput(result);
 
-            if (result === "El agua está formada por 3 átomos.") {
+            if (result === "El Hexaclorociclohexano tiene un total de 18 átomos.") {
                 const idToken = userProfile.id
-                const response = await axios.post('http://localhost:3001/validate/course-python/8/2', {
+                const response = await axios.post('http://localhost:3001/validate/course-python/6/14', {
                     class_code: classCode
                 }, {
                     headers: {
@@ -100,20 +95,17 @@ output.getvalue()
     return (
         <div className="course-level-1 flex">
             <div className="moving-course-sky"></div>
-            <Instructions instructions={"Definir el tipo del agua; se sabe que no es un metal. Declarar las variables necesarias."}/>
+            <Instructions instructions={"Sabiendo que los átomos de Carbono corresponden a ⅓ de la cantidad total de átomos en el Hexaclorociclohexano, calcular la cantidad de átomos totales. Definir las variables necesarias."}/>
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>
                     <CodeEditor
                         onSubmit={handleCompileAndRun}
-                        title="7.1 if - No igual que (!=)"
+                        className="❧ 5.5 Multiplicación con variables (*)"
                         correctAnswer={correctAnswer}
-                        previousCode='"""
-Átomos (H₂O) = 3
-El agua está formada por {atomos} átomos.
-"""
+                        previousCode='atomos_carbono = 6
 
-if atomos 1:
+print(f"El Hexaclorociclohexano tiene un total de {atomos_totales} átomos.")
 '
                         placeholder="Escriba el codigo aqui"
                     />
@@ -125,4 +117,4 @@ if atomos 1:
     );
 };
 
-export default Course8Sublevel2;
+export default Course6Sublevel14;

@@ -15,10 +15,10 @@ const temas_3_5 = {
                 <div>modificadorAcceso class nombreClase '{' contenido '}'</div>,
                 <div>En el espacio donde va el contenido más adelante se van a definir los componentes que suelen tener la mayoría de las clases:</div>,
                 <div>
-                    // 01. ATRIBUTOS <br></br>
-                    // 02. CONSTRUCTOR <br></br>
-                    // 03. SETTERS & GETTERS <br></br>
-                    // 04. MÉTODOS
+                    \// 01. ATRIBUTOS <br></br>
+                    \// 02. CONSTRUCTOR <br></br>
+                    \// 03. SETTERS & GETTERS <br></br>
+                    \// 04. MÉTODOS
                 </div>
             ],
             previews: [

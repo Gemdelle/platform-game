@@ -57,7 +57,7 @@ const Course8Sublevel10 = () => {
                 navigate('/course-python/8/11');
             }, 2500);
         }
-    }, [shouldProceed]);
+    }, [navigate, shouldProceed]);
 
     const handleCompileAndRun = async (className, classCode) => {
 

@@ -4,13 +4,11 @@ import './Header.css';
 import FAQ from "../../components/FAQ/FAQ";
 import Support from '../Support/Support';
 import Calendar from '../Calendar/Calendar';
-import Library from '../Library/Library';
 import Friends from '../Friends/Friends';
 import EvolutionMap from '../EvolutionMap/EvolutionMap';
 import { auth } from "../../firebase";
 import { useUser } from "../utils/UserProvider";
 import { useNavigate } from "react-router-dom";
-import ActivityButton from "../ActivityButton/ActivityButton";
 
 const Header = ({ children }) => {
     const [showOptions, setShowOptions] = useState(false);

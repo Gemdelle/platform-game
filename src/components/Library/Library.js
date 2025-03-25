@@ -31,6 +31,7 @@ const Library = () => {
         setUserLevels(updatedLevels);
     };
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const getTotalSlides = (levelIndex) => {
         if (levelIndex === null) return 0;
         return userLevels[levelIndex].subLevels ? userLevels[levelIndex].subLevels.reduce((subTotal, subLevel) => {
@@ -38,6 +39,7 @@ const Library = () => {
         }, 0) : 0;
     };
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const getCompletedSlides = (levelIndex) => {
         if (levelIndex === null) return 0;
         return userLevels[levelIndex].subLevels ? userLevels[levelIndex].subLevels.reduce((subTotal, subLevel) => {
@@ -45,8 +47,8 @@ const Library = () => {
         }, 0) : 0;
     };
 
-    const totalSlides = useMemo(() => getTotalSlides(selectedCourseIndex), [selectedCourseIndex, userLevels]);
-    const completedSlides = useMemo(() => getCompletedSlides(selectedCourseIndex), [selectedCourseIndex, userLevels]);
+    const totalSlides = useMemo(() => getTotalSlides(selectedCourseIndex), [getTotalSlides, selectedCourseIndex]);
+    const completedSlides = useMemo(() => getCompletedSlides(selectedCourseIndex), [getCompletedSlides, selectedCourseIndex]);
 
     return (
         <div className='library-popup'>
