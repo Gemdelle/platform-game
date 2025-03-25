@@ -5,8 +5,6 @@
     margin-top: 8vmax;
 }
 
-
-
 .course-level-1 {
     font-family: 'BlackwoodCastle', sans-serif;
     background-attachment: fixed;
@@ -44,7 +42,6 @@
         background-position: -100% 0;
     }
 }
-
 
 @keyframes shake {
     0% { transform: rotate(0); }

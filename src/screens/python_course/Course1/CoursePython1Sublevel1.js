@@ -67,15 +67,15 @@ const CoursePython1Sublevel1 = () => {
     };
 
     return (
-        <div className="course-level-1 flex">
+        <div className="course-level-1 flex python-course">
             <div className="moving-course-sky"></div>
-            <Instructions instructions={"0.1 Comentarios de una línea #"}/>
+            <Instructions instructions={"Habilitar la variable."}/>
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>
                     <CodeEditor
                         onSubmit={handleCompileAndRun}
-                        className="Egg"
+                        title="0.1 Comentarios de una línea #"
                         correctAnswer={correctAnswer}
                         previousCode='# quote = "La materia no se crea ni se destruye, solo se transforma."'
                         placeholder="Escriba el codigo aqui"

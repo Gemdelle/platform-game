@@ -1,0 +1,125 @@
+.user-stories {
+    width: 25%;
+    height: 94%;
+    /* background-color: pink; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.stories-container {
+    height: 100%;
+    margin-bottom: -6vmax;
+    background-color: violet;
+}
+
+.user-stories ul {
+    list-style: none; /* Remove default list bullets */
+    max-height: 65%;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    z-index: 2;
+    background-color: coral;
+    background-image: url("/public/assets/user-stories-background.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 55%;
+    height: 100%;
+}
+
+.a-user-story {
+    width: 80%;
+    height: auto;
+    min-height: 4vmax;
+    /* background-color: lightblue; */
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5vh;
+    margin-bottom: 3vh;
+}
+
+.stories-container li {
+    text-align: left;
+    font-size: 1.5vw;
+    color: rgb(65, 65, 53);
+    width: 80%;
+    /* background-color: gray; */
+    margin-top: 1.5vh;
+}
+
+.stories-container .heart-bullet {
+    content: "";
+    /* background-color: brown; */
+    width: 15%;
+    height: 3.5vmax;
+}
+
+
+/* DEAD HEART */
+.stories-container .heart-bullet.dead {
+    background-image: url("/public/assets/UI/heart-dead.png"), url("/public/assets/UI/dead-veins.png");
+    background-position: right, left;
+    background-size: contain, 100% 100%;
+    background-repeat: no-repeat;
+    /* background-color: red; */
+}
+
+.stories-container .heart-bullet.alive {
+    content: "";
+    left: 2vw;
+    transform: translateY(-35%);
+    background-image: url("/public/assets/UI/heart.gif"), url("/public/assets/UI/veins.png");
+    background-position: right, left;
+    background-size: contain, 100% 100%;
+    background-repeat: no-repeat;
+    /* background-color: red; */
+}
+
+/* USER STORIES PROGRESS BAR */
+.bar {
+    position: absolute;
+    right: 23%;
+    bottom: 2.5vh;
+    width: 4.5vw;
+    height: 79%;
+    /* background-color: cyan; */
+    z-index: 50;
+    background-image: url(/public/assets/question-bar.png);
+    background-position: center;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+}
+
+.stories-bar-interior {
+    background-image: url(/public/assets/UI/question-bar-background.png);
+    background-position: center;
+    background-size: 100% 120%;
+    background-repeat: no-repeat;
+    /* background-color: red; */
+    width: 58%;
+    height: 84%;
+    border-radius: 10px 10px 50px 50px;
+    margin-bottom: 2.2vmax;
+}
+
+.score {
+    margin-top: 15.5vh;
+    /* background-color: yellowgreen; */
+    background-image: url(/public/assets/horizontal-small-frame.png);
+    background-position: center;
+    background-size: 100% 100%;
+    color: black;
+    z-index: 900;
+    height: 6.5vw;
+    width: 11vw;
+    margin-left: -4.5vmax;
+    font-size: 1.5vmax;
+    position: absolute;
+    color: rgb(54, 38, 38);
+    text-shadow: 1px 1px 2px rgba(36, 23, 23, 0.3), -1px -1px 2px rgba(100, 50, 50, 0.3), 0 0 5px rgba(100, 50, 50, 0.2);
+}

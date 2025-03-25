@@ -7,7 +7,7 @@
   height: 14%;
   margin-right: 2.5vw;
   font-size: large;
-  /* background-color: red; */
+  background-color: red;
   text-shadow: 1px 1px 1px rgba(121, 124, 114, 0.3),
     -1px -1px 1px rgba(54, 55, 53, 0.3), 0 0 5px rgba(46, 50, 37, 0.2);
   color: rgb(65, 65, 53);
@@ -19,29 +19,27 @@
   top: 17vh;
 }
 
-.arrows {
+/* .arrows {
   position: absolute;
   top: 40%;
   width: 32%;
   height: 20%;
-  /* background-color: white; */
   display: flex;
   justify-content: space-between;
   align-items: center;
   pointer-events: none;
-}
+} */
 
-.arrow {
+/* .arrow {
   width: 10%;
   height: 100%;
-  /* background-color: red; */
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
   transition: all 200ms ease-in-out;
-}
+} */
 
-.arrow:hover {
+/* .arrow:hover {
   filter: brightness(1.1);
   scale: 103%;
 }
@@ -52,7 +50,7 @@
 
 .arr-right {
   background-image: url(/public/assets/arrows/right-arrow.png);
-}
+} */
 
 form {
   width: 100%;

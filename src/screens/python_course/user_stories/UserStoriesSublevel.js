@@ -1,7 +1,5 @@
 import React from 'react';
-import '../../../components/UserStories/UserStories.css';
-
-
+import './UserStories.css';
 
 const UserStoriesSublevel = ({validations, user_stories}) => {
     return (
