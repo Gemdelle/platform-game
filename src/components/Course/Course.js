@@ -1,6 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Course.css';
 import { useNavigate } from "react-router-dom";
+
+const availableLevels = {
+    1: [1,2,3,4,5,6],
+    2: [4,5,6,16,17,18],
+    3: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],
+    4: [1,2,3],
+    6: [13,14,15],
+    8: [1,2,3,4,5,6,7,8,9,10,11,12,25,26,27],
+}
 
 const Course = ({
     navigationUrl,
@@ -35,14 +44,17 @@ const Course = ({
             let isCompleted = completed_sub_levels && completed_sub_levels.find((sublevelNumber) => {
                 return number === sublevelNumber
             }) !== undefined;
+            let isAvailable = availableLevels[courseNumber]?.includes(number) || false;
             let nextAvailableSubLevel = completed_sub_levels.length + 1;
-            let className = `level flex bg ${grade !== "NONE" ? isCompleted ? 'completed clickable' : nextAvailableSubLevel === number ? 'default clickable' : 'disabled' : 'disabled'}`;
+            let className = `level flex bg ${grade !== "NONE" ? (isCompleted || isAvailable) ? 'completed clickable' : nextAvailableSubLevel === number ? 'default clickable' : `${!isAvailable ? "disabled" : ""}` : `${!isAvailable ? "disabled" : ""}`} ${isAvailable ? "silver" : ""}`;
             return (<div
                 className={className}
                 onClick={() => {
-                    if (isCompleted || nextAvailableSubLevel === number) {
+                    // if (isCompleted || nextAvailableSubLevel === number) {
+                    if(isAvailable) {
                         navigateToCourse(number)
                     }
+                    // }
                 }}><span>{number}</span></div>);
         });
     }
@@ -63,6 +75,7 @@ const Course = ({
         }, 0);
     }
 
+    let isTheoreticalAvailable = availableLevels[courseNumber]?.includes(0) || false;
     return (
         <div className='course' id='course-1'>
             <div className='course-container flex-c'>
@@ -97,7 +110,7 @@ const Course = ({
                 </div>
                 <div className='levels'>
                     <div
-                        className={`level flex bg ${grade === "SILVER" ? 'silver clickable' : grade === "GOLD" ? 'gold clickable' : (courseNumber === 1 || courseNumber === 2) ? 'default clickable' : 'disabled'}`}
+                        className={`level flex bg ${grade === "SILVER" ? 'silver clickable' : grade === "GOLD" ? 'gold clickable' : isTheoreticalAvailable ? 'clickable' : 'disabled'} ${isTheoreticalAvailable ? "silver" : "default"}`}
                         onClick={() => {
                             navigateToTheoretical()
                         }}><span>{current}</span></div>

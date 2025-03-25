@@ -9,16 +9,14 @@ import UserStoriesSublevel from "../user_stories/UserStoriesSublevel";
 import axios from "axios";
 
 const correctAnswer = '"""\n' +
-    'Estado actual del agua: líquido\n' +
+    'Átomos (H₂O) = 3\n' +
+    'El agua está formada por {atomos} átomos.\n' +
     '"""\n' +
     '\n' +
-    'estado_1 = "líquido"  \n' +
-    'estado_2 = "sólido"\n' +
-    'estado_3 = "gaseoso"\n' +
-    'estado_actual = estado_1\n' +
+    'atomos = 3\n' +
     '\n' +
-    'if estado_actual != "sólido":  \n' +
-    '    print("El agua no está en estado sólido.") \n'
+    'if atomos != 1:\n' +
+    '   print(f"El agua está formada por {atomos} átomos.")\n'
 const user_stories = [
     {
         action: "DELETE",
@@ -47,7 +45,7 @@ const Course8Sublevel1 = () => {
     useEffect(() => {
         if (shouldProceed) {
             setTimeout(() => {
-                navigate('/course-python/8/2');
+                navigate('/course-python/8/3');
             }, 2500);
         }
     }, [shouldProceed]);
@@ -72,9 +70,9 @@ output.getvalue()
 
             setOutput(result);
 
-            if (result === "El agua no está en estado sólido.") {
+            if (result === "El agua está formada por 3 átomos.") {
                 const idToken = userProfile.id
-                const response = await axios.post('http://localhost:3001/validate/course-python/8/1', {
+                const response = await axios.post('http://localhost:3001/validate/course-python/8/2', {
                     class_code: classCode
                 }, {
                     headers: {
@@ -102,7 +100,7 @@ output.getvalue()
     return (
         <div className="course-level-1 flex">
             <div className="moving-course-sky"></div>
-            <Instructions instructions={"Definir el estado en el que se encuentra el agua. Corregir las variables en caso de ser necesario."}/>
+            <Instructions instructions={"Definir el tipo del agua; se sabe que no es un metal. Declarar las variables necesarias."}/>
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>
@@ -111,16 +109,11 @@ output.getvalue()
                         className="❧ 7.1 if - No igual que (!=)"
                         correctAnswer={correctAnswer}
                         previousCode='"""
-Estado actual del agua: líquido
+Átomos (H₂O) = 3
+El agua está formada por {atomos} átomos.
 """
 
-estado_1 = "líquido"
-estado_2 = "sólido"
-estado_3 = "gaseoso"
-estado_actual = estado_123
-
-if estado_actual =!= "sólido":
-# print("El agua no está en estado sólido.")
+if atomos 1:
 '
                         placeholder="Escriba el codigo aqui"
                     />
