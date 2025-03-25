@@ -55,7 +55,7 @@
 form {
   width: 120%;
   height: 80% !important;
-  background-color: brown;
+  /* background-color: brown; */
   display: flex;
   flex-direction: column;
   justify-content: center;

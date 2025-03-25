@@ -1,8 +1,8 @@
 /* OUTPUT */
 
 .output {
-    height: 75vh;
-    width: 65vh;
+    height: 70vh;
+    width: 50vh;
      /* background-color: blue; */
      background-image: url(/public/assets/output-bugs.png);
      background-size: contain;
@@ -10,11 +10,11 @@
      background-repeat: no-repeat;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     margin-top: 5vw;
-    right: 30%;
+    right: 33%;
     position: absolute;
-    z-index: 999;
+    z-index: 5;
 }
 
 .output .delete {
@@ -22,7 +22,7 @@
     height: 100%;
     background-image: url(/public/assets/bugs/bug-delete.png);
     background-position: center;
-    background-size: 100% 100%;
+    background-size: 90% 70%;
     background-repeat: no-repeat;
 }
 
@@ -31,7 +31,7 @@
     height: 100%;
     background-image: url(/public/assets/bugs/bug-add.png);
     background-position: center;
-    background-size: 100% 100%;
+    background-size: 100% 90%;
     background-repeat: no-repeat;
 }
 
@@ -44,86 +44,121 @@
     background-repeat: no-repeat;
 }
 
+@keyframes bugWalk {
+    0% {
+      transform: translateY(0) scaleY(1);
+    }
+    25% {
+      transform: translateY(3px) scaleY(1.03);
+    }
+    50% {
+      transform: translateY(6px) scaleY(1);
+    }
+    75% {
+      transform: translateY(3px) scaleY(0.98);
+    }
+    100% {
+      transform: translateY(0) scaleY(1);
+    }
+  }
+
+.bug-slot-1,
+.bug-slot-2,
+.bug-slot-3,
+.bug-slot-4,
+.bug-slot-5,
+.bug-slot-6,
+.bug-slot-7,
+.bug-slot-8 {
+    width: 20%;
+    height: 18%;
+
+    animation: bugWalk 6s linear infinite;
+}
+
 .bug-slot-1 {
-    width: 5vh;
-    height: 5vh;
     position: absolute;
-    right: 5vh;
-    top: 5vh;
-    background-color: red;
+    left: 0%;
+    top: 10%;
+    /* background-color: red; */
+    rotate: -145deg;
 }
 
 .bug-slot-2 {
-    width: 5vh;
-    height: 5vh;
     position: absolute;
-    right: 5vh;
-    top: 20vh;
-    background-color: blueviolet;
+    right: 2%;
+    top: 15%;
+    rotate: -20deg;
+    /* background-color: blueviolet; */
 }
 
 .bug-slot-3 {
-    width: 5vh;
-    height: 5vh;
     position: absolute;
-    right: 5vh;
-    top: 40vh;
-    background-color: grey;
+    /* background-color: grey; */
+    right: 8%;
+    top: 35%;
+    rotate: -125deg;
+    width: 17%;
+    height: 14%;
 }
 
 .bug-slot-4 {
-    width: 5vh;
-    height: 5vh;
     position: absolute;
-    right: 5vh;
-    top: 50vh;
-    background-color: yellowgreen;
+    /* background-color: yellowgreen; */
+    right: 0%;
+    bottom: 28%;
+    rotate: -35deg;
 }
 
 .bug-slot-5 {
-    width: 5vh;
-    height: 5vh;
     position: absolute;
-    right: 20vh;
-    top: 50vh;
-    background-color: brown;
+    /* background-color: brown; */
+    right: 7%;
+    bottom: 10%;
+    rotate: -140deg;
+    width: 17%;
+    height: 14%;
 }
 
 .bug-slot-6 {
-    width: 5vh;
-    height: 5vh;
     position: absolute;
-    right: 28vh;
-    top: 50vh;
-    background-color: beige;
+    /* background-color: beige; */
+    right: 40%;
+    bottom: 3%;
+    rotate: -35deg;
 }
 
 .bug-slot-7 {
-    width: 5vh;
-    height: 5vh;
     position: absolute;
-    right: 35vh;
-    top: 50vh;
-    background-color: white;
+    /* background-color: white; */
+    left: 4%;
+    bottom: 12%;
+    rotate: 35deg;
+    width: 23%;
+    height: 20%;
 }
 
 .bug-slot-8 {
-    width: 5vh;
-    height: 5vh;
     position: absolute;
-    right: 55vh;
-    top: 50vh;
-    background-color: darkgoldenrod;
+    /* background-color: darkgoldenrod; */
+    left: 40%;
+    top: -3%;
+    rotate: 30deg;
+    width: 25%;
+    height: 22%;
 }
 
 
 pre {
-    height: 66%;
-    width: 50%;
+    height: 60%;
+    width: 65%;
     padding: 0;
     margin: 0px;
-    /*background-color: aquamarine;*/
     background-color: transparent;
+    /* background-color: aquamarine; */
+    overflow: scroll;
+    scrollbar-color: transparent;
+    scrollbar-width: none;
 }
 
 /* END OUTPUT */
