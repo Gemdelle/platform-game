@@ -84,13 +84,13 @@ const Course4Sublevel3 = () => {
     return (
         <div className="course-level-1 flex">
             <div className="moving-course-sky"></div>
-            <Instructions instructions={"❧ 3.1. str a int"}/>
+            <Instructions instructions={"Definir nuevas variables para convertir los datos a enteros.  Definir la impresión para que quede exactamente el mismo formato que el texto comentado."}/>
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>
                     <CodeEditor
                         onSubmit={handleCompileAndRun}
-                        className="Egg"
+                        title="3.1. str a int"
                         correctAnswer={correctAnswer}
                         previousCode='“””
 Cantidad de sustancia de Bromo: 2 mol

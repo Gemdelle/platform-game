@@ -76,7 +76,7 @@ const CoursePython3Sublevel3 = () => {
     return (
         <div className="course-level-1 flex">
             <div className="moving-course-sky"></div>
-            <Instructions instructions={"❧ 2.1 Variable de tipo string"}/>
+            <Instructions instructions={"Arreglar la declaración de variables y agregar el Calcio (Ca). Definir la impresión para que quede exactamente el mismo formato que el texto comentado."}/>
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>

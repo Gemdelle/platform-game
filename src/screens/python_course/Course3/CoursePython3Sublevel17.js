@@ -84,7 +84,7 @@ const CoursePython3Sublevel17 = () => {
     return (
         <div className="course-level-1 flex">
             <div className="moving-course-sky"></div>
-            <Instructions instructions={"❧ 2.6 Sobreescribir variables de tipo int"}/>
+            <Instructions instructions={"Sobreescribir los valores de los números atómicos erróneos. Imprimir los valores."}/>
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>

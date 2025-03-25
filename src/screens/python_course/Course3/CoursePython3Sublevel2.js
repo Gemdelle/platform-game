@@ -74,7 +74,7 @@ const CoursePython3Sublevel2 = () => {
     return (
         <div className="course-level-1 flex">
             <div className="moving-course-sky"></div>
-            <Instructions instructions={"❧ 2.1 Variable de tipo string"}/>
+            <Instructions instructions={"Declarar las mismas variables para Arsénico (As) e imprimir sus valores. Los elementos deben quedar separados por una línea en blanco."}/>
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>

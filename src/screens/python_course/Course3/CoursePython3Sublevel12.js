@@ -86,7 +86,7 @@ const CoursePython3Sublevel12 = () => {
     return (
         <div className="course-level-1 flex">
             <div className="moving-course-sky"></div>
-            <Instructions instructions={"❧ 2.4 Variable de tipo boolean"}/>
+            <Instructions instructions={"Declarar las variables de cada elemento y definir la impresión para que quede exactamente el mismo formato que el texto comentado."}/>
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>

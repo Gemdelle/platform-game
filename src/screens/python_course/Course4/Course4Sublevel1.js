@@ -72,13 +72,13 @@ const Course4Sublevel1 = () => {
     return (
         <div className="course-level-1 flex">
             <div className="moving-course-sky"></div>
-            <Instructions instructions={"❧ 3.1. str a int"}/>
+            <Instructions instructions={"En el laboratorio se registraron los datos de cantidad de sustancia en formato caracter. Se convirtieron a enteros, pero el único valor correctamente registrado es Bromo. Eliminar Borrar las variables que corresponden a otros elementos."}/>
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>
                     <CodeEditor
                         onSubmit={handleCompileAndRun}
-                        className="Egg"
+                        title="3.1. str a int"
                         correctAnswer={correctAnswer}
                         previousCode='bromo_cantidad_sustancia = “2”  # mol
 cobre_cantidad_sustancia = “5”  # mol

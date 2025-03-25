@@ -74,7 +74,7 @@ const CoursePython3Sublevel8 = () => {
     return (
         <div className="course-level-1 flex">
             <div className="moving-course-sky"></div>
-            <Instructions instructions={"❧ 2.3 Variable de tipo float"}/>
+            <Instructions instructions={"Completar los valores para el Hidrógeno (H, 1.008) y declarar las variables para el Aluminio (Al, 26.98). Imprimir los valores; los elementos deben estar separados por una línea vacía."}/>
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>

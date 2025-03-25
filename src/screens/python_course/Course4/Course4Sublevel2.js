@@ -72,13 +72,13 @@ const Course4Sublevel2 = () => {
     return (
         <div className="course-level-1 flex">
             <div className="moving-course-sky"></div>
-            <Instructions instructions={"❧ 3.1. str a int"}/>
+            <Instructions instructions={"Se devolvieron los datos analizados del bromo, pero falta la transformación de tipo. Agregar lo necesario para realizar la transformación de caracter a entero."}/>
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>
                     <CodeEditor
                         onSubmit={handleCompileAndRun}
-                        className="Egg"
+                        title="3.1. str a int"
                         correctAnswer={correctAnswer}
                         previousCode='bromo_cantidad_sustancia = “1”  # mol
 bromo_cantidad_sustancia =  # mol

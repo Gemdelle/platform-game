@@ -75,7 +75,7 @@ const CoursePython3Sublevel13 = () => {
     return (
         <div className="course-level-1 flex">
             <div className="moving-course-sky"></div>
-            <Instructions instructions={"❧ 2.5 Sobreescribir variables de tipo string"}/>
+            <Instructions instructions={"Eliminar las variables necesarias para que la asignación de valores sea correcta. La asignación incorrecta que no afecta el resultado no debe ser eliminada."}/>
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>

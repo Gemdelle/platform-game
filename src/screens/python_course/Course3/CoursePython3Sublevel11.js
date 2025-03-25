@@ -75,7 +75,7 @@ const CoursePython3Sublevel11 = () => {
     return (
         <div className="course-level-1 flex">
             <div className="moving-course-sky"></div>
-            <Instructions instructions={"❧ 2.4 Variable de tipo boolean"}/>
+            <Instructions instructions={"El Hidrógeno es un no metal, mientras que el Azufre es un metal. Declarar las mismas variables para el Azufre e imprimir los valores de ambos elementos."}/>
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>

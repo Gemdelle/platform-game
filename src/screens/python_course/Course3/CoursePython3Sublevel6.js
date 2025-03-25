@@ -84,7 +84,7 @@ const CoursePython3Sublevel6 = () => {
     return (
         <div className="course-level-1 flex">
             <div className="moving-course-sky"></div>
-            <Instructions instructions={"❧ 2.2 Variable de tipo int"}/>
+            <Instructions instructions={"Corregir el número atómico de los elementos, que están invertidos. Declarar las mismas variables para el Arsénico (Z(As) corresponde a la suma de Z(Ca) y Z(Al), escribir el número sin realizar cuentas). Definir la impresión para que quede exactamente el mismo formato que el texto comentado."}/>
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>

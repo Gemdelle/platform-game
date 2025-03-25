@@ -91,7 +91,7 @@ const CoursePython3Sublevel15 = () => {
     return (
         <div className="course-level-1 flex">
             <div className="moving-course-sky"></div>
-            <Instructions instructions={"❧ 2.5 Sobreescribir variables de tipo string"}/>
+            <Instructions instructions={"Sobreescribir las los valores que sean necesarios declarando nuevas variables. Definir la impresión para que quede exactamente el mismo formato que el texto comentado."}/>
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>

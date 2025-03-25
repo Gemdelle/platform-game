@@ -74,7 +74,7 @@ const CoursePython3Sublevel4 = () => {
     return (
         <div className="course-level-1 flex">
             <div className="moving-course-sky"></div>
-            <Instructions instructions={"❧ 2.2 Variable de tipo int"}/>
+            <Instructions instructions={"Corregir los números atómicos de los elementos; el Calcio tiene un valor 20 veces mayor que el Hidrógeno. Deben ser números enteros. Imprimir los números atómicos de ambos elementos, separados por una línea en blanco"}/>
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>

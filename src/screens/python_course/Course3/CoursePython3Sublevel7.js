@@ -77,7 +77,7 @@ const CoursePython3Sublevel7 = () => {
     return (
         <div className="course-level-1 flex">
             <div className="moving-course-sky"></div>
-            <Instructions instructions={"❧ 2.3 Variable de tipo float"}/>
+            <Instructions instructions={"Corregir el peso atómico de los elementos para que quede representado con 2 decimales. Imprimir los valores."}/>
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>
