@@ -16,11 +16,12 @@
 
 .cheat {
   position: absolute;
-  left: 50% !important;
-  top: 15% !important;
+  left: 36% !important;
+  top: 19% !important;
   /* background-color: red !important; */
-  color: bisque !important;
-  z-index: 999;
+  color: black !important;
+  z-index: 999999 !important;
+  pointer-events: auto;
 }
 
 /* .arrows {

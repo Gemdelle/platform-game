@@ -35,7 +35,7 @@ const CodeEditor = ({title, onSubmit, previousCode, correctAnswer, placeholder=`
                 ></textarea>
                 <button type="submit" className='compile-button clickable'><span>Compile & Run</span>
                 </button>
-                {cheatActivated ? (<div className='compile-button cheat' onClick={executeCheat}><span>Cheat</span></div>) : null}
+                {cheatActivated ? (<div className='compile-button cheat' onClick={executeCheat}>Cheat</div>) : null}
             </div>
         </form>
     );

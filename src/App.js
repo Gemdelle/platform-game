@@ -28,39 +28,39 @@ import CoursePython1Sublevel6 from "./screens/python_course/Course1/CoursePython
 import CustomCursor from "./components/Cursor/CustomCursor";
 import Library from "./components/Library/Library";
 import CourseSelection from "./screens/CourseSelection/CourseSelection";
-import Course2Sublevel2 from "./screens/python_course/Course2/Course2Sublevel2";
-import Course2Sublevel3 from "./screens/python_course/Course2/Course2Sublevel3";
-import Course2Sublevel4 from "./screens/python_course/Course2/Course2Sublevel4";
-import Course2Sublevel5 from "./screens/python_course/Course2/Course2Sublevel5";
-import Course2Sublevel6 from "./screens/python_course/Course2/Course2Sublevel6";
-import Course2Sublevel7 from "./screens/python_course/Course2/Course2Sublevel7";
-import Course2Sublevel8 from "./screens/python_course/Course2/Course2Sublevel8";
-import Course2Sublevel9 from "./screens/python_course/Course2/Course2Sublevel9";
-import Course2Sublevel10 from "./screens/python_course/Course2/Course2Sublevel10";
-import Course2Sublevel11 from "./screens/python_course/Course2/Course2Sublevel11";
-import Course2Sublevel12 from "./screens/python_course/Course2/Course2Sublevel12";
-import Course2Sublevel13 from "./screens/python_course/Course2/Course2Sublevel13";
-import Course2Sublevel14 from "./screens/python_course/Course2/Course2Sublevel14";
-import Course2Sublevel15 from "./screens/python_course/Course2/Course2Sublevel15";
-import Course2Sublevel16 from "./screens/python_course/Course2/Course2Sublevel16";
-import Course2Sublevel17 from "./screens/python_course/Course2/Course2Sublevel17";
-import Course2Sublevel18 from "./screens/python_course/Course2/Course2Sublevel18";
-import Course3Sublevel3 from "./screens/python_course/Course3/Course3Sublevel3";
-import Course3Sublevel4 from "./screens/python_course/Course3/Course3Sublevel4";
-import Course3Sublevel5 from "./screens/python_course/Course3/Course3Sublevel5";
-import Course3Sublevel6 from "./screens/python_course/Course3/Course3Sublevel6";
-import Course3Sublevel7 from "./screens/python_course/Course3/Course3Sublevel7";
-import Course3Sublevel8 from "./screens/python_course/Course3/Course3Sublevel8";
-import Course3Sublevel9 from "./screens/python_course/Course3/Course3Sublevel9";
-import Course3Sublevel10 from "./screens/python_course/Course3/Course3Sublevel10";
-import Course3Sublevel11 from "./screens/python_course/Course3/Course3Sublevel11";
-import Course3Sublevel12 from "./screens/python_course/Course3/Course3Sublevel12";
-import Course3Sublevel13 from "./screens/python_course/Course3/Course3Sublevel13";
-import Course3Sublevel14 from "./screens/python_course/Course3/Course3Sublevel14";
-import Course3Sublevel15 from "./screens/python_course/Course3/Course3Sublevel15";
-import Course3Sublevel16 from "./screens/python_course/Course3/Course3Sublevel16";
-import Course3Sublevel17 from "./screens/python_course/Course3/Course3Sublevel17";
-import Course3Sublevel18 from "./screens/python_course/Course3/Course3Sublevel18";
+import CoursePython2Sublevel2 from "./screens/python_course/Course2/CoursePython2Sublevel2";
+import CoursePython2Sublevel3 from "./screens/python_course/Course2/CoursePython2Sublevel3";
+import CoursePython2Sublevel4 from "./screens/python_course/Course2/CoursePython2Sublevel4";
+import CoursePython2Sublevel5 from "./screens/python_course/Course2/CoursePython2Sublevel5";
+import CoursePython2Sublevel6 from "./screens/python_course/Course2/CoursePython2Sublevel6";
+import CoursePython2Sublevel7 from "./screens/python_course/Course2/CoursePython2Sublevel7";
+import CoursePython2Sublevel8 from "./screens/python_course/Course2/CoursePython2Sublevel8";
+import CoursePython2Sublevel9 from "./screens/python_course/Course2/CoursePython2Sublevel9";
+import CoursePython2Sublevel10 from "./screens/python_course/Course2/CoursePython2Sublevel10";
+import CoursePython2Sublevel11 from "./screens/python_course/Course2/CoursePython2Sublevel11";
+import CoursePython2Sublevel12 from "./screens/python_course/Course2/CoursePython2Sublevel12";
+import CoursePython2Sublevel13 from "./screens/python_course/Course2/CoursePython2Sublevel13";
+import CoursePython2Sublevel14 from "./screens/python_course/Course2/CoursePython2Sublevel14";
+import CoursePython2Sublevel15 from "./screens/python_course/Course2/CoursePython2Sublevel15";
+import CoursePython2Sublevel16 from "./screens/python_course/Course2/CoursePython2Sublevel16";
+import CoursePython2Sublevel17 from "./screens/python_course/Course2/CoursePython2Sublevel17";
+import CoursePython2Sublevel18 from "./screens/python_course/Course2/CoursePython2Sublevel18";
+import CoursePython3Sublevel3 from "./screens/python_course/Course3/CoursePython3Sublevel3";
+import CoursePython3Sublevel4 from "./screens/python_course/Course3/CoursePython3Sublevel4";
+import CoursePython3Sublevel5 from "./screens/python_course/Course3/CoursePython3Sublevel5";
+import CoursePython3Sublevel6 from "./screens/python_course/Course3/CoursePython3Sublevel6";
+import CoursePython3Sublevel7 from "./screens/python_course/Course3/CoursePython3Sublevel7";
+import CoursePython3Sublevel8 from "./screens/python_course/Course3/CoursePython3Sublevel8";
+import CoursePython3Sublevel9 from "./screens/python_course/Course3/CoursePython3Sublevel9";
+import CoursePython3Sublevel10 from "./screens/python_course/Course3/CoursePython3Sublevel10";
+import CoursePython3Sublevel11 from "./screens/python_course/Course3/CoursePython3Sublevel11";
+import CoursePython3Sublevel12 from "./screens/python_course/Course3/CoursePython3Sublevel12";
+import CoursePython3Sublevel13 from "./screens/python_course/Course3/CoursePython3Sublevel13";
+import CoursePython3Sublevel14 from "./screens/python_course/Course3/CoursePython3Sublevel14";
+import CoursePython3Sublevel15 from "./screens/python_course/Course3/CoursePython3Sublevel15";
+import CoursePython3Sublevel16 from "./screens/python_course/Course3/CoursePython3Sublevel16";
+import CoursePython3Sublevel17 from "./screens/python_course/Course3/CoursePython3Sublevel17";
+import CoursePython3Sublevel18 from "./screens/python_course/Course3/CoursePython3Sublevel18";
 import Course4Sublevel1 from "./screens/python_course/Course4/Course4Sublevel1";
 import Course4Sublevel2 from "./screens/python_course/Course4/Course4Sublevel2";
 import Course4Sublevel3 from "./screens/python_course/Course4/Course4Sublevel3";
@@ -84,6 +84,11 @@ import Course8Sublevel7 from "./screens/python_course/Course8/Course8Sublevel7";
 import Course8Sublevel8 from "./screens/python_course/Course8/Course8Sublevel8";
 import Course8Sublevel9 from "./screens/python_course/Course8/Course8Sublevel9";
 import Course8Sublevel10 from "./screens/python_course/Course8/Course8Sublevel10";
+import Course8Sublevel11 from "./screens/python_course/Course8/Course8Sublevel11";
+import Course8Sublevel12 from "./screens/python_course/Course8/Course8Sublevel12";
+import CoursePython2Sublevel1 from "./screens/python_course/Course2/CoursePython2Sublevel1";
+import CoursePython3Sublevel1 from "./screens/python_course/Course3/CoursePython3Sublevel1";
+import CoursePython3Sublevel2 from "./screens/python_course/Course3/CoursePython3Sublevel2";
 
 const App = () => {
     return (
@@ -118,44 +123,44 @@ const App = () => {
                     <Route path="/course-python/1/5" element={<CoursePython1Sublevel5/>}/>
                     <Route path="/course-python/1/6" element={<CoursePython1Sublevel6/>}/>
 
-                    <Route path="/course-python/2/1" element={<Course2Sublevel1/>}/>
-                    <Route path="/course-python/2/2" element={<Course2Sublevel2/>}/>
-                    <Route path="/course-python/2/3" element={<Course2Sublevel3/>}/>
-                    <Route path="/course-python/2/4" element={<Course2Sublevel4/>}/>
-                    <Route path="/course-python/2/5" element={<Course2Sublevel5/>}/>
-                    <Route path="/course-python/2/6" element={<Course2Sublevel6/>}/>
-                    <Route path="/course-python/2/7" element={<Course2Sublevel7/>}/>
-                    <Route path="/course-python/2/8" element={<Course2Sublevel8/>}/>
-                    <Route path="/course-python/2/9" element={<Course2Sublevel9/>}/>
-                    <Route path="/course-python/2/10" element={<Course2Sublevel10/>}/>
-                    <Route path="/course-python/2/11" element={<Course2Sublevel11/>}/>
-                    <Route path="/course-python/2/12" element={<Course2Sublevel12/>}/>
-                    <Route path="/course-python/2/13" element={<Course2Sublevel13/>}/>
-                    <Route path="/course-python/2/14" element={<Course2Sublevel14/>}/>
-                    <Route path="/course-python/2/15" element={<Course2Sublevel15/>}/>
-                    <Route path="/course-python/2/16" element={<Course2Sublevel16/>}/>
-                    <Route path="/course-python/2/17" element={<Course2Sublevel17/>}/>
-                    <Route path="/course-python/2/18" element={<Course2Sublevel18/>}/>
+                    <Route path="/course-python/2/1" element={<CoursePython2Sublevel1/>}/>
+                    <Route path="/course-python/2/2" element={<CoursePython2Sublevel2/>}/>
+                    <Route path="/course-python/2/3" element={<CoursePython2Sublevel3/>}/>
+                    <Route path="/course-python/2/4" element={<CoursePython2Sublevel4/>}/>
+                    <Route path="/course-python/2/5" element={<CoursePython2Sublevel5/>}/>
+                    <Route path="/course-python/2/6" element={<CoursePython2Sublevel6/>}/>
+                    <Route path="/course-python/2/7" element={<CoursePython2Sublevel7/>}/>
+                    <Route path="/course-python/2/8" element={<CoursePython2Sublevel8/>}/>
+                    <Route path="/course-python/2/9" element={<CoursePython2Sublevel9/>}/>
+                    <Route path="/course-python/2/10" element={<CoursePython2Sublevel10/>}/>
+                    <Route path="/course-python/2/11" element={<CoursePython2Sublevel11/>}/>
+                    <Route path="/course-python/2/12" element={<CoursePython2Sublevel12/>}/>
+                    <Route path="/course-python/2/13" element={<CoursePython2Sublevel13/>}/>
+                    <Route path="/course-python/2/14" element={<CoursePython2Sublevel14/>}/>
+                    <Route path="/course-python/2/15" element={<CoursePython2Sublevel15/>}/>
+                    <Route path="/course-python/2/16" element={<CoursePython2Sublevel16/>}/>
+                    <Route path="/course-python/2/17" element={<CoursePython2Sublevel17/>}/>
+                    <Route path="/course-python/2/18" element={<CoursePython2Sublevel18/>}/>
 
                     <Route path="/course-python/3/theoretical" element={<Teoric3Sublevel/>}/>
-                    <Route path="/course-python/3/1" element={<Course3Sublevel1/>}/>
-                    <Route path="/course-python/3/2" element={<Course3Sublevel2/>}/>
-                    <Route path="/course-python/3/3" element={<Course3Sublevel3/>}/>
-                    <Route path="/course-python/3/4" element={<Course3Sublevel4/>}/>
-                    <Route path="/course-python/3/5" element={<Course3Sublevel5/>}/>
-                    <Route path="/course-python/3/6" element={<Course3Sublevel6/>}/>
-                    <Route path="/course-python/3/7" element={<Course3Sublevel7/>}/>
-                    <Route path="/course-python/3/8" element={<Course3Sublevel8/>}/>
-                    <Route path="/course-python/3/9" element={<Course3Sublevel9/>}/>
-                    <Route path="/course-python/3/10" element={<Course3Sublevel10/>}/>
-                    <Route path="/course-python/3/11" element={<Course3Sublevel11/>}/>
-                    <Route path="/course-python/3/12" element={<Course3Sublevel12/>}/>
-                    <Route path="/course-python/3/13" element={<Course3Sublevel13/>}/>
-                    <Route path="/course-python/3/14" element={<Course3Sublevel14/>}/>
-                    <Route path="/course-python/3/15" element={<Course3Sublevel15/>}/>
-                    <Route path="/course-python/3/16" element={<Course3Sublevel16/>}/>
-                    <Route path="/course-python/3/17" element={<Course3Sublevel17/>}/>
-                    <Route path="/course-python/3/18" element={<Course3Sublevel18/>}/>
+                    <Route path="/course-python/3/1" element={<CoursePython3Sublevel1/>}/>
+                    <Route path="/course-python/3/2" element={<CoursePython3Sublevel2/>}/>
+                    <Route path="/course-python/3/3" element={<CoursePython3Sublevel3/>}/>
+                    <Route path="/course-python/3/4" element={<CoursePython3Sublevel4/>}/>
+                    <Route path="/course-python/3/5" element={<CoursePython3Sublevel5/>}/>
+                    <Route path="/course-python/3/6" element={<CoursePython3Sublevel6/>}/>
+                    <Route path="/course-python/3/7" element={<CoursePython3Sublevel7/>}/>
+                    <Route path="/course-python/3/8" element={<CoursePython3Sublevel8/>}/>
+                    <Route path="/course-python/3/9" element={<CoursePython3Sublevel9/>}/>
+                    <Route path="/course-python/3/10" element={<CoursePython3Sublevel10/>}/>
+                    <Route path="/course-python/3/11" element={<CoursePython3Sublevel11/>}/>
+                    <Route path="/course-python/3/12" element={<CoursePython3Sublevel12/>}/>
+                    <Route path="/course-python/3/13" element={<CoursePython3Sublevel13/>}/>
+                    <Route path="/course-python/3/14" element={<CoursePython3Sublevel14/>}/>
+                    <Route path="/course-python/3/15" element={<CoursePython3Sublevel15/>}/>
+                    <Route path="/course-python/3/16" element={<CoursePython3Sublevel16/>}/>
+                    <Route path="/course-python/3/17" element={<CoursePython3Sublevel17/>}/>
+                    <Route path="/course-python/3/18" element={<CoursePython3Sublevel18/>}/>
 
                     <Route path="/course-python/4/1" element={<Course4Sublevel1/>}/>
                     <Route path="/course-python/4/2" element={<Course4Sublevel2/>}/>
@@ -180,6 +185,8 @@ const App = () => {
                     <Route path="/course-python/8/8" element={<Course8Sublevel8/>}/>
                     <Route path="/course-python/8/9" element={<Course8Sublevel9/>}/>
                     <Route path="/course-python/8/10" element={<Course8Sublevel10/>}/>
+                    <Route path="/course-python/8/11" element={<Course8Sublevel11/>}/>
+                    <Route path="/course-python/8/12" element={<Course8Sublevel12/>}/>
                 </Routes>
             </div>
         </Router>

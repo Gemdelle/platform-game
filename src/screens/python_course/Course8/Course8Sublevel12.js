@@ -9,22 +9,25 @@ import UserStoriesSublevel from "../user_stories/UserStoriesSublevel";
 import axios from "axios";
 
 const correctAnswer = '"""\n' +
-    'pH: 4\n' +
-    'pH menor a 7: Agua ácida\n' +
-    'pH igual a 7: Agua neutra\n' +
-    'pH mayor a 7: Agua alcalina\n' +
+    'pH: 6.5\n' +
+    'pH menor a 6: Aceite ácido\n' +
+    'pH menor a 7 y mayor igual a 6: Aceite ligeramente ácido\n' +
+    'pH igual a 7: Aceite neutro\n' +
+    'pH mayor a 7: Aceite alcalino\n' +
     '"""\n' +
     '\n' +
-    'pH = 4\n' +
-    '\n' +
+    'if pH < 6:\n' +
+    '    mensaje = "El aceite es ácido"\n' +
+    'if pH >= 6:\n' +
+    '    mensaje = "El aceite es ligeramente ácido."\n' +
     'if pH < 7:\n' +
-    '    mensaje = "El agua es ácida."\n' +
+    '    mensaje = "El aceite es ligeramente ácido."\n' +
     'if pH == 7:\n' +
-    '    mensaje = "El agua es neutra."\n' +
+    '    mensaje = "El aceite es neutro."\n' +
     'if pH > 7:\n' +
-    '    mensaje = "El agua es alcalina."\n' +
+    '    mensaje = "El aceite es alcalino."\n' +
     '\n' +
-    'print(f"El pH del agua es: {pH}. {mensaje}")\n'
+    'print(f"El pH del aceite es: {pH:.2f}. {mensaje}")\n'
 
 const user_stories = [
     {
@@ -34,7 +37,7 @@ const user_stories = [
     }
 ];
 
-const Course8Sublevel10 = () => {
+const Course8Sublevel12 = () => {
     const [output, setOutput] = useState('');
     const [validations, setValidations] = useState([]);
     const [shouldProceed, setShouldProceed] = useState(false);
@@ -54,7 +57,7 @@ const Course8Sublevel10 = () => {
     useEffect(() => {
         if (shouldProceed) {
             setTimeout(() => {
-                navigate('/course-python/8/11');
+                navigate('/');
             }, 2500);
         }
     }, [shouldProceed]);
@@ -78,9 +81,10 @@ output.getvalue()
             result = result.trim();
 
             setOutput(result);
+            debugger
             if (result === "El pH del agua es: 4. El agua es ácida.") {
                 const idToken = userProfile.id
-                const response = await axios.post('http://localhost:3001/validate/course-python/8/10', {
+                const response = await axios.post('http://localhost:3001/validate/course-python/8/12', {
                     class_code: classCode
                 }, {
                     headers: {
@@ -108,7 +112,7 @@ output.getvalue()
     return (
         <div className="course-level-1 flex">
             <div className="moving-course-sky"></div>
-            <Instructions instructions={"Utilizando el operador >=, verificar si el pH es mayor o igual a 7."}/>
+            <Instructions instructions={"???"}/>
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>
@@ -117,22 +121,21 @@ output.getvalue()
                         className="7.4 if/else - Mayor/menor o igual que (>=)"
                         correctAnswer={correctAnswer}
                         previousCode='"""
-pH: 4
-pH menor a 7: Agua ácida
-pH igual a 7: Agua neutra
-pH mayor a 7: Agua alcalina
+pH: 6.5
+pH menor a 6: Aceite ácido
+pH menor a 7 y mayor igual a 6: Aceite ligeramente ácido
+pH igual a 7: Aceite neutro
+pH mayor a 7: Aceite alcalino
 """
 
-pH = 4.5
-
-if pH < 7+3:
-    mensaje = "El agua es ácida."
+if pH < 6:
+    mensaje = "El aceite es ácido"
+if pH >= 6:
+    mensaje = "El aceite es ligeramente ácido."
 if pH == 7:
-    mensaje = "El agua es neutra."
-if pH > 7:
-    mensaje = "El agua es alcalina."
+    mensaje = "El aceite es neutro."
 
-#print(f"El pH del agua es: {pH}. {mensaje}")
+print(f"El pH del aceite es: {pH:.2f}. {mensaje}")
 '
                         placeholder="Escriba el codigo aqui"
                     />
@@ -144,4 +147,4 @@ if pH > 7:
     );
 };
 
-export default Course8Sublevel10;
+export default Course8Sublevel12;
