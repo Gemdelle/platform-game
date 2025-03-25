@@ -17,7 +17,7 @@
 .cheat {
   position: absolute;
   left: 50% !important;
-  bottom: 10% !important;
+  bottom: 50% !important;
   background-color: red !important;
 }
 
@@ -101,25 +101,27 @@ textarea:focus {
   background-color: transparent;
   border: none;
   margin-right: 2.5vw !important;
-  background-color: pink;
-  height: 12%;
-  width: 20%;
+  /* background-color: pink; */
+  height: 10%;
+  width: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  bottom: 7%;
+  bottom: 8%;
 
 }
 
 .compile-button span {
-  font-size: large;
   color: rgb(65, 65, 53);
-  background-color: red;
+  /* background-color: red; */
   /* line-height: 1vmax; */
   height: 100%;
   width: 100%;
-  font-size: 1.5vw !important;
+  font-size: 1.3vw !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 pre {
