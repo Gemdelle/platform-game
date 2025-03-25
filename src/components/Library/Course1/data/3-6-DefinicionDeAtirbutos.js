@@ -25,7 +25,6 @@ const temas_3_6 = {
                
             ]
         },
-        ,
         {
             completed: false,
             subtitle: "¿Aplica el camel case?",

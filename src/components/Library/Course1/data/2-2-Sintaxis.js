@@ -107,9 +107,9 @@ const temas_2_2 = {
                     <div className="java-col">
                         <div className="java-img"></div>
                         <div className="java-desc">
-                            //No me gusta Python
+                            \//No me gusta Python
                             <br></br><br></br>
-                            /*Java es más
+                            \/*Java es más
                             <br></br>
                             seguro que
                             <br></br>
