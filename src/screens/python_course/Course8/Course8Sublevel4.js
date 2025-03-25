@@ -9,16 +9,17 @@ import UserStoriesSublevel from "../user_stories/UserStoriesSublevel";
 import axios from "axios";
 
 const correctAnswer = '"""\n' +
-    'Estado actual del agua: líquido\n' +
+    'Temperatura  actual: -2.3°C\n' +
     '"""\n' +
     '\n' +
-    'estado_1 = "líquido"  \n' +
-    'estado_2 = "sólido"\n' +
-    'estado_3 = "gaseoso"\n' +
-    'estado_actual = estado_1\n' +
+    'temperatura_actual = -2.3\n' +
     '\n' +
-    'if estado_actual != "sólido":  \n' +
-    '    print("El agua no está en estado sólido.") \n'
+    'if temperatura_actual < 0:  \n' +
+    '    mensaje = "La temperatura está por debajo de 0°C. Está congelando."\n' +
+    'else:\n' +
+    '    mensaje = "La temperatura está por encima de 0°C. No está congelando."\n' +
+    '\n' +
+    'print(f"La temperatura ingresada es {temperatura_actual}°C.\\n{mensaje}")\n'
 const user_stories = [
     {
         action: "DELETE",
@@ -47,7 +48,7 @@ const Course8Sublevel1 = () => {
     useEffect(() => {
         if (shouldProceed) {
             setTimeout(() => {
-                navigate('/course-python/8/2');
+                navigate('/course-python/8/5');
             }, 2500);
         }
     }, [shouldProceed]);
@@ -71,10 +72,9 @@ output.getvalue()
             result = result.trim();
 
             setOutput(result);
-
-            if (result === "El agua no está en estado sólido.") {
+            if (result === "La temperatura ingresada es {temperatura_actual}°C.\n{mensaje}") {
                 const idToken = userProfile.id
-                const response = await axios.post('http://localhost:3001/validate/course-python/8/1', {
+                const response = await axios.post('http://localhost:3001/validate/course-python/8/4', {
                     class_code: classCode
                 }, {
                     headers: {
@@ -102,25 +102,26 @@ output.getvalue()
     return (
         <div className="course-level-1 flex">
             <div className="moving-course-sky"></div>
-            <Instructions instructions={"Definir el estado en el que se encuentra el agua. Corregir las variables en caso de ser necesario."}/>
+            <Instructions instructions={"Sabiendo que el punto de fusión del agua es 0°C, determinar el estado del agua. Corregir las variables necesarias."}/>
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>
                     <CodeEditor
                         onSubmit={handleCompileAndRun}
-                        className="❧ 7.1 if - No igual que (!=)"
+                        className="❧ 7.2 if/else - Menor que (<)"
                         correctAnswer={correctAnswer}
                         previousCode='"""
-Estado actual del agua: líquido
+Temperatura  actual: -2.3°C
 """
 
-estado_1 = "líquido"
-estado_2 = "sólido"
-estado_3 = "gaseoso"
-estado_actual = estado_123
+temperatura_actual = -22.3
 
-if estado_actual =!= "sólido":
-# print("El agua no está en estado sólido.")
+if temperatura < 10:
+    mensaje = "La temperatura está por debajo de 0°C. Está congelando."
+else:
+    mensaje = "La temperatura está por encima de 0°C. No está congelando."
+
+# print(f"La temperatura ingresada es {temperatura_actual}°C.\n{mensaje}")
 '
                         placeholder="Escriba el codigo aqui"
                     />
