@@ -9,16 +9,18 @@ import UserStoriesSublevel from "../user_stories/UserStoriesSublevel";
 import axios from "axios";
 
 const correctAnswer = '"""\n' +
-    'Estado actual del agua: líquido\n' +
+    'Temperatura actual: 140°C\n' +
+    'El agua alcanzó su máxima densidad. / El agua todavía no alcanzó su máxima densidad. # imprimir el mensaje correspondiente\n' +
     '"""\n' +
     '\n' +
-    'estado_1 = "líquido"  \n' +
-    'estado_2 = "sólido"\n' +
-    'estado_3 = "gaseoso"\n' +
-    'estado_actual = estado_1\n' +
+    'temperatura_actual = 140\n' +
+    'temperatura_densidad_maxima = 4\n' +
     '\n' +
-    'if estado_actual != "sólido":  \n' +
-    '    print("El agua no está en estado sólido.") \n'
+    'if temperatura_actual > temperatura_densidad_maxima:\n' +
+    '  print(f"Temperatura: {temperatura_actual}.\\nEl agua alcanzó su máxima densidad.")\n' +
+    'else:\n' +
+    '  print(f"Temperatura: {temperatura_densidad_maxima}.\\nEl agua todavía no alcanzó su máxima densidad.")\n'
+
 const user_stories = [
     {
         action: "DELETE",
@@ -27,7 +29,7 @@ const user_stories = [
     }
 ];
 
-const Course8Sublevel1 = () => {
+const Course8Sublevel10 = () => {
     const [output, setOutput] = useState('');
     const [validations, setValidations] = useState([]);
     const [shouldProceed, setShouldProceed] = useState(false);
@@ -47,7 +49,7 @@ const Course8Sublevel1 = () => {
     useEffect(() => {
         if (shouldProceed) {
             setTimeout(() => {
-                navigate('/course-python/8/2');
+                navigate('/course-python/8/11');
             }, 2500);
         }
     }, [shouldProceed]);
@@ -71,10 +73,9 @@ output.getvalue()
             result = result.trim();
 
             setOutput(result);
-
-            if (result === "El agua no está en estado sólido.") {
+            if (result === "Temperatura: 140.\nEl agua alcanzó su máxima densidad.") {
                 const idToken = userProfile.id
-                const response = await axios.post('http://localhost:3001/validate/course-python/8/1', {
+                const response = await axios.post('http://localhost:3001/validate/course-python/8/10', {
                     class_code: classCode
                 }, {
                     headers: {
@@ -102,25 +103,31 @@ output.getvalue()
     return (
         <div className="course-level-1 flex">
             <div className="moving-course-sky"></div>
-            <Instructions instructions={"Definir el estado en el que se encuentra el agua. Corregir las variables en caso de ser necesario."}/>
+            <Instructions instructions={"Utilizando el operador >=, verificar si el pH es mayor o igual a 7."}/>
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>
                     <CodeEditor
                         onSubmit={handleCompileAndRun}
-                        className="❧ 7.1 if - No igual que (!=)"
+                        className="7.4 if/else - Mayor/menor o igual que (>=)"
                         correctAnswer={correctAnswer}
                         previousCode='"""
-Estado actual del agua: líquido
+pH: 4
+pH menor a 7: Agua ácida
+pH igual a 7: Agua neutra
+pH mayor a 7: Agua alcalina
 """
 
-estado_1 = "líquido"
-estado_2 = "sólido"
-estado_3 = "gaseoso"
-estado_actual = estado_123
+pH = 4.5
 
-if estado_actual =!= "sólido":
-# print("El agua no está en estado sólido.")
+if pH < 7+3:
+    mensaje = "El agua es ácida."
+if pH == 7:
+    mensaje = "El agua es neutra."
+if pH > 7:
+    mensaje = "El agua es alcalina."
+
+#print(f"El pH del agua es: {pH}. {mensaje}")
 '
                         placeholder="Escriba el codigo aqui"
                     />
@@ -132,4 +139,4 @@ if estado_actual =!= "sólido":
     );
 };
 
-export default Course8Sublevel1;
+export default Course8Sublevel10;

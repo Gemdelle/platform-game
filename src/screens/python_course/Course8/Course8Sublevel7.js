@@ -9,16 +9,16 @@ import UserStoriesSublevel from "../user_stories/UserStoriesSublevel";
 import axios from "axios";
 
 const correctAnswer = '"""\n' +
-    'Estado actual del agua: líquido\n' +
+    'Temperatura actual: 5°C\n' +
     '"""\n' +
     '\n' +
-    'estado_1 = "líquido"  \n' +
-    'estado_2 = "sólido"\n' +
-    'estado_3 = "gaseoso"\n' +
-    'estado_actual = estado_1\n' +
+    'temperatura_actual = 5\n' +
     '\n' +
-    'if estado_actual != "sólido":  \n' +
-    '    print("El agua no está en estado sólido.") \n'
+    'if temperatura_actual  > 4:\n' +
+    '  print(f"Temperatura: {temperatura_actual}°C.\\nEl agua alcanzó su máxima densidad")\n' +
+    'else:\n' +
+    '  print(f"Temperatura: {temperatura_actual}°C.\\nEl agua todavía no alcanzó su máxima densidad")\n'
+
 const user_stories = [
     {
         action: "DELETE",
@@ -27,7 +27,7 @@ const user_stories = [
     }
 ];
 
-const Course8Sublevel1 = () => {
+const Course8Sublevel7 = () => {
     const [output, setOutput] = useState('');
     const [validations, setValidations] = useState([]);
     const [shouldProceed, setShouldProceed] = useState(false);
@@ -47,7 +47,7 @@ const Course8Sublevel1 = () => {
     useEffect(() => {
         if (shouldProceed) {
             setTimeout(() => {
-                navigate('/course-python/8/2');
+                navigate('/course-python/8/8');
             }, 2500);
         }
     }, [shouldProceed]);
@@ -71,10 +71,9 @@ output.getvalue()
             result = result.trim();
 
             setOutput(result);
-
-            if (result === "El agua no está en estado sólido.") {
+            if (result === "Temperatura: 5°C.\nEl agua alcanzó su máxima densidad") {
                 const idToken = userProfile.id
-                const response = await axios.post('http://localhost:3001/validate/course-python/8/1', {
+                const response = await axios.post('http://localhost:3001/validate/course-python/8/7', {
                     class_code: classCode
                 }, {
                     headers: {
@@ -102,25 +101,28 @@ output.getvalue()
     return (
         <div className="course-level-1 flex">
             <div className="moving-course-sky"></div>
-            <Instructions instructions={"Definir el estado en el que se encuentra el agua. Corregir las variables en caso de ser necesario."}/>
+            <Instructions instructions={"Sabiendo que el agua alcanza su máxima densidad a 4°C, determinar si ya se alcanzó o no según la temperatura actual."}/>
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>
                     <CodeEditor
                         onSubmit={handleCompileAndRun}
-                        className="❧ 7.1 if - No igual que (!=)"
+                        className="❧ 7.3 if/else - Mayor que (>)"
                         correctAnswer={correctAnswer}
                         previousCode='"""
-Estado actual del agua: líquido
+Temperatura actual: 5°C
 """
 
-estado_1 = "líquido"
-estado_2 = "sólido"
-estado_3 = "gaseoso"
-estado_actual = estado_123
+temperatura_actual = 51
 
-if estado_actual =!= "sólido":
-# print("El agua no está en estado sólido.")
+      if temperatura_actual == 3  > 4:
+
+
+
+  print(f"Temperatura: {temperatura_actual_c}°C.\nEl agua alcanzó su máxima densidad")
+           else:
+
+  print(f"Temperatura: {temperatura_actual_c}°C.\nEl agua todavía no alcanzó su máxima densidad")
 '
                         placeholder="Escriba el codigo aqui"
                     />
@@ -132,4 +134,4 @@ if estado_actual =!= "sólido":
     );
 };
 
-export default Course8Sublevel1;
+export default Course8Sublevel7;
