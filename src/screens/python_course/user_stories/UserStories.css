@@ -9,8 +9,9 @@
 
 .stories-container {
     height: 100%;
-    margin-bottom: -6vmax;
-    background-color: violet;
+    margin-bottom: -3vmax;
+    margin-left: 2vw;
+    background-color: transparent !important;
 }
 
 .user-stories ul {
@@ -20,29 +21,29 @@
     scroll-behavior: smooth;
     scrollbar-width: none;
     z-index: 2;
-    background-color: coral;
+    background-color: transparent !important;
     background-image: url("/public/assets/user-stories-background.png");
-    background-size: 100% 100%;
-    background-position: center;
+    background-size: 88% 100%;
+    background-position: center right;
     background-repeat: no-repeat;
     margin-top: 55%;
     height: 100%;
 }
 
 .a-user-story {
-    width: 80%;
+    width: 175%;
     height: auto;
     min-height: 4vmax;
     /* background-color: lightblue; */
     display: flex;
     justify-content: space-between;
-    margin-left: 5vh;
+    margin-left: 2vh;
     margin-bottom: 3vh;
 }
 
 .stories-container li {
     text-align: left;
-    font-size: 1.5vw;
+    font-size: 1.4vw;
     color: rgb(65, 65, 53);
     width: 80%;
     /* background-color: gray; */
