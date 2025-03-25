@@ -72,13 +72,13 @@ const Course2Sublevel16 = () => {
     return (
         <div className="course-level-1 flex">
             <div className="moving-course-sky"></div>
-            <Instructions instructions={"❧ 1.6 Impresión formateada y salto de línea"}/>
+            <Instructions instructions={"Imprimir los datos del ácido sulfúrico de manera tal que quede un dato por línea, separados por un solo renglón."}/>
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>
                     <CodeEditor
                         onSubmit={handleCompileAndRun}
-                        className="Egg"
+                        title="1.6 Impresión formateada y salto de línea"
                         correctAnswer={correctAnswer}
                         previousCode='# acido_sulfurico_nombre = "Ácido sulfúrico"
 # acido_sulfurico_formula = "H₂SO₄"

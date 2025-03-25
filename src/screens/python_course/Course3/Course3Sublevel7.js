@@ -83,7 +83,7 @@ const Course3Sublevel7 = () => {
                 <div className='code-container flex-c'>
                     <CodeEditor
                         onSubmit={handleCompileAndRun}
-                        className="Egg"
+                        title="2.3 Variable de tipo float"
                         correctAnswer={correctAnswer}
                         previousCode='aluminio_simbolo = “Al”
 aluminio_numero_atomico = 13

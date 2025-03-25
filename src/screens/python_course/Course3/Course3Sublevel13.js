@@ -81,7 +81,7 @@ const Course3Sublevel13 = () => {
                 <div className='code-container flex-c'>
                     <CodeEditor
                         onSubmit={handleCompileAndRun}
-                        className="Egg"
+                        title="2.5 Sobreescribir variables de tipo string"
                         correctAnswer={correctAnswer}
                         previousCode='silicio_nombre = "Silicio"
 oxigeno_simbolo = "O"

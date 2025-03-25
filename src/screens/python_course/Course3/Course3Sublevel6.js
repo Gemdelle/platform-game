@@ -90,7 +90,7 @@ const Course3Sublevel6 = () => {
                 <div className='code-container flex-c'>
                     <CodeEditor
                         onSubmit={handleCompileAndRun}
-                        className="Egg"
+                        title="2.2 Variable de tipo int"
                         correctAnswer={correctAnswer}
                         previousCode='“””
 Z(Ca): …

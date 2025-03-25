@@ -73,13 +73,13 @@ const Course2Sublevel17 = () => {
     return (
         <div className="course-level-1 flex">
             <div className="moving-course-sky"></div>
-            <Instructions instructions={"❧ 1.6 Impresión formateada y salto de línea"}/>
+            <Instructions instructions={"Agregar los saltos de línea donde corresponde de manera tal que quede un dato por línea. El último dato a imprimir debe ser el uso. Debe contar con punto final."}/>
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>
                     <CodeEditor
                         onSubmit={handleCompileAndRun}
-                        className="Egg"
+                        title="1.6 Impresión formateada y salto de línea"
                         correctAnswer={correctAnswer}
                         previousCode='“””
 acido_sulfurico_usos = "Se utiliza en la fabricación de fertilizantes, detergentes y en el refinado de petróleo."

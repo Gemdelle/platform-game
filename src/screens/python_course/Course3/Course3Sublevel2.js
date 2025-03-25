@@ -80,7 +80,7 @@ const Course3Sublevel2 = () => {
                 <div className='code-container flex-c'>
                     <CodeEditor
                         onSubmit={handleCompileAndRun}
-                        className="Egg"
+                        title="2.1 Variable de tipo string"
                         correctAnswer={correctAnswer}
                         previousCode='aluminio_nombre  = "Aluminio"
 aluminio_simbolo  = "Al"

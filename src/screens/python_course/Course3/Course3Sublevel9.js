@@ -87,7 +87,7 @@ const Course3Sublevel9 = () => {
                 <div className='code-container flex-c'>
                     <CodeEditor
                         onSubmit={handleCompileAndRun}
-                        className="Egg"
+                        title="2.3 Variable de tipo float"
                         correctAnswer={correctAnswer}
                         previousCode='"""
 Peso atómico (H): 1.008

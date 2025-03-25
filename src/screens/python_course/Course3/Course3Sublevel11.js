@@ -81,7 +81,7 @@ const Course3Sublevel11 = () => {
                 <div className='code-container flex-c'>
                     <CodeEditor
                         onSubmit={handleCompileAndRun}
-                        className="Egg"
+                        title="2.4 Variable de tipo boolean"
                         correctAnswer={correctAnswer}
                         previousCode='hidrogeno_simbolo = "H" # str
 hidrogeno_es_metaloide = False  # boolean

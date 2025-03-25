@@ -74,13 +74,13 @@ const Course2Sublevel6 = () => {
     return (
         <div className="course-level-1 flex">
             <div className="moving-course-sky"></div>
-            <Instructions instructions={"❧ 1.2 Imprimir variables"}/>
+            <Instructions instructions={"Habilitar las variables  <sal_formula>, <sal_punto_fusion> y <sal_punto_ebullicion = '1413°C'> e imprimirla."}/>
             <Header/>
             <div className='container flex'>
                 <div className='code-container flex-c'>
                     <CodeEditor
                         onSubmit={handleCompileAndRun}
-                        className="Egg"
+                        title="1.2 Imprimir variables"
                         correctAnswer={correctAnswer}
                         previousCode='# sal_formula = "NaCl"
 # sal_punto_fusion = "801°C"

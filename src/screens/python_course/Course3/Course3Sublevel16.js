@@ -90,7 +90,7 @@ const Course3Sublevel16 = () => {
                 <div className='code-container flex-c'>
                     <CodeEditor
                         onSubmit={handleCompileAndRun}
-                        className="Egg"
+                        title="2.6 Sobreescribir variables de tipo int"
                         correctAnswer={correctAnswer}
                         previousCode='“””
 El número atómico de (O) es 8.
