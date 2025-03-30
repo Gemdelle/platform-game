@@ -61,7 +61,7 @@ output.getvalue()
 
             if (isValidResult(result)) {
                 const idToken = userProfile.id
-                const response = await axios.post(validationUrl, {
+                const response = await axios.post(`http://localhost:3001/validate/${validationUrl}`, {
                     class_code: classCode
                 }, {
                     headers: {

@@ -54,7 +54,7 @@ const App = () => {
                     <Route path="/course-python/1/1" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/1/2'
-                            validationUrl='http://localhost:3001/validate/course-python/1/1'
+                            validationUrl='course-python/1/1'
                             instructions="Habilitar la variable."
                             codeEditorSetup={
                                 {
@@ -75,7 +75,7 @@ const App = () => {
                     <Route path="/course-python/1/2" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/1/3'
-                            validationUrl='http://localhost:3001/validate/course-python/1/2'
+                            validationUrl='course-python/1/2'
                             instructions="Agregar el nombre del autor (Antoine Lavoisier) a modo de comentario # al lado de la declaración de la variable."
                             codeEditorSetup={
                                 {
@@ -96,7 +96,7 @@ const App = () => {
                     <Route path="/course-python/1/3" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/1/4'
-                            validationUrl='http://localhost:3001/validate/course-python/1/3'
+                            validationUrl='course-python/1/3'
                             instructions="Corregir el código para que la variable quede habilitada y el nombre del autor comentado en la misma línea."
                             codeEditorSetup={
                                 {
@@ -118,15 +118,15 @@ const App = () => {
                     <Route path="/course-python/1/4" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/1/5'
-                            validationUrl='http://localhost:3001/validate/course-python/1/4'
+                            validationUrl='course-python/1/4'
                             instructions="Deshabilitar la variable."
                             codeEditorSetup={
                                 {
-                                    title: "❧ 0.2 Comentarios multilínea “”” “””",
+                                    title: '❧ 0.2 Comentarios multilínea """ """',
                                     previousCode:'quote = "Si la química no existiera, la vida no sería posible."',
-                                    correctAnswer:'“””\n' +
+                                    correctAnswer:'"""\n' +
                                         'quote = "Si la química no existiera, la vida no sería posible."\n' +
-                                        '“””\n'
+                                        '"""\n'
                                 }}
                             userStories={[
                                 {
@@ -141,27 +141,27 @@ const App = () => {
                     <Route path="/course-python/1/5" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/1/6'
-                            validationUrl='http://localhost:3001/validate/course-python/1/5'
+                            validationUrl='course-python/1/5'
                             instructions="Comentar las quotes que no corresponden al autor del comentario."
                             codeEditorSetup={
                                 {
-                                    title: "❧ 0.2 Comentarios multilínea “”” “””",
-                                    previousCode:'“””\n' +
+                                    title: '❧ 0.2 Comentarios multilínea """ """',
+                                    previousCode:'"""\n' +
                                         'Glenn T. Seaborg (1912-1999) fue un químico estadounidense que descubrió varios elementos transuránicos, incluido el plutonio El elemento seaborgio (Sg) fue nombrado en su honor.\n' +
-                                        '“””\n' +
+                                        '"""\n' +
                                         'quote1 = "La alquimia fue la predecesora de la química moderna." # Carl Jung\n' +
                                         'quote2 = "Cada elemento tiene su propia identidad." # Glenn T. Seaborg\n' +
                                         'quote3 = "La ciencia y la paz triunfarán sobre la ignorancia y la guerra." # Louis Pasteur\n',
-                                    correctAnswer:'“””\n' +
+                                    correctAnswer:'"""\n' +
                                         'Glenn T. Seaborg (1912-1999) fue un químico estadounidense que descubrió varios elementos transuránicos, incluido el plutonio El elemento seaborgio (Sg) fue nombrado en su honor.\n' +
-                                        '“””\n' +
-                                        '“””\n' +
+                                        '"""\n' +
+                                        '"""\n' +
                                         'quote1 = "La alquimia fue la predecesora de la química moderna." # Carl Jung\n' +
-                                        '“””\n' +
+                                        '"""\n' +
                                         'quote2 = "Cada elemento tiene su propia identidad." # Glenn T. Seaborg\n' +
-                                        '“””\n' +
+                                        '"""\n' +
                                         'quote3 = "La ciencia y la paz triunfarán sobre la ignorancia y la guerra." # Louis Pasteur\n' +
-                                        '“””\n'
+                                        '"""\n'
                                 }}
                             userStories={[
                                 {
@@ -176,17 +176,17 @@ const App = () => {
                     <Route path="/course-python/1/6" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/1/7'
-                            validationUrl='http://localhost:3001/validate/course-python/1/6'
+                            validationUrl='course-python/1/6'
                             instructions="Comentar la información del autor en formato multilínea y el nombre del autor después de la frase en la misma línea."
                             codeEditorSetup={
                                 {
-                                    title: "❧ 0.2 Comentarios multilínea “”” “””",
+                                    title: '❧ 0.2 Comentarios multilínea """ """',
                                     previousCode:'Theodore Gray es un químico, escritor y divulgador científico conocido por su pasión por la tabla periódica. Es cofundador de Wolfram Research y autor de libros como The Elements, donde presenta la química de forma visual e interactiva.\n' +
                                         '\n' +
                                         'quote = "Los elementos son los átomos de la tabla periódica, pero la química es la sinfonía de sus combinaciones." - Theodore Gray\n',
-                                    correctAnswer:'“””\n' +
+                                    correctAnswer:'"""\n' +
                                         'Theodore Gray es un químico, escritor y divulgador científico conocido por su pasión por la tabla periódica. Es cofundador de Wolfram Research y autor de libros como The Elements, donde presenta la química de forma visual e interactiva.\n' +
-                                        '“””\n' +
+                                        '"""\n' +
                                         '\n' +
                                         'quote = "Los elementos son los átomos de la tabla periódica, pero la química es la sinfonía de sus combinaciones." # Theodore Gray\n'
                                 }}
@@ -204,7 +204,7 @@ const App = () => {
                     <Route path="/course-python/2/1" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/2/2'
-                            validationUrl='http://localhost:3001/validate/course-python/2/1'
+                            validationUrl='course-python/2/1'
                             instructions="?????????????????"
                             codeEditorSetup={
                                 {
@@ -225,15 +225,15 @@ const App = () => {
                     <Route path="/course-python/2/2" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/2/3'
-                            validationUrl='http://localhost:3001/validate/course-python/2/2'
+                            validationUrl='course-python/2/2'
                             instructions="?????????????????"
                             codeEditorSetup={
                                 {
                                     title: "❧ 1.1. Imprimir texto",
                                     previousCode:'print El agua hierve a 100°C y se congela a 0°C.\n' +
-                                        'print “El agua tiene un punto de ebullición de 100°C y congelación de 0°C.”\n',
-                                    correctAnswer:'print(“El agua hierve a 100°C y se congela a 0°C.”)\n' +
-                                        'print(“El agua tiene un punto de ebullición de 100°C y congelación de 0°C.”)\n'
+                                        'print "El agua tiene un punto de ebullición de 100°C y congelación de 0°C."\n',
+                                    correctAnswer:'print("El agua hierve a 100°C y se congela a 0°C.")\n' +
+                                        'print("El agua tiene un punto de ebullición de 100°C y congelación de 0°C.")\n'
                                 }}
                             userStories={[
                                 {
@@ -248,19 +248,19 @@ const App = () => {
                     <Route path="/course-python/2/3" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/2/4'
-                            validationUrl='http://localhost:3001/validate/course-python/2/3'
+                            validationUrl='course-python/2/3'
                             instructions="?????????????????"
                             codeEditorSetup={
                                 {
                                     title: "❧ 1.1. Imprimir texto",
-                                    previousCode:'“””\n' +
+                                    previousCode:'"""\n' +
                                         'El agua (H2O) es líquida a temperatura ambiente.\n' +
                                         'El agua hierve a 100°C y se congela a 0°C.\n' +
                                         'El agua tiene un punto de ebullición de 100°C y congelación de 0°C.\n' +
-                                        '“””\n',
-                                    correctAnswer:'print(“El agua (H2O) es líquida a temperatura ambiente.”)\n' +
-                                        'print(“El agua hierve a 100°C y se congela a 0°C.”)\n' +
-                                        'print(“El agua tiene un punto de ebullición de 100°C y congelación de 0°C.”)\n'
+                                        '"""\n',
+                                    correctAnswer:'print("El agua (H2O) es líquida a temperatura ambiente.")\n' +
+                                        'print("El agua hierve a 100°C y se congela a 0°C.")\n' +
+                                        'print("El agua tiene un punto de ebullición de 100°C y congelación de 0°C.")\n'
                                 }}
                             userStories={[
                                 {
@@ -275,13 +275,13 @@ const App = () => {
                     <Route path="/course-python/2/4" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/2/5'
-                            validationUrl='http://localhost:3001/validate/course-python/2/4'
+                            validationUrl='course-python/2/4'
                             instructions="Imprimir la variable <sal_importancia>."
                             codeEditorSetup={
                                 {
                                     title: "❧ 1.2 Imprimir variables",
                                     previousCode:'sal_importancia = "Se usa en la industria alimentaria y como desinfectante."\n' +
-                                        'print(“sal_importancia”’)\n',
+                                        'print("sal_importancia"’)\n',
                                     correctAnswer:'sal_importancia = "Se usa en la industria alimentaria y como desinfectante."\n' +
                                         'print(sal_importancia)\n'
                                 }}
@@ -298,7 +298,7 @@ const App = () => {
                     <Route path="/course-python/2/5" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/2/6'
-                            validationUrl='http://localhost:3001/validate/course-python/2/5'
+                            validationUrl='course-python/2/5'
                             instructions="Imprimir la variable <sal_estado>."
                             codeEditorSetup={
                                 {
@@ -321,7 +321,7 @@ const App = () => {
                     <Route path="/course-python/2/6" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/2/7'
-                            validationUrl='http://localhost:3001/validate/course-python/2/6'
+                            validationUrl='course-python/2/6'
                             instructions="Habilitar las variables  <sal_formula>, <sal_punto_fusion> y <sal_punto_ebullicion = '1413°C'> e imprimirla."
                             codeEditorSetup={
                                 {
@@ -349,7 +349,7 @@ const App = () => {
                     <Route path="/course-python/2/7" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/2/8'
-                            validationUrl='http://localhost:3001/validate/course-python/2/7'
+                            validationUrl='course-python/2/7'
                             instructions="??????????????"
                             codeEditorSetup={
                                 {
@@ -357,7 +357,7 @@ const App = () => {
                                     previousCode:'metano_nombre = "Metano"\n' +
                                         'metano_formula = "CH4"\n' +
                                         '\n' +
-                                        '# print("El compuesto es", “metano_nombre”)\n',
+                                        '# print("El compuesto es", "metano_nombre")\n',
                                     correctAnswer:'metano_nombre = "Metano"\n' +
                                         'metano_formula = "CH4"\n' +
                                         '\n' +
@@ -376,7 +376,7 @@ const App = () => {
                     <Route path="/course-python/2/8" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/2/9'
-                            validationUrl='http://localhost:3001/validate/course-python/2/8'
+                            validationUrl='course-python/2/8'
                             instructions="??????????????"
                             codeEditorSetup={
                                 {
@@ -391,8 +391,8 @@ const App = () => {
                                         'metano_formula = "CH4"\n' +
                                         'metano_punto_fusion = "-161.5°C"\n' +
                                         '\n' +
-                                        'print("La fórmula del metano es ", metano_formula, “.”)\n' +
-                                        'print("Su punto de fusión es", metano_punto_fusion, “.”)\n'
+                                        'print("La fórmula del metano es ", metano_formula, ".")\n' +
+                                        'print("Su punto de fusión es", metano_punto_fusion, ".")\n'
                                 }}
                             userStories={[
                                 {
@@ -407,21 +407,21 @@ const App = () => {
                     <Route path="/course-python/2/9" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/2/10'
-                            validationUrl='http://localhost:3001/validate/course-python/2/9'
+                            validationUrl='course-python/2/9'
                             instructions="??????????????"
                             codeEditorSetup={
                                 {
                                     title: "❧ 1.3 Imprimir concatenación de texto y variables con ,",
-                                    previousCode:'“””\n' +
+                                    previousCode:'"""\n' +
                                         'metano_nombre = "Metano"\n' +
                                         'metano_formula = "CH4"\n' +
                                         'metano_estado = "gas"\n' +
                                         'metano_punto_fusion = "-161.5°C"\n' +
                                         'metano_punto_ebullicion = "-161.5°C"\n' +
                                         'metano_origen = "Se encuentra en los yacimientos de gas natural."\n' +
-                                        '“””\n' +
+                                        '"""\n' +
                                         '\n' +
-                                        '# print(“El nombre del compuesto a describir es”, metano_nombre, “.”)\n',
+                                        '# print("El nombre del compuesto a describir es", metano_nombre, ".")\n',
                                     correctAnswer:'metano_nombre = "Metano"\n' +
                                         'metano_formula = "CH4"\n' +
                                         'metano_estado = "gas"\n' +
@@ -449,7 +449,7 @@ const App = () => {
                     <Route path="/course-python/2/10" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/2/11'
-                            validationUrl='http://localhost:3001/validate/course-python/2/10'
+                            validationUrl='course-python/2/10'
                             instructions="??????????????"
                             codeEditorSetup={
                                 {
@@ -457,14 +457,14 @@ const App = () => {
                                     previousCode:'dioxido_carbono_nombre = "Dióxido de carbono"\n' +
                                         'dioxido_carbono_formula = "CO2"\n' +
                                         'dioxido_carbono_estado = "gas"\n' +
-                                        '# print("El " + dioxido_carbono_nombre + “Dióxido de Azufre” + " tiene la fórmula " + “CO2” +  dioxido_carbono_formula)\n' +
-                                        '# print(“El  + “Dióxido de Magnesio” + dioxido_carbono_nombre + "es un " + “líquido” + dioxido_carbono_estado)\n',
+                                        '# print("El " + dioxido_carbono_nombre + "Dióxido de Azufre" + " tiene la fórmula " + "CO2" +  dioxido_carbono_formula)\n' +
+                                        '# print("El  + "Dióxido de Magnesio" + dioxido_carbono_nombre + "es un " + "líquido" + dioxido_carbono_estado)\n',
                                     correctAnswer:'dioxido_carbono_nombre = "Dióxido de carbono"\n' +
                                         'dioxido_carbono_formula = "CO2"\n' +
                                         'dioxido_carbono_estado = "gas"\n' +
                                         '\n' +
                                         '# print("El " + dioxido_carbono_nombre + " tiene la fórmula " + dioxido_carbono_formula)\n' +
-                                        '# print(“El + dioxido_carbono_nombre + " es un " +  dioxido_carbono_estado)\n'
+                                        '# print("El + dioxido_carbono_nombre + " es un " +  dioxido_carbono_estado)\n'
                                 }}
                             userStories={[
                                 {
@@ -479,7 +479,7 @@ const App = () => {
                     <Route path="/course-python/2/11" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/2/12'
-                            validationUrl='http://localhost:3001/validate/course-python/2/11'
+                            validationUrl='course-python/2/11'
                             instructions="??????????????"
                             codeEditorSetup={
                                 {
@@ -496,8 +496,8 @@ const App = () => {
                                         'dioxido_carbono_estado = "gas"\n' +
                                         'dioxido_carbono_concentracion_atmosferica = "0.04%"\n' +
                                         '\n' +
-                                        'print("El " + dioxido_carbono_nombre + " tiene la fórmula " + dioxido_carbono_formula + “.”)\n' +
-                                        'print("Es un " + dioxido_carbono_estado + " que se encuentra en la atmósfera con una concentración de " + dioxido_carbono_concentracion_atmosferica + “.”’)\n'
+                                        'print("El " + dioxido_carbono_nombre + " tiene la fórmula " + dioxido_carbono_formula + ".")\n' +
+                                        'print("Es un " + dioxido_carbono_estado + " que se encuentra en la atmósfera con una concentración de " + dioxido_carbono_concentracion_atmosferica + "."’)\n'
                                 }}
                             userStories={[
                                 {
@@ -512,7 +512,7 @@ const App = () => {
                     <Route path="/course-python/2/12" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/2/13'
-                            validationUrl='http://localhost:3001/validate/course-python/2/12'
+                            validationUrl='course-python/2/12'
                             instructions="??????????????"
                             codeEditorSetup={
                                 {
@@ -550,7 +550,7 @@ const App = () => {
                     <Route path="/course-python/2/13" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/2/14'
-                            validationUrl='http://localhost:3001/validate/course-python/2/13'
+                            validationUrl='course-python/2/13'
                             instructions="??????????????"
                             codeEditorSetup={
                                 {
@@ -577,7 +577,7 @@ const App = () => {
                     <Route path="/course-python/2/14" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/2/15'
-                            validationUrl='http://localhost:3001/validate/course-python/2/14'
+                            validationUrl='course-python/2/14'
                             instructions="??????????????"
                             codeEditorSetup={
                                 {
@@ -608,7 +608,7 @@ const App = () => {
                     <Route path="/course-python/2/15" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/2/16'
-                            validationUrl='http://localhost:3001/validate/course-python/2/15'
+                            validationUrl='course-python/2/15'
                             instructions="??????????????"
                             codeEditorSetup={
                                 {
@@ -641,7 +641,7 @@ const App = () => {
                     <Route path="/course-python/2/16" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/2/17'
-                            validationUrl='http://localhost:3001/validate/course-python/2/16'
+                            validationUrl='course-python/2/16'
                             instructions="Imprimir los datos del ácido sulfúrico de manera tal que quede un dato por línea, separados por un solo renglón."
                             codeEditorSetup={
                                 {
@@ -649,11 +649,11 @@ const App = () => {
                                     previousCode:'# acido_sulfurico_nombre = "Ácido sulfúrico"\n' +
                                         '# acido_sulfurico_formula = "H₂SO₄"\n' +
                                         '\n' +
-                                        '# print(f”Nombre: \\n{acido_sulfurico_nombre}\\n\\n Fórmula: \\n{acido_sulfurico_formula}”)\n',
+                                        '# print(f"Nombre: \\n{acido_sulfurico_nombre}\\n\\n Fórmula: \\n{acido_sulfurico_formula}")\n',
                                     correctAnswer:'acido_sulfurico_nombre = "Ácido sulfúrico"\n' +
                                         'acido_sulfurico_formula = "H₂SO₄"\n' +
                                         '\n' +
-                                        'print(f”Nombre: {acido_sulfurico_nombre}\\n Fórmula: {acido_sulfurico_formula}”)\n'
+                                        'print(f"Nombre: {acido_sulfurico_nombre}\\n Fórmula: {acido_sulfurico_formula}")\n'
                                 }}
                             userStories={[
                                 {
@@ -668,7 +668,7 @@ const App = () => {
                     <Route path="/course-python/2/17" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/2/18'
-                            validationUrl='http://localhost:3001/validate/course-python/2/17'
+                            validationUrl='course-python/2/17'
                             instructions="Agregar los saltos de línea donde corresponde de manera tal que quede un dato por línea. El último dato a imprimir debe ser el uso. Debe contar con punto final."
                             codeEditorSetup={
                                 {
@@ -679,7 +679,7 @@ const App = () => {
                                         'acido_sulfurico_ph = "0.3"\n' +
                                         '"""\n' +
                                         '\n' +
-                                        '# print(“La fórmula del ácido sulfúrico es . El ph del ácido sulfúrico es.”)\n',
+                                        '# print("La fórmula del ácido sulfúrico es . El ph del ácido sulfúrico es.")\n',
                                     correctAnswer:'acido_sulfurico_usos = "Se utiliza en la fabricación de fertilizantes, detergentes y en el refinado de petróleo."\n' +
                                         'acido_sulfurico_formula = "H₂SO₄"\n' +
                                         'acido_sulfurico_ph = "0.3"\n' +
@@ -699,7 +699,7 @@ const App = () => {
                     <Route path="/course-python/2/18" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/2/19'
-                            validationUrl='http://localhost:3001/validate/course-python/2/18'
+                            validationUrl='course-python/2/18'
                             instructions="Imprimir todos los datos de las variables de manera tal que queden exactamente igual al contenido de las triples comillas."
                             codeEditorSetup={
                                 {
@@ -734,19 +734,19 @@ const App = () => {
                     <Route path="/course-python/3/1" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/3/2'
-                            validationUrl='http://localhost:3001/validate/course-python/3/1'
+                            validationUrl='course-python/3/1'
                             instructions="Declarar las variables correctamente e imprimir sus valores."
                             codeEditorSetup={
                                 {
                                     title: "2.1 Variable de tipo string",
-                                    previousCode:'# “aluminio_nombre” = -"Aluminio"-\n' +
-                                        '# “aluminio_simbolo” = -"Al"-\n' +
+                                    previousCode:'# "aluminio_nombre" = -"Aluminio"-\n' +
+                                        '# "aluminio_simbolo" = -"Al"-\n' +
                                         '\n' +
-                                        'print(f”Nombre: \\nSímbolo: ”)\n',
+                                        'print(f"Nombre: \\nSímbolo: ")\n',
                                     correctAnswer:'aluminio_nombre  = "Aluminio"\n' +
                                         'aluminio_simbolo  = "Al"\n' +
                                         '\n' +
-                                        'print(f”Nombre: {aluminio_nombre}\\nSímbolo: {aluminio_simbolo}”)\n'
+                                        'print(f"Nombre: {aluminio_nombre}\\nSímbolo: {aluminio_simbolo}")\n'
                                 }}
                             userStories={[
                                 {
@@ -761,7 +761,7 @@ const App = () => {
                     <Route path="/course-python/3/2" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/3/3'
-                            validationUrl='http://localhost:3001/validate/course-python/3/2'
+                            validationUrl='course-python/3/2'
                             instructions="Declarar las mismas variables para Arsénico (As) e imprimir sus valores. Los elementos deben quedar separados por una línea en blanco."
                             codeEditorSetup={
                                 {
@@ -773,7 +773,7 @@ const App = () => {
                                         'arsenico_nombre = "Arsénico"\n' +
                                         'arsenico_simbolo = "As"\n' +
                                         '\n' +
-                                        'print(f”Nombre: {aluminio_nombre}\\nSímbolo: {aluminio_simbolo}\\nNombre: {arsenico_nombre}\\nSímbolo: {arsenico_simbolo}”)\n'
+                                        'print(f"Nombre: {aluminio_nombre}\\nSímbolo: {aluminio_simbolo}\\nNombre: {arsenico_nombre}\\nSímbolo: {arsenico_simbolo}")\n'
                                 }}
                             userStories={[
                                 {
@@ -788,12 +788,12 @@ const App = () => {
                     <Route path="/course-python/3/3" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/3/4'
-                            validationUrl='http://localhost:3001/validate/course-python/3/3'
+                            validationUrl='course-python/3/3'
                             instructions="Arreglar la declaración de variables y agregar el Calcio (Ca). Definir la impresión para que quede exactamente el mismo formato que el texto comentado."
                             codeEditorSetup={
                                 {
                                     title: "2.1 Variable de tipo string",
-                                    previousCode:'“””\n' +
+                                    previousCode:'"""\n' +
                                         'Nombre: Aluminio\n' +
                                         'Símbolo: …\n' +
                                         '\n' +
@@ -802,7 +802,7 @@ const App = () => {
                                         '\n' +
                                         'Nombre: Calcio\n' +
                                         'Símbolo: Ca\n' +
-                                        '“””\n' +
+                                        '"""\n' +
                                         '\n' +
                                         '# aluminio_nombre  = As\n' +
                                         '# aluminio_simbolo  = Arsénico\n' +
@@ -812,10 +812,10 @@ const App = () => {
                                         'aluminio_simbolo  = "Al"\n' +
                                         'arsenico_nombre = "Arsénico"\n' +
                                         'arsenico_simbolo = "As"\n' +
-                                        'calcio_nombre = “Calcio”\n' +
-                                        'calcio_simbolo = “Ca”\n' +
+                                        'calcio_nombre = "Calcio"\n' +
+                                        'calcio_simbolo = "Ca"\n' +
                                         '\n' +
-                                        'print(f”Nombre: {aluminio_nombre}\\nSímbolo: {aluminio_simbolo}\\n\\nNombre: {arsenico_nombre}\\nSímbolo: {arsenico_simbolo}\\n\\nNombre: {calcio_nombre}\\nSímbolo: {calcio_simbolo}”)\n'
+                                        'print(f"Nombre: {aluminio_nombre}\\nSímbolo: {aluminio_simbolo}\\n\\nNombre: {arsenico_nombre}\\nSímbolo: {arsenico_simbolo}\\n\\nNombre: {calcio_nombre}\\nSímbolo: {calcio_simbolo}")\n'
                                 }}
                             userStories={[
                                 {
@@ -830,23 +830,23 @@ const App = () => {
                     <Route path="/course-python/3/4" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/3/5'
-                            validationUrl='http://localhost:3001/validate/course-python/3/4'
+                            validationUrl='course-python/3/4'
                             instructions="Corregir los números atómicos de los elementos; el Calcio tiene un valor 20 veces mayor que el Hidrógeno. Deben ser números enteros. Imprimir los números atómicos de ambos elementos, separados por una línea en blanco"
                             codeEditorSetup={
                                 {
                                     title: "2.2 Variable de tipo int",
                                     previousCode:'\'hidrogeno_simbolo = "H"\n' +
-                                        'hidrogeno_numero_atomico = “10”\n' +
+                                        'hidrogeno_numero_atomico = "10"\n' +
                                         'calcio_simbolo = "Ca"\n' +
-                                        'calcio_numero_atomico = “200”\n' +
+                                        'calcio_numero_atomico = "200"\n' +
                                         '\n' +
-                                        '# print(f”Z(H): {hidrogeno_numero_atomico}”)\n',
+                                        '# print(f"Z(H): {hidrogeno_numero_atomico}")\n',
                                     correctAnswer:'hidrogeno_simbolo = "H"\n' +
                                         'hidrogeno_numero_atomico = 1\n' +
                                         'calcio_simbolo = "Ca"\n' +
                                         'calcio_numero_atomico = 20\n' +
                                         '\n' +
-                                        'print(f”Z(H): {hidrogeno_numero_atomico\\nZ(Ca): {calcio_numero_atomico}}.”)\n'
+                                        'print(f"Z(H): {hidrogeno_numero_atomico\\nZ(Ca): {calcio_numero_atomico}}.")\n'
                                 }}
                             userStories={[
                                 {
@@ -861,7 +861,7 @@ const App = () => {
                     <Route path="/course-python/3/5" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/3/6'
-                            validationUrl='http://localhost:3001/validate/course-python/3/5'
+                            validationUrl='course-python/3/5'
                             instructions="Declarar las variables para el elemento Azufre (S), con un número atómico de 16. Agregarlo a la impresión."
                             codeEditorSetup={
                                 {
@@ -871,15 +871,15 @@ const App = () => {
                                         'calcio_simbolo = "Ca"\n' +
                                         'calcio_numero_atomico = 20\n' +
                                         '\n' +
-                                        '# print(f”Z(H): {hidrogeno_numero_atomico\\nZ(Ca): {calcio_numero_atomico}}.”)\n',
+                                        '# print(f"Z(H): {hidrogeno_numero_atomico\\nZ(Ca): {calcio_numero_atomico}}.")\n',
                                     correctAnswer:'hidrogeno_simbolo = "H"\n' +
                                         'hidrogeno_numero_atomico = 1\n' +
                                         'calcio_simbolo = "Ca"\n' +
                                         'calcio_numero_atomico = 20\n' +
-                                        'azufre_simbolo = “S”\n' +
+                                        'azufre_simbolo = "S"\n' +
                                         'azufre_numero_atomico = 16\n' +
                                         '\n' +
-                                        '# print(f”Z(H): {hidrogeno_numero_atomico\\nZ(Ca): {calcio_numero_atomico}}.\\nZ(S): {azufre_numero_atomico }}.”)\n'
+                                        '# print(f"Z(H): {hidrogeno_numero_atomico\\nZ(Ca): {calcio_numero_atomico}}.\\nZ(S): {azufre_numero_atomico }}.")\n'
                                 }}
                             userStories={[
                                 {
@@ -894,41 +894,41 @@ const App = () => {
                     <Route path="/course-python/3/6" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/3/7'
-                            validationUrl='http://localhost:3001/validate/course-python/3/6'
+                            validationUrl='course-python/3/6'
                             instructions="Corregir el número atómico de los elementos, que están invertidos. Declarar las mismas variables para el Arsénico (Z(As) corresponde a la suma de Z(Ca) y Z(Al), escribir el número sin realizar cuentas). Definir la impresión para que quede exactamente el mismo formato que el texto comentado."
                             codeEditorSetup={
                                 {
                                     title: "2.2 Variable de tipo int",
-                                    previousCode:'“””\n' +
+                                    previousCode:'"""\n' +
                                         'Z(Ca): …\n' +
                                         '\n' +
                                         'Z(Al): …\n' +
                                         '\n' +
                                         'Z(As): …\n' +
-                                        '“””\n' +
+                                        '"""\n' +
                                         '\n' +
                                         '# calcio_simbolo = Ca\n' +
-                                        '# calcio_numero_atomico = “13”\n' +
+                                        '# calcio_numero_atomico = "13"\n' +
                                         '# aluminio_simbolo = Al\n' +
-                                        '# aluminio_numero_atomico = “20”\n' +
+                                        '# aluminio_numero_atomico = "20"\n' +
                                         '\n' +
-                                        '# print(f””)\n',
-                                    correctAnswer:'“””\n' +
+                                        '# print(f"")\n',
+                                    correctAnswer:'"""\n' +
                                         'Z(Ca): …\n' +
                                         '\n' +
                                         'Z(Al): …\n' +
                                         '\n' +
                                         'Z(As): …\n' +
-                                        '“””\n' +
+                                        '"""\n' +
                                         '\n' +
-                                        'calcio_simbolo = “Ca”\n' +
+                                        'calcio_simbolo = "Ca"\n' +
                                         'calcio_numero_atomico = 20 \n' +
-                                        'aluminio_simbolo = “Al”\n' +
+                                        'aluminio_simbolo = "Al"\n' +
                                         'aluminio_numero_atomico = 13\n' +
-                                        'arsenico_simbolo = “As”\n' +
+                                        'arsenico_simbolo = "As"\n' +
                                         'arsenico_numero_atomico = 33\n' +
                                         '\n' +
-                                        '# print(f”Z({calcio_simbolo}): {calcio_numero_atomico\\n\\nZ({aluminio_simbolo}): {aluminio_numero_atomico}.\\n\\nZ({arsenico_simbolo}): {arsenico_numero_atomico}.”)\n'
+                                        '# print(f"Z({calcio_simbolo}): {calcio_numero_atomico\\n\\nZ({aluminio_simbolo}): {aluminio_numero_atomico}.\\n\\nZ({arsenico_simbolo}): {arsenico_numero_atomico}.")\n'
                                 }}
                             userStories={[
                                 {
@@ -943,21 +943,21 @@ const App = () => {
                     <Route path="/course-python/3/7" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/3/8'
-                            validationUrl='http://localhost:3001/validate/course-python/3/7'
+                            validationUrl='course-python/3/7'
                             instructions="Corregir el peso atómico de los elementos para que quede representado con 2 decimales. Imprimir los valores."
                             codeEditorSetup={
                                 {
                                     title: "2.3 Variable de tipo float",
-                                    previousCode:'aluminio_simbolo = “Al”\n' +
+                                    previousCode:'aluminio_simbolo = "Al"\n' +
                                         'aluminio_numero_atomico = 13\n' +
-                                        'aluminio_peso_atomico = “26.9875”\n' +
+                                        'aluminio_peso_atomico = "26.9875"\n' +
                                         '\n' +
                                         'azufre_simbolo = "S"\n' +
                                         'azufre_numero_atomico = 16\n' +
-                                        'azufre_peso_atomico = “32.0668”\n' +
+                                        'azufre_peso_atomico = "32.0668"\n' +
                                         '\n' +
-                                        '# print(f”Peso atómico ({aluminio_simbolo}):\\n”)\n',
-                                    correctAnswer:'aluminio_simbolo = “Al”\n' +
+                                        '# print(f"Peso atómico ({aluminio_simbolo}):\\n")\n',
+                                    correctAnswer:'aluminio_simbolo = "Al"\n' +
                                         'aluminio_numero_atomico = 13 \n' +
                                         'aluminio_peso_atomico = 26.9875\n' +
                                         '\n' +
@@ -965,7 +965,7 @@ const App = () => {
                                         'azufre_numero_atomico = 16\n' +
                                         'azufre_peso_atomico = 32.0668\n' +
                                         '\n' +
-                                        'print(f”Peso atómico ({aluminio_simbolo}): {aluminio_peso_atomico}\\nPeso atómico ({azufre_simbolo}): {azufre_peso_atomico}.”)\n'
+                                        'print(f"Peso atómico ({aluminio_simbolo}): {aluminio_peso_atomico}\\nPeso atómico ({azufre_simbolo}): {azufre_peso_atomico}.")\n'
                                 }}
                             userStories={[
                                 {
@@ -980,7 +980,7 @@ const App = () => {
                     <Route path="/course-python/3/8" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/3/9'
-                            validationUrl='http://localhost:3001/validate/course-python/3/8'
+                            validationUrl='course-python/3/8'
                             instructions="Completar los valores para el Hidrógeno (H, 1.008) y declarar las variables para el Aluminio (Al, 26.98). Imprimir los valores; los elementos deben estar separados por una línea vacía."
                             codeEditorSetup={
                                 {
@@ -988,13 +988,13 @@ const App = () => {
                                     previousCode:'hidrogeno_simbolo =\n' +
                                         'hidrogeno_peso_atomico =\n' +
                                         '\n' +
-                                        '# print(f”Peso atómico ({}): {}\\n”)\n',
-                                    correctAnswer:'hidrogeno_simbolo = “H”\n' +
+                                        '# print(f"Peso atómico ({}): {}\\n")\n',
+                                    correctAnswer:'hidrogeno_simbolo = "H"\n' +
                                         'hidrogeno_peso_atomico = 1.008\n' +
-                                        'aluminio_simbolo = “Al”\n' +
+                                        'aluminio_simbolo = "Al"\n' +
                                         'aluminio_peso_atomico = 26.98\n' +
                                         '\n' +
-                                        'print(f”Peso atómico ({hidrogeno_simbolo}): {hidrogeno_peso_atomico}\\n\\nPeso atómico ({aluminio_simbolo}): {aluminio_peso_atomico}.”)\n'
+                                        'print(f"Peso atómico ({hidrogeno_simbolo}): {hidrogeno_peso_atomico}\\n\\nPeso atómico ({aluminio_simbolo}): {aluminio_peso_atomico}.")\n'
                                 }}
                             userStories={[
                                 {
@@ -1009,7 +1009,7 @@ const App = () => {
                     <Route path="/course-python/3/9" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/3/10'
-                            validationUrl='http://localhost:3001/validate/course-python/3/9'
+                            validationUrl='course-python/3/9'
                             instructions="Declarar las variables para los pesos atómicos de cada elemento y definir la impresión para que quede exactamente el mismo formato que el texto comentado."
                             codeEditorSetup={
                                 {
@@ -1056,19 +1056,19 @@ const App = () => {
                     <Route path="/course-python/3/10" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/3/11'
-                            validationUrl='http://localhost:3001/validate/course-python/3/10'
+                            validationUrl='course-python/3/10'
                             instructions="Los elementos se dividen en metales, no metales y metaloides según su ubicación en la tabla periódica. El Hidrógeno es un no metal. Corregir la declaración de la variable e imprimir los datos."
                             codeEditorSetup={
                                 {
                                     title: "2.4 Variable de tipo boolean",
                                     previousCode:'hidrogeno_simbolo = "H" # str\n' +
-                                        'hidrogeno_es_metaloide = “false”  # boolean\n' +
+                                        'hidrogeno_es_metaloide = "false"  # boolean\n' +
                                         '\n' +
-                                        '# print(f”El Hidrógeno ({}) es un metal: {}”)\n',
+                                        '# print(f"El Hidrógeno ({}) es un metal: {}")\n',
                                     correctAnswer:'hidrogeno_simbolo = "H" # str\n' +
                                         'hidrogeno_es_metaloide = False  # boolean\n' +
                                         '\n' +
-                                        '# print(f”El Hidrógeno ({hidrogeno_simbolo}) es un metal: {hidrogeno_es_metaloide}”)\n'
+                                        '# print(f"El Hidrógeno ({hidrogeno_simbolo}) es un metal: {hidrogeno_es_metaloide}")\n'
                                 }}
                             userStories={[
                                 {
@@ -1083,7 +1083,7 @@ const App = () => {
                     <Route path="/course-python/3/11" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/3/12'
-                            validationUrl='http://localhost:3001/validate/course-python/3/11'
+                            validationUrl='course-python/3/11'
                             instructions="El Hidrógeno es un no metal, mientras que el Azufre es un metal. Declarar las mismas variables para el Azufre e imprimir los valores de ambos elementos."
                             codeEditorSetup={
                                 {
@@ -1091,14 +1091,14 @@ const App = () => {
                                     previousCode:'hidrogeno_simbolo = "H" # str\n' +
                                         'hidrogeno_es_metaloide = False  # boolean\n' +
                                         '\n' +
-                                        '# print(f”El Hidrógeno ({hidrogeno_simbolo}) es un metal: {hidrogeno_es_metaloide}\\n”)\n',
+                                        '# print(f"El Hidrógeno ({hidrogeno_simbolo}) es un metal: {hidrogeno_es_metaloide}\\n")\n',
                                     correctAnswer:'hidrogeno_simbolo = "H" # str\n' +
                                         'hidrogeno_es_metaloide = False  # boolean\n' +
                                         '\n' +
                                         'azufre_simbolo = "S"\n' +
                                         'azufre_es_metaloide = True \n' +
                                         '\n' +
-                                        '# print(f”El Hidrógeno ({hidrogeno_simbolo}) es un metal: {hidrogeno_es_metaloide}\\nEl Azufre ({S}) es un metal: {azufre_es_metaloide}”)\n'
+                                        '# print(f"El Hidrógeno ({hidrogeno_simbolo}) es un metal: {hidrogeno_es_metaloide}\\nEl Azufre ({S}) es un metal: {azufre_es_metaloide}")\n'
                                 }}
                             userStories={[
                                 {
@@ -1113,17 +1113,17 @@ const App = () => {
                     <Route path="/course-python/3/12" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/3/13'
-                            validationUrl='http://localhost:3001/validate/course-python/3/12'
+                            validationUrl='course-python/3/12'
                             instructions="Declarar las variables de cada elemento y definir la impresión para que quede exactamente el mismo formato que el texto comentado."
                             codeEditorSetup={
                                 {
                                     title: "2.4 Variable de tipo boolean",
-                                    previousCode:'“””\n' +
+                                    previousCode:'"""\n' +
                                         'H: False\n' +
                                         'As: True\n' +
                                         'Ca: False\n' +
                                         'S: True\n' +
-                                        '“””\n' +
+                                        '"""\n' +
                                         '\n' +
                                         'hidrogeno_simbolo = H\n' +
                                         'arsenico_simbolo = As\n' +
@@ -1133,17 +1133,17 @@ const App = () => {
                                         'hidrogeno_es_metaloide =\n' +
                                         '\n' +
                                         '# print()\n',
-                                    correctAnswer:'“””\n' +
+                                    correctAnswer:'"""\n' +
                                         'H: False\n' +
                                         'As: True\n' +
                                         'Ca: False\n' +
                                         'S: True\n' +
-                                        '“””\n' +
+                                        '"""\n' +
                                         '\n' +
                                         'hidrogeno_simbolo = "H"\n' +
                                         'arsenico_simbolo = "As"\n' +
                                         'calcio_simbolo = "Ca"\n' +
-                                        'azufre_simbolo = “S”\n' +
+                                        'azufre_simbolo = "S"\n' +
                                         '\n' +
                                         'hidrogeno_es_metaloide = False\n' +
                                         'arsenico_es_metaloide = True\n' +
@@ -1165,7 +1165,7 @@ const App = () => {
                     <Route path="/course-python/3/13" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/3/14'
-                            validationUrl='http://localhost:3001/validate/course-python/3/13'
+                            validationUrl='course-python/3/13'
                             instructions="Eliminar las variables necesarias para que la asignación de valores sea correcta. La asignación incorrecta que no afecta el resultado no debe ser eliminada."
                             codeEditorSetup={
                                 {
@@ -1175,17 +1175,17 @@ const App = () => {
                                         'oxigeno_simbolo = "Cl"\n' +
                                         'silicio_simbolo = "K"\n' +
                                         'silicio_simbolo = "Si"\n' +
-                                        'Oxígeno_nombre = “Oxígeno”\n' +
+                                        'Oxígeno_nombre = "Oxígeno"\n' +
                                         'silicio_nombre = "Cloro"\n' +
                                         '\n' +
-                                        'print(f“{hidrogeno_nombre}: {hidrogeno_simbolo}\\n{aluminio_nombre}: {aluminio_simbolo}”)\n',
+                                        'print(f"{hidrogeno_nombre}: {hidrogeno_simbolo}\\n{aluminio_nombre}: {aluminio_simbolo}")\n',
                                     correctAnswer:'silicio_nombre = "Silicio"\n' +
                                         'oxigeno_simbolo = "O"\n' +
                                         'silicio_simbolo = "K"\n' +
                                         'silicio_simbolo = "Si"\n' +
-                                        'Oxígeno_nombre = “Oxígeno”\n' +
+                                        'Oxígeno_nombre = "Oxígeno"\n' +
                                         '\n' +
-                                        'print(f“{hidrogeno_nombre}: {hidrogeno_simbolo}\\n{aluminio_nombre}: {aluminio_simbolo}”)\n'
+                                        'print(f"{hidrogeno_nombre}: {hidrogeno_simbolo}\\n{aluminio_nombre}: {aluminio_simbolo}")\n'
                                 }}
                             userStories={[
                                 {
@@ -1200,7 +1200,7 @@ const App = () => {
                     <Route path="/course-python/3/14" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/3/15'
-                            validationUrl='http://localhost:3001/validate/course-python/3/14'
+                            validationUrl='course-python/3/14'
                             instructions="Los nombres y símbolos de los elementos están alternados. Sobreescribir los valores declarando nuevas variables e imprimir los valores."
                             codeEditorSetup={
                                 {
@@ -1211,18 +1211,18 @@ const App = () => {
                                         'potasio_nombre = Magnesio\n' +
                                         'potasio_simbolo = Mg\n' +
                                         '\n' +
-                                        '# print(f”{magnesio_nombre}: {magnesio_simbolo}\\n”)\n',
-                                    correctAnswer:'magnesio_nombre = “Potasio“\n' +
-                                        'magnesio_simbolo = “K“\n' +
-                                        'magnesio_nombre = “Magnesio“\n' +
-                                        'magnesio_simbolo = “Mg“\n' +
+                                        '# print(f"{magnesio_nombre}: {magnesio_simbolo}\\n")\n',
+                                    correctAnswer:'magnesio_nombre = "Potasio"\n' +
+                                        'magnesio_simbolo = "K"\n' +
+                                        'magnesio_nombre = "Magnesio"\n' +
+                                        'magnesio_simbolo = "Mg"\n' +
                                         '\n' +
-                                        'potasio_nombre = “Magnesio“\n' +
-                                        'potasio_simbolo = “Mg“\n' +
-                                        'potasio_nombre = “Potasio“\n' +
-                                        'potasio_simbolo = “K“\n' +
+                                        'potasio_nombre = "Magnesio"\n' +
+                                        'potasio_simbolo = "Mg"\n' +
+                                        'potasio_nombre = "Potasio"\n' +
+                                        'potasio_simbolo = "K"\n' +
                                         '\n' +
-                                        '# print(f”{magnesio_nombre}: {magnesio_simbolo}\\n{potasio_nombre}: {potasio_simbolo}”)\n'
+                                        '# print(f"{magnesio_nombre}: {magnesio_simbolo}\\n{potasio_nombre}: {potasio_simbolo}")\n'
                                 }}
                             userStories={[
                                 {
@@ -1237,16 +1237,16 @@ const App = () => {
                     <Route path="/course-python/3/15" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/3/16'
-                            validationUrl='http://localhost:3001/validate/course-python/3/15'
+                            validationUrl='course-python/3/15'
                             instructions="Sobreescribir las los valores que sean necesarios declarando nuevas variables. Definir la impresión para que quede exactamente el mismo formato que el texto comentado."
                             codeEditorSetup={
                                 {
                                     title: "2.5 Sobreescribir variables de tipo string",
-                                    previousCode:'“””\n' +
-                                        'elemento 1: “Oxígeno” (O)\n' +
-                                        'elemento 2: “Silicio” (Si)\n' +
-                                        'elemento 3: “Magnesio” (Mg)\n' +
-                                        '“””\n' +
+                                    previousCode:'"""\n' +
+                                        'elemento 1: "Oxígeno" (O)\n' +
+                                        'elemento 2: "Silicio" (Si)\n' +
+                                        'elemento 3: "Magnesio" (Mg)\n' +
+                                        '"""\n' +
                                         '\n' +
                                         'oxigeno_nombre = "Oxígeno"\n' +
                                         'oxigeno_simbolo = "O"\n' +
@@ -1259,11 +1259,11 @@ const App = () => {
                                         'oxigeno_nombre =  "Potasio"\n' +
                                         'magnesio_simbolo = "Mg"\n' +
                                         'magnesio_nombre = "Cloro"\n',
-                                    correctAnswer:'“””\n' +
-                                        'elemento 1: “Oxígeno” (O)\n' +
-                                        'elemento 2: “Silicio” (Si)\n' +
-                                        'elemento 3: “Magnesio” (Mg)\n' +
-                                        '“””\n' +
+                                    correctAnswer:'"""\n' +
+                                        'elemento 1: "Oxígeno" (O)\n' +
+                                        'elemento 2: "Silicio" (Si)\n' +
+                                        'elemento 3: "Magnesio" (Mg)\n' +
+                                        '"""\n' +
                                         '\n' +
                                         'oxigeno_nombre = "Oxígeno"\n' +
                                         'oxigeno_simbolo = "O"\n' +
@@ -1296,16 +1296,16 @@ const App = () => {
                     <Route path="/course-python/3/16" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/3/17'
-                            validationUrl='http://localhost:3001/validate/course-python/3/16'
+                            validationUrl='course-python/3/16'
                             instructions="Eliminar únicamente las asignaciones que hacen que el resultado sea erróneo."
                             codeEditorSetup={
                                 {
                                     title: "2.6 Sobreescribir variables de tipo int",
-                                    previousCode:'“””\n' +
+                                    previousCode:'"""\n' +
                                         'El número atómico de (O) es 8.\n' +
                                         'El número atómico de (Mg) es 12.\n' +
                                         'El número atómico de (Cl) es 17.\n' +
-                                        '“””\n' +
+                                        '"""\n' +
                                         '\n' +
                                         'oxigeno_simbolo = "O"\n' +
                                         'magnesio_simbolo = "Mg"\n' +
@@ -1319,11 +1319,11 @@ const App = () => {
                                         'oxigeno_numero_atomico = 5\n' +
                                         '\n' +
                                         '# print(f"El número atómico de ({oxigeno_simbolo}) es {oxigeno_numero_atomico}.\\nEl número atómico de ({magnesio_simbolo}) es {magnesio_numero_atomico}.\\nEl número atómico de ({cloro_simbolo}) es {cloro_numero_atomico}.")\n',
-                                    correctAnswer:'“””\n' +
+                                    correctAnswer:'"""\n' +
                                         'El número atómico de (O) es 8.\n' +
                                         'El número atómico de (Mg) es 12.\n' +
                                         'El número atómico de (Cl) es 17.\n' +
-                                        '“””\n' +
+                                        '"""\n' +
                                         '\n' +
                                         'oxigeno_simbolo = "O"\n' +
                                         'magnesio_simbolo = "Mg"\n' +
@@ -1349,7 +1349,7 @@ const App = () => {
                     <Route path="/course-python/3/17" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/3/18'
-                            validationUrl='http://localhost:3001/validate/course-python/3/17'
+                            validationUrl='course-python/3/17'
                             instructions="Sobreescribir los valores de los números atómicos erróneos. Imprimir los valores."
                             codeEditorSetup={
                                 {
@@ -1396,7 +1396,7 @@ const App = () => {
                     <Route path="/course-python/3/18" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/3/19'
-                            validationUrl='http://localhost:3001/validate/course-python/3/18'
+                            validationUrl='course-python/3/18'
                             instructions="Sobreescribir los valores de las variables según la información del comentario. Completar los valores desconocidos … en la impresión. Definir la impresión para que quede exactamente el mismo formato que el texto comentado."
                             codeEditorSetup={
                                 {
@@ -1470,7 +1470,7 @@ const App = () => {
                     <Route path="/course-python/4/1" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/4/2'
-                            validationUrl='http://localhost:3001/validate/course-python/4/1'
+                            validationUrl='course-python/4/1'
                             instructions="?????????????????????"
                             codeEditorSetup={
                                 {
@@ -1500,7 +1500,7 @@ const App = () => {
                     <Route path="/course-python/4/2" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/4/3'
-                            validationUrl='http://localhost:3001/validate/course-python/4/2'
+                            validationUrl='course-python/4/2'
                             instructions="?????????????????????"
                             codeEditorSetup={
                                 {
@@ -1527,7 +1527,7 @@ const App = () => {
                     <Route path="/course-python/4/3" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/4/4'
-                            validationUrl='http://localhost:3001/validate/course-python/4/3'
+                            validationUrl='course-python/4/3'
                             instructions="?????????????????????"
                             codeEditorSetup={
                                 {
@@ -1574,7 +1574,7 @@ const App = () => {
                     <Route path="/course-python/4/4" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/4/5'
-                            validationUrl='http://localhost:3001/validate/course-python/4/4'
+                            validationUrl='course-python/4/4'
                             instructions="?????????????????????"
                             codeEditorSetup={
                                 {
@@ -1611,7 +1611,7 @@ const App = () => {
                     <Route path="/course-python/4/5" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/4/6'
-                            validationUrl='http://localhost:3001/validate/course-python/4/5'
+                            validationUrl='course-python/4/5'
                             instructions="?????????????????????"
                             codeEditorSetup={
                                 {
@@ -1640,7 +1640,7 @@ const App = () => {
                     <Route path="/course-python/4/6" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/4/7'
-                            validationUrl='http://localhost:3001/validate/course-python/4/6'
+                            validationUrl='course-python/4/6'
                             instructions="?????????????????????"
                             codeEditorSetup={
                                 {
@@ -1683,7 +1683,7 @@ const App = () => {
                     <Route path="/course-python/4/7" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/4/8'
-                            validationUrl='http://localhost:3001/validate/course-python/4/7'
+                            validationUrl='course-python/4/7'
                             instructions="?????????????????????"
                             codeEditorSetup={
                                 {
@@ -1720,7 +1720,7 @@ const App = () => {
                     <Route path="/course-python/4/8" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/4/9'
-                            validationUrl='http://localhost:3001/validate/course-python/4/8'
+                            validationUrl='course-python/4/8'
                             instructions="?????????????????????"
                             codeEditorSetup={
                                 {
@@ -1755,7 +1755,7 @@ const App = () => {
                     <Route path="/course-python/4/9" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/4/10'
-                            validationUrl='http://localhost:3001/validate/course-python/4/9'
+                            validationUrl='course-python/4/9'
                             instructions="?????????????????????"
                             codeEditorSetup={
                                 {
@@ -1812,7 +1812,7 @@ const App = () => {
                     <Route path="/course-python/4/10" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/4/11'
-                            validationUrl='http://localhost:3001/validate/course-python/4/10'
+                            validationUrl='course-python/4/10'
                             instructions="?????????????????????"
                             codeEditorSetup={
                                 {
@@ -1855,7 +1855,7 @@ const App = () => {
                     <Route path="/course-python/4/11" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/4/12'
-                            validationUrl='http://localhost:3001/validate/course-python/4/11'
+                            validationUrl='course-python/4/11'
                             instructions="?????????????????????"
                             codeEditorSetup={
                                 {
@@ -1906,7 +1906,7 @@ const App = () => {
                     <Route path="/course-python/4/12" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/4/13'
-                            validationUrl='http://localhost:3001/validate/course-python/4/12'
+                            validationUrl='course-python/4/12'
                             instructions="?????????????????????"
                             codeEditorSetup={
                                 {
@@ -1965,7 +1965,7 @@ const App = () => {
                     <Route path="/course-python/6/13" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/6/14'
-                            validationUrl='http://localhost:3001/validate/course-python/6/13'
+                            validationUrl='course-python/6/13'
                             instructions="Sabiendo que los átomos de Flúor son el cuádruple que los átomos de carbono, calcular la cantidad de átomos de Flúor en el Tetrafluoruro de carbono. Verificar que la operación sea correcta."
                             codeEditorSetup={
                                 {
@@ -1992,7 +1992,7 @@ const App = () => {
                     <Route path="/course-python/6/14" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/6/15'
-                            validationUrl='http://localhost:3001/validate/course-python/6/14'
+                            validationUrl='course-python/6/14'
                             instructions="Sabiendo que los átomos de Carbono corresponden a ⅓ de la cantidad total de átomos en el Hexaclorociclohexano, calcular la cantidad de átomos totales. Definir las variables necesarias."
                             codeEditorSetup={
                                 {
@@ -2018,7 +2018,7 @@ const App = () => {
                     <Route path="/course-python/6/15" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/6/16'
-                            validationUrl='http://localhost:3001/validate/course-python/6/15'
+                            validationUrl='course-python/6/15'
                             instructions="Sabiendo la siguiente información de la Trimetilamina, calcular la cantidad de átomos de cada elemento y la cantidad total: la cantidad de átomos de Carbono corresponde al triple de átomos de Nitrógeno, y la cantidad de átomos de Hidrógeno corresponde al triple de átomos de Carbono."
                             codeEditorSetup={
                                 {
@@ -2056,7 +2056,7 @@ const App = () => {
                     <Route path="/course-python/8/1" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/8/2'
-                            validationUrl='http://localhost:3001/validate/course-python/8/1'
+                            validationUrl='course-python/8/1'
                             instructions="Definir el estado en el que se encuentra el agua. Corregir las variables en caso de ser necesario."
                             codeEditorSetup={
                                 {
@@ -2097,7 +2097,7 @@ const App = () => {
                     <Route path="/course-python/8/2" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/8/3'
-                            validationUrl='http://localhost:3001/validate/course-python/8/2'
+                            validationUrl='course-python/8/2'
                             instructions="Definir el tipo del agua; se sabe que no es un metal. Declarar las variables necesarias."
                             codeEditorSetup={
                                 {
@@ -2131,7 +2131,7 @@ const App = () => {
                     <Route path="/course-python/8/3" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/8/4'
-                            validationUrl='http://localhost:3001/validate/course-python/8/3'
+                            validationUrl='course-python/8/3'
                             instructions="Definir si una molécula de agua (H₂O) está formado por un único átomo. Declarar las variables necesarias.  Definir la impresión para que quede exactamente el mismo formato que el texto comentado."
                             codeEditorSetup={
                                 {
@@ -2165,7 +2165,7 @@ const App = () => {
                     <Route path="/course-python/8/4" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/8/5'
-                            validationUrl='http://localhost:3001/validate/course-python/8/4'
+                            validationUrl='course-python/8/4'
                             instructions="Sabiendo que el punto de fusión del agua es 0°C, determinar el estado del agua. Corregir las variables necesarias."
                             codeEditorSetup={
                                 {
@@ -2208,7 +2208,7 @@ const App = () => {
                     <Route path="/course-python/8/5" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/8/6'
-                            validationUrl='http://localhost:3001/validate/course-python/8/5'
+                            validationUrl='course-python/8/5'
                             instructions="Sabiendo que el punto de fusión del agua es 0°C, determinar el estado del agua. Declarar las variables necesarias."
                             codeEditorSetup={
                                 {
@@ -2252,7 +2252,7 @@ const App = () => {
                     <Route path="/course-python/8/6" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/8/7'
-                            validationUrl='http://localhost:3001/validate/course-python/8/6'
+                            validationUrl='course-python/8/6'
                             instructions="Sabiendo que el agua alcanza el punto de ebullición a 373K, determinar el estado del agua. Definir la impresión para que quede exactamente el mismo formato que el texto comentado."
                             codeEditorSetup={
                                 {
@@ -2294,7 +2294,7 @@ const App = () => {
                     <Route path="/course-python/8/7" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/8/8'
-                            validationUrl='http://localhost:3001/validate/course-python/8/7'
+                            validationUrl='course-python/8/7'
                             instructions="Sabiendo que el agua alcanza su máxima densidad a 4°C, determinar si ya se alcanzó o no según la temperatura actual."
                             codeEditorSetup={
                                 {
@@ -2337,7 +2337,7 @@ const App = () => {
                     <Route path="/course-python/8/8" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/8/9'
-                            validationUrl='http://localhost:3001/validate/course-python/8/8'
+                            validationUrl='course-python/8/8'
                             instructions="Determinar si la densidad es máxima según la temperatura. La densidad máxima es a 4°C. Declarar las variables necesarias."
                             codeEditorSetup={
                                 {
@@ -2377,7 +2377,7 @@ const App = () => {
                     <Route path="/course-python/8/9" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/8/10'
-                            validationUrl='http://localhost:3001/validate/course-python/8/9'
+                            validationUrl='course-python/8/9'
                             instructions="Determinar nuevamente si la densidad es máxima según la temperatura. La densidad máxima es a 4°C. Declarar las variables necesarias. Definir la impresión para que quede exactamente el mismo formato que el texto comentado."
                             codeEditorSetup={
                                 {
@@ -2416,7 +2416,7 @@ const App = () => {
                     <Route path="/course-python/8/10" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/8/11'
-                            validationUrl='http://localhost:3001/validate/course-python/8/10'
+                            validationUrl='course-python/8/10'
                             instructions="Utilizando el operador >=, verificar si el pH es mayor o igual a 7."
                             codeEditorSetup={
                                 {
@@ -2469,7 +2469,7 @@ const App = () => {
                     <Route path="/course-python/8/11" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/8/12'
-                            validationUrl='http://localhost:3001/validate/course-python/8/11'
+                            validationUrl='course-python/8/11'
                             instructions="Utilizando el operador >=, verificar si el pH es mayor o igual a 7."
                             codeEditorSetup={
                                 {
@@ -2524,7 +2524,7 @@ const App = () => {
                     <Route path="/course-python/8/12" element={
                         <CourseScreen
                             nextLevelRoute='/course-python/8/13'
-                            validationUrl='http://localhost:3001/validate/course-python/8/12'
+                            validationUrl='course-python/8/12'
                             instructions="Utilizando el operador >=, verificar si el pH es mayor o igual a 7."
                             codeEditorSetup={
                                 {
